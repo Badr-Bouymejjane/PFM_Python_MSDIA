@@ -1,0 +1,22 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+.venv/
+env/
+
+# Data
+.tmp/
+# Using ! to explicitely track data folder but ignore large/temp files if needed
+# For this project user wants to share data, so we DO NOT ignore data/
+# data/*.csv
+# data/*.json
+# data/*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
