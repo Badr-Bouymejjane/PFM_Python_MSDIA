@@ -1,0 +1,507 @@
+{
+  "user": {
+    "searches": [
+      {
+        "query": "math",
+        "timestamp": "2026-01-29T16:35:03.786018"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:35:10.254028"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:35:12.548581"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:41:56.803646"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:42:00.147902"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:42:00.276260"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:42:00.442021"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:42:00.583424"
+      },
+      {
+        "query": "python",
+        "timestamp": "2026-01-29T16:42:00.719160"
+      },
+      {
+        "query": "devops",
+        "timestamp": "2026-01-29T16:42:21.365867"
+      },
+      {
+        "query": "math",
+        "timestamp": "2026-01-29T16:45:26.467833"
+      },
+      {
+        "query": "devops",
+        "timestamp": "2026-01-29T16:45:31.673108"
+      },
+      {
+        "query": "devops",
+        "timestamp": "2026-01-29T16:45:33.004255"
+      },
+      {
+        "query": "devops",
+        "timestamp": "2026-01-29T16:45:33.220187"
+      },
+      {
+        "query": "devops",
+        "timestamp": "2026-01-29T16:45:33.387846"
+      },
+      {
+        "query": "cyber",
+        "timestamp": "2026-01-29T17:10:51.564086"
+      },
+      {
+        "query": "cybersecurity",
+        "timestamp": "2026-01-29T17:11:04.360278"
+      },
+      {
+        "query": "cyber security",
+        "timestamp": "2026-01-29T17:11:10.959463"
+      },
+      {
+        "query": "machine leanring",
+        "timestamp": "2026-01-29T17:18:07.982274"
+      }
+    ],
+    "clicks": [
+      {
+        "course_id": 13,
+        "title": "Mathematics for Machine Learning and Data Science",
+        "category": "Data Science",
+        "level": "Intermediate",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T16:35:23.583828"
+      },
+      {
+        "course_id": 265,
+        "title": "Introduction to Business Analysis Using Spreadsheets: Basics",
+        "category": "Business",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T16:35:32.246911"
+      },
+      {
+        "course_id": 385,
+        "title": "Professional Deep Learning",
+        "category": "Deep Learning",
+        "level": "Intermediate",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T16:35:49.359914"
+      },
+      {
+        "course_id": 384,
+        "title": "Advanced Deep Learning Techniques",
+        "category": "Deep Learning",
+        "level": "Beginner",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T16:36:04.061330"
+      },
+      {
+        "course_id": 362,
+        "title": "Data Science A-Z",
+        "category": "Data Science",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T16:42:11.693317"
+      },
+      {
+        "course_id": 313,
+        "title": "Foundations of Finance",
+        "category": "Finance",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T16:45:45.594381"
+      },
+      {
+        "course_id": 312,
+        "title": "Introduction to Finance and Accounting",
+        "category": "Finance",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T16:45:50.312161"
+      },
+      {
+        "course_id": 310,
+        "title": "Introduction to Corporate Finance",
+        "category": "Finance",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T16:45:52.433308"
+      },
+      {
+        "course_id": 354,
+        "title": "DevOps and Jenkins Fundamentals",
+        "category": "DevOps",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:08:39.720026"
+      },
+      {
+        "course_id": 339,
+        "title": "DevOps Prerequisite Course",
+        "category": "DevOps",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:08:54.158737"
+      },
+      {
+        "course_id": 424,
+        "title": "Introduction to Tech Entrepreneurship",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:09:32.610922"
+      },
+      {
+        "course_id": 451,
+        "title": "Care: The First Step in Tech Innovation for Entrepreneurs",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:09:42.563190"
+      },
+      {
+        "course_id": 1,
+        "title": "Business Foundations",
+        "category": "Business",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:11:50.459314"
+      },
+      {
+        "course_id": 161,
+        "title": "Machine Learning",
+        "category": "Machine Learning",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:18:21.947432"
+      },
+      {
+        "course_id": 1052,
+        "title": "Build a Medical & Health Website CMS with PHP & MySQL (2026)",
+        "category": "Health",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T17:21:31.991493"
+      },
+      {
+        "course_id": 1052,
+        "title": "Build a Medical & Health Website CMS with PHP & MySQL (2026)",
+        "category": "Health",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T17:27:01.514406"
+      },
+      {
+        "course_id": 800,
+        "title": "مهارات إدارة التغيير الذاتي",
+        "category": "Personal Development",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:20.324533"
+      },
+      {
+        "course_id": 1,
+        "title": "Business Foundations",
+        "category": "Business",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:26.241952"
+      },
+      {
+        "course_id": 4,
+        "title": "Excel Skills for Business",
+        "category": "Business",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:31.481292"
+      },
+      {
+        "course_id": 436,
+        "title": "Skills for a Modern Entrepreneur or Business Owner",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:39.288633"
+      },
+      {
+        "course_id": 430,
+        "title": "Educate Skills for Startups",
+        "category": "Entrepreneurship",
+        "level": "Intermediate",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:44.539620"
+      },
+      {
+        "course_id": 817,
+        "title": "Personal Skills",
+        "category": "Personal Development",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:46.939197"
+      },
+      {
+        "course_id": 436,
+        "title": "Skills for a Modern Entrepreneur or Business Owner",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:28:54.034814"
+      },
+      {
+        "course_id": 6,
+        "title": "Strengthen Your Business Savvy",
+        "category": "Business",
+        "level": "Intermediate",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:29:02.203963"
+      },
+      {
+        "course_id": 387,
+        "title": "Increase Engagement to your Instagram Business Profile ",
+        "category": "Digital Marketing",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T17:29:05.285762"
+      },
+      {
+        "course_id": 1038,
+        "title": "Economics 101 : Master the Basics of Business & Finance",
+        "category": "Finance",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T19:46:36.763358"
+      },
+      {
+        "course_id": 1038,
+        "title": "Economics 101 : Master the Basics of Business & Finance",
+        "category": "Finance",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T19:48:23.149523"
+      },
+      {
+        "course_id": 414,
+        "title": "Creating Change through Social Entrepreneurship",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T19:49:19.475307"
+      },
+      {
+        "course_id": 1031,
+        "title": "Digital Marketing Fundamentals: From Basics to Analytics",
+        "category": "Digital Marketing",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T20:15:50.274601"
+      },
+      {
+        "course_id": 1002,
+        "title": "Consumer Sales Training Masterclass - Consumer Business",
+        "category": "Business",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-01-29T21:54:04.648589"
+      },
+      {
+        "course_id": 82,
+        "title": "Finance & Quantitative Modeling for Analysts",
+        "category": "Finance",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T22:19:13.511907"
+      },
+      {
+        "course_id": 75,
+        "title": "Financial Markets",
+        "category": "Finance",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-01-29T22:19:16.531922"
+      },
+      {
+        "course_id": 1106,
+        "title": "Microsoft Clipchamp Video Editor with Microsoft Copilot & AI",
+        "category": "Video Editing",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-02-05T11:09:30.871420"
+      }
+    ],
+    "views": [
+      {
+        "course_id": 13,
+        "timestamp": "2026-01-29T16:35:23.581182"
+      },
+      {
+        "course_id": 265,
+        "timestamp": "2026-01-29T16:35:32.244320"
+      },
+      {
+        "course_id": 385,
+        "timestamp": "2026-01-29T16:35:49.357799"
+      },
+      {
+        "course_id": 384,
+        "timestamp": "2026-01-29T16:36:04.059191"
+      },
+      {
+        "course_id": 362,
+        "timestamp": "2026-01-29T16:42:11.690579"
+      },
+      {
+        "course_id": 313,
+        "timestamp": "2026-01-29T16:45:45.591457"
+      },
+      {
+        "course_id": 312,
+        "timestamp": "2026-01-29T16:45:50.310051"
+      },
+      {
+        "course_id": 310,
+        "timestamp": "2026-01-29T16:45:52.430880"
+      },
+      {
+        "course_id": 354,
+        "timestamp": "2026-01-29T17:08:39.716640"
+      },
+      {
+        "course_id": 339,
+        "timestamp": "2026-01-29T17:08:54.155932"
+      },
+      {
+        "course_id": 424,
+        "timestamp": "2026-01-29T17:09:32.608154"
+      },
+      {
+        "course_id": 451,
+        "timestamp": "2026-01-29T17:09:42.559799"
+      },
+      {
+        "course_id": 1,
+        "timestamp": "2026-01-29T17:11:50.456694"
+      },
+      {
+        "course_id": 161,
+        "timestamp": "2026-01-29T17:18:21.944692"
+      },
+      {
+        "course_id": 1052,
+        "timestamp": "2026-01-29T17:21:31.988246"
+      },
+      {
+        "course_id": 1052,
+        "timestamp": "2026-01-29T17:27:01.511645"
+      },
+      {
+        "course_id": 800,
+        "timestamp": "2026-01-29T17:28:20.321383"
+      },
+      {
+        "course_id": 1,
+        "timestamp": "2026-01-29T17:28:26.238304"
+      },
+      {
+        "course_id": 4,
+        "timestamp": "2026-01-29T17:28:31.478277"
+      },
+      {
+        "course_id": 436,
+        "timestamp": "2026-01-29T17:28:39.285067"
+      },
+      {
+        "course_id": 430,
+        "timestamp": "2026-01-29T17:28:44.536515"
+      },
+      {
+        "course_id": 817,
+        "timestamp": "2026-01-29T17:28:46.936844"
+      },
+      {
+        "course_id": 436,
+        "timestamp": "2026-01-29T17:28:54.031034"
+      },
+      {
+        "course_id": 6,
+        "timestamp": "2026-01-29T17:29:02.199962"
+      },
+      {
+        "course_id": 387,
+        "timestamp": "2026-01-29T17:29:05.282245"
+      },
+      {
+        "course_id": 1038,
+        "timestamp": "2026-01-29T19:46:36.759989"
+      },
+      {
+        "course_id": 1038,
+        "timestamp": "2026-01-29T19:48:23.146660"
+      },
+      {
+        "course_id": 414,
+        "timestamp": "2026-01-29T19:49:19.472043"
+      },
+      {
+        "course_id": 1031,
+        "timestamp": "2026-01-29T20:15:50.269696"
+      },
+      {
+        "course_id": 1002,
+        "timestamp": "2026-01-29T21:54:04.643775"
+      },
+      {
+        "course_id": 82,
+        "timestamp": "2026-01-29T22:19:13.507880"
+      },
+      {
+        "course_id": 75,
+        "timestamp": "2026-01-29T22:19:16.528474"
+      },
+      {
+        "course_id": 1106,
+        "timestamp": "2026-02-05T11:09:30.865646"
+      }
+    ],
+    "favorites": [],
+    "preferences": {
+      "categories": {
+        "Data Science": 2,
+        "Business": 6,
+        "Deep Learning": 2,
+        "Finance": 7,
+        "DevOps": 2,
+        "Entrepreneurship": 6,
+        "Machine Learning": 1,
+        "Health": 2,
+        "Personal Development": 2,
+        "Digital Marketing": 2,
+        "Video Editing": 1
+      },
+      "levels": {
+        "Intermediate": 4,
+        "Beginner": 21,
+        "All Levels": 8
+      },
+      "platforms": {
+        "Coursera": 23,
+        "Udemy": 10
+      }
+    }
+  }
+}
