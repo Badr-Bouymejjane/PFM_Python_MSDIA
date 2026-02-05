@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% block title %}🔮 Clustering - Course Recommender{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <h1 class="section-title"><i data-lucide="layers"></i> Clustering des Formations</h1>
+    <p class="text-muted">Visualisation intelligente et groupement automatique des 1137 cours par thématique (Algorithme K-Means).</p>
+</section>
+
+<!-- Stats Grid -->
+<section class="stats-compact-grid">
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="database"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ total_courses }}</div>
+            <div class="stat-label">Cours Analysés</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="pie-chart"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ n_clusters }}</div>
+            <div class="stat-label">Groupes (Clusters)</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="tag"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ n_categories }}</div>
+            <div class="stat-label">Catégories</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="maximize-2"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">2D</div>
+            <div class="stat-label">Projection PCA</div>
+        </div>
+    </div>
+</section>
+
+<!-- Visualization -->
+<section class="page-section">
+    <h3 class="section-title"><i data-lucide="image"></i> Visualisation de l'Espace des Cours</h3>
+    <div class="viz-wrapper" style="height: 600px; position: relative;">
+        <canvas id="clusterChart"></canvas>
+    </div>
+</section>
+
+<!-- Cluster Details -->
+<section class="page-section">
+    <h3 class="section-title"><i data-lucide="list"></i> Composition des Clusters</h3>
+    <div class="courses-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+        {% for cluster in clusters_info %}
+        <div class="course-card" style="border-left: 5px solid {{ cluster_colors[cluster.cluster_id] }}">
+            <div class="cluster-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                <span style="background: {{ cluster_colors[cluster.cluster_id] }}; color:white; padding:0.25rem 0.75rem; border-radius:var(--radius-full); font-size:0.8rem; font-weight:700;">
+                    Cluster {{ cluster.cluster_id }}
+                </span>
+                <span style="color:var(--text-muted); font-size:0.85rem;">{{ cluster.count }} cours</span>
+            </div>
+            <div class="cluster-body" style="font-size:0.9rem;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                    <span><i data-lucide="star" size="14"></i> Note Moyenne:</span>
+                    <strong>{{ cluster.avg_rating }}</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+                    <span><i data-lucide="trending-up" size="14"></i> Niveau:</span>
+                    <strong>{{ cluster.dominant_level }}</strong>
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <span style="color:var(--text-muted); font-size:0.8rem; text-transform:uppercase;">Top Domaines:</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.4rem;">
+                        {% for cat, count in cluster.top_categories.items() %}
+                        <span style="background:var(--bg-secondary); padding:0.2rem 0.6rem; border-radius:var(--radius-sm); font-size:0.75rem;">{{ cat }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div style="border-top:1px solid var(--border-light); padding-top:0.75rem;">
+                    <span style="color:var(--text-muted); font-size:0.8rem; text-transform:uppercase;">Exemples:</span>
+                    <ul style="margin:0.5rem 0 0 1rem; color:var(--text-secondary); font-size:0.85rem;">
+                        {% for course in cluster.sample_courses[:2] %}
+                        <li>{{ course[:45] }}...</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Learning Path Generator -->
+<section class="page-section">
+    <h3 class="section-title">🎯 Générateur de Parcours</h3>
+    <p class="text-muted" style="margin-bottom:1.5rem;">Sélectionnez une catégorie pour tracer une route d'apprentissage cohérente (Débutant → Avancé).</p>
+    
+    <div class="search-filter-box" style="margin-bottom:2rem;">
+        <select id="category-select" class="filter-pill" style="flex:1;">
+            <option value="">Choisir un domaine d'étude...</option>
+            {% for cat in categories %}
+            <option value="{{ cat }}">{{ cat }}</option>
+            {% endfor %}
+        </select>
+        <button onclick="generatePath()" class="btn-search">Générer le parcours</button>
+    </div>
+    
+    <div id="learning-path"></div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const vizData = {{ viz_data | safe }};
+const colors = {{ cluster_colors | tojson }};
+
+const ctx = document.getElementById('clusterChart').getContext('2d');
+const datasets = [];
+
+for (let i = 0; i < {{ n_clusters }}; i++) {
+    const clusterCourses = vizData.courses.filter(c => c.cluster === i);
+    datasets.push({
+        label: `Cluster ${i}`,
+        data: clusterCourses.map(c => ({x: c.x, y: c.y, title: c.title, cat: c.category})),
+        backgroundColor: colors[i] + '90',
+        borderColor: colors[i],
+        pointRadius: 5,
+        pointHoverRadius: 10
+    });
+}
+
+new Chart(ctx, {
+    type: 'scatter',
+    data: { datasets },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: (ctx) => `${ctx.raw.title} (${ctx.raw.cat})`
+                }
+            },
+            legend: { position: 'bottom' }
+        }
+    }
+});
+
+async function generatePath() {
+    const category = document.getElementById('category-select').value;
+    if (!category) return;
+    
+    const container = document.getElementById('learning-path');
+    container.innerHTML = '<p style="text-align:center; padding:2rem;">Création du parcours optimal...</p>';
+    
+    const response = await fetch(`/api/learning-path?category=${encodeURIComponent(category)}`);
+    const data = await response.json();
+    
+    if (data.path.length === 0) {
+        container.innerHTML = '<p class="no-results">Désolé, pas assez de données pour cette catégorie.</p>';
+        return;
+    }
+    
+    let html = '<div style="display:flex; flex-direction:column; gap:1.5rem;">';
+    data.path.forEach((step, i) => {
+        html += `
+            <div style="display:flex; gap:1.5rem; align-items:center;">
+                <div style="width:50px; height:50px; background:var(--primary); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.25rem; flex-shrink:0; box-shadow:var(--shadow-md);">
+                    ${step.step}
+                </div>
+                <div class="course-card" style="flex:1; margin:0;">
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <div>
+                            <span class="meta-badge level" style="margin-bottom:0.5rem; display:inline-block;">${step.level}</span>
+                            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">${step.title}</h4>
+                            <div style="display:flex; gap:1rem; font-size:0.85rem; color:var(--text-muted);">
+                                <span>⭐ ${step.rating.toFixed(1)}</span>
+                                <span>⏱️ ${step.duration}h</span>
+                            </div>
+                        </div>
+                        <a href="/course/${step.course_id}" class="btn-search" style="text-decoration:none; padding:0.5rem 1rem; font-size:0.8rem;">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            ${i < data.path.length - 1 ? '<div style="margin-left:25px; height:20px; width:2px; background:var(--border); border-radius:1px;"></div>' : ''}
+        `;
+    });
+    html += '</div>';
+    container.innerHTML = html;
+}
+</script>
+{% endblock %}

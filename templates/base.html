@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Course Recommendation System - Find your perfect course" />
+    <title>{% block title %}Course Recommender{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/enhancements.css') }}" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    {% block extra_css %}{% endblock %}
+  </head>
+  <body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="{{ url_for('home') }}" class="nav-logo">
+          <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
+          <span class="logo-text">Course Recommender</span>
+        </a>
+      </div>
+      
+      <div class="sidebar-content">
+        {% if username %}
+        <nav class="nav-links">
+          <a href="{{ url_for('home') }}" class="nav-link {% if request.endpoint == 'home' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="home"></i></span>
+            <span class="nav-link-text">Accueil</span>
+          </a>
+          <a href="{{ url_for('courses') }}" class="nav-link {% if request.endpoint == 'courses' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="book-open"></i></span>
+            <span class="nav-link-text">Tous les cours</span>
+          </a>
+          <a href="{{ url_for('clustering') }}" class="nav-link {% if request.endpoint == 'clustering' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="layers"></i></span>
+            <span class="nav-link-text">Clustering</span>
+          </a>
+          <a href="{{ url_for('profile') }}" class="nav-link {% if request.endpoint == 'profile' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="user"></i></span>
+            <span class="nav-link-text">Profil</span>
+          </a>
+        </nav>
+        {% endif %}
+      </div>
+      
+      <div class="sidebar-footer">
+        {% if username %}
+        <div class="nav-user">
+          <span class="nav-link-icon"><i data-lucide="user-circle"></i></span>
+          <span class="user-badge">{{ username }}</span>
+        </div>
+        <a href="{{ url_for('logout') }}" class="logout-btn">
+          <span class="nav-link-icon"><i data-lucide="log-out"></i></span>
+          <span class="nav-link-text">Déconnexion</span>
+        </a>
+        {% endif %}
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      {% block content %}{% endblock %}
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>Course Recommendation System - Powered by ML</p>
+          <p class="footer-sub">SDIA S7 - Python Project</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
