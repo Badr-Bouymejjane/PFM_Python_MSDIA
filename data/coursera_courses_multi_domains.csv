@@ -1,0 +1,855 @@
+domain,title,organization,rating,reviews,level,course_type,duration,url
+Data Science,"Python pour la science des données, l'IA et le développement",IBM,"4,6",43 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python-for-applied-data-science-ai
+Data Science,Qu'est-ce que la science des données ?,IBM,"4,7",77 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/what-is-datascience
+Data Science,Science des données IBM,IBM,"4,6",149 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-data-science
+Data Science,Introduction à la science des données,IBM,"4,6",102 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/introduction-data-science
+Data Science,Fondements de la science des données,Google,"4,7","3,8 k avis",Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/foundations-of-data-science
+Data Science,Bases de données et SQL pour la science des données avec Python,IBM,"4,7",23 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/sql-data-science
+Data Science,Science des données,Johns Hopkins University,"4,5",51 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/jhu-data-science
+Data Science,SQL pour la Science des Données,"University of California, Davis","4,6",17 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/sql-for-data-science
+Data Science,Introduction à la science des données en Python,University of Michigan,"4,5",27 k avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-data-analysis
+Data Science,Science des Données Appliquée avec Python,University of Michigan,"4,5",34 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-science-python
+Data Science,Fondamentaux de la science des données avec Python et SQL,IBM,"4,6",75 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-science-fundamentals-python-sql
+Data Science,Analyse des Données avec Python,IBM,"4,7",20 k avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/data-analysis-with-python
+Data Science,Projet Python pour la science des données,IBM,"4,5","4,8 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-project-for-data-science
+Data Science,Compétences mathématiques de science des données,Duke University,"4,5",13 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/datasciencemathskills
+Data Science,Data Science Foundations,Plusieurs enseignants,"4,6",117 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-science-foundations
+Data Science,Analyse de données Google,Google,"4,8",177 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-data-analytics
+Data Science,Mathématiques pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,6","3,1 k avis",Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science
+Data Science,Google Advanced Data Analytics,Google,"4,8","9,9 k avis",Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-advanced-data-analytics
+Data Science,Probabilités et statistiques pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,6",676 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-probability-and-statistics
+Data Science,Statistiques avancées pour la science des données,Johns Hopkins University,"4,4",787 avis,Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/advanced-statistics-data-science
+Data Science,Mathematical Foundations for Data Science and Analytics,University of Pittsburgh,"4,1",7 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/mathematical-foundations-for-data-science-and-analysis
+Data Science,Data Science Beyond the Basics (ML+DS),Coursera,"4,2",26 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-science-beyond-the-basics-ml-and-ds
+Data Science,Défi de la science des données,Coursera,"4,7",204 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/data-science-challenge
+Data Science,cours intensif en science des données,Johns Hopkins University,"4,5","8,4 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/data-science-course
+Machine Learning,Apprentissage automatique,Plusieurs enseignants,"4,9",38 k avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/machine-learning-introduction
+Machine Learning,Apprentissage automatique avec Python,IBM,"4,7",18 k avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/machine-learning-with-python
+Machine Learning,IBM Machine Learning,IBM,"4,6","3,6 k avis",Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-machine-learning
+Machine Learning,Mathématiques pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,6","3,1 k avis",Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science
+Machine Learning,Algèbre linéaire pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,6","2,3 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-linear-algebra
+Machine Learning,Developing Machine Learning Solutions,Amazon Web Services,"4,5",105 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/developing-machine-learning-solutions
+Machine Learning,Mathématiques pour l'apprentissage automatique,Imperial College London,"4,6",15 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/mathematics-machine-learning
+Machine Learning,Fundamentals of Machine Learning and Artificial Intelligence,Amazon Web Services,"4,6","2,6 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-machine-learning-and-artificial-intelligence
+Machine Learning,Apprentissage automatique,University of Washington,"4,6",16 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/machine-learning
+Machine Learning,Apprentissage automatique supervisé : régression et classification,DeepLearning.AI,"4,9",32 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning
+Machine Learning,Microsoft Azure Machine Learning,Microsoft,"4,4",284 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/microsoft-azure-machine-learning
+Machine Learning,Les rouages de l'apprentissage automatique,Google,"4,8",599 avis,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/the-nuts-and-bolts-of-machine-learning
+Machine Learning,Deep learning,DeepLearning.AI,"4,8",147 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/deep-learning
+Machine Learning,Défi de la science des données,Coursera,"4,7",204 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/data-science-challenge
+Machine Learning,Introduction à l'Apprentissage automatique,Duke University,"4,7","3,8 k avis",Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/machine-learning-duke
+Machine Learning,IBM Introduction à l'apprentissage automatique,IBM,"4,6","3,3 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ibm-intro-machine-learning
+Machine Learning,MLOps | Machine Learning Operations,Duke University,"4,2",581 avis,Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/mlops-machine-learning-duke
+Machine Learning,Apprentissage automatique en production,DeepLearning.AI,"4,8","3,4 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-machine-learning-in-production
+Machine Learning,L'apprentissage automatique pour tous,University of London,"4,7","3,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/uol-machine-learning-for-all
+Machine Learning,Probabilités et statistiques pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,6",676 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-probability-and-statistics
+Machine Learning,Apprentissage automatique appliqué en Python,University of Michigan,"4,6","8,8 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-machine-learning
+Machine Learning,Calculs pour l'apprentissage automatique et la science des données,DeepLearning.AI,"4,8",944 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-calculus
+Machine Learning,Fondements de l'apprentissage automatique,Coursera,"4,6",11 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-of-machine-learning-1
+Machine Learning,Introduction à l'IA et à l'apprentissage automatique sur Google Cloud,Google Cloud,"4,6",317 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud
+Machine Learning,Introduction à l'apprentissage automatique pour tous,IBM,"4,6",304 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-introduction-for-everyone
+Machine Learning,Apprentissage automatique,O.P. Jindal Global University,"3,6",7 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/machine-learning-1
+Machine Learning,AI and Machine Learning Essentials with Python,University of Pennsylvania,"4,5",42 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-machinelearning-essentials
+Machine Learning,L'IA pour tous,DeepLearning.AI,"4,8",52 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-for-everyone
+Machine Learning,"Machine Learning with Scikit-learn, PyTorch & Hugging Face",Coursera,"4,6",20 avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/machine-learning-scikit-learn-pytorch-hugging-face
+Machine Learning,Preparing for Google Cloud Certification: Machine Learning Engineer,Google Cloud,"4,4","4,9 k avis",Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate
+Machine Learning,IBM AI Engineering,IBM,"4,6",22 k avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ai-engineer
+Machine Learning,Les bases de l'apprentissage automatique,Sungkyunkwan University,"4,4",91 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-basics
+Machine Learning,Machine Learning for Absolute Beginners - Level 1,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-machine-learning-for-absolute-beginners-level-1-yqflt
+Machine Learning,Machine Learning for Trading,Plusieurs enseignants,"3,8","1,2 k avis",Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/machine-learning-trading
+Machine Learning,Mathématiques pour l’apprentissage automatique : algèbre linéaire,Imperial College London,"4,6",13 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/linear-algebra-machine-learning
+Machine Learning,Databricks Machine Learning Fundamentals,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/databricks-machine-learning-fundamentals
+Machine Learning,Créer des modèles d'apprentissage automatique dans Microsoft Azure,Microsoft,"4,5",328 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/create-machine-learning-models-in-microsoft-azure
+Machine Learning,Pipelines d'apprentissage automatique avec Azure ML Studio,Coursera,"4,5",823 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/azure-machine-learning-studio-pipeline
+Machine Learning,Introduction à l'apprentissage automatique embarqué,Edge Impulse,"4,8",751 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-embedded-machine-learning
+Machine Learning,Développeur IA IBM,IBM,"4,6",80 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai
+Machine Learning,Analyse exploratoire des données pour l'apprentissage automatique,IBM,"4,6","2,5 k avis",Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning
+Machine Learning,Apprendre TensorFlow : le Hello World de l'apprentissage automatique,Google Cloud,4,20 avis,Débutant,Projet,Moins de 2 heures,https://www.coursera.org/projects/googlecloud-learning-tensorflow-the-hello-world-of-machine-learning-063j7
+Machine Learning,SAS Machine Learning Engineer,SAS,"4,7",103 avis,Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/sas-machine-learning-engineer
+Machine Learning,Principes de l'apprentissage automatique pour les soins de santé,Stanford University,"4,8",610 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/fundamental-machine-learning-healthcare
+Machine Learning,Advanced Machine Learning on Google Cloud,Google Cloud,"4,5","1,5 k avis",Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/advanced-machine-learning-tensorflow-gcp
+Machine Learning,Gestion des investissements avec Python et l'apprentissage automatique,EDHEC Business School,"4,6","1,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/investment-management-python-machine-learning
+Machine Learning,Foundations of AI and Machine Learning,Microsoft,"4,6",240 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/foundations-of-ai-and-machine-learning
+Machine Learning,Machine Learning on Google Cloud,Google Cloud,"4,4","3,8 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/machine-learning-tensorflow-gcp
+Machine Learning,Machine Learning Fundamentals,Dartmouth College,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/machine-learning-fundamentals-dartmouth
+Machine Learning,Apprentissage automatique : une vue d'ensemble,Politecnico di Milano,"4,6",203 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/machine-learning-overview
+Artificial Intelligence,Introduction à l’intelligence artificielle (IA),IBM,"4,7",22 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-ai
+Artificial Intelligence,L'IA pour tous,DeepLearning.AI,"4,8",52 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-for-everyone
+Artificial Intelligence,Introduction à l'IA,Google,"4,8",11 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/google-introduction-to-ai
+Artificial Intelligence,L'IA au service des entreprises,University of Pennsylvania,"4,7","1,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-for-business-wharton
+Artificial Intelligence,Principes essentiels de l'IA,Google,"4,8",19 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-essentials-google
+Artificial Intelligence,Fundamentals of Machine Learning and Artificial Intelligence,Amazon Web Services,"4,6","2,6 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-machine-learning-and-artificial-intelligence
+Artificial Intelligence,Generative AI Leader,Google Cloud,"4,7",905 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/generative-ai-for-leaders
+Artificial Intelligence,Exploring Artificial Intelligence Use Cases and Applications,Amazon Web Services,"4,5",232 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/exploring-artificial-intelligence-use-cases-and-applications
+Artificial Intelligence,Microsoft AI & ML Engineering,Microsoft,"4,6",323 avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-ai-and-ml-engineering
+Artificial Intelligence,Apprentissage automatique,Plusieurs enseignants,"4,9",38 k avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/machine-learning-introduction
+Artificial Intelligence,Les fondements de l'IA pour tous,IBM,"4,7",35 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-foundations-for-everyone
+Artificial Intelligence,IBM Generative AI Engineering,IBM,"4,6",98 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering
+Artificial Intelligence,Introduction à l'IA et à l'apprentissage automatique sur Google Cloud,Google Cloud,"4,6",317 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud
+Artificial Intelligence,Introduction à l'IA générative,Google Cloud,"4,7",11 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-generative-ai
+Artificial Intelligence,Artificial Intelligence for Healthcare,SkillUp,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/artificial-intelligence-for-healthcare
+Artificial Intelligence,Agentic AI and AI Agents for Leaders,Vanderbilt University,"4,8","9,2 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/ai-agents-for-leaders
+Artificial Intelligence,Deep learning,DeepLearning.AI,"4,8",147 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/deep-learning
+Artificial Intelligence,Intelligence artificielle sur Microsoft Azure,Microsoft,"4,5",1 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/artificial-intelligence-microsoft-azure
+Artificial Intelligence,Chef de produit IA IBM,IBM,"4,7",35 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-ai-product-manager
+Artificial Intelligence,AI Agent Developer,Vanderbilt University,"4,8","9,6 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-agents
+Artificial Intelligence,IBM AI Engineering,IBM,"4,6",22 k avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ai-engineer
+Artificial Intelligence,Développeur IA IBM,IBM,"4,6",80 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai
+Artificial Intelligence,Les fondamentaux du prompting,Google,"4,8","6,3 k avis",Débutant,Spécialisation,1 à 4 semaines,https://www.coursera.org/specializations/prompting-essentials-google
+Artificial Intelligence,L'essentiel de l'Intelligence artificielle (IA),University of Pennsylvania,"4,4",33 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/artificial-intelligence-essentials
+Artificial Intelligence,IBM RAG and Agentic AI,IBM,"4,6",705 avis,Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-rag-and-agentic-ai
+Artificial Intelligence,ChatGPT - Artificial Intelligence (AI) That Works For You,Alex Genadinik,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/chatgpt-introduction
+Artificial Intelligence,Master of Science in Artificial Intelligence,University of Colorado Boulder,,,Diplôme,24 months,,https://www.coursera.org/degrees/ms-artificial-intelligence-boulder
+Artificial Intelligence,Intelligence artificielle,O.P. Jindal Global University,,,Mixte,Cours,3 à 6 mois,https://www.coursera.org/learn/artificial-intelligence-1
+Artificial Intelligence,Développer des applications d'IA avec Python et Flask,IBM,"4,5","1,3 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-project-for-ai-application-development
+Artificial Intelligence,Create (Artificial Intelligence) AI VIDEOS WITH ZERO FILMING,Alex Genadinik,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-video
+Artificial Intelligence,Generative AI Strategic Leader,Vanderbilt University,"4,8","9,1 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-strategic-leader
+Artificial Intelligence,Google Business Intelligence,Google,"4,8",7 k avis,Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-business-intelligence
+Artificial Intelligence,Introduction à l'Intelligence artificielle (IA),University of Illinois Urbana-Champaign,"4,6",56 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/intro-to-artificial-intelligence
+Artificial Intelligence,Understand and Apply Artificial Intelligence Fundamentals,EDUCBA,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/understand-apply-artificial-intelligence-fundamentals
+Artificial Intelligence,L'intelligence artificielle dans le marketing,University of Virginia,"4,6",351 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/uva-darden-artificial-intelligence-marketing
+Artificial Intelligence,Intelligence artificielle : une vue d'ensemble,Politecnico di Milano,"4,6",814 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/artificial-intelligence-overview
+Artificial Intelligence,AI Agents and Agentic AI in Python: Powered by Generative AI,Vanderbilt University,"4,8",8 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-agents-python
+Artificial Intelligence,L'IA dans les soins de santé,Stanford University,"4,7","2,5 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-healthcare
+Artificial Intelligence,AI Security: Security in the Age of Artificial Intelligence,Coursera,,,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-security-security-in-the-age-of-artificial-intelligence
+Artificial Intelligence,Intelligence artificielle : Éthique et défis sociétaux,Lund University,"4,7",346 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-ethics
+Artificial Intelligence,Intelligence artificielle,Illinois Tech,"4,3",55 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-artificial-intelligence
+Artificial Intelligence,L’IA générative pour tous,DeepLearning.AI,"4,8","4,9 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/generative-ai-for-everyone
+Artificial Intelligence,AWS Artificial Intelligence Practitioner,Amazon Web Services,"4,4",13 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/aws-artificial-intelligence-practitioner
+Artificial Intelligence,Innovations dans le domaine des technologies de l'investissement : Intelligence artificielle,University of Michigan,"4,7",418 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/invest-tech
+Artificial Intelligence,GenAI Basics - Comment fonctionnent les LLM ?,Duke University,"3,9",35 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/genai-basics-how-llms-work
+Artificial Intelligence,Principes fondamentaux de l'infrastructure et des opérations de l'IA,NVIDIA,"4,6",464 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-infrastructure-operations-fundamentals
+Artificial Intelligence,Ingénierie de l'IA,Scrimba,"4,6",304 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-engineering
+Artificial Intelligence,AI Foundations for Business Professionals,"Saïd Business School, University of Oxford","4,8",246 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-foundations-business-professionals
+Python Programming,"Python pour la science des données, l'IA et le développement",IBM,"4,6",43 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python-for-applied-data-science-ai
+Python Programming,Cours intensif sur Python,Google,"4,8",40 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python-crash-course
+Python Programming,Certified Entry-Level Python Programmer (PCEP),Logical Operations,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/certified-entry-level-python-programmer-pcep
+Python Programming,Introduction to Data Analysis Using Python,Google,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-data-analysis-using-python
+Python Programming,Introduction to Programming with Python,Logical Operations,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/intro-programming-python
+Python Programming,La programmation pour tous (S'initier à Python),University of Michigan,"4,8",233 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python
+Python Programming,Programmation en Python,Meta,"4,6","1,8 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/programming-in-python
+Python Programming,Principes de base de la programmation en Python,Microsoft,"4,5",500 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/microsoft-python-programming-fundamentals
+Python Programming,Introduction à la programmation en Python,University of Pennsylvania,"4,6","1,2 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-programming-intro
+Python Programming,Python pour tous,University of Michigan,"4,8",280 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python
+Python Programming,Microsoft Python Development,Microsoft,"4,4",612 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-python-developer
+Python Programming,Programmation Python 3,University of Michigan,"4,8",23 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python-3-programming
+Python Programming,Python Developer: From Basics to Case Studies,EDUCBA,"4,8",99 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python-developer-basics-to-case-studies
+Python Programming,Programming in Python: A Hands-on Introduction,Codio,"4,5",483 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/hands-on-python
+Python Programming,"Les bases de Python : Apprendre, appliquer et créer des programmes",EDUCBA,"4,5",33 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-basics-learn-apply-build-programs
+Python Programming,Python pour la cybersécurité,Infosec,"4,5",545 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/pythonforcybersecurity
+Python Programming,L'essentiel de la programmation en Python,Rice University,"4,8","3,6 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-programming
+Python Programming,Python Programming with Red Hat,Red Hat,,,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/python-programming-with-red-hat
+Python Programming,Science des données IBM,IBM,"4,6",149 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-data-science
+Python Programming,Analyse des Données avec Python,IBM,"4,7",20 k avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/data-analysis-with-python
+Python Programming,Google IT Automation with Python,Google,"4,8",53 k avis,Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-it-automation
+Python Programming,Data-Oriented Python Programming and Debugging,University of Michigan,"4,3",16 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-oriented-python-programming-and-debugging
+Python Programming,Créez votre premier programme Python à partir de UST,Coursera,"4,6","3,1 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/first-python-program-ust
+Python Programming,L'informatique : Programmer dans un but précis,Princeton University,"4,7","1,3 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/cs-programming-java
+Python Programming,AI Agents and Agentic AI in Python: Powered by Generative AI,Vanderbilt University,"4,8",8 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-agents-python
+Python Programming,Bases de Python,University of Michigan,"4,8",18 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-basics
+Python Programming,Introduction à Python,Coursera,"4,5","2,2 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/introduction-to-python
+Python Programming,Structures de données et Algorithmes,University of California San Diego,"4,6",17 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-structures-algorithms
+Python Programming,La voie express vers la science des données : Programmation Python,University of Colorado Boulder,"4,7",308 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/python-programming-data-science
+Python Programming,Classes et héritage en Python,University of Michigan,"4,7","3,7 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-classes-inheritance
+Python Programming,Introduction aux principes fondamentaux de Python,University of Colorado Boulder,"4,8",226 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-python-fundamentals
+Python Programming,Statistiques avec Python,University of Michigan,"4,6","3,3 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/statistics-with-python
+Python Programming,Structure de données Python,University of Michigan,"4,9",97 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python-data
+Python Programming,"Résolution de problèmes, programmation Python et jeux vidéo",University of Alberta,"4,3",235 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/problem-solving-programming-video-games
+Python Programming,Certified Associate in Python Programming (PCAP),Logical Operations,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/certified-associate-python-programming-pcap
+Python Programming,Science des Données Appliquée avec Python,University of Michigan,"4,5",34 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-science-python
+Python Programming,Principes de base de la programmation en Python,Duke University,4,64 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-programming-fundamentals
+Python Programming,Introduction à la programmation avec Python,University of Leeds,"4,8",105 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/an-introduction-to-programming-using-python
+Python Programming,Introduction to Python Programming and Essentials,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-introduction-to-python-programming-and-essentials-f4rrd
+Python Programming,Projet Python pour la science des données,IBM,"4,5","4,8 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-project-for-data-science
+Python Programming,Foundations of Python Programming,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-foundations-of-python-programming
+Python Programming,Formation à l'essentiel de la programmation Python,Simplilearn,"3,1",8 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-programming-essentials-training
+Python Programming,Principes de base de Python,Corporate Finance Institute,"4,9",13 avis,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/python-fundamentals
+Python Programming,Python from Scratch: Learn by Coding,JetBrains,"4,3",6 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/jb-python-from-scratch
+Python Programming,IA Python pour les débutants,DeepLearning.AI,"4,8",228 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ai-python-for-beginners
+Python Programming,Analyse de données en Python,Rice University,"4,7",893 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-analysis
+Python Programming,Python for OOP - The A to Z OOP Python Programming Course,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-python-for-oop-the-a-to-z-oop-python-programming-course-qshqd
+Python Programming,Advanced Programming Techniques with Python,Logical Operations,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/advanced-programming-techniques-python
+Web Development,"Introduction à HTML, CSS et JavaScript",IBM,"4,4",793 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-html-css-javascript
+Web Development,Meta Full Stack Developer: Front-End & Back-End from Scratch,Meta,"4,7",25 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-full-stack-developer
+Web Development,"Web Development with HTML5, CSS, and JavaScript",Logical Operations,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/web-development-html-css-javascript
+Web Development,Introduction au développement frontal,Meta,"4,8",14 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-front-end-development
+Web Development,Meta développeur front-end,Meta,"4,7",24 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/meta-front-end-developer
+Web Development,Full-Stack Web Development,University of London,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/full-stack-web-development
+Web Development,Développement Web Full Stack,Amazon,"4,1",43 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/fullstack-web-development
+Web Development,"Python pour la science des données, l'IA et le développement",IBM,"4,6",43 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/python-for-applied-data-science-ai
+Web Development,Développeur(euse) de logiciels Full Stack IBM,IBM,"4,6",60 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer
+Web Development,Introduction au développement web,Microsoft,"4,1",36 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-web-development
+Web Development,La conception de sites Web pour tous : Les bases du développement web et du codage,University of Michigan,"4,7",35 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/web-design
+Web Development,"HTML, CSS, and Javascript for Web Developers",Johns Hopkins University,"4,7",17 k avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/html-css-javascript-for-web-developers
+Web Development,Principes de base du développement web,Microsoft,"3,5",6 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/web-development-fundamentals
+Web Development,Web Development Fundamentals,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-web-development-fundamentals-2zdmi
+Web Development,"HTML, CSS et Javascript pour les développeurs Web",Johns Hopkins University,"4,7",17 k avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/html-css-javascript-for-web-developers
+Web Development,Développement Web avec Python,Microsoft,"4,1",18 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/microsoft-web-development-with-python
+Web Development,Introduction au développement web,"University of California, Davis","4,7","3,7 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/web-development
+Web Development,Meta Web Development Fundamentals,Meta,"4,7",17 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-web-development-fundamentals
+Web Development,Build a free website with WordPress,Coursera,"4,5","2,4 k avis",Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/build-free-website-wordpress
+Web Development,"Introduction au développement web avec HTML, CSS, JavaScript",IBM,"4,6","2,3 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-web-development-with-html-css-javacript
+Web Development,IBM Front-End Developer,IBM,"4,6","8,2 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-frontend-developer
+Web Development,IBM Full-Stack JavaScript Developer,IBM,"4,6","9,2 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer
+Web Development,"Advanced Web Development, Real-Time Apps & Final Projects",Packt,,,Avancées,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-advanced-web-development-real-time-apps-and-final-proejcts-74iem
+Web Development,Modern Web Development with TypeScript,Edureka,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/modern-web-development-with-typescript
+Web Development,Modern Web Development with TypeScript,Edureka,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/modern-web-development-with-typescript
+Web Development,"Full-Stack Web Development: PHP, HTML, CSS & JavaScript",Board Infinity,"4,5",22 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/full-stack-web-development-php-html-css-and-js
+Web Development,Web Development for Beginners,"University of California, Davis","4,7","3,7 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/webdevelopmentforbeginners
+Web Development,"Holistic Web Development: Responsive UIs, Logic, Deployment",Board Infinity,,,Avancées,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/holisticwebdevelopment-responsiveuis-serverlogic-scalabledeployment
+Web Development,Full Stack Web Development Mastery - Novice to Expert,Packt,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-full-stack-web-development-mastery-novice-to-expert
+Web Development,Build a Full Website using WordPress,Coursera,"4,4","4,3 k avis",Avancées,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/build-a-full-website-using-wordpress
+Web Development,"Build a Portfolio Website with HTML, CSS, and JavaScript",Coursera,"4,3",129 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/showcase-build-a-portfolio-website-html-css-javascript
+Web Development,Front-End Web Development for Beginners,University of Washington,"4,6",21 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/uw-html
+Web Development,Modern Web Development Specialization,EDUCBA,"4,9",165 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/modern-web-development-specialization
+Web Development,Modern Web Development: Advanced HTML & CSS,Board Infinity,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/modern-web-development-advanced-html-css
+Web Development,Modern Frontend Web Development,Skillshare,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/modernfrontendwebdevelopment
+Web Development,The Art of Doing - Web Development for Beginners,Packt,5,7 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/the-art-of-doing-web-development-for-beginners
+Web Development,Svelte 5 & SvelteKit For Hands-On Modern Web Development,Packt,5,6 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/packt-svelte-5-sveltekit-for-hands-on-modern-web-development
+Web Development,"End-to-End Web Development: UI, Databases, APIs",Board Infinity,5,6 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/end-to-end-web-development
+Web Development,Le full stack,Meta,"4,6",234 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/the-full-stack
+Web Development,Spring Boot Web Development with Java,EDUCBA,"4,6",60 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/spring-boot-web-development-with-java
+Web Development,Modern HTML5 & Responsive Web Development Mastery,EDUCBA,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/modern-html5-responsive-web-development-mastery
+Web Development,Développement Web en Flask : Créez votre premier site Web,Coursera,"4,6",7 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/web-development-in-flask-build-your-first-website
+Web Development,Generative AI for Web Development,Scrimba,"4,4",180 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-web-development
+Web Development,"Build a Website using an API with HTML, JavaScript, and JSON",Coursera,"4,2",40 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/showcase-build-a-website-api-html-javascript-json
+Web Development,Full Stack Web Development en Español,Universidad Austral,"4,2",817 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/fullstack-web-development-espanol
+Web Development,Maîtriser le développement web Full stack avec Laravel et PHP,Board Infinity,"4,2",190 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/laravel-framework-and-php
+Web Development,Web Development Foundations,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-web-development-foundations-ufovf
+Web Development,JavaScript pour le développement web,Board Infinity,"4,5",15 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/javascript-for-web-development
+Web Development,Introduction au développement Web et aux bases de l'HTML,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-the-art-of-doing-web-development-for-beginners-usfuy
+Web Development,WebSockets Protocol Explained – Master Web Development,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-web-sockets-protocol-explained-master-web-development-fkxh5
+Business Analytics,Business Analytics with Excel,Johns Hopkins University,"4,8","4,1 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/business-analytics-with-excel
+Business Analytics,Business Analytics,University of Pennsylvania,"4,6",18 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/business-analytics
+Business Analytics,Microsoft Business Analyst,Microsoft,"4,6","1,5 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-business-analyst
+Business Analytics,IBM Business Analyst,IBM,"4,7",14 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-business-analyst-professional-certificate
+Business Analytics,Business Analytics avec Excel : niveau élémentaire à avancé,Johns Hopkins University,"4,8",4 k avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/business-analytics-excel
+Business Analytics,Analyse de données Google,Google,"4,8",177 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-data-analytics
+Business Analytics,Microsoft Power BI Analyste décisionnelle de données,Microsoft,"4,6",9 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-power-bi-data-analyst
+Business Analytics,Business Analytics,University of Illinois Urbana-Champaign,"4,6","1,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/analytics
+Business Analytics,Principes de base de l'analyse d'entreprise,Microsoft,"4,7",1 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-analysis-fundamentals
+Business Analytics,Analyse avancée des entreprises,University of Colorado Boulder,"4,6","5,2 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-analytics-business
+Business Analytics,Business Analysis & Process Management,Coursera,"4,5","7,3 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/business-analysis-process-management
+Business Analytics,Analyse stratégique des entreprises,ESSEC Business School,"4,4","1,3 k avis",Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/strategic-analytics
+Business Analytics,Google Business Intelligence,Google,"4,8",7 k avis,Avancées,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-business-intelligence
+Business Analytics,Fondements de l'analyse stratégique des entreprises,ESSEC Business School,"4,4",662 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/strategic-business-analytics
+Business Analytics,Analyses commerciales à l'aide d'Excel,Simplilearn,"4,5",35 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-analytics-using-excel
+Business Analytics,Introduction to Business Analysis Using Spreadsheets: Basics,Coursera,"4,3",1 k avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/business-analysis-using-spreadsheets
+Business Analytics,Introduction à l'analyse d'entreprise,IBM,"4,7",406 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-business-analysis
+Business Analytics,Business Analytics,Campus BBVA,"4,7",46 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/business-analytics-enus-bbva
+Business Analytics,Introduction à l'analyse d'entreprise : Communiquer avec les données,University of Illinois Urbana-Champaign,"4,6",649 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/intro-business-analytics
+Business Analytics,Business Analytics,Campus BBVA,"4,6",216 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/business-analytics-bbva
+Business Analytics,Introduction à l'analytique appliquée aux entreprises,University of Illinois Urbana-Champaign,"4,6",316 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-applied-business-analytics
+Business Analytics,Unlock Business Insights with Microsoft Excel and Power BI,Microsoft,"4,5",752 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/unlock-business-insights-with-microsoft-excel-and-power-bi
+Business Analytics,L'analyse d'entreprise pour la prise de décision,University of Colorado Boulder,"4,6","1,9 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-analytics-decision-making
+Business Analytics,Introduction à l'analyse des entreprises,Tableau Learning Partner,"4,7",492 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-business-analytics
+Business Analytics,Statistiques et analyses commerciales,Rice University,"4,7",13 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/business-statistics-analysis
+Business Analytics,Données pour les analystes commerciaux à l'aide de Microsoft Excel,Microsoft,"4,7",323 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/data-for-business-analysts-using-microsoft-excel
+Business Analytics,Advanced Business Analytics: Excel Optimization & Simulation,Johns Hopkins University,"4,9",53 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/business-analytics-2
+Business Analytics,D'Excel à MySQL : Techniques d'analyse pour l'entreprise,Duke University,"4,6",15 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/excel-mysql
+Business Analytics,Fundamentals of Business Analysis,Starweaver,"4,6",90 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-business-analysis
+Business Analytics,analyse des personnes,University of Pennsylvania,"4,6","6,2 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/wharton-people-analytics
+Business Analytics,Compétences Excel pour l’analyse et la visualisation des données,Macquarie University,"4,8",6 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/excel-data-analytics-visualization
+Business Analytics,Introduction à l'analyse commerciale et à l'économie de l'information,University of Illinois Urbana-Champaign,"4,6",410 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/analytics-information
+Business Analytics,"AI-Powered Business Analysis: Excel, KPIs & GenAI",Coursera,"4,5",414 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-powered-business-analysis-excel-kpis-and-genai
+Business Analytics,L'analyse au service de la prise de décision,University of Minnesota,"4,7",295 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/analytics-for-decision-making
+Business Analytics,Communication de Résultats de Business Analytics,University of Colorado Boulder,"4,5",520 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/communicating-business-analytics-results
+Business Analytics,Business Analytics : vue d'ensemble,University of Illinois Urbana-Champaign,"4,6",282 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-analytics-executive-overview
+Business Analytics,Mejores Decisiones con Business Analytics,Pontificia Universidad Católica de Chile,"4,7",67 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/mejores-decisiones-con-business-analytics
+Business Analytics,Entreposage de données pour l'informatique décisionnelle,University of Colorado System,"4,5","4,1 k avis",Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-warehousing
+Business Analytics,Data Analytics and Big Data,Illinois Tech,"4,4",78 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/data-analytics-and-big-data
+Business Analytics,Business Intelligence & Analytics,Universidad de Palermo,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/mooc-business-intelligence
+Business Analytics,Analyse marketing,University of Virginia,"4,7","6,4 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/uva-darden-market-analytics
+Business Analytics,Social Media Data Analytics,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/socialmedia-data-analytics
+Business Analytics,Intelligence économique et analyse visuelle,"University of California, Irvine","4,1",31 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-intelligence-visual-analytics
+Business Analytics,Comptabilité analytique,University of Pennsylvania,"4,5",3 k avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/accounting-analytics
+Business Analytics,MySQL pour l'analyse des données et la veille stratégique,Edureka,4,29 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/mysql-for-data-analytics-and-business-intelligence
+Business Analytics,Analyse des données et Visualisation des données,University at Buffalo,"4,7",171 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/data-analyze-visualize
+Business Analytics,Predictive Analytics,Illinois Tech,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-predictive-analytics
+Business Analytics,Analytique des données (Big data),O.P. Jindal Global University,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/big-data-analytics-1
+Business Analytics,Processus d'analyse d'entreprise,Tableau Learning Partner,"4,6",139 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/business-analysis-process
+Business Analytics,商管統計資料分析三 (Analytics for Business and Management (III)),National Taiwan University,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/analytics-for-business-and-management-3
+Digital Marketing,Fondements du marketing numérique et du commerce électronique,Google,"4,8",31 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce
+Digital Marketing,Google Digital Marketing & E-commerce,Google,"4,8",48 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce
+Digital Marketing,Analyze and Optimize Marketing Channel Performance,Coursera,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/analyze-and-optimize-marketing-channel-performance
+Digital Marketing,Digital Marketing,Adobe,"4,8",306 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/adobe-digital-marketing
+Digital Marketing,Attirer et fidéliser des clients grâce au marketing numérique,Google,"4,8","7,7 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/attract-and-engage-customers
+Digital Marketing,Meta Social Media Marketing,Meta,"4,8",23 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/facebook-social-media-marketing
+Digital Marketing,Full Digital Marketing,LearnKartS,"4,5",13 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/digital-marketing-certification-course
+Digital Marketing,Marketing numérique,University of Illinois Urbana-Champaign,"4,7",23 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/digital-marketing
+Digital Marketing,IBM Digital Marketing and Growth Hacking with GenAI,IBM,"4,8",156 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-digital-marketing-and-growth-hacking
+Digital Marketing,Digital Marketing Operations & Analytics,Coursera,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/digital-marketing-operations-analytics
+Digital Marketing,Stratégie de marketing numérique avec Goldman Sachs 10 000 femmes,Goldman Sachs,"4,7",921 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/10kw-digital-marketing
+Digital Marketing,Digital Marketing with Canva,Coursera,"4,5","6,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/digital-marketing-with-canva
+Digital Marketing,Generative AI for Digital Marketing,IBM,"4,7",11 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/generative-ai-for-digital-marketing
+Digital Marketing,Introduction to Digital Marketing,IBM,"4,8",69 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-digital-marketing
+Digital Marketing,Google Ads for Beginners,Coursera,"4,4","5,9 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/google-ads-beginner
+Digital Marketing,Fondamentaux des médias sociaux et du marketing numérique,Digital Marketing Institute,"4,7",399 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/social-media-digital-marketing-fundamentals
+Digital Marketing,Increase Engagement to your Instagram Business Profile,Coursera,4,372 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/increase-engagement-instagram-business-profile
+Digital Marketing,Digital Marketing,Illinois Tech,"4,5",58 avis,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-digital-marketing
+Digital Marketing,Create and Design Digital Products using Canva,Coursera,"4,4","1,3 k avis",Avancées,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/create-design-digital-products-canva
+Digital Marketing,Digital Business Marketing with Easil,Coursera,"4,6",27 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/digital-business-marketing-easil
+Digital Marketing,Search Engine Optimization (SEO) with Squarespace,Coursera,"4,5","1,2 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/search-engine-optimization-with-squarespace
+Digital Marketing,Unilever Digital Marketing Analyst,Unilever,"4,7",325 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/unilever-digital-marketing-analyst
+Digital Marketing,Pensez en dehors de la boîte de réception : Marketing par courrier électronique,Google,"4,8","2,9 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/think-outside-the-inbox
+Digital Marketing,Advanced Digital Marketing,"University of Maryland, College Park","4,6",42 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/advanced-digital-marketing
+Cloud Computing,Introduction au cloud computing,IBM,"4,6","7,7 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-cloud
+Cloud Computing,Fondamentaux Google Cloud : Core Infrastructure,Google Cloud,"4,7",49 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/gcp-fundamentals
+Cloud Computing,Cloud Computing,University of Illinois Urbana-Champaign,"4,3","2,1 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cloud-computing
+Cloud Computing,Essentiels techniques du cloud AWS,Amazon Web Services,"4,8","6,3 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/aws-cloud-technical-essentials
+Cloud Computing,Introduction aux réseaux et à l'informatique en nuage,Microsoft,"4,8",553 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-networking-and-cloud-computing
+Cloud Computing,Architecte de solutions de cloud AWS,Amazon Web Services,"4,8",7 k avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/aws-cloud-solutions-architect
+Cloud Computing,Fondements de l'informatique en nuage,Duke University,"4,5",281 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-computing-foundations-duke
+Cloud Computing,Les bases de l'informatique en nuage (Cloud 101),LearnQuest,"4,5","6,5 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-computing-basics
+Cloud Computing,Consultant en technologie cloud AWS,Amazon Web Services,"4,8",7 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/aws-cloud-technology-consultant
+Cloud Computing,L'essentiel du cloud computing avec la gestion d'Azure,Microsoft,"4,7",18 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-computing-essentials-with-azure-management
+Cloud Computing,Amazon EC2 Basics,Amazon Web Services,"4,6",99 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/aws-amazon-ec2-basics
+Cloud Computing,Cloud Computing Law,Queen Mary University of London,"4,9",179 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/cloud-computing-law
+Cloud Computing,Cloud Computing: Infrastructure and Platforms,Illinois Tech,"4,7",30 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cloud-computing-infrastructure-and-platforms
+Cloud Computing,Construire des solutions d'informatique en nuage à grande échelle,Duke University,"4,4",488 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/building-cloud-computing-solutions-at-scale
+Cloud Computing,Create a Virtual Private Cloud (VPC) Using AWS,Coursera,"4,4",169 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/create-virtual-private-cloud-vpc-aws
+Cloud Computing,Introduction à AWS pour les débutants en informatique dématérialisée,Simplilearn,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-aws-for-cloud-beginners
+Cloud Computing,"Concepts de l'informatique en nuage, partie 1",University of Illinois Urbana-Champaign,"4,3","1,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-computing
+Cloud Computing,Principes de base du cloud computing et du GCP,LearnKartS,"4,4",7 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/gcp-professional-architect-cloud-computing-and-gcp-fundamentals
+Cloud Computing,Technologies de l'information (TI) et principes fondamentaux de l'informatique en nuage,IBM,"4,7",11 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/it-cloud-fundamentals
+Cloud Computing,Principes de base de l'informatique en nuage,LearnQuest,"3,6",42 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-cloud-computing
+Cloud Computing,Sécurité de l'informatique en nuage,University of Colorado System,"4,5",132 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-computing-security
+Cloud Computing,Cloud Computing Primer for Semi-tech and Business Learners,Codio,"4,6",93 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/codio-cloud-computing-primer-semi-technical-business
+Cloud Computing,IoT (Internet des objets) Informatique sans fil et informatique en nuage Technologies émergentes,Yonsei University,"4,7","1,4 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/iot-wireless-cloud-computing
+Cloud Computing,Droit de l'informatique en nuage : Transactions,Queen Mary University of London,"4,9",100 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-computing-law-transactions
+Cloud Computing,Formation au cloud computing Azure pour les débutants,Simplilearn,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/azure-cloud-computing-training-for-beginners
+Cloud Computing,Unleashing the Power of Networks and the Cloud,Illinois Tech,"4,7",37 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/unleashing-the-power-of-networks-and-the-cloud
+Cloud Computing,L'essentiel du cloud pour les dirigeants d'entreprise - Éducation,Amazon Web Services,5,12 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/aws-cloud-essentials-for-business-leaders-education
+Cloud Computing,Introduction à Oracle Cloud Essentials,Oracle,"4,8",12 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-oracle-cloud-essentials
+Cloud Computing,Principes de base de l'informatique en nuage,LearnKartS,"4,4",77 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/aws-cloud-practitioner-certification-cloud-fundamentals
+Cloud Computing,Comment se lancer dans l'informatique en nuage (Cloud Computing),University of Leeds,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/how-to-get-into-cloud-computing
+Cloud Computing,Intro to AWS - Your First Steps in Cloud Computing,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-intro-to-aws-your-first-steps-in-cloud-computing-l4paq
+Cloud Computing,Certified Cloud Security Professional (CCSP): Unit 1,Pearson,,,Avancées,Cours,1 à 4 semaines,https://www.coursera.org/learn/pearson-certified-cloud-security-professional-ccsp-complete-video-course-1-3ghx9
+Cloud Computing,Introduction aux technologies de l'information et au nuage AWS,Amazon Web Services,"4,8",508 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/information-technology-and-aws
+Cloud Computing,Technologies du Cloud computing - Licence,Illinois Tech,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-cloud-computing-technologies-bit
+Cloud Computing,"Virtualisation de l'informatique en nuage, conteneurs et API",Duke University,"4,4",134 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-virtualization-containers-api-duke
+Cloud Computing,Transformation de l'informatique en nuage,Howard University,"4,7",7 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-transformation
+Cloud Computing,Cloud : Infrastructure as a Service - Bachelor,Illinois Tech,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-cloud-infrastructure-as-a-service-bit
+Cloud Computing,Introduction to Cloud Computing & Core AWS Services,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-introduction-to-cloud-computing-and-core-aws-services-umwtp
+Cloud Computing,Problèmes de système dans l'informatique en nuage,Georgia Institute of Technology,"4,5",407 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cloud
+Cloud Computing,Informatique en nuage d'Alibaba,Alibaba Cloud Academy,"4,6",144 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/alibabacloud
+Cloud Computing,Build and Scale with AWS Cloud - A Hands-on Beginners Guide,Packt,,,Débutant,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-build-and-scale-with-aws-cloud-a-hands-on-beginners-guide-e7wfr
+Cloud Computing,Cloud Computing Primer: Software as a Service (SaaS),Codio,"4,6",82 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/codio-cloud-computing-primer-semi-tech-business-software-as-a-service-saas
+Cloud Computing,Technologies de l'informatique en nuage - Master,Illinois Tech,"4,7",7 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-cloud-computing-technologies-mit
+Cloud Computing,Cloud Computing Security - Bachelor's,Illinois Tech,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-cloud-computing-security-bit
+Cloud Computing,Projet d'informatique dématérialisée,University of Illinois Urbana-Champaign,4,41 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-computing-project
+Cloud Computing,Introduction aux principes de sécurité du cloud computing,Google Cloud,"4,6",300 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-security-principles-in-cloud-computing
+Cloud Computing,Droit de l’informatique cloud : protection des données et cybersécurité,Queen Mary University of London,"4,9",76 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cloud-computing-law-data-protection-and-cybersecurity
+Cloud Computing,Concepts de l'informatique en nuage : Partie 2,University of Illinois Urbana-Champaign,"4,6",319 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-computing-2
+Cloud Computing,"Applications de l'informatique en nuage, partie 1 : Systèmes et infrastructure en nuage",University of Illinois Urbana-Champaign,"4,3",845 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/cloud-applications-part1
+Cloud Computing,Cloud Computing Security - Master's,Illinois Tech,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/illinois-tech-cloud-computing-security-mit
+Cybersecurity,Fondements de la cybersécurité,Google,"4,8",40 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-of-cybersecurity
+Cybersecurity,Google Cybersécurité,Google,"4,8",64 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-cybersecurity
+Cybersecurity,Introduction aux principes essentiels de cybersécurité,IBM,"4,8","1,2 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-cybersecurity-essentials
+Cybersecurity,Analyste en cybersécurité chez Microsoft,Microsoft,"4,7","2,9 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-cybersecurity-analyst
+Cybersecurity,Certifié en cybersécurité,ISC2,"4,7","1,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/certified-in-cybersecurity
+Cybersecurity,Introduction aux outils de cybersécurité et aux cyberattaques,IBM,"4,6",16 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-cybersecurity-cyber-attacks
+Cybersecurity,Cybersecurity Operations Fundamentals,Cisco Learning and Certifications,"4,8","1,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cbrops
+Cybersecurity,Architecture de cybersécurité,IBM,"4,8",185 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/cybersecurity-architecture
+Cybersecurity,La cybersécurité pour tous,"University of Maryland, College Park","4,7","3,3 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/cybersecurity-for-everyone
+Cybersecurity,Python pour la cybersécurité,Infosec,"4,5",545 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/pythonforcybersecurity
+Cybersecurity,Automatiser les tâches de cybersécurité avec Python,Google,"4,8","3,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/automate-cybersecurity-tasks-with-python
+Cybersecurity,Principes fondamentaux de la cybersécurité,IBM,"4,8","2,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cybersecurity-fundamentals
+Cybersecurity,AI for Cybersecurity,Johns Hopkins University,"4,3",106 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-for-cybersecurity
+Cybersecurity,Analyste de cybersécurité d'IBM,IBM,"4,6",27 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst
+Cybersecurity,Google Cloud Cybersecurity,Google Cloud,"4,5",409 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-cloud-cybersecurity-certificate
+Cybersecurity,Principes fondamentaux de l'informatique pour la cybersécurité,IBM,"4,6",22 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/it-fundamentals-cybersecurity
+Cybersecurity,Introduction aux principes fondamentaux de la cybersécurité,Coursera,"4,6",914 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-cybersecurity-fundamentals
+Cybersecurity,Cybersecurity Essentials - From Zero to Secure,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-cybersecurity-essentials-from-zero-to-secure-iexc7
+Cybersecurity,Principes fondamentaux de l'attaque et de la défense en matière de cybersécurité,EC-Council,"4,6",794 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cybersecurity-attack-and-defense
+Cybersecurity,Mettez-le au travail : Se préparer aux emplois dans le domaine de la cybersécurité,Google,"4,8","6,2 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/prepare-for-cybersecurity-jobs
+Cybersecurity,Cybersecurity basics for everyone,Universitat Politècnica de València,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-basics-for-everyone
+Cybersecurity,Spécialiste en cybersécurité d'IBM et de l'ISC2,Plusieurs enseignants,"4,7",15 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-isc2-cybersecurity-specialist
+Cybersecurity,Évaluation de la cybersécurité : CompTIA Security+ et CYSA+,IBM,"4,8","1,3 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-assessment-comptia-security-cysa
+Cybersecurity,Palo Alto Networks Cybersécurité,Palo Alto Networks,"4,6",868 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/palo-alto-networks-cybersecurity-fundamentals
+Cybersecurity,Cybersecurity in the AI Era,"University of Maryland, College Park","4,7","3,3 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cybersecurity-in-the-ai-era
+Cybersecurity,Systems and Cybersecurity Fundamentals Part 1,Northeastern University,,,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/systems-and-cybersecurity-fundamentals-part1
+Cybersecurity,Introduction à la cybersécurité et à la gestion des risques,"University of California, Irvine","4,7",336 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/information-security
+Cybersecurity,CompTIA Cybersecurity Analyst (CySA+) CS0-003,Pearson,"4,6",16 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/pearson-comptia-cybersecurity-analyst-cysa-cs0-003
+Cybersecurity,Cybersecurity in modern organizations,Coursera,"4,6","1,1 k avis",Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/cybersecurity-in-modern-organizations
+Cybersecurity,L'IA générative d'IBM pour les professionnels de la cybersécurité,IBM,"4,7",11 k avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-cybersecurity-professionals
+Cybersecurity,Cybersecurity Fundamentals for High-Tech Manufacturing,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-fundamentals-for-high-tech-manufacturing
+Cybersecurity,Cybersecurity Awareness for Everyone,Kennesaw State University,"4,9",62 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cybersecurityzarenessforeveryone
+Cybersecurity,Cybersecurity Prevention and Detection,Pearson,,,Débutant,Spécialisation,1 à 4 semaines,https://www.coursera.org/specializations/pearson-cybersecurity-prevention-and-detection
+Cybersecurity,Sécurité intérieure et cybersécurité,University of Colorado System,"4,7",631 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/homeland-security-cybersecurity
+Cybersecurity,"Cadre de conformité, normes et réglementations en matière de cybersécurité",IBM,"4,7","3,5 k avis",Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/cybersecurity-compliance-framework-standards-regulations
+Cybersecurity,Gestion de la cybersécurité,Kennesaw State University,"4,7","1,4 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/managing-cybersecurity
+Cybersecurity,La cybersécurité pour les entreprises,University of Colorado System,"4,7","1,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cyber-security-business
+Cybersecurity,Cybersécurité et vie privée,Microsoft,"4,9",139 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-and-privacy
+Cybersecurity,Cybersecurity Testing and Prevention,Microsoft,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybesecurity-testing-prevention
+Cybersecurity,Practical Cybersecurity Fundamentals,Pearson,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/pearson-practical-cybersecurity-fundamentals
+Cybersecurity,"Cybersecurity Planning, Management, and Compliance",Microsoft,"4,9",10 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-planning-management-compliance
+Cybersecurity,L’approche GRC de la gestion de la cybersécurité,Kennesaw State University,"4,7",363 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/grc-approach-to-managing-cybersecurity
+Cybersecurity,Les fondements de la cybersécurité,Kennesaw State University,"4,8",723 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/foundations-cybersecurity
+Cybersecurity,Real-World Cybersecurity Leadership,Advancing Women in Tech,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/real-world-cybersecurity-leadership
+Cybersecurity,CompTIA Cybersecurity Analyst (CySA+) CS0-003: Unit 3,Pearson,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/pearson-comptia-cybersecurity-analyst-cysa-cs0-003-video-course-3-cwosx
+Cybersecurity,Introduction to AI for Cybersecurity,Johns Hopkins University,"4,2",88 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-ai-for-cybersecurity
+Cybersecurity,Cybersecurity Best Practices,Coursera,"4,8",61 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-best-practices
+Cybersecurity,Office of the CISO Institute: Cybersecurity Essentials,Google,"4,6",86 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/gcat-cybersecurity-essentials
+Cybersecurity,Cybersecurity Governance and Compliance,LearnKartS,"4,1",7 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cybersecurity-governance-compliance
+Cybersecurity,Introduction aux fondements de la cybersécurité,Infosec,"4,7",516 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-cybersecurity-foundations
+Project Management,Fondamentaux du Projet Management,Google,"4,9",100 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/project-management-foundations
+Project Management,Gestion de projet Google,Google,"4,8",140 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-project-management
+Project Management,Principes et pratiques de la gestion de projet,"University of California, Irvine","4,7",31 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/project-management
+Project Management,Introduction à la gestion de projets,IBM,"4,8","2,3 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-project-management
+Project Management,Gestion de projet Agile,Google,"4,8",15 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/agile-project-management
+Project Management,Project Management,University of Colorado Boulder,"4,7","1,5 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/meem-project-management
+Project Management,Principes fondamentaux de la gestion de projet,Microsoft,"4,6",551 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/project-management-fundamentals-microsoft
+Project Management,gestion de projet de construction,Columbia University,"4,8","7,3 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/construction-project-management
+Project Management,Introduction au Développement Agile et à Scrum,IBM,"4,9","2,7 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/agile-development-and-scrum
+Project Management,Microsoft Project Management: Build Job-Ready Skills,Microsoft,"4,7",732 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-project-management
+Project Management,Capstone : Application de la Gestion de projet dans le monde réel,Google,"4,9",13 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/applying-project-management
+Project Management,Chef de projet IBM,IBM,"4,8","5,6 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-project-manager
+Project Management,Project Management and Planning,Johns Hopkins University,"4,7",126 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/project-management-and-planning
+Project Management,"Project Management: Costs, Risk, Quality, and Compliance",Logical Operations,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/project-management-costs-risk-quality-compliance-lo095033
+Project Management,PMP Exam Preparation,LearnKartS,"4,6",441 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/pmp-certification-training-course
+Project Management,Gestion de projet d'ingénierie,Rice University,"4,7","4,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/engineering-project-management
+Project Management,Project Management,"University of California, Irvine","4,7",33 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/uci-project-management
+Project Management,ChatGPT for Project Management - Leveraging AI for Success,Vanderbilt University,"4,8","7,8 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/chatgpt-project-management
+Project Management,Project Management in Construction,L&T EduTech,"4,7",64 avis,Avancées,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/project-management-in-construction
+Project Management,Project Management: Applying Predictive and Adaptive Methods,Logical Operations,,,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/project-management-applying-predictive-adaptive-methods
+Project Management,Practical Project Management for Managers,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/practical-project-management-for-managers
+Project Management,Project Management Essentials,Howard University,"4,6","1,1 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/project-management-essentials
+Project Management,Business Analysis & Process Management,Coursera,"4,5","7,3 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/business-analysis-process-management
+Project Management,Introduction to Project Management,Coursera,"4,6","2,2 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/introduction-project-management
+Software Engineering,Introduction au génie logiciel,IBM,"4,7","4,5 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-software-engineering
+Software Engineering,IBM DevOps et ingénierie logicielle,IBM,"4,6",64 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/devops-and-software-engineering
+Software Engineering,Programmation Java et principes fondamentaux du génie logiciel,Duke University,"4,6",22 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/java-programming
+Software Engineering,Génie logiciel,The Hong Kong University of Science and Technology,"4,6",609 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-engineering
+Software Engineering,IA générative : les bases de l'ingénierie des requêtes,IBM,"4,8","7,7 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/generative-ai-prompt-engineering-for-everyone
+Software Engineering,Principes fondamentaux du génie logiciel appliqué,IBM,"4,6",51 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-engineering-fundamentals
+Software Engineering,Développeur(euse) de logiciels Full Stack IBM,IBM,"4,6",60 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer
+Software Engineering,Amazon Junior Software Developer,Amazon,"4,4",528 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/amazon-junior-software-developer
+Software Engineering,Conception et architecture des logiciels,University of Alberta,"4,6",4 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-design-architecture
+Software Engineering,Generative AI Software Engineering,Vanderbilt University,"4,8","8,5 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/generative-ai-software-engineering
+Software Engineering,Microsoft Full-Stack Developer,Microsoft,"4,6",368 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/microsoft-full-stack-developer
+Software Engineering,Claude Code : Génie logiciel avec des agents IA génératifs,Vanderbilt University,"4,9",89 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/claude-code
+Software Engineering,IBM Generative AI Engineering,IBM,"4,6",98 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering
+Software Engineering,Cycle de développement des logiciels,University of Minnesota,"4,7","9,8 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-development-lifecycle
+Software Engineering,IBM AI Engineering,IBM,"4,6",22 k avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ai-engineer
+Software Engineering,IBM Applied DevOps Engineering,IBM,"4,7","7,9 k avis",Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-applied-devops-engineering
+Software Engineering,Tests de logiciels et automatisation,University of Minnesota,"4,2",1 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-testing-automation
+Software Engineering,"Software Testing, Deployment, and Maintenance Strategies",IBM,"4,8",12 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/software-testing-deployment-and-maintenance-strategies
+Software Engineering,Développeur IA IBM,IBM,"4,6",80 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai
+Software Engineering,Génie logiciel : modélisation des systèmes logiciels avec UML,The Hong Kong University of Science and Technology,"4,6",360 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/software-engineering-modeling-software-systems-using-uml
+Software Engineering,IBM Data Engineering,IBM,"4,6",62 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-data-engineer
+Software Engineering,L'IA générative pour les développeurs de logiciels,IBM,"4,7",11 k avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-software-developers
+Software Engineering,Introduction au développement de logiciels,Amazon,"4,5",365 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-software-development
+Software Engineering,Generative AI in Software Engineering Certification,Simplilearn,"3,8",15 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-in-software-engineering-certification
+Mobile Development,Meta React Native,Meta,"4,6",11 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-react-native
+Mobile Development,Introduction au développement d'applications mobiles,IBM,"4,7",204 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-mobile-app-development
+Mobile Development,Apply Flutter Fundamentals to Build Interactive Apps,EDUCBA,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/apply-flutter-fundamentals-build-interactive-apps
+Mobile Development,IBM iOS and Android Mobile App Developer,IBM,"4,6","8,1 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-ios-android-mobile-app-developer-pc
+Mobile Development,Meta Développeur Android,Meta,"4,6","9,1 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/meta-android-developer
+Mobile Development,Developing Mobile Apps with Flutter,IBM,"4,5",162 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/developing-mobile-apps-with-flutter
+Mobile Development,Introduction au développement mobile,Meta,"4,7",597 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/intro-to-mobile-development
+Mobile Development,Generative AI for Mobile App Developers,IBM,"4,7",11 k avis,Avancées,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-mobile-app-developers
+Mobile Development,Développeur Meta iOS,Meta,"4,6","8,6 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/meta-ios-developer
+Mobile Development,"Flutter et Dart : Développer des applications iOS, Android et mobiles",IBM,"4,5",144 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/flutter-and-dart-developing-ios-android-mobile-apps
+Mobile Development,Développement avancé d'applications sous Android,Imperial College London,"4,3",131 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/advanced-app-android
+Mobile Development,Mastering Android App Development,"Birla Institute of Technology & Science, Pilani",,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/mastering-android-app-development-bits
+Mobile Development,Advanced Kotlin for Multi-Platform Development,Board Infinity,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/advance-kotlin-for-multi-platform-development
+Mobile Development,Build Interactive Flutter Apps with Practical UI Design,EDUCBA,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/build-interactive-flutter-apps-practical-ui-design
+Mobile Development,Apply Flutter App Development From Beginner to Advanced,EDUCBA,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/google-flutter-app-development-beginner-advanced
+Mobile Development,Apply React & React Native Through Real-World Projects,EDUCBA,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/apply-react-react-native-real-world-projects
+Mobile Development,Meta Android UI Development,Meta,"4,6","1,9 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-android-ui-development
+Mobile Development,Build Dynamic No-Code Apps,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/build-dynamic-no-code-apps
+Mobile Development,"Security, Testing, and Deployment",Microsoft,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/security-testing-and-development
+Mobile Development,Meta iOS UI Development,Meta,"4,6","1,3 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-ios-ui-development
+Mobile Development,Développement mobile et JavaScript,Meta,"4,1",133 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/mobile-development-and-javascript
+Mobile Development,Introduction au développement d'applications mobiles Android,Meta,"4,6","1,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-android-mobile-application-development
+Mobile Development,"Advanced iOS Development with Swift, Gestures & APIs",EDUCBA,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/advanced-ios-development-swift-gestures-apis
+Mobile Development,développement d'applications iOS avec Swift,University of Toronto,"3,9","1,6 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/app-development
+UI/UX Design,Conception d'expérience utilisateur Google,Google,"4,8",97 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-ux-design
+UI/UX Design,Principes de conception de l’expérience utilisateur (UX),Google,"4,8",75 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-user-experience-design
+UI/UX Design,Concepteur UI / UX,California Institute of the Arts,"4,7","8,1 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ui-ux-design
+UI/UX Design,IBM UI/UX Designer,IBM,"4,8","2,8 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-ui-ux-designer
+UI/UX Design,Principes de conception UX/UI,Meta,"4,6","1,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/principles-of-ux-ui-design
+UI/UX Design,Principes fondamentaux du concepteur UI/UX,Microsoft,"4,7",470 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-uiux-design
+UI/UX Design,Beginner: Figma UI / UX Design Essentials,Skillshare,"4,1",24 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/beginnerfigmauiuxdesignessentials
+UI/UX Design,AI Powered UI/UX Design,AI CERTs,"2,6",8 avis,Avancées,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-powered-ui-ux-design
+UI/UX Design,Créer des interfaces utilisateurs (UI) dynamiques pour les sites web,Google,"4,8","3,8 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/responsive-web-design-adobe-xd
+UI/UX Design,Intermediate to Advanced: Professional Figma UI / UX Design,Skillshare,"4,6",22 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/intermediatetoadvancedprofessionalfigma-ui-uxdesign
+UI/UX Design,Conception d'interfaces et d'expériences utilisateur (UI/UX),IBM,"4,5",305 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/designing-user-interfaces-and-experiences-uiux
+UI/UX Design,Microsoft UX Design,Microsoft,"4,7",607 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ux-design
+UI/UX Design,Projet Capstone : Appliquer le concepteur UI/UX dans le monde réel,IBM,"4,8",9 avis,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/ux-ui-captsone-project
+UI/UX Design,UI/UX Design Principles,Microsoft,"4,9",7 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/uiux-design-principles
+UI/UX Design,UI/UX Design Fundamentals & Prototyping with Generative AI,SkillUp,"4,8",64 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/uiux-design-fundamentals-prototyping-with-generative-ai
+UI/UX Design,Recherche et conception de l'expérience utilisateur,University of Michigan,"4,7","2,3 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/michiganux
+UI/UX Design,Introduction au concepteur UX/UI,IBM,"4,7",82 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-uxui-design
+UI/UX Design,Introduction à la conception UX Programme de certificat MasterTrack Certificates,University of Minnesota,"4,1",43 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/ux-design-open-content-shell
+UI/UX Design,"Concepteur d'interface utilisateur : Principes, prototypage, pratiques",Coursera,"4,8",41 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/user-interface-design-principles-prototyping-practices
+UI/UX Design,Introduction à la conception d’expérience utilisateur,Georgia Institute of Technology,"4,6",9 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/user-experience-design
+UI/UX Design,Figma for UI/UX: Master Web Design in Figma,Packt,"4,3",31 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-figma-for-ui-ux-master-web-design-in-figma-essgs
+UI/UX Design,Évaluer les conceptions avec les utilisateurs,University of Michigan,"4,8",299 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/evaluating-designs-with-users
+UI/UX Design,Évaluer les interfaces utilisateurs,University of Minnesota,"4,7",272 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/ui-testing
+UI/UX Design,Comprehensive UX and Responsive Web Design,Northeastern University,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/comprehensive-ux--responsive-web-design
+UI/UX Design,Generative AI for UI UX Design,IBM,"4,7",11 k avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-ui-ux-design
+UI/UX Design,"Démarrer le processus de conception d’expérience utilisateur : créer de l’empathie, définir et imaginer",Google,"4,8",17 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/start-ux-design-process
+UI/UX Design,Figma UI UX Design Essentials Pt.1 : Tools & Foundations (en anglais),Skillshare,"3,8",19 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/figma-ui-ux-design-essentials-pt1-tools--foundations
+UI/UX Design,Figma UI UX Design Essentials Pt.2 : Layout & Components (en anglais),Skillshare,,,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/figma-ui-ux-design-essentials-pt2-layout--components
+UI/UX Design,Product Design and UX/UI Fundamentals,Microsoft,"4,5",23 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/microsoft-product-design-and-ux-ui-fundamentals
+UI/UX Design,Product Design and UX/UI Fundamentals,Xbox,"4,7",10 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/xbox-product-design-and-uxui-fundamentals
+UI/UX Design,Le concepteur UX en pratique : Accessibilité et collaboration,Microsoft,"4,8",96 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/ux-design-in-practice-accessibility-and-collaboration
+UI/UX Design,Conception d'interface utilisateur et prototypage,Microsoft,"4,4",63 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/user-interface-design-and-prototyping
+UI/UX Design,Next-Gen UX and UI,Coursera,"4,4",183 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/next-gen-ux-and-ui
+UI/UX Design,Interaction Design and UX/UI Principles,Xbox,"4,7",11 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/xbox-interaction-design-and-ux-ui-principles
+UI/UX Design,"Figma, Sketch & Miro for UX Design",Coursera,"4,6",30 avis,Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/coursera-ux-design-toolkit
+UI/UX Design,Mener des recherches UX et tester les premiers concepts,Google,"4,8",6 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/conduct-ux-research
+UI/UX Design,Expérience utilisateur (UX),Microsoft,"4,6",106 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/designing-for-user-experience
+UI/UX Design,User experience design,University of Cambridge,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/user-experience-design-cam
+UI/UX Design,UI/UX Design with Sketch: Travel Booking App,Coursera,,,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/uiux-design-with-sketch-travel-booking-app
+UI/UX Design,Concevoir une expérience utilisateur pour le bien social et se préparer à l'emploi,Google,"4,8",5 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/ux-design-jobs
+UI/UX Design,Éléments visuels de la conception de l'interface utilisateur,California Institute of the Arts,"4,7","6,4 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/visual-elements-user-interface-design
+UI/UX Design,UI Design for Web Developers,Scrimba,"4,5",21 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ui-design
+UI/UX Design,Foundations and Advanced Practices in UX Design,Indian Institute of Technology Guwahati,"4,2",13 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ux-design-and-hci-iitg
+UI/UX Design,Conception de l'interface utilisateur,University of Minnesota,"4,6","1,8 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/user-interface-design
+UI/UX Design,Expérience utilisateur et design d'interaction pour AR/VR/MR/XR,University of Michigan,"4,7",178 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/user-experience-interaction-design-augmented-virtual-mixed-extended-reality
+UI/UX Design,Conception de sites web : stratégie et architecture des informations,California Institute of the Arts,"4,8","1,3 k avis",Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/web-design-strategy
+UI/UX Design,"Maîtriser l'IUG d'Unité : Concevoir, animer et scénariser des menus",EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/master-unity-gui-design-animate-script-menus
+UI/UX Design,Figma Micro Design d'interaction Design Training,Simplilearn,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/figma-micro-interaction-design-training
+UI/UX Design,IA générative : l'avenir du concepteur UX UI,SkillUp,"4,7",33 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/gen-ai-the-future-of-uxui-design
+UI/UX Design,L'expérience utilisateur dans la conception de jeux,Epic Games,"4,1",23 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/user-experience-in-game-design
+Blockchain,Blockchain,University at Buffalo,"4,6",9 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/blockchain
+Blockchain,Bases de la blockchain,University at Buffalo,"4,6","7,8 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/blockchain-basics
+Blockchain,La blockchain et les crypto-monnaies expliquées,University of Michigan,"4,7",970 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/crypto-finance
+Blockchain,Cryptocurrency et Blockchain : Une introduction aux monnaies numériques,University of Pennsylvania,"4,6","1,5 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/wharton-cryptocurrency-blockchain-introduction-digital-currency
+Blockchain,Introduction aux technologies de la blockchain,INSEAD,"4,7","2,5 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-blockchain-technologies
+Blockchain,La révolution de la blockchain,INSEAD,"4,7","3,1 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/blockchain-revolution-enterprise
+Blockchain,Finance décentralisée (DeFi) : L'avenir de la finance,Duke University,"4,8","2,1 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/decentralized-finance-duke
+Blockchain,La révolution blockchain dans les services financiers,INSEAD,"4,7",1 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/blockchain-financial-services
+Blockchain,Principes fondamentaux du Web3 et de la blockchain,INSEAD,"4,6",111 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/web3-blockchain-fundamentals
+Blockchain,Building DApps In Ethereum Blockchain,EDUCBA,"4,9",140 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/building-dapps-ethereum-blockchain
+Blockchain,Blockchain Innovation Deep Dive,Creo Incubator,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-innovation-deep-dive
+Blockchain,Blockchain Applications in Fintech,INSEAD,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/blockchain-applications-in-fintech
+Blockchain,Technologies du Bitcoin et des cryptomonnaies,Princeton University,"4,6","3,1 k avis",Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/cryptocurrency
+Blockchain,IA générative et blockchain,INSEAD,"4,8",26 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/generative-ai-and-blockchain
+Blockchain,Introduction au cloud computing,IBM,"4,6","7,7 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/introduction-to-cloud
+Blockchain,Blockchain Foundations & Smart Contracts,AI CERTs,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/blockchaino-fundations-smart-contracts
+Blockchain,Sécurité de blockchain,Infosec,"4,6",84 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-security
+Blockchain,Blockchain,"University of California, Irvine","4,2",231 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/uci-blockchain
+Blockchain,From Blocks to Build: Blockchain Dev Essentials,AI CERTs,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/from-blocks-to-build-blockchain-dev-essentials
+Blockchain,Complete DApp - Solidity and React - Blockchain Development,Packt,"4,5",10 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-complete-dapp-solidity-and-react-blockchain-development
+Blockchain,Certified Blockchain Security Professional (CBSP) Exam Prep,SkillUp,5,9 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/certifiedblockchainsecurityprofessionalexamprepspecialization
+Blockchain,Blockchains and Cryptocurrencies Fundamentals,Macquarie University,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchains-and-cryptocurrencies-fundamentals
+Blockchain,Introduction à la blockchain,Association of International Certified Professional Accountants,"4,6",213 avis,Débutant,Spécialisation,1 à 4 semaines,https://www.coursera.org/specializations/introduction-to-blockchain
+Blockchain,La blockchain,"University of California, Irvine","4,2",177 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/uciblockchain
+Blockchain,Blockchain Technology Applied,Board Infinity,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/blockchain-technology-applied
+Blockchain,Blockchain Solution Architecture,LearnQuest,"4,7",16 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/blockchain-solution-architecture
+Blockchain,Modèles économiques de la blockchain,Duke University,"4,7",389 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-business-models
+Blockchain,Security for Blockchain and DApps,LearnQuest,"4,6",20 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/security-for-blockchain-and-dapps
+Blockchain,Web3 and Blockchain in Global Commerce,INSEAD,"4,7",72 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/web3-blockchain-global-commerce
+Blockchain,Fintech : Fondements et applications de la technologie financière,University of Pennsylvania,"4,6","3,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/wharton-fintech
+Blockchain,Financement de la chaîne d'approvisionnement et technologie blockchain,New York Institute of Finance,"4,6",377 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/supply-chain-finance-and-blockchain-technology
+Blockchain,"Blockchain, crypto-actifs et finance décentralisée",INSEAD,"4,6",382 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/blockchain-crypto-decentralized-finance
+Blockchain,Plateformes de blockchain,University at Buffalo,"4,6","1,1 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/blockchain-platforms
+Blockchain,Build a Blockchain-Based Stock Trading Website,EDUCBA,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/build-blockchain-based-stock-trading-website
+Blockchain,Contrats intelligents,University at Buffalo,"4,6","2,3 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/smarter-contracts
+Blockchain,Practical Blockchain and Cryptocurrency,Pearson,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/pearson-practical-blockchain-and-cryptocurrency-livelessons-bcgwo
+Blockchain,Innovations dans le domaine des technologies financières (Fintech),University of Michigan,"4,7","2,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/financialtechnology
+Blockchain,Introduction à la blockchain pour les services financiers,INSEAD,"4,7",690 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/intro-blockchain-financial-services
+Blockchain,Applications décentralisées (Dapps),University at Buffalo,"4,5","1,2 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/decentralized-apps-on-blockchain
+Blockchain,Introduction to Ethereum Blockchain,EDUCBA,5,49 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/building-dapps-in-ethereum-blockchain
+Blockchain,Blockchain for Leaders,AI CERTs,,,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/blockchain-for-leaders
+Blockchain,Introduction au financement de la chaîne d'approvisionnement et à la technologie blockchain,New York Institute of Finance,"4,6",298 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-supply-chain-finance-blockchain-technology
+Blockchain,Infrastructure de financement décentralisé (DeFi),Duke University,"4,8","1,6 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/decentralized-finance-infrastructure-duke
+Blockchain,Blockchain Security - Intermediate Practices,LearnQuest,,,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-security-intermediate-practices
+Blockchain,L'évolutivité de la blockchain et ses fondements dans les systèmes distribués,The University of Sydney,"4,5",120 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-scalability
+Blockchain,Analyse de l'opportunité Blockchain,INSEAD,"4,6",213 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-opportunity-analysis
+Blockchain,Complete Cryptocurrency & Blockchain Course | Learn Solidity,Packt,,,Débutant,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-complete-cryptocurrency-and-blockchain-course-learn-solidity-ihzll
+Blockchain,Blockchain : bases et cas d’utilisation,ConsenSys Academy,"4,7",846 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/blockchain-foundations-and-use-cases
+Internet of Things,Introduction à la programmation de l'Internet des objets (IOT),"University of California, Irvine","4,7",20 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/iot
+Internet of Things,Introduction à l'internet des objets et aux systèmes embarqués,"University of California, Irvine","4,7",13 k avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot
+Internet of Things,Introduction to Internet of Things,IIT Bombay,"4,7",81 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-internet-of-things
+Internet of Things,L'internet des objets en action,University of Illinois Urbana-Champaign,"4,7",622 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/uiuc-iot
+Internet of Things,IoT (Internet des objets) Informatique sans fil et informatique en nuage Technologies émergentes,Yonsei University,"4,7","1,4 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/iot-wireless-cloud-computing
+Internet of Things,Learn Bits and Bytes of Raspberry Pi & IoT using Node-RED,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-learn-bits-and-bytes-of-raspberry-pi-iot-using-node-red-tzic5
+Internet of Things,Internet des objets et IA Cloud,University of California San Diego,"4,2","1,8 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/internet-of-things
+Internet of Things,Internet industriel des objets (IIoT),University of Michigan,"4,5",207 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/industrial-internet-of-things
+Internet of Things,La cybersécurité et l'internet des objets,Kennesaw State University,"4,6","2,2 k avis",Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-cyber-security
+Internet of Things,Développer l'internet industriel des objets,University of Colorado Boulder,"4,6",854 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/developing-industrial-iot
+Internet of Things,Gestion de projet Google,Google,"4,8",140 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-project-management
+Internet of Things,Google IT Support,Google,"4,8",212 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-it-support
+Internet of Things,Python pour tous,University of Michigan,"4,8",280 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python
+Internet of Things,Internet industriel des objets appliqué,L&T EduTech,"4,8",6 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/applied-industrial-internet-of-things
+Internet of Things,Réseaux IdO,University of Illinois Urbana-Champaign,"4,8",40 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-networking
+Internet of Things,Introduction à l'architecture des dispositifs IoT intelligents,28DIGITAL,"4,2",311 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-devices
+Internet of Things,Démarrer avec Azure IOT Hub,Coursera,"4,5",85 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/getting-started-with-azure-iot-hub
+Internet of Things,Internet of Things (IoT) Security (Exam ITS-110),CertNexus,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/internet-of-things-iot-security-its110
+Internet of Things,Internet of Things (IoT) Practitioner (Exam ITP-110),CertNexus,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/internet-of-things-iot-practitioner-itp110
+Internet of Things,IoT Security: Interface and Data Security,CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-security-interface-data-security-cnx0006
+Internet of Things,Internet of Things: Foundations of Design and Development,CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/internet-of-things-iot-foundations-design-development-cnx0002
+Internet of Things,Internet of Things: Connectivity and Data Intelligence,CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/internet-of-things-iot-connectivity-data-intelligence-cnx0002
+Internet of Things,Internet of Things: Governance and Real-World Implementation,CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/internet-of-things-iot-governance-real-world-implementation-cnx0002
+Internet of Things,Allen Bradley Micro850 PLC with IIoT,Packt,,,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-allen-bradley-micro850-plc-with-iiot
+Internet of Things,Industrial Internet of Things Graduate Certificate,University of Colorado Boulder,,,Certificat d'études supérieures,6 à 12 mois,,https://www.coursera.org/certificates/iiot-boulder
+Internet of Things,IoT Security: Access Control and Network Security,CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-security-access-control-network-cnx0006
+Internet of Things,"IoT Security: Privacy, Software, and Physical Security",CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-security-privacy-software-physical-security-cnx0006
+Internet of Things,Google Cybersécurité,Google,"4,8",64 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-cybersecurity
+Internet of Things,IoTBIZ (Exam IOZ-110),CertNexus,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/iotbiz-exam-ioz-110-cnx0004
+Internet of Things,Google Digital Marketing & E-commerce,Google,"4,8",48 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce
+Internet of Things,Industrial IoT Integration with Micro850 PLC,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-industrial-iot-integration-with-micro850-plc-bdnii
+Internet of Things,Analyse de données Google,Google,"4,8",177 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-data-analytics
+Internet of Things,Science des données IBM,IBM,"4,6",149 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-data-science
+Internet of Things,Fondements de l'entreprise,University of Pennsylvania,"4,7",26 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/wharton-business-foundations
+Internet of Things,"Master AWS IoT: Build, Automate & Deploy Smart Systems",EDUCBA,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/master-aws-iot-build-automate-deploy-smart-systems
+Internet of Things,IBM Generative AI Engineering,IBM,"4,6",98 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering
+Internet of Things,Technologie de fabrication et de conception numériques,University at Buffalo,"4,6",7 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/digital-manufacturing-design-technology
+Internet of Things,Programmation pour le projet de l'internet des objets,"University of California, Irvine","4,7",951 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/internet-of-things-project
+Internet of Things,Fondements de la cybersécurité,Google,"4,8",40 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-of-cybersecurity
+Internet of Things,Internet des objets V2 : DragonBoard™ apporter et écosystème communautaire,University of California San Diego,"3,8",39 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/internet-of-things-dragonboard-version2
+Internet of Things,L'internet des objets : Comment en sommes-nous arrivés là ?,University of California San Diego,"3,9","1,2 k avis",Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/internet-of-things-history
+Internet of Things,Les bits et les octets des réseaux informatiques,Google,"4,7",52 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/computer-networking
+Internet of Things,Fondamentaux de l’assistance technique,Google,"4,8",163 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/technical-support-fundamentals
+Internet of Things,Technologies émergentes : Des smartphones aux technologies de l'information et de la communication (IdO) en passant par les données massives (Big Data),Yonsei University,"4,7","2,1 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/emerging-technologies
+Internet of Things,IoT Enabled Farming,EDUCBA,"4,6",243 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/iot-enabled-farming
+Internet of Things,Internet des objets : Technologies multimédias,University of California San Diego,"4,7",307 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/internet-of-things-multimedia
+Internet of Things,Fondements du marketing numérique et du commerce électronique,Google,"4,8",31 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce
+Internet of Things,Developing Secure IoT Applications,EDUCBA,"4,9",19 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/developing-secure-iot-applications
+Internet of Things,Apprendre comment apprendre : des outils mentaux puissants qui vous aideront à maitriser les sujets difficiles,Deep Teaching Solutions,"4,8",93 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/learning-how-to-learn
+Internet of Things,Interfaçage avec le Raspberry Pi,"University of California, Irvine","4,7","1,6 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/raspberry-pi-interface
+DevOps,Introduction à DevOps,IBM,"4,8","4,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/intro-to-devops
+DevOps,IBM DevOps et ingénierie logicielle,IBM,"4,6",64 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/devops-and-software-engineering
+DevOps,Design and Implement DevOps Automation CI/CD Pipelines,EDUCBA,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/design-implement-devops-automation-cicd-pipelines
+DevOps,DevOps Mastery,KodeKloud,"4,6",245 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/devops-mastery
+DevOps,IBM Applied DevOps Engineering,IBM,"4,7","7,9 k avis",Intermédiaire,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-applied-devops-engineering
+DevOps,DevOps Complete Course,Packt,"4,3",23 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-devops-complete-course
+DevOps,"Fondations IBM DevOps, Cloud et Agile",IBM,"4,7",13 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/devops-cloud-and-agile-foundations
+DevOps,"Master DevOps: CI/CD, Automation & Monitoring",Edureka,,,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/master-devops-ci-cd-automation-monitoring
+DevOps,Intégration et livraison continues (CI/CD),IBM,"4,7",246 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/continuous-integration-and-continuous-delivery-ci-cd
+DevOps,Preparing for Google Cloud Certification: Cloud DevOps Engr,Google Cloud,"4,7",54 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/sre-devops-engineer-google-cloud
+DevOps,DevOps and AI on AWS,Amazon Web Services,"4,6",47 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/devops-ai-aws
+DevOps,Déploiement et DevOps,Microsoft,"4,1",9 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/deployment-and-devops
+DevOps,"DevOps, DataOps, MLOps",Duke University,"4,1",215 avis,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/devops-dataops-mlops-duke
+DevOps,Amazon DevOps Guru Getting Started,Amazon Web Services,"4,4",60 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/amazon-devops-guru-getting-started
+DevOps,Surveillance et observabilité pour le développement et DevOps,IBM,"4,6",98 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/monitoring-and-observability-for-development-and-devops
+DevOps,DevOps Cours prérequis,KodeKloud,"4,7",109 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/devops-prerequisite-course
+DevOps,Exam Prep AZ-400: Microsoft DevOps Engineer Expert,Whizlabs,,,Avancées,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/exam-prep-az-400-microsoft-devops-engineer-expert
+DevOps,Culture et état d'esprit DevOps,"University of California, Davis","4,7",594 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/devops-culture-and-mindset
+DevOps,Scripting Python pour DevOps,LearnQuest,4,209 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python-scripting-devops
+DevOps,Exam Prep: AWS Certified DevOps Engineer - Professional,Whizlabs,"4,4",29 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/exam-prep-dop-c02-aws-certified-devops-engineer--professional
+DevOps,"Master AWS DevOps: Automate, Deploy & Scale Efficiently",EDUCBA,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/master-aws-devops-automate-deploy-scale-efficiently
+DevOps,Mastering GitHub for Developers and DevOps,Packt,"4,5",28 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-mastering-github-for-developers-and-devops
+DevOps,Advanced ALM with Azure DevOps & GitHub Integration,Coursera,,,Avancées,Cours,1 à 4 semaines,https://www.coursera.org/learn/advanced-alm-strategies-with-azure-devops-and-github-integra
+DevOps,CI/CD with GitLab: Automating DevOps Pipelines,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cicd-with-gitlab-automating-devops-pipelines
+DevOps,Getting Started with Azure DevOps Boards,Coursera,"4,5",627 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/getting-started-azure-devops-boards
+DevOps,Principes fondamentaux de DevOps et de Jenkins,LearnKartS,"3,6",34 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/copy-of-jenkins-from-zero-to-hero
+DevOps,DevOps for Network Automation (NetDevOps),Cisco Learning and Certifications,"4,7",33 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/devops-for-network-automation-netdevops
+DevOps,DevOps sur AWS et gestion de projet,Amazon Web Services,"4,8",120 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/devops-and-project-management-aws
+DevOps,Les bases de Kubernetes pour DevOps,KodeKloud,"4,6",20 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/kubernetes-basic-for-devops
+DevOps,GenAI pour les praticiens DevOps,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/genai-for-devops-practitioners
+DevOps,Livraison continue et DevOps,University of Virginia,"4,6","1,6 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/uva-darden-continous-delivery-devops
+DevOps,AWS Certified DevOps Engineer - Professional,Packt,,,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-aws-certified-devops-engineer-professional-5agv7
+DevOps,Deploying Microservices to Kubernetes using Azure DevOps,Whizlabs,"4,1",7 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/deploying-microservices-to-kubernetes-using-azure-devops
+DevOps,Continuous Delivery and Managing Builds with Azure DevOps,Coursera,"4,6",7 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/continuous-delivery-managing-builds-azure-devops
+DevOps,Open Practices for your DevOps Journey,Red Hat,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/open-practices-for-your-devops-journey
+DevOps,Cyber Security: DevOps,Macquarie University,"4,5",16 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cyber-security-devops
+DevOps,Mastering Docker Essentials - Hands-on DevOps,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-mastering-docker-essentials-hands-on-devops-sreqv
+DevOps,DevOps et IA sur AWS : AIOps,Amazon Web Services,5,9 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/aiops-aws
+DevOps,Essentiels DevOps et Contrôle des versions avec Git,Edureka,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/devops-essentials-and-version-control-with-git
+DevOps,Advanced DevOps Tools and Practices,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-advanced-devops-tools-and-practices-tgusu
+DevOps,Getting Started with AWS DevOps,Whizlabs,"4,1",15 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/getting-started-with-aws-devops
+DevOps,"Real World DevOps Project with Ansible, Docker and GitLab",Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-real-world-devops-project-with-ansible-docker-and-gitlab-ub4tp
+DevOps,Gemini pour les ingénieurs DevOps,Google Cloud,5,6 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/gemini-for-devops-engineers
+DevOps,Projet DevOps Capstone,IBM,"4,8",168 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/devops-capstone-project
+DevOps,Rust pour DevOps,Duke University,"4,1",16 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/rust-for-devops
+DevOps,Automate your DevOps pipelines with GitHub Actions,Packt,,,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-automate-your-devops-pipelines-with-github-actions-75x3n
+DevOps,JFrog DevOps: Secure Software Pipelines & CI/CD Mastery,Coursera,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/jfrog-devops-secure-software-pipelines--cicd-mastery
+DevOps,Linux: Introduction to Shell Scripting for DevOps,Coursera,"4,6",84 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/intro-shell-bash-scripting-devops
+Game Development,Conception et développement de jeux avec l'Unité,Michigan State University,"4,7",650 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/game-design-and-development
+Game Development,Epic Games Game Design,Epic Games,"4,3",590 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/epic-games-game-design-professional-certificate
+Game Development,Getting Started with Unity and Basic 2D/3D Game Development,Packt,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/game-getting-started-with-unity-and-basic-2d-3d-game-development-ezykz
+Game Development,Advanced Android Game Development in Unity,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-advanced-android-game-development-in-unity-gnl6y
+Game Development,Unreal Engine FPS & Action Game Development,EDUCBA,"4,8",18 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/unreal-engine-fps-action-game-development
+Game Development,Programmation C# pour le développement de jeux Unity,University of Colorado System,"4,6","2,8 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/programming-unity-game-development
+Game Development,Programmation C++ pour le développement de jeux Unreal,University of Colorado System,"4,5",212 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cplusplusunrealgamedevelopment
+Game Development,Développement et prototypage de jeux,Epic Games,4,20 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/game-development-and-prototyping
+Game Development,Introduction to Basic Game Development using Scratch,Coursera,"4,5","1,5 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/introduction-to-basic-game-development-using-scratch
+Game Development,Basic Game Development with Levels using Scratch,Coursera,"4,7",141 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/basic-game-development-with-levels-using-scratch
+Game Development,IBM DevOps et ingénierie logicielle,IBM,"4,6",64 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/devops-and-software-engineering
+Game Development,Développeur(euse) de logiciels Full Stack IBM,IBM,"4,6",60 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer
+Game Development,Conception de jeux : Art et concepts,California Institute of the Arts,"4,7","4,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/game-design
+Game Development,Game Development with GameMaker,University of Colorado System,"4,9",11 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/game-development-gamemaker
+Game Development,Unity Game Development: Fun Mini-Game Projects,EDUCBA,5,11 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/unity-game-development-fun-mini-game-projects
+Game Development,Meta Développeur Android,Meta,"4,6","9,1 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/meta-android-developer
+Game Development,Développeur Meta iOS,Meta,"4,6","8,6 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/meta-ios-developer
+Game Development,Meta Full Stack Developer: Front-End & Back-End from Scratch,Meta,"4,7",25 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/meta-full-stack-developer
+Game Development,AI Game Development Essentials with Unity 6,Packt,,,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/packt-ai-game-development-essentials-with-unity-6
+Game Development,Introduction à la conception de jeux,Epic Games,"4,4",490 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-game-design
+Game Development,"Unity Advanced Game Development, Physics & GUI",EDUCBA,,,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/unity-advanced-game-development-physics-gui
+Game Development,Introduction au développement d'applications mobiles Android,Meta,"4,6","1,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-android-mobile-application-development
+Game Development,Unity Game Development: Beginner to Intermediate,EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/unity-game-development-beginner-to-intermediate
+Game Development,Foundations of AI in Game Development,Packt,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-foundations-of-ai-in-game-development-je46i
+Game Development,"Apprendre le HTML, le CSS et le JavaScript par le développement de jeux vidéo",The Hong Kong University of Science and Technology,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/learning-html-css-and-javascript-through-game-development
+Game Development,Introduction à la conception de jeux,California Institute of the Arts,"4,7","2,9 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/game-design
+Game Development,Python Game Development with Pygame,EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-game-development-with-pygame
+Game Development,Conception et développement d'un jeu 1 : Tireur 2D,Michigan State University,"4,7",527 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/game-design-and-development-1
+Game Development,Développement d'histoires et de récits pour les jeux vidéo,California Institute of the Arts,"4,7","1,3 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/video-game-story
+Game Development,"HTML, CSS et Javascript pour les développeurs Web",Johns Hopkins University,"4,7",17 k avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/html-css-javascript-for-web-developers
+Game Development,Game Development: HTML to Unreal Engine Mastery,Coursera,"4,5",12 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/game-development-html-to-unreal-engine-mastery
+Game Development,Intermediate Python Game Development with Pygame,EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/intermediate-python-game-development-pygame
+Game Development,"Game Development, Data Science, and Machine Learning",Packt,,,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-game-development-data-science-and-machine-learning-83x7l
+Game Development,L'ère du développement durable,Columbia University,"4,7","4,1 k avis",Mixte,Cours,3 à 6 mois,https://www.coursera.org/learn/sustainable-development
+Game Development,Développement et monétisation de jeux intermédiaires,Packt,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/packt-intermediate-game-development-and-monetization-i5rvy
+Game Development,Apprendre la programmation côté serveur par le développement de jeux,The Hong Kong University of Science and Technology,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/learning-server-side-programming-through-game-development
+Game Development,Intermediate Python Game Development with Pygame,EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/intermediate-python-game-development-pygame
+Game Development,"Game Development, Data Science, and Machine Learning",Packt,,,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-game-development-data-science-and-machine-learning-83x7l
+Game Development,L'ère du développement durable,Columbia University,"4,7","4,1 k avis",Mixte,Cours,3 à 6 mois,https://www.coursera.org/learn/sustainable-development
+Game Development,Développement et monétisation de jeux intermédiaires,Packt,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/packt-intermediate-game-development-and-monetization-i5rvy
+Game Development,Apprendre la programmation côté serveur par le développement de jeux,The Hong Kong University of Science and Technology,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/learning-server-side-programming-through-game-development
+Game Development,Bienvenue à la théorie des jeux,The University of Tokyo,"4,7",2 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/game-theory-introduction
+Game Development,Game Deployment and Final Touches,Packt,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/packt-game-deployment-and-final-touches-fb04o
+Game Development,"Python Game Development: Design, Animate & Render",EDUCBA,,,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/python-game-development-design-animate-render
+Game Development,Théorie des jeux,Stanford University,"4,6","4,9 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/game-theory-1
+Game Development,PyCharm Project - Développement d'un jeu de morpion,EDUCBA,"4,6",25 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/pycharm-project-tic-tac-toe-game-development
+Game Development,Développement avancé de jeux et bases de l'Unité,Packt,,,Avancées,Cours,1 à 3 mois,https://www.coursera.org/learn/packt-advanced-game-development-and-unity-basics-vrxyj
+Game Development,Strategy and Game Theory for Management,IIMA - IIM Ahmedabad,"4,8",138 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/strategy-and-game-theory-for-management
+Graphic Design,Conception graphique,California Institute of the Arts,"4,7",22 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/graphic-design
+Graphic Design,Adobe Graphic Designer: Design that Demands Attention,Adobe,"4,7","2,7 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/adobe-graphic-designer
+Graphic Design,Conception graphique,Adobe,"4,6",318 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/adobe-graphic-design
+Graphic Design,Principes fondamentaux du graphisme,California Institute of the Arts,"4,8",18 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/fundamentals-of-graphic-design
+Graphic Design,Conception d'expérience utilisateur Google,Google,"4,8",97 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-ux-design
+Graphic Design,Principes de conception avec l'IA,Adobe,"4,7","1,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/design-fundamentals-ai
+Graphic Design,Conception graphique,University of Colorado Boulder,"4,8","3,4 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/presentation-design
+Graphic Design,Build your business brand using Canva,Coursera,"4,3",126 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/build-your-business-brand-using-canva
+Graphic Design,The Complete Graphic Design Masterclass,Skillshare,"4,4",17 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/the-complete-graphic-design-masterclass
+Graphic Design,Xbox Graphic Designer,Xbox,"4,5",79 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/xbox-graphic-designer
+Graphic Design,Create and Design Digital Products using Canva,Coursera,"4,4","1,3 k avis",Avancées,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/create-design-digital-products-canva
+Graphic Design,Éléments de conception graphique pour les non-designers,University of Colorado Boulder,"4,7","1,7 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/graphic-design-elements-non-designers
+Graphic Design,Branding Basics with Adobe Express,Adobe,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/branding-basics-with-adobe-express
+Graphic Design,"Creative Design Tools: Adobe Photoshop, Illustrator, Acrobat",Adobe,"4,6",588 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/creative-design-tools-adobe-photoshop-illustrator-acrobat
+Graphic Design,Graphic Design Theory - Web & Digital Design,Skillshare,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/graphic-design-theory---web--digital-design
+Graphic Design,Build a free website with WordPress,Coursera,"4,5","2,4 k avis",Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/build-free-website-wordpress
+Graphic Design,Design Engaging Social Media Visuals Fast,Coursera,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/design-engaging-social-media-visuals-fast
+Graphic Design,Introduction à la typographie,California Institute of the Arts,"4,8","5,8 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/typography
+Graphic Design,Analyse de données Google,Google,"4,8",177 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/google-data-analytics
+Graphic Design,Create a Promotional Video using Canva,Coursera,"4,3","1,1 k avis",Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/create-a-promotional-video-using-canva
+Graphic Design,Logo Design: From Concept to Client-Approved Work,Skillshare,"4,4",10 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/logodesign-fromconcepttoclient-approvedwork
+Graphic Design,Graphic design: pop your Linkedin with 3D effect using Canva,Coursera,"4,5",120 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/linkedin-cover-with-canva
+Graphic Design,Créer des conceptions et des prototypes haute fidélité dans Figma,Google,"4,8","4,8 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/high-fidelity-designs-prototype
+Graphic Design,Building Digital Media using Graphic Design in PowerPoint,Coursera,"4,4",74 avis,Débutant,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/building-digital-media-graphic-design-powerpoint
+Graphic Design,Design d'interaction,University of California San Diego,"4,5",4 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/interaction-design
+Graphic Design,Science des données IBM,IBM,"4,6",149 k avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-data-science
+Graphic Design,Design Engaging Social Media Visuals Fast,Coursera,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/design-engaging-social-media-visuals-fast
+Graphic Design,Le langage du design : Forme et signification,California Institute of the Arts,"4,6",903 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/design-language
+Graphic Design,"Communication efficace : Rédaction, conception et présentation",University of Colorado Boulder,"4,8",12 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/effective-business-communication
+Graphic Design,Use Canva to Design Digital Course Collateral,Coursera,"4,6","1,6 k avis",Avancées,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/canva-design-digital-course-collateral
+Graphic Design,Fundamentals of Graphic Design,Xbox,"4,5",52 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/xbox-fundamentals-of-graphic-design
+Graphic Design,Microsoft UX Design,Microsoft,"4,7",607 avis,Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ux-design
+Graphic Design,Python pour tous,University of Michigan,"4,8",280 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/python
+Graphic Design,Principes de conception UX/UI,Meta,"4,6","1,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/principles-of-ux-ui-design
+Graphic Design,Graphic Design Theory - Print Design,Skillshare,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/graphic-design-theory---print-design
+Graphic Design,Créer des interfaces utilisateurs (UI) dynamiques pour les sites web,Google,"4,8","3,8 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/responsive-web-design-adobe-xd
+Graphic Design,IBM UI/UX Designer,IBM,"4,8","2,8 k avis",Débutant,Certificat Professionnel,3 à 6 mois,https://www.coursera.org/professional-certificates/ibm-ui-ux-designer
+Graphic Design,Le design thinking au service de l'innovation,University of Virginia,"4,7","9,2 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/uva-darden-designbiz
+Graphic Design,Graphic Design Theory - Space,Skillshare,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/graphic-design-theory---space
+Graphic Design,"Principes fondamentaux : des Données... des Données, Partout",Google,"4,8",121 k avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/foundations-data
+Graphic Design,Ultimate Graphic Design Course: Create 40 Practical Projects,Packt,,,Débutant,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-ultimate-graphic-design-course-create-40-practical-projects-hkosa
+Graphic Design,Generative AI for UI UX Design,IBM,"4,7",11 k avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-ui-ux-design
+Graphic Design,Idées tirées de l'histoire du graphisme,California Institute of the Arts,"4,7","2,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/graphic-design-history
+Graphic Design,Conception de jeux : Art et concepts,California Institute of the Arts,"4,7","4,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/game-design
+Graphic Design,La conception de sites Web pour tous : Les bases du développement web et du codage,University of Michigan,"4,7",35 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/web-design
+Graphic Design,Conception et architecture des logiciels,University of Alberta,"4,6",4 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/software-design-architecture
+Graphic Design,Conception d'interfaces et d'expériences utilisateur (UI/UX),IBM,"4,5",305 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/designing-user-interfaces-and-experiences-uiux
+Graphic Design,Document Design,Adobe,"4,7",158 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/document-design
+Finance,Introduction à la finance d'entreprise,University of Pennsylvania,"4,6","6,4 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/wharton-finance
+Finance,Marchés financiers,Yale University,"4,8",32 k avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/financial-markets-global
+Finance,Introduction à la finance et à la comptabilité,University of Pennsylvania,"4,6",14 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/finance-accounting
+Finance,Preparatory Certificate in Finance and Financial Markets,Corporate Finance Institute,"4,7",701 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/finance-and-financial-markets
+Finance,Foundations of Finance,University of Cambridge,"4,7",42 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/foundationsfinance
+Finance,Corporate Finance Fundamentals,Corporate Finance Institute,"4,8",199 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/corporate-finance-fundamentals
+Finance,Financial Management,Duke University,"4,8",372 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/business-financial-management
+Finance,Fundamentals of Financial Analysis,London Business School,"4,4",111 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/fundamentals-of-financial-analysis
+Finance,"Principes fondamentaux de la finance d'entreprise, avec Goldman Sachs 10 000 femmes",Goldman Sachs,"4,7","1,3 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/10k-women-2
+Finance,Gestion des risques,New York Institute of Finance,"4,6","1,6 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/risk-management
+Finance,Finance et modélisation quantitative pour les analystes,University of Pennsylvania,"4,5",17 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/finance-quantitative-modeling-analysts
+Finance,"AI-Powered Finance: Forecasting, Planning & Reporting",Coursera,"4,3",229 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ai-powered-finance-forecasting-planning-and-reporting
+Finance,Les fondamentaux des finances personnelles,SoFi,"4,6",420 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/personal-finance-fundamentals
+Finance,Finance décentralisée (DeFi) : L'avenir de la finance,Duke University,"4,8","2,1 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/decentralized-finance-duke
+Finance,La finance pour les non professionnels de la finance,Rice University,"4,8","2,8 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/finance-for-non-finance
+Finance,BI Essentials for Finance Analysts (Power BI Edition),Corporate Finance Institute,"4,8",350 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/bi-essentials-for-finance-professionals-powerbi
+Finance,Finance for Non-finance Professionals,University of Cambridge,,,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/finance-for-non-finance-professionals
+Finance,L'essentiel de la finance d'entreprise,The University of Melbourne,"4,7",2 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/learn-finance
+Finance,Generative AI for Finance and Accounting,Edureka,,,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-for-finance-and-accounting
+Finance,La finance pour les managers,IESE Business School,"4,8",1 k avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/operational-finance
+Finance,CFO Excellence: Mastering Finance Teams,Coursera,,,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/cfo-excellence-mastering-finance-teams
+Finance,Foundations of Corporate Finance,University of Cambridge,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/foundations-of-corporate-finance
+Finance,L'essentiel de la finance d'entreprise,IESE Business School,"4,8","2,6 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/corporate-finance-essentials
+Finance,Introduction à la finance : Les bases,University of Illinois Urbana-Champaign,"4,7",535 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-finance-the-basics
+Finance,Finance comportementale,Duke University,"4,4","4,5 k avis",Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/duke-behavioral-finance
+Finance,Business Finance and Data Analysis Fundamentals,Rice University,"4,8","2,9 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/pre-mba-quantitative-skills
+Finance,Gestion financière,University of Illinois Urbana-Champaign,"4,7","6,9 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/financial-management
+Finance,Finance and Budgeting Essentials for Business Professionals,Logical Operations,,,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/finance-budgeting-essentials-business-professionals-lo097014
+Finance,Machine Learning for Trading,Plusieurs enseignants,"3,8","1,2 k avis",Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/machine-learning-trading
+Finance,Principes fondamentaux de la finance,University of Pennsylvania,4,"1,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/finance-fundamentals
+Finance,Principes fondamentaux de la finance,"University of California, Irvine","4,7",206 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/finance-fundamentals-uci
+Finance,AI in Finance Agent,AI CERTs,,,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/ai-in-finance-agent
+Finance,Introduction aux finances personnelles,SoFi,"4,6",237 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/personal-finance-introduction
+Finance,"Sustainable Finance: Products, Instruments and Future Trends","Saïd Business School, University of Oxford","4,8",47 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/sustainable-finance-oxford
+Finance,BI Essentials for Finance Analysts (Tableau Edition),Corporate Finance Institute,"4,8",90 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/bi-essentials-for-finance-analysts-tableau-edition
+Finance,Python for Finance: Investment Fundamentals & Data Analytics,Packt,"4,5",12 avis,Intermédiaire,Cours,3 à 6 mois,https://www.coursera.org/learn/packt-python-for-finance-investment-fundamentals-and-data-analytics-zafvf
+Finance,Financement de la construction,Columbia University,"4,8","1,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/construction-finance
+Finance,Applications de l'IA dans le marketing et la finance,University of Pennsylvania,"4,6",482 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/wharton-ai-applications-marketing-finance
+Finance,La finance pour tous,McMaster University,"4,7","1,4 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/finance-for-everyone
+Finance,Le marché du financement de la chaîne d'approvisionnement et l'écosystème Fintech,New York Institute of Finance,"4,5",74 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/supply-chain-finance-market-fintech-ecosystem
+Finance,Financial Planning,Indian School of Business,"4,6",54 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/financial-planning-course-isb
+Finance,AI for Finance,AI Business School,"4,3",27 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/ai-for-finance
+Finance,Banking & Finance in India,O.P. Jindal Global University,"4,7",28 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/banking-and-finance-in-india
+Finance,Introduction à l'IA générative en finance,Coursera,"3,7",69 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/introduction-to-generative-ai-in-finance
+Finance,La finance pour les non professionnels de la finance,"University of California, Irvine","4,6","4,6 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/finance-for-non-finance-managers
+Finance,Finance fondamentale pour la prise de décision stratégique,University of Michigan,"4,7","1,3 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/foundational-finance
+Finance,La finance décentralisée (DeFi) en profondeur,Duke University,"4,9",308 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/decentralized-finance-deep-dive-duke
+Finance,Project Finance Fundamentals: Analyze & Structure Deals,EDUCBA,"4,8",13 avis,Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/project-finance-fundamentals-analyze-structure-deals
+Leadership,Boost Your Leadership Impact,Harvard Business Review,"4,9",13 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/boost-your-leadership-impact
+Leadership,Compétences en matière de leadership,IIMA - IIM Ahmedabad,"4,8","2,1 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/leadershipskills
+Leadership,Practical Leadership,Logical Operations,,,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/practical-leadership-lo097006
+Leadership,Leadership et gestion stratégiques,University of Illinois Urbana-Champaign,"4,8",10 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/strategic-leadership
+Leadership,Emotional Intelligence in Leadership,Coursera,"4,8",183 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/emotional-intelligence-in-leadership-1
+Leadership,Leadership organisationnel,Northwestern University,"4,7","5,4 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/organizational-leadership
+Leadership,Leadership,University of Illinois Urbana-Champaign,"4,8",141 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/leaders
+Leadership,Diriger des personnes et des équipes,University of Michigan,"4,7",12 k avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/leading-teams
+Leadership,Effective Leadership: Master Management Styles,Coursera,"4,7",127 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/effective-leadership-master-management-styles
+Leadership,Leadership connecté,Yale University,"4,8",776 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/connected-leadership
+Leadership,Agile Approaches for Modern Leadership,Duke University,"4,7",116 avis,Intermédiaire,Spécialisation,1 à 4 semaines,https://www.coursera.org/specializations/agile-approaches-modern-leadership
+Leadership,Le leadership dans les organisations du 21e siècle,Copenhagen Business School,"4,8","1,3 k avis",Mixte,Cours,3 à 6 mois,https://www.coursera.org/learn/leadership-21st-century
+Leadership,"Leadership stratégique : Impact, changement et prise de décision",Dartmouth College,"4,8",660 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/strategic-leadership-impact-change-decision-making
+Leadership,Leadership and Influencing Skills,Google,"4,7",27 avis,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/google-leadership-and-influencing-skills
+Leadership,"Collaboration de haute performance : Leadership, travail d'équipe et négociation",Northwestern University,"4,8","3,4 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/leadership-collaboration
+Leadership,Advanced Leadership Skills & Communication,University of Huddersfield,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/advanced-leadership-skills-and-communication
+Leadership,Neuroscience of Leadership: Leading with Your Brain,University of Colorado Boulder,"4,8",159 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/neuroscience-of-leadership-leading-with-your-brain
+Leadership,Modern Leadership Skills,Alex Genadinik,,,Mixte,Cours,3 à 6 mois,https://www.coursera.org/learn/modern-leadership
+Leadership,Leadership for Healthcare Professionals,University of Michigan,"4,6",18 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/leadership-for-healthcare-professionals
+Leadership,Leadership: Being a Confident and Effective Team Leader,Skillshare,"4,8",15 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/leadershipbeingaconfidentandeffectiveteamleader
+Leadership,Leadership and Society,O.P. Jindal Global University,"4,5",32 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/leadership-and-society
+Leadership,Leadership et pensée critique,Tecnológico de Monterrey,"4,6",352 avis,Avancées,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/leadership-critical-thinking
+Leadership,Leadership agile,University of Colorado System,"4,8","3,2 k avis",Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/agile-leadership-change-management
+Leadership,Strategic Business Leadership,University of Glasgow,"4,8",17 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/strategic-business-leadership
+Leadership,Leadership and Team Management,Packt,"4,7",138 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/packt-leadership-and-team-management
+Leadership,Diriger : Gestion des ressources humaines et leadership,Macquarie University,"4,8",4 k avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/hr-management-leadership
+Leadership,Generative AI Leadership & Strategy,Vanderbilt University,"4,8","8,7 k avis",Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/generative-ai-leadership-strategy
+Leadership,Leadership inspiré,Case Western Reserve University,"4,7","2,7 k avis",Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/inspired-leadership
+Leadership,Principles of Leadership: Leading Technical Organizations,University of Colorado Boulder,"4,4",34 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/leading-technical-organizations
+Leadership,Leadership that Delivers,Coursera,"4,9",13 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/leadership-that-delivers
+Leadership,Leadership: An Introduction,Johns Hopkins University,"4,5",40 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/leadership-introduction
+Leadership,Complete Executive Leadership,Starweaver,"4,4",33 avis,Intermédiaire,Spécialisation,1 à 4 semaines,https://www.coursera.org/specializations/complete-executive-leadership
+Leadership,Change Leadership: Strategic Route Analysis with Miro,Coursera,"4,6",41 avis,Intermédiaire,Projet Guidé,Moins de 2 heures,https://www.coursera.org/projects/route-analysis-miro
+Leadership,S'élever : Se préparer au leadership,Queen Mary University of London,"4,8",68 avis,Avancées,Cours,1 à 4 semaines,https://www.coursera.org/learn/stepping-up-preparing-yourself-for-leadership
+Leadership,La communication des dirigeants pour un impact maximal : La narration,Northwestern University,"4,5","1,3 k avis",Mixte,Cours,1 à 4 semaines,https://www.coursera.org/learn/leadership-storytelling
+Leadership,Les femmes dans le leadership : Inspirer des changements positifs,Case Western Reserve University,"4,7",570 avis,Mixte,Cours,1 à 3 mois,https://www.coursera.org/learn/women-in-leadership
+Leadership,Strategic and Inclusive Leadership,Johns Hopkins University,"4,8",12 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/strategic-and-inclusive-leadership
+Leadership,Executive Communication & Data Leadership,Starweaver,"4,4",28 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/executive-communication-and-data-leadership
+Leadership,Strategic Leadership Fundamentals,University of Huddersfield,"4,8",6 avis,Débutant,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/strategic-leadership-fundamentals
+Leadership,"Modern Project Leadership: Agile, AI, and Beyond",Coursera,"4,6",492 avis,Intermédiaire,Spécialisation,1 à 3 mois,https://www.coursera.org/specializations/modern-project-leadership-agile-ai-and-beyond
+Leadership,Leadership et influence,University of Illinois Urbana-Champaign,"4,6",78 avis,Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/leadership-influence
+Leadership,Foundations of Leadership,Johns Hopkins University,"4,3",14 avis,Intermédiaire,Cours,1 à 3 mois,https://www.coursera.org/learn/foundations-of-leadership
+Leadership,Leadership et gestion de la cybersécurité,Infosec,"4,5",141 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/cybersecurity-leadership
+Leadership,Agile Team Leadership,Duke University,"4,7",51 avis,Intermédiaire,Cours,1 à 4 semaines,https://www.coursera.org/learn/agile-team-leadership
+Leadership,Ethical Leadership,The University of Notre Dame,"4,8",195 avis,Débutant,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/ethical-leadership
+Leadership,Strategic Leadership in Hospitality,Starweaver,"4,4",117 avis,Intermédiaire,Spécialisation,3 à 6 mois,https://www.coursera.org/specializations/strategic-leadership-in-hospitality
+Leadership,Leading Teams Effectively: Skills for Impactful Leadership,Coursera,,,Débutant,Cours,1 à 4 semaines,https://www.coursera.org/learn/leading-teams-effectively-skills-for-impactful-leadership
+Leadership,Inspirer le leadership par l'intelligence émotionnelle,Case Western Reserve University,"4,7","1,7 k avis",Débutant,Cours,1 à 3 mois,https://www.coursera.org/learn/emotional-intelligence-leadership
