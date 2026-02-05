@@ -46,7 +46,12 @@ class CourseRecommender:
         print(f"📂 Loading data: {filepath}")
         
         try:
-            self.df = pd.read_csv(filepath)
+            # Essaie d'abord avec le séparateur par défaut
+            try:
+                self.df = pd.read_csv(filepath)
+            except:
+                # Si ça échoue, essaie avec le point-virgule
+                self.df = pd.read_csv(filepath, sep=';')
             
             # Standardize column names for the app
             column_mapping = {
@@ -65,9 +70,17 @@ class CourseRecommender:
             if 'course_id' not in self.df.columns:
                 self.df['course_id'] = range(len(self.df))
             
+            # Create category from title if not exists
+            if 'category' not in self.df.columns:
+                self.df['category'] = self.df['title'].apply(self._extract_category_from_title)
+            
             # Extract level from metadata
             if 'level' not in self.df.columns and 'metadata' in self.df.columns:
                 self.df['level'] = self.df['metadata'].apply(self._extract_level)
+            
+            # Set default level if not exists
+            if 'level' not in self.df.columns:
+                self.df['level'] = 'All Levels'
             
             # Set price based on platform (Coursera = Free with subscription)
             if 'price' not in self.df.columns:
@@ -82,6 +95,33 @@ class CourseRecommender:
         except FileNotFoundError:
             print(f"   ❌ File not found: {filepath}")
             return False
+    
+    def _extract_category_from_title(self, title):
+        """Extract category from course title"""
+        if pd.isna(title):
+            return 'General'
+        
+        title_lower = str(title).lower()
+        
+        # Dictionnaire de mots-clés pour les catégories
+        categories = {
+            'Data Science': ['data science', 'data analytics', 'data analysis', 'big data'],
+            'Machine Learning': ['machine learning', 'ml ', 'deep learning', 'neural network'],
+            'Programming': ['python', 'java', 'javascript', 'programming', 'coding', 'developer'],
+            'Web Development': ['web development', 'web design', 'html', 'css', 'react', 'angular', 'vue'],
+            'Business': ['business', 'management', 'marketing', 'finance', 'accounting', 'entrepreneurship'],
+            'Design': ['design', 'photoshop', 'illustrator', 'ui', 'ux', 'graphic'],
+            'IT & Software': ['software', 'cloud', 'aws', 'azure', 'devops', 'docker', 'kubernetes'],
+            'Health & Fitness': ['health', 'fitness', 'yoga', 'nutrition', 'medical', 'healthcare'],
+            'Personal Development': ['leadership', 'productivity', 'communication', 'career'],
+        }
+        
+        for category, keywords in categories.items():
+            for keyword in keywords:
+                if keyword in title_lower:
+                    return category
+        
+        return 'General'
     
     def _extract_level(self, metadata):
         """Extract level from metadata string"""
@@ -102,7 +142,7 @@ class CourseRecommender:
         
         # Create combined text for TF-IDF
         if 'combined_text' not in self.df.columns or self.df['combined_text'].isna().any():
-            text_columns = ['title', 'category', 'instructor']
+            text_columns = ['title', 'category', 'level']
             self.df['combined_text'] = self.df.apply(
                 lambda row: ' '.join([str(row[col]) for col in text_columns if col in row.index and pd.notna(row[col])]),
                 axis=1
@@ -194,7 +234,7 @@ class CourseRecommender:
             return []
             
         idx = self.get_course_index(course_id)
-        if idx is None:
+        if idx is None or idx >= len(self.similarity_matrix):
             return []
             
         sim_scores = list(enumerate(self.similarity_matrix[idx]))
@@ -218,6 +258,19 @@ class CourseRecommender:
         query_vector = self.tfidf_vectorizer.transform([query.lower()])
         sim_scores = cosine_similarity(query_vector, self.tfidf_matrix).flatten()
         
+        # Ensure sim_scores matches dataframe length (handles out-of-sync models)
+        if len(sim_scores) != len(self.df):
+            print(f"⚠️ Model out of sync with data ({len(sim_scores)} vs {len(self.df)}). Using fallback scores.")
+            # Create a simple score based on keyword matching as fallback or use partial scores
+            if len(sim_scores) < len(self.df):
+                # Pad with zeros if model is behind
+                padded_scores = np.zeros(len(self.df))
+                padded_scores[:len(sim_scores)] = sim_scores
+                sim_scores = padded_scores
+            else:
+                # Truncate if model is ahead (unlikely but possible)
+                sim_scores = sim_scores[:len(self.df)]
+
         results_df = self.df.copy()
         results_df['similarity_score'] = sim_scores
         
@@ -340,19 +393,29 @@ class CourseRecommender:
         print(f"💾 Model saved: {filepath}")
         
     def load_model(self, filepath='models/recommender.pkl'):
-        """Load model"""
+        """Load model and check consistency if data is already loaded"""
         try:
+            if not os.path.exists(filepath):
+                return False
+                
             with open(filepath, 'rb') as f:
                 model_data = pickle.load(f)
                 
             self.tfidf_vectorizer = model_data['tfidf_vectorizer']
             self.tfidf_matrix = model_data['tfidf_matrix']
             self.similarity_matrix = model_data['similarity_matrix']
-            self.is_trained = True
             
+            # Check consistency with self.df if it exists
+            if self.df is not None:
+                if self.tfidf_matrix.shape[0] != len(self.df):
+                    print(f"⚠️ Model at {filepath} is out of sync with data: matrix {self.tfidf_matrix.shape[0]} rows, CSV {len(self.df)} rows.")
+                    return False
+                    
+            self.is_trained = True
             print(f"📂 Model loaded: {filepath}")
             return True
-        except FileNotFoundError:
+        except Exception as e:
+            print(f"❌ Error loading model: {e}")
             return False
 
 

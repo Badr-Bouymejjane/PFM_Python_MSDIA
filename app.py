@@ -6,15 +6,6 @@ With User Authentication and Personalized Recommendations
 import sys
 import os
 
-# Configuration UTF-8 pour Windows
-import io
-if not isinstance(sys.stdout, io.TextIOWrapper) or sys.stdout.encoding != 'utf-8':
-    try:
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
-    except AttributeError:
-        pass
-
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
 import pandas as pd
 from datetime import timedelta
@@ -70,24 +61,28 @@ def get_current_user():
 def init_recommender():
     global recommender
     
-    print("\n" + "🎓"*25)
+    print("\n" + "="*60)
     print("   COURSE RECOMMENDATION SYSTEM")
-    print("🎓"*25 + "\n")
+    print("="*60 + "\n")
     
     if os.path.exists('models/recommender.pkl'):
-        print("📂 Chargement du modèle existant...")
-        recommender.load_model()
+        print("Chargement du modele existant...")
+        # Load data first so load_model can check consistency
         recommender.load_data()
+        if not recommender.load_model():
+            print("⚠️ Modele obsolète ou incompatible. Re-entrainement...")
+            recommender.train()
+            recommender.save_model()
     else:
-        print("🧠 Entraînement du modèle...")
+        print("Entrainement du modele...")
         recommender.train()
         recommender.save_model()
         
     if recommender.is_trained:
         stats = recommender.get_stats()
-        print(f"\n✅ Système prêt!")
-        print(f"   📊 {stats.get('total_courses', 0)} cours chargés")
-        print(f"   📊 Utilisateurs: {user_manager.get_all_users_count()}")
+        print(f"\nSysteme pret!")
+        print(f"   {stats.get('total_courses', 0)} cours charges")
+        print(f"   Utilisateurs: {user_manager.get_all_users_count()}")
         return True
     return False
 
@@ -286,6 +281,12 @@ def course_detail(course_id):
 def profile():
     username = get_current_user()
     user = user_manager.get_user(username)
+    
+    if not user:
+        # If session exists but user not in DB (after migration or deletion)
+        flash("Utilisateur introuvable. Veuillez vous reconnecter.")
+        return redirect(url_for('logout'))
+        
     stats = user_manager.get_user_stats(username)
     prefs = user_manager.get_preferences(username)
     
@@ -310,10 +311,14 @@ def api_search():
     if not query:
         return jsonify({'error': 'Query required'}), 400
     
-    # Track search
-    user_manager.track_search(username, query)
-    
     recommendations = recommender.recommend_by_query(query, n)
+    
+    # Track search only if results are found and relevant
+    # We check if we have results and if the top result has at least some similarity (e.g. 15%)
+    if recommendations and recommendations[0].get('similarity_score', 0) > 15:
+        user_manager.track_search(username, query)
+    else:
+        print(f"🔍 Search for '{query}' ignored (no relevant results found)")
     
     return jsonify({
         'recommendations': recommendations,
@@ -386,7 +391,7 @@ def get_clustering():
     global clustering_instance
     if clustering_instance is None:
         from models.clustering import CourseClustering
-        clustering_instance = CourseClustering(n_clusters=8)
+        clustering_instance = CourseClustering(n_clusters=10)
         clustering_instance.run()
     return clustering_instance
 
@@ -434,8 +439,8 @@ def api_clusters():
 
 if __name__ == '__main__':
     if init_recommender():
-        print(f"\n🚀 Démarrage du serveur Flask...")
-        print(f"📍 Accédez à: http://localhost:2400\n")
+        print(f"\nDemarrage du serveur Flask...")
+        print(f"Accedez a: http://localhost:2400\n")
         app.run(debug=FLASK_DEBUG, host=FLASK_HOST, port=2400)
     else:
-        print("\n❌ Impossible de démarrer l'application")
+        print("\nImpossible de demarrer l'application")

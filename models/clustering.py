@@ -37,7 +37,12 @@ class CourseClustering:
     def load_data(self, filepath='data/final_courses.csv'):
         """Load course data"""
         print(f"📂 Loading data: {filepath}")
-        self.df = pd.read_csv(filepath)
+        try:
+            # Essaie d'abord avec le séparateur par défaut
+            self.df = pd.read_csv(filepath)
+        except:
+            # Si ça échoue, essaie avec le point-virgule
+            self.df = pd.read_csv(filepath, sep=';')
         
         # Ensure required columns
         if 'course_id' not in self.df.columns:
@@ -67,7 +72,7 @@ class CourseClustering:
         print("🔧 Preparing features...")
         
         # Text features
-        text_cols = ['title', 'category']
+        text_cols = ['title', 'category', 'level']
         self.df['text_features'] = self.df.apply(
             lambda row: ' '.join([str(row[c]) for c in text_cols if c in row.index and pd.notna(row[c])]),
             axis=1
