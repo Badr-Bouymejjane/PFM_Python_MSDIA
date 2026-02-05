@@ -24,7 +24,7 @@ import json
 class CourseClustering:
     """K-Means clustering for courses"""
     
-    def __init__(self, n_clusters=8):
+    def __init__(self, n_clusters=10):
         self.n_clusters = n_clusters
         self.kmeans = None
         self.tfidf = None
