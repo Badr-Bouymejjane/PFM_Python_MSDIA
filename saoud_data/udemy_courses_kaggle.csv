@@ -1,0 +1,51 @@
+domain,title,instructor,rating,students,price,level,url
+Python,Complete Python Bootcamp From Zero to Hero in Python,Jose Portilla,4.6,"1,500,000",$84.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Python for Data Science and Machine Learning Bootcamp,Jose Portilla,4.6,"500,000",$84.99,All Levels,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Automate the Boring Stuff with Python Programming,Al Sweigart,4.6,"800,000",$84.99,Beginner,https://www.udemy.com/course/automate/
+Python,The Python Mega Course: Build 10 Real World Applications,Ardit Sulce,4.5,"300,000",$84.99,All Levels,https://www.udemy.com/course/the-python-mega-course/
+Python,Python Django - The Practical Guide,Maximilian Schwarzmüller,4.6,"150,000",$84.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Data Science,Data Science A-Z: Real-Life Data Science Exercises,Kirill Eremenko,4.5,"400,000",$84.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,The Data Science Course: Complete Data Science Bootcamp,365 Careers,4.5,"300,000",$84.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,Python for Data Science and Machine Learning Bootcamp,Jose Portilla,4.6,"500,000",$84.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Data Science,Data Science and Machine Learning Bootcamp with R,Jose Portilla,4.6,"200,000",$84.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Statistics for Data Science and Business Analysis,365 Careers,4.5,"250,000",$84.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Machine Learning,Machine Learning A-Z: Hands-On Python & R In Data Science,"Kirill Eremenko, Hadelin de Ponteves",4.5,"1,000,000",$84.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,"Machine Learning, Data Science and Deep Learning with Python",Frank Kane,4.5,"300,000",$84.99,Intermediate,https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/
+Machine Learning,Complete Machine Learning & Data Science Bootcamp 2024,Andrei Neagoie,4.6,"150,000",$84.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,PyTorch for Deep Learning with Python Bootcamp,Jose Portilla,4.6,"100,000",$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,Machine Learning Practical: 6 Real-World Applications,Dr. Ryan Ahmed,4.4,"80,000",$84.99,Intermediate,https://www.udemy.com/course/machine-learning-practical/
+Web Development,The Complete Web Developer Course 3.0,Rob Percival,4.5,"800,000",$84.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Web Developer Bootcamp 2024,Colt Steele,4.7,"900,000",$84.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,The Complete 2024 Web Development Bootcamp,Dr. Angela Yu,4.7,"600,000",$84.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,Modern HTML & CSS From The Beginning (Including Sass),Brad Traversy,4.6,"200,000",$84.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,"Advanced CSS and Sass: Flexbox, Grid, Animations and More!",Jonas Schmedtmann,4.8,"300,000",$84.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+JavaScript,The Complete JavaScript Course 2024: From Zero to Expert!,Jonas Schmedtmann,4.7,"700,000",$84.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,Modern JavaScript From The Beginning 2.0,Brad Traversy,4.6,"250,000",$84.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,JavaScript: Understanding the Weird Parts,Anthony Alicea,4.6,"200,000",$84.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,React - The Complete Guide 2024,Maximilian Schwarzmüller,4.6,"600,000",$84.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,"Node.js, Express, MongoDB & More: The Complete Bootcamp",Jonas Schmedtmann,4.7,"300,000",$84.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+Artificial Intelligence,Artificial Intelligence A-Z: Learn How To Build An AI,Hadelin de Ponteves,4.4,"200,000",$84.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,AI & Machine Learning Masterclass,Dr. Ryan Ahmed,4.5,"100,000",$84.99,Intermediate,https://www.udemy.com/course/ai-machine-learning-masterclass/
+Artificial Intelligence,"ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More",Julian Melanson,4.5,"150,000",$84.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,Complete AI & ML Bootcamp 2024,Andrei Neagoie,4.6,"80,000",$84.99,All Levels,https://www.udemy.com/course/complete-ai-ml-bootcamp/
+Artificial Intelligence,AI for Everyone: Master the Basics,Hadelin de Ponteves,4.4,"120,000",$84.99,Beginner,https://www.udemy.com/course/ai-for-everyone/
+Deep Learning,Deep Learning A-Z: Hands-On Artificial Neural Networks,"Kirill Eremenko, Hadelin de Ponteves",4.5,"300,000",$84.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Complete TensorFlow 2 and Keras Deep Learning Bootcamp,Jose Portilla,4.6,"150,000",$84.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,PyTorch for Deep Learning and Computer Vision,"Rayan Slim, Jad Slim",4.5,"80,000",$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-and-computer-vision/
+Deep Learning,Deep Learning: Advanced Computer Vision,Lazy Programmer Inc.,4.6,"60,000",$84.99,Advanced,https://www.udemy.com/course/advanced-computer-vision/
+Deep Learning,Natural Language Processing with Deep Learning in Python,Lazy Programmer Inc.,4.6,"70,000",$84.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-deep-learning-in-python/
+Cloud Computing,AWS Certified Solutions Architect - Associate 2024,Stephane Maarek,4.7,"800,000",$84.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,Ultimate AWS Certified Cloud Practitioner - 2024,Stephane Maarek,4.7,"500,000",$84.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Microsoft Azure Fundamentals AZ-900 Exam Prep,Scott Duffy,4.6,"300,000",$84.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Google Cloud Platform (GCP) Fundamentals for Beginners,Loony Corn,4.5,"100,000",$84.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Docker and Kubernetes: The Complete Guide,Stephen Grider,4.6,"250,000",$84.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cybersecurity,The Complete Cyber Security Course: Hackers Exposed!,Nathan House,4.5,"300,000",$84.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,Complete Ethical Hacking Bootcamp 2024: Zero to Mastery,Andrei Neagoie,4.6,"150,000",$84.99,All Levels,https://www.udemy.com/course/complete-ethical-hacking-bootcamp-zero-to-mastery/
+Cybersecurity,Learn Ethical Hacking From Scratch,Zaid Sabih,4.6,"400,000",$84.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,CompTIA Security+ (SY0-601) Complete Course & Exam,Jason Dion,4.7,"200,000",$84.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,Practical Ethical Hacking - The Complete Course,Heath Adams,4.7,"180,000",$84.99,All Levels,https://www.udemy.com/course/practical-ethical-hacking/
+DevOps,DevOps Beginners to Advanced with Projects,Imran Teli,4.5,"200,000",$84.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,Docker Mastery: with Kubernetes +Swarm from a Docker Captain,Bret Fisher,4.6,"250,000",$84.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,"Jenkins, From Zero To Hero: Become a DevOps Jenkins Master",Ricardo Andre Gonzalez Gomez,4.5,"150,000",$84.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Kubernetes for the Absolute Beginners - Hands-on,Mumshad Mannambeth,4.6,"300,000",$84.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Complete DevOps Bootcamp 2024,Andrei Neagoie,4.6,"100,000",$84.99,All Levels,https://www.udemy.com/course/complete-devops-bootcamp/

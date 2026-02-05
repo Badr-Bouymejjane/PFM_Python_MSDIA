@@ -1,0 +1,502 @@
+[
+  {
+    "domain": "Python",
+    "title": "Complete Python Bootcamp From Zero to Hero in Python",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "1,500,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/complete-python-bootcamp/"
+  },
+  {
+    "domain": "Python",
+    "title": "Python for Data Science and Machine Learning Bootcamp",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "500,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"
+  },
+  {
+    "domain": "Python",
+    "title": "Automate the Boring Stuff with Python Programming",
+    "instructor": "Al Sweigart",
+    "rating": "4.6",
+    "students": "800,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/automate/"
+  },
+  {
+    "domain": "Python",
+    "title": "The Python Mega Course: Build 10 Real World Applications",
+    "instructor": "Ardit Sulce",
+    "rating": "4.5",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-python-mega-course/"
+  },
+  {
+    "domain": "Python",
+    "title": "Python Django - The Practical Guide",
+    "instructor": "Maximilian Schwarzmüller",
+    "rating": "4.6",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/python-django-the-practical-guide/"
+  },
+  {
+    "domain": "Data Science",
+    "title": "Data Science A-Z: Real-Life Data Science Exercises",
+    "instructor": "Kirill Eremenko",
+    "rating": "4.5",
+    "students": "400,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/datascience/"
+  },
+  {
+    "domain": "Data Science",
+    "title": "The Data Science Course: Complete Data Science Bootcamp",
+    "instructor": "365 Careers",
+    "rating": "4.5",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/"
+  },
+  {
+    "domain": "Data Science",
+    "title": "Python for Data Science and Machine Learning Bootcamp",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "500,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"
+  },
+  {
+    "domain": "Data Science",
+    "title": "Data Science and Machine Learning Bootcamp with R",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/"
+  },
+  {
+    "domain": "Data Science",
+    "title": "Statistics for Data Science and Business Analysis",
+    "instructor": "365 Careers",
+    "rating": "4.5",
+    "students": "250,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/"
+  },
+  {
+    "domain": "Machine Learning",
+    "title": "Machine Learning A-Z: Hands-On Python & R In Data Science",
+    "instructor": "Kirill Eremenko, Hadelin de Ponteves",
+    "rating": "4.5",
+    "students": "1,000,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/machinelearning/"
+  },
+  {
+    "domain": "Machine Learning",
+    "title": "Machine Learning, Data Science and Deep Learning with Python",
+    "instructor": "Frank Kane",
+    "rating": "4.5",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/"
+  },
+  {
+    "domain": "Machine Learning",
+    "title": "Complete Machine Learning & Data Science Bootcamp 2024",
+    "instructor": "Andrei Neagoie",
+    "rating": "4.6",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/"
+  },
+  {
+    "domain": "Machine Learning",
+    "title": "PyTorch for Deep Learning with Python Bootcamp",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "100,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/"
+  },
+  {
+    "domain": "Machine Learning",
+    "title": "Machine Learning Practical: 6 Real-World Applications",
+    "instructor": "Dr. Ryan Ahmed",
+    "rating": "4.4",
+    "students": "80,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/machine-learning-practical/"
+  },
+  {
+    "domain": "Web Development",
+    "title": "The Complete Web Developer Course 3.0",
+    "instructor": "Rob Percival",
+    "rating": "4.5",
+    "students": "800,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-complete-web-developer-course-2/"
+  },
+  {
+    "domain": "Web Development",
+    "title": "The Web Developer Bootcamp 2024",
+    "instructor": "Colt Steele",
+    "rating": "4.7",
+    "students": "900,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-web-developer-bootcamp/"
+  },
+  {
+    "domain": "Web Development",
+    "title": "The Complete 2024 Web Development Bootcamp",
+    "instructor": "Dr. Angela Yu",
+    "rating": "4.7",
+    "students": "600,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+  },
+  {
+    "domain": "Web Development",
+    "title": "Modern HTML & CSS From The Beginning (Including Sass)",
+    "instructor": "Brad Traversy",
+    "rating": "4.6",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/modern-html-css-from-the-beginning/"
+  },
+  {
+    "domain": "Web Development",
+    "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+    "instructor": "Jonas Schmedtmann",
+    "rating": "4.8",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/advanced-css-and-sass/"
+  },
+  {
+    "domain": "JavaScript",
+    "title": "The Complete JavaScript Course 2024: From Zero to Expert!",
+    "instructor": "Jonas Schmedtmann",
+    "rating": "4.7",
+    "students": "700,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-complete-javascript-course/"
+  },
+  {
+    "domain": "JavaScript",
+    "title": "Modern JavaScript From The Beginning 2.0",
+    "instructor": "Brad Traversy",
+    "rating": "4.6",
+    "students": "250,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/modern-javascript-from-the-beginning/"
+  },
+  {
+    "domain": "JavaScript",
+    "title": "JavaScript: Understanding the Weird Parts",
+    "instructor": "Anthony Alicea",
+    "rating": "4.6",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/understand-javascript/"
+  },
+  {
+    "domain": "JavaScript",
+    "title": "React - The Complete Guide 2024",
+    "instructor": "Maximilian Schwarzmüller",
+    "rating": "4.6",
+    "students": "600,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+  },
+  {
+    "domain": "JavaScript",
+    "title": "Node.js, Express, MongoDB & More: The Complete Bootcamp",
+    "instructor": "Jonas Schmedtmann",
+    "rating": "4.7",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
+  },
+  {
+    "domain": "Artificial Intelligence",
+    "title": "Artificial Intelligence A-Z: Learn How To Build An AI",
+    "instructor": "Hadelin de Ponteves",
+    "rating": "4.4",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/artificial-intelligence-az/"
+  },
+  {
+    "domain": "Artificial Intelligence",
+    "title": "AI & Machine Learning Masterclass",
+    "instructor": "Dr. Ryan Ahmed",
+    "rating": "4.5",
+    "students": "100,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/ai-machine-learning-masterclass/"
+  },
+  {
+    "domain": "Artificial Intelligence",
+    "title": "ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More",
+    "instructor": "Julian Melanson",
+    "rating": "4.5",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/chatgpt-complete-guide/"
+  },
+  {
+    "domain": "Artificial Intelligence",
+    "title": "Complete AI & ML Bootcamp 2024",
+    "instructor": "Andrei Neagoie",
+    "rating": "4.6",
+    "students": "80,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/complete-ai-ml-bootcamp/"
+  },
+  {
+    "domain": "Artificial Intelligence",
+    "title": "AI for Everyone: Master the Basics",
+    "instructor": "Hadelin de Ponteves",
+    "rating": "4.4",
+    "students": "120,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/ai-for-everyone/"
+  },
+  {
+    "domain": "Deep Learning",
+    "title": "Deep Learning A-Z: Hands-On Artificial Neural Networks",
+    "instructor": "Kirill Eremenko, Hadelin de Ponteves",
+    "rating": "4.5",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/deeplearning/"
+  },
+  {
+    "domain": "Deep Learning",
+    "title": "Complete TensorFlow 2 and Keras Deep Learning Bootcamp",
+    "instructor": "Jose Portilla",
+    "rating": "4.6",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/"
+  },
+  {
+    "domain": "Deep Learning",
+    "title": "PyTorch for Deep Learning and Computer Vision",
+    "instructor": "Rayan Slim, Jad Slim",
+    "rating": "4.5",
+    "students": "80,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/pytorch-for-deep-learning-and-computer-vision/"
+  },
+  {
+    "domain": "Deep Learning",
+    "title": "Deep Learning: Advanced Computer Vision",
+    "instructor": "Lazy Programmer Inc.",
+    "rating": "4.6",
+    "students": "60,000",
+    "price": "$84.99",
+    "level": "Advanced",
+    "url": "https://www.udemy.com/course/advanced-computer-vision/"
+  },
+  {
+    "domain": "Deep Learning",
+    "title": "Natural Language Processing with Deep Learning in Python",
+    "instructor": "Lazy Programmer Inc.",
+    "rating": "4.6",
+    "students": "70,000",
+    "price": "$84.99",
+    "level": "Advanced",
+    "url": "https://www.udemy.com/course/natural-language-processing-with-deep-learning-in-python/"
+  },
+  {
+    "domain": "Cloud Computing",
+    "title": "AWS Certified Solutions Architect - Associate 2024",
+    "instructor": "Stephane Maarek",
+    "rating": "4.7",
+    "students": "800,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/"
+  },
+  {
+    "domain": "Cloud Computing",
+    "title": "Ultimate AWS Certified Cloud Practitioner - 2024",
+    "instructor": "Stephane Maarek",
+    "rating": "4.7",
+    "students": "500,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/"
+  },
+  {
+    "domain": "Cloud Computing",
+    "title": "Microsoft Azure Fundamentals AZ-900 Exam Prep",
+    "instructor": "Scott Duffy",
+    "rating": "4.6",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/az900-azure/"
+  },
+  {
+    "domain": "Cloud Computing",
+    "title": "Google Cloud Platform (GCP) Fundamentals for Beginners",
+    "instructor": "Loony Corn",
+    "rating": "4.5",
+    "students": "100,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/"
+  },
+  {
+    "domain": "Cloud Computing",
+    "title": "Docker and Kubernetes: The Complete Guide",
+    "instructor": "Stephen Grider",
+    "rating": "4.6",
+    "students": "250,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/"
+  },
+  {
+    "domain": "Cybersecurity",
+    "title": "The Complete Cyber Security Course: Hackers Exposed!",
+    "instructor": "Nathan House",
+    "rating": "4.5",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/"
+  },
+  {
+    "domain": "Cybersecurity",
+    "title": "Complete Ethical Hacking Bootcamp 2024: Zero to Mastery",
+    "instructor": "Andrei Neagoie",
+    "rating": "4.6",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/complete-ethical-hacking-bootcamp-zero-to-mastery/"
+  },
+  {
+    "domain": "Cybersecurity",
+    "title": "Learn Ethical Hacking From Scratch",
+    "instructor": "Zaid Sabih",
+    "rating": "4.6",
+    "students": "400,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/learn-ethical-hacking-from-scratch/"
+  },
+  {
+    "domain": "Cybersecurity",
+    "title": "CompTIA Security+ (SY0-601) Complete Course & Exam",
+    "instructor": "Jason Dion",
+    "rating": "4.7",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "Intermediate",
+    "url": "https://www.udemy.com/course/securityplus/"
+  },
+  {
+    "domain": "Cybersecurity",
+    "title": "Practical Ethical Hacking - The Complete Course",
+    "instructor": "Heath Adams",
+    "rating": "4.7",
+    "students": "180,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/practical-ethical-hacking/"
+  },
+  {
+    "domain": "DevOps",
+    "title": "DevOps Beginners to Advanced with Projects",
+    "instructor": "Imran Teli",
+    "rating": "4.5",
+    "students": "200,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/decodingdevops/"
+  },
+  {
+    "domain": "DevOps",
+    "title": "Docker Mastery: with Kubernetes +Swarm from a Docker Captain",
+    "instructor": "Bret Fisher",
+    "rating": "4.6",
+    "students": "250,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/docker-mastery/"
+  },
+  {
+    "domain": "DevOps",
+    "title": "Jenkins, From Zero To Hero: Become a DevOps Jenkins Master",
+    "instructor": "Ricardo Andre Gonzalez Gomez",
+    "rating": "4.5",
+    "students": "150,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/jenkins-from-zero-to-hero/"
+  },
+  {
+    "domain": "DevOps",
+    "title": "Kubernetes for the Absolute Beginners - Hands-on",
+    "instructor": "Mumshad Mannambeth",
+    "rating": "4.6",
+    "students": "300,000",
+    "price": "$84.99",
+    "level": "Beginner",
+    "url": "https://www.udemy.com/course/learn-kubernetes/"
+  },
+  {
+    "domain": "DevOps",
+    "title": "Complete DevOps Bootcamp 2024",
+    "instructor": "Andrei Neagoie",
+    "rating": "4.6",
+    "students": "100,000",
+    "price": "$84.99",
+    "level": "All Levels",
+    "url": "https://www.udemy.com/course/complete-devops-bootcamp/"
+  }
+]

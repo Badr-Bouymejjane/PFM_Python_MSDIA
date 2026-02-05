@@ -1,0 +1,501 @@
+domain,title,instructor,rating,students,price,level,url
+Python,Complete Python Bootcamp From Zero to Hero,Jose Portilla,4.6,800000,$99.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Complete Python Bootcamp From Zero to Hero - Complete Course,Colt Steele,4.6,800000,$89.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Complete Python Bootcamp From Zero to Hero Bootcamp,Tim Buchalka,4.6,600000,$89.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Complete Python Bootcamp From Zero to Hero 2024,Tim Buchalka,4.6,600000,$79.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Complete Complete Python Bootcamp From Zero to Hero,Colt Steele,4.6,800000,$89.99,All Levels,https://www.udemy.com/course/complete-python-bootcamp/
+Python,Python for Data Science and Machine Learning,Frank Kane,4.6,500000,$79.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Python for Data Science and Machine Learning - Complete Course,Frank Kane,4.6,300000,$84.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Python for Data Science and Machine Learning Bootcamp,Frank Kane,4.6,500000,$99.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Python for Data Science and Machine Learning 2024,Frank Kane,4.6,300000,$89.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Complete Python for Data Science and Machine Learning,Jose Portilla,4.6,300000,$84.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Python,Automate the Boring Stuff with Python,Al Sweigart,4.6,400000,$84.99,Beginner,https://www.udemy.com/course/automate/
+Python,Automate the Boring Stuff with Python - Complete Course,Al Sweigart,4.6,800000,$94.99,Beginner,https://www.udemy.com/course/automate/
+Python,Automate the Boring Stuff with Python Bootcamp,Al Sweigart,4.6,800000,$89.99,Beginner,https://www.udemy.com/course/automate/
+Python,Automate the Boring Stuff with Python 2024,Al Sweigart,4.6,800000,$99.99,Beginner,https://www.udemy.com/course/automate/
+Python,Complete Automate the Boring Stuff with Python,Jose Portilla,4.6,800000,$84.99,Beginner,https://www.udemy.com/course/automate/
+Python,Python Django - The Practical Guide,Jose Portilla,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Python,Python Django - The Practical Guide - Complete Course,Maximilian Schwarzmüller,4.6,150000,$84.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Python,Python Django - The Practical Guide Bootcamp,Jose Portilla,4.6,100000,$89.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Python,Python Django - The Practical Guide 2024,Jose Portilla,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Python,Complete Python Django - The Practical Guide,Jose Portilla,4.6,100000,$84.99,Intermediate,https://www.udemy.com/course/python-django-the-practical-guide/
+Python,Python and Flask Bootcamp,Jose Portilla,4.5,120000,$94.99,Intermediate,https://www.udemy.com/course/python-and-flask-bootcamp/
+Python,Python and Flask Bootcamp - Complete Course,Colt Steele,4.5,120000,$89.99,Intermediate,https://www.udemy.com/course/python-and-flask-bootcamp/
+Python,Python and Flask Bootcamp Bootcamp,Colt Steele,4.5,80000,$99.99,Intermediate,https://www.udemy.com/course/python-and-flask-bootcamp/
+Python,Python and Flask Bootcamp 2024,Jose Portilla,4.5,120000,$79.99,Intermediate,https://www.udemy.com/course/python-and-flask-bootcamp/
+Python,Complete Python and Flask Bootcamp,Jose Portilla,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/python-and-flask-bootcamp/
+Python,Python for Beginners,Mosh Hamedani,4.5,150000,$89.99,Beginner,https://www.udemy.com/course/python-for-beginners/
+Python,Python for Beginners - Complete Course,Tim Buchalka,4.5,150000,$84.99,Beginner,https://www.udemy.com/course/python-for-beginners/
+Python,Python for Beginners Bootcamp,Mosh Hamedani,4.5,200000,$99.99,Beginner,https://www.udemy.com/course/python-for-beginners/
+Python,Python for Beginners 2024,Tim Buchalka,4.5,200000,$99.99,Beginner,https://www.udemy.com/course/python-for-beginners/
+Python,Complete Python for Beginners,Tim Buchalka,4.5,200000,$84.99,Beginner,https://www.udemy.com/course/python-for-beginners/
+Python,Advanced Python Programming,Jose Portilla,4.6,100000,$89.99,Advanced,https://www.udemy.com/course/advanced-python-programming/
+Python,Advanced Python Programming - Complete Course,Ardit Sulce,4.6,80000,$89.99,Advanced,https://www.udemy.com/course/advanced-python-programming/
+Python,Advanced Python Programming Bootcamp,Ardit Sulce,4.6,80000,$99.99,Advanced,https://www.udemy.com/course/advanced-python-programming/
+Python,Advanced Python Programming 2024,Jose Portilla,4.6,100000,$94.99,Advanced,https://www.udemy.com/course/advanced-python-programming/
+Python,Complete Advanced Python Programming,Jose Portilla,4.6,100000,$94.99,Advanced,https://www.udemy.com/course/advanced-python-programming/
+Python,Python OOP - Object Oriented Programming,Tim Buchalka,4.5,70000,$94.99,Intermediate,https://www.udemy.com/course/python-oop-four-pillars-of-oop-in-python-3/
+Python,Python OOP - Object Oriented Programming - Complete Course,Jose Portilla,4.5,90000,$84.99,Intermediate,https://www.udemy.com/course/python-oop-four-pillars-of-oop-in-python-3/
+Python,Python OOP - Object Oriented Programming Bootcamp,Tim Buchalka,4.5,70000,$79.99,Intermediate,https://www.udemy.com/course/python-oop-four-pillars-of-oop-in-python-3/
+Python,Python OOP - Object Oriented Programming 2024,Jose Portilla,4.5,90000,$99.99,Intermediate,https://www.udemy.com/course/python-oop-four-pillars-of-oop-in-python-3/
+Python,Complete Python OOP - Object Oriented Programming,Tim Buchalka,4.5,70000,$84.99,Intermediate,https://www.udemy.com/course/python-oop-four-pillars-of-oop-in-python-3/
+Python,Python Web Development with Django,Nick Walter,4.5,60000,$79.99,Intermediate,https://www.udemy.com/course/python-django-dev-to-deployment/
+Python,Python Web Development with Django - Complete Course,Maximilian Schwarzmüller,4.5,80000,$94.99,Intermediate,https://www.udemy.com/course/python-django-dev-to-deployment/
+Python,Python Web Development with Django Bootcamp,Maximilian Schwarzmüller,4.5,60000,$79.99,Intermediate,https://www.udemy.com/course/python-django-dev-to-deployment/
+Python,Python Web Development with Django 2024,Maximilian Schwarzmüller,4.5,60000,$99.99,Intermediate,https://www.udemy.com/course/python-django-dev-to-deployment/
+Python,Complete Python Web Development with Django,Nick Walter,4.5,60000,$94.99,Intermediate,https://www.udemy.com/course/python-django-dev-to-deployment/
+Python,Python REST APIs with Flask and Docker,Teclado,4.6,50000,$84.99,Advanced,https://www.udemy.com/course/rest-api-flask-and-python/
+Python,Python REST APIs with Flask and Docker - Complete Course,Jose Portilla,4.6,50000,$99.99,Advanced,https://www.udemy.com/course/rest-api-flask-and-python/
+Python,Python REST APIs with Flask and Docker Bootcamp,Teclado,4.6,70000,$89.99,Advanced,https://www.udemy.com/course/rest-api-flask-and-python/
+Python,Python REST APIs with Flask and Docker 2024,Teclado,4.6,70000,$89.99,Advanced,https://www.udemy.com/course/rest-api-flask-and-python/
+Python,Complete Python REST APIs with Flask and Docker,Teclado,4.6,50000,$94.99,Advanced,https://www.udemy.com/course/rest-api-flask-and-python/
+Data Science,Data Science A-Z: Real-Life Data Science,SuperDataScience Team,4.5,300000,$99.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,Data Science A-Z: Real-Life Data Science - Complete Course,Kirill Eremenko,4.5,400000,$79.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,Data Science A-Z: Real-Life Data Science Bootcamp,Kirill Eremenko,4.5,400000,$79.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,Data Science A-Z: Real-Life Data Science 2024,Kirill Eremenko,4.5,300000,$94.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,Complete Data Science A-Z: Real-Life Data Science,Kirill Eremenko,4.5,400000,$84.99,All Levels,https://www.udemy.com/course/datascience/
+Data Science,The Data Science Course: Complete Bootcamp,365 Careers,4.5,300000,$89.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,The Data Science Course: Complete Bootcamp - Complete Course,Kirill Eremenko,4.5,300000,$84.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,The Data Science Course: Complete Bootcamp Bootcamp,365 Careers,4.5,250000,$84.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,The Data Science Course: Complete Bootcamp 2024,Kirill Eremenko,4.5,300000,$99.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,Complete The Data Science Course: Complete Bootcamp,Kirill Eremenko,4.5,300000,$84.99,All Levels,https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/
+Data Science,Data Science and Machine Learning Bootcamp with R,Jose Portilla,4.6,200000,$84.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Data Science and Machine Learning Bootcamp with R - Complete Course,Kirill Eremenko,4.6,150000,$79.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Data Science and Machine Learning Bootcamp with R Bootcamp,Kirill Eremenko,4.6,150000,$94.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Data Science and Machine Learning Bootcamp with R 2024,Kirill Eremenko,4.6,150000,$99.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Complete Data Science and Machine Learning Bootcamp with R,Jose Portilla,4.6,200000,$99.99,All Levels,https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/
+Data Science,Statistics for Data Science and Business,Kirill Eremenko,4.5,180000,$99.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Data Science,Statistics for Data Science and Business - Complete Course,Kirill Eremenko,4.5,250000,$89.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Data Science,Statistics for Data Science and Business Bootcamp,365 Careers,4.5,180000,$94.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Data Science,Statistics for Data Science and Business 2024,365 Careers,4.5,250000,$89.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Data Science,Complete Statistics for Data Science and Business,365 Careers,4.5,250000,$84.99,Beginner,https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/
+Data Science,Data Analysis with Pandas and Python,Jose Portilla,4.6,150000,$94.99,Intermediate,https://www.udemy.com/course/data-analysis-with-pandas/
+Data Science,Data Analysis with Pandas and Python - Complete Course,Jose Portilla,4.6,100000,$99.99,Intermediate,https://www.udemy.com/course/data-analysis-with-pandas/
+Data Science,Data Analysis with Pandas and Python Bootcamp,Jose Portilla,4.6,100000,$94.99,Intermediate,https://www.udemy.com/course/data-analysis-with-pandas/
+Data Science,Data Analysis with Pandas and Python 2024,Jose Portilla,4.6,100000,$79.99,Intermediate,https://www.udemy.com/course/data-analysis-with-pandas/
+Data Science,Complete Data Analysis with Pandas and Python,Boris Paskhaver,4.6,100000,$94.99,Intermediate,https://www.udemy.com/course/data-analysis-with-pandas/
+Data Science,Python for Data Analysis and Visualization,Frank Kane,4.5,120000,$84.99,Intermediate,https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/
+Data Science,Python for Data Analysis and Visualization - Complete Course,Jose Portilla,4.5,120000,$99.99,Intermediate,https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/
+Data Science,Python for Data Analysis and Visualization Bootcamp,Frank Kane,4.5,180000,$94.99,Intermediate,https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/
+Data Science,Python for Data Analysis and Visualization 2024,Frank Kane,4.5,120000,$94.99,Intermediate,https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/
+Data Science,Complete Python for Data Analysis and Visualization,Jose Portilla,4.5,120000,$99.99,Intermediate,https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/
+Data Science,Data Science: Natural Language Processing,Jose Portilla,4.6,80000,$89.99,Advanced,https://www.udemy.com/course/data-science-natural-language-processing-in-python/
+Data Science,Data Science: Natural Language Processing - Complete Course,Lazy Programmer Inc.,4.6,100000,$84.99,Advanced,https://www.udemy.com/course/data-science-natural-language-processing-in-python/
+Data Science,Data Science: Natural Language Processing Bootcamp,Jose Portilla,4.6,80000,$79.99,Advanced,https://www.udemy.com/course/data-science-natural-language-processing-in-python/
+Data Science,Data Science: Natural Language Processing 2024,Lazy Programmer Inc.,4.6,100000,$94.99,Advanced,https://www.udemy.com/course/data-science-natural-language-processing-in-python/
+Data Science,Complete Data Science: Natural Language Processing,Lazy Programmer Inc.,4.6,80000,$94.99,Advanced,https://www.udemy.com/course/data-science-natural-language-processing-in-python/
+Data Science,Data Science: Deep Learning and Neural Networks,Lazy Programmer Inc.,4.6,120000,$99.99,Advanced,https://www.udemy.com/course/data-science-deep-learning-and-neural-networks/
+Data Science,Data Science: Deep Learning and Neural Networks - Complete Course,Kirill Eremenko,4.6,120000,$89.99,Advanced,https://www.udemy.com/course/data-science-deep-learning-and-neural-networks---complete-course/
+Data Science,Data Science: Deep Learning and Neural Networks Bootcamp,Lazy Programmer Inc.,4.6,90000,$84.99,Advanced,https://www.udemy.com/course/data-science-deep-learning-and-neural-networks-bootcamp/
+Data Science,Data Science: Deep Learning and Neural Networks 2024,Lazy Programmer Inc.,4.6,120000,$89.99,Advanced,https://www.udemy.com/course/data-science-deep-learning-and-neural-networks-2024/
+Data Science,Complete Data Science: Deep Learning and Neural Networks,Kirill Eremenko,4.6,120000,$84.99,Advanced,https://www.udemy.com/course/complete-data-science-deep-learning-and-neural-networks/
+Data Science,SQL for Data Science,Jose Portilla,4.5,150000,$89.99,Beginner,https://www.udemy.com/course/the-complete-sql-bootcamp/
+Data Science,SQL for Data Science - Complete Course,Jose Portilla,4.5,150000,$84.99,Beginner,https://www.udemy.com/course/the-complete-sql-bootcamp/
+Data Science,SQL for Data Science Bootcamp,Jose Portilla,4.5,150000,$89.99,Beginner,https://www.udemy.com/course/the-complete-sql-bootcamp/
+Data Science,SQL for Data Science 2024,Jose Portilla,4.5,200000,$84.99,Beginner,https://www.udemy.com/course/the-complete-sql-bootcamp/
+Data Science,Complete SQL for Data Science,Jose Portilla,4.5,200000,$89.99,Beginner,https://www.udemy.com/course/the-complete-sql-bootcamp/
+Data Science,Data Visualization with Python and Matplotlib,Boris Paskhaver,4.5,90000,$99.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Data Science,Data Visualization with Python and Matplotlib - Complete Course,Boris Paskhaver,4.5,70000,$94.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Data Science,Data Visualization with Python and Matplotlib Bootcamp,Boris Paskhaver,4.5,70000,$79.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Data Science,Data Visualization with Python and Matplotlib 2024,Boris Paskhaver,4.5,90000,$99.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Data Science,Complete Data Visualization with Python and Matplotlib,Jose Portilla,4.5,90000,$89.99,Intermediate,https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+Machine Learning,Machine Learning A-Z: Hands-On Python & R,Hadelin de Ponteves,4.5,1000000,$89.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning A-Z: Hands-On Python & R - Complete Course,Kirill Eremenko,4.5,1000000,$94.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning A-Z: Hands-On Python & R Bootcamp,Kirill Eremenko,4.5,1000000,$99.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning A-Z: Hands-On Python & R 2024,Hadelin de Ponteves,4.5,1000000,$79.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,Complete Machine Learning A-Z: Hands-On Python & R,Kirill Eremenko,4.5,800000,$79.99,All Levels,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning with Python,Jose Portilla,4.5,250000,$99.99,Intermediate,https://www.udemy.com/course/machine-learning-with-python-hands-on/
+Machine Learning,Machine Learning with Python - Complete Course,Jose Portilla,4.5,300000,$79.99,Intermediate,https://www.udemy.com/course/machine-learning-with-python-hands-on/
+Machine Learning,Machine Learning with Python Bootcamp,Jose Portilla,4.5,300000,$99.99,Intermediate,https://www.udemy.com/course/machine-learning-with-python-hands-on/
+Machine Learning,Machine Learning with Python 2024,Jose Portilla,4.5,300000,$79.99,Intermediate,https://www.udemy.com/course/machine-learning-with-python-hands-on/
+Machine Learning,Complete Machine Learning with Python,Jose Portilla,4.5,250000,$84.99,Intermediate,https://www.udemy.com/course/machine-learning-with-python-hands-on/
+Machine Learning,Complete Machine Learning & Data Science Bootcamp,Daniel Bourke,4.6,150000,$79.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Complete Machine Learning & Data Science Bootcamp - Complete Course,Andrei Neagoie,4.6,150000,$89.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Complete Machine Learning & Data Science Bootcamp Bootcamp,Daniel Bourke,4.6,120000,$89.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Complete Machine Learning & Data Science Bootcamp 2024,Andrei Neagoie,4.6,120000,$94.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Complete Complete Machine Learning & Data Science Bootcamp,Andrei Neagoie,4.6,120000,$94.99,All Levels,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,PyTorch for Deep Learning,Jose Portilla,4.6,100000,$99.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,PyTorch for Deep Learning - Complete Course,Daniel Bourke,4.6,100000,$79.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,PyTorch for Deep Learning Bootcamp,Jose Portilla,4.6,100000,$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,PyTorch for Deep Learning 2024,Jose Portilla,4.6,80000,$94.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,Complete PyTorch for Deep Learning,Jose Portilla,4.6,80000,$99.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Machine Learning,Machine Learning Practical Workouts,Kirill Eremenko,4.4,60000,$79.99,Intermediate,https://www.udemy.com/course/machine-learning-practical-workouts/
+Machine Learning,Machine Learning Practical Workouts - Complete Course,Kirill Eremenko,4.4,80000,$89.99,Intermediate,https://www.udemy.com/course/machine-learning-practical-workouts---complete-course/
+Machine Learning,Machine Learning Practical Workouts Bootcamp,Dr. Ryan Ahmed,4.4,60000,$89.99,Intermediate,https://www.udemy.com/course/machine-learning-practical-workouts-bootcamp/
+Machine Learning,Machine Learning Practical Workouts 2024,Dr. Ryan Ahmed,4.4,60000,$99.99,Intermediate,https://www.udemy.com/course/machine-learning-practical-workouts-2024/
+Machine Learning,Complete Machine Learning Practical Workouts,Kirill Eremenko,4.4,60000,$89.99,Intermediate,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,TensorFlow Developer Certificate,Hadelin de Ponteves,4.6,120000,$99.99,Advanced,https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/
+Machine Learning,TensorFlow Developer Certificate - Complete Course,Kirill Eremenko,4.6,120000,$99.99,Advanced,https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/
+Machine Learning,TensorFlow Developer Certificate Bootcamp,Kirill Eremenko,4.6,90000,$99.99,Advanced,https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/
+Machine Learning,TensorFlow Developer Certificate 2024,Hadelin de Ponteves,4.6,90000,$84.99,Advanced,https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/
+Machine Learning,Complete TensorFlow Developer Certificate,Kirill Eremenko,4.6,120000,$84.99,Advanced,https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/
+Machine Learning,Machine Learning with scikit-learn,Jose Portilla,4.5,90000,$94.99,Intermediate,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning with scikit-learn - Complete Course,Jose Portilla,4.5,90000,$89.99,Intermediate,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning with scikit-learn Bootcamp,Jose Portilla,4.5,90000,$99.99,Intermediate,https://www.udemy.com/course/machinelearning/
+Machine Learning,Machine Learning with scikit-learn 2024,Jose Portilla,4.5,70000,$94.99,Intermediate,https://www.udemy.com/course/machinelearning/
+Machine Learning,Complete Machine Learning with scikit-learn,Jose Portilla,4.5,90000,$84.99,Intermediate,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Advanced Machine Learning Algorithms,Kirill Eremenko,4.6,70000,$84.99,Advanced,https://www.udemy.com/course/advanced-machine-learning-algorithms/
+Machine Learning,Advanced Machine Learning Algorithms - Complete Course,Lazy Programmer Inc.,4.6,70000,$94.99,Advanced,https://www.udemy.com/course/advanced-machine-learning-algorithms---complete-course/
+Machine Learning,Advanced Machine Learning Algorithms Bootcamp,Kirill Eremenko,4.6,50000,$79.99,Advanced,https://www.udemy.com/course/advanced-machine-learning-algorithms-bootcamp/
+Machine Learning,Advanced Machine Learning Algorithms 2024,Kirill Eremenko,4.6,70000,$99.99,Advanced,https://www.udemy.com/course/advanced-machine-learning-algorithms-2024/
+Machine Learning,Complete Advanced Machine Learning Algorithms,Lazy Programmer Inc.,4.6,50000,$99.99,Advanced,https://www.udemy.com/course/complete-advanced-machine-learning-algorithms/
+Machine Learning,Machine Learning for Time Series,Lazy Programmer Inc.,4.5,45000,$99.99,Advanced,https://www.udemy.com/course/machine-learning-for-time-series/
+Machine Learning,Machine Learning for Time Series - Complete Course,Jose Portilla,4.5,45000,$94.99,Advanced,https://www.udemy.com/course/machine-learning-for-time-series---complete-course/
+Machine Learning,Machine Learning for Time Series Bootcamp,Jose Portilla,4.5,45000,$99.99,Advanced,https://www.udemy.com/course/machine-learning-for-time-series-bootcamp/
+Machine Learning,Machine Learning for Time Series 2024,Jose Portilla,4.5,45000,$84.99,Advanced,https://www.udemy.com/course/machine-learning-for-time-series-2024/
+Machine Learning,Complete Machine Learning for Time Series,Lazy Programmer Inc.,4.5,60000,$84.99,Advanced,https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/
+Machine Learning,Ensemble Machine Learning,Hadelin de Ponteves,4.5,50000,$94.99,Advanced,https://www.udemy.com/course/ensemble-machine-learning/
+Machine Learning,Ensemble Machine Learning - Complete Course,Kirill Eremenko,4.5,40000,$84.99,Advanced,https://www.udemy.com/course/ensemble-machine-learning---complete-course/
+Machine Learning,Ensemble Machine Learning Bootcamp,Kirill Eremenko,4.5,40000,$94.99,Advanced,https://www.udemy.com/course/ensemble-machine-learning-bootcamp/
+Machine Learning,Ensemble Machine Learning 2024,Hadelin de Ponteves,4.5,40000,$79.99,Advanced,https://www.udemy.com/course/ensemble-machine-learning-2024/
+Machine Learning,Complete Ensemble Machine Learning,Kirill Eremenko,4.5,40000,$79.99,Advanced,https://www.udemy.com/course/complete-ensemble-machine-learning/
+Web Development,The Complete Web Developer Course,Colt Steele,4.5,800000,$89.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer Course - Complete Course,Colt Steele,4.5,600000,$89.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer Course Bootcamp,Colt Steele,4.5,600000,$94.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer Course 2024,Rob Percival,4.5,800000,$99.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Complete The Complete Web Developer Course,Colt Steele,4.5,800000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Web Developer Bootcamp,Colt Steele,4.7,900000,$94.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,The Web Developer Bootcamp - Complete Course,Colt Steele,4.7,900000,$94.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,The Web Developer Bootcamp Bootcamp,Angela Yu,4.7,700000,$94.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,The Web Developer Bootcamp 2024,Colt Steele,4.7,900000,$89.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,Complete The Web Developer Bootcamp,Angela Yu,4.7,700000,$99.99,All Levels,https://www.udemy.com/course/the-web-developer-bootcamp/
+Web Development,The Complete Web Development Bootcamp,Dr. Angela Yu,4.7,600000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,The Complete Web Development Bootcamp - Complete Course,Dr. Angela Yu,4.7,500000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,The Complete Web Development Bootcamp Bootcamp,Dr. Angela Yu,4.7,500000,$84.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,The Complete Web Development Bootcamp 2024,Colt Steele,4.7,500000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,Complete The Complete Web Development Bootcamp,Dr. Angela Yu,4.7,500000,$94.99,All Levels,https://www.udemy.com/course/the-complete-web-development-bootcamp/
+Web Development,Modern HTML & CSS From The Beginning,Jonas Schmedtmann,4.6,200000,$94.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,Modern HTML & CSS From The Beginning - Complete Course,Brad Traversy,4.6,200000,$94.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,Modern HTML & CSS From The Beginning Bootcamp,Brad Traversy,4.6,200000,$89.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,Modern HTML & CSS From The Beginning 2024,Brad Traversy,4.6,200000,$94.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,Complete Modern HTML & CSS From The Beginning,Jonas Schmedtmann,4.6,200000,$99.99,Beginner,https://www.udemy.com/course/modern-html-css-from-the-beginning/
+Web Development,Advanced CSS and Sass,Brad Traversy,4.8,250000,$84.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+Web Development,Advanced CSS and Sass - Complete Course,Brad Traversy,4.8,300000,$94.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+Web Development,Advanced CSS and Sass Bootcamp,Brad Traversy,4.8,250000,$99.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+Web Development,Advanced CSS and Sass 2024,Jonas Schmedtmann,4.8,300000,$89.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+Web Development,Complete Advanced CSS and Sass,Jonas Schmedtmann,4.8,250000,$79.99,Intermediate,https://www.udemy.com/course/advanced-css-and-sass/
+Web Development,Complete Web & Mobile Designer,Daniel Walter Scott,4.6,180000,$94.99,All Levels,https://www.udemy.com/course/complete-web-&-mobile-designer/
+Web Development,Complete Web & Mobile Designer - Complete Course,Daniel Walter Scott,4.6,180000,$89.99,All Levels,https://www.udemy.com/course/complete-web-&-mobile-designer---complete-course/
+Web Development,Complete Web & Mobile Designer Bootcamp,Daniel Walter Scott,4.6,140000,$99.99,All Levels,https://www.udemy.com/course/complete-web-&-mobile-designer-bootcamp/
+Web Development,Complete Web & Mobile Designer 2024,Rob Percival,4.6,180000,$99.99,All Levels,https://www.udemy.com/course/complete-web-&-mobile-designer-2024/
+Web Development,Complete Complete Web & Mobile Designer,Rob Percival,4.6,180000,$89.99,All Levels,https://www.udemy.com/course/complete-complete-web-&-mobile-designer/
+Web Development,The Complete Web Developer in 2024,Andrei Neagoie,4.7,250000,$84.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer in 2024 - Complete Course,Zero To Mastery,4.7,250000,$94.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer in 2024 Bootcamp,Andrei Neagoie,4.7,200000,$99.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,The Complete Web Developer in 2024 2024,Andrei Neagoie,4.7,250000,$89.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Complete The Complete Web Developer in 2024,Zero To Mastery,4.7,250000,$99.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Modern Web Development,Brad Traversy,4.6,120000,$94.99,Intermediate,https://www.udemy.com/course/modern-web-development/
+Web Development,Modern Web Development - Complete Course,Maximilian Schwarzmüller,4.6,120000,$99.99,Intermediate,https://www.udemy.com/course/modern-web-development---complete-course/
+Web Development,Modern Web Development Bootcamp,Maximilian Schwarzmüller,4.6,120000,$89.99,Intermediate,https://www.udemy.com/course/modern-web-development-bootcamp/
+Web Development,Modern Web Development 2024,Brad Traversy,4.6,120000,$99.99,Intermediate,https://www.udemy.com/course/modern-web-development-2024/
+Web Development,Complete Modern Web Development,Maximilian Schwarzmüller,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/complete-modern-web-development/
+Web Development,Full Stack Web Development,Rob Percival,4.6,160000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Full Stack Web Development - Complete Course,Rob Percival,4.6,160000,$79.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Full Stack Web Development Bootcamp,Colt Steele,4.6,200000,$89.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Full Stack Web Development 2024,Colt Steele,4.6,160000,$99.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Complete Full Stack Web Development,Rob Percival,4.6,200000,$94.99,All Levels,https://www.udemy.com/course/the-complete-web-developer-course-2/
+Web Development,Responsive Web Design Bootcamp,Colt Steele,4.6,90000,$94.99,Beginner,https://www.udemy.com/course/responsive-web-design-bootcamp/
+Web Development,Responsive Web Design Bootcamp - Complete Course,Colt Steele,4.6,90000,$84.99,Beginner,https://www.udemy.com/course/responsive-web-design-bootcamp---complete-course/
+Web Development,Responsive Web Design Bootcamp Bootcamp,Brad Traversy,4.6,120000,$94.99,Beginner,https://www.udemy.com/course/responsive-web-design-bootcamp-bootcamp/
+Web Development,Responsive Web Design Bootcamp 2024,Colt Steele,4.6,90000,$84.99,Beginner,https://www.udemy.com/course/responsive-web-design-bootcamp-2024/
+Web Development,Complete Responsive Web Design Bootcamp,Brad Traversy,4.6,120000,$79.99,Beginner,https://www.udemy.com/course/complete-responsive-web-design-bootcamp/
+JavaScript,The Complete JavaScript Course: From Zero to Expert,Jonas Schmedtmann,4.7,600000,$94.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,The Complete JavaScript Course: From Zero to Expert - Complete Course,Jonas Schmedtmann,4.7,700000,$79.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,The Complete JavaScript Course: From Zero to Expert Bootcamp,Jonas Schmedtmann,4.7,600000,$79.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,The Complete JavaScript Course: From Zero to Expert 2024,Jonas Schmedtmann,4.7,700000,$99.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,Complete The Complete JavaScript Course: From Zero to Expert,Colt Steele,4.7,600000,$94.99,All Levels,https://www.udemy.com/course/the-complete-javascript-course/
+JavaScript,Modern JavaScript From The Beginning,Jonas Schmedtmann,4.6,200000,$89.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,Modern JavaScript From The Beginning - Complete Course,Jonas Schmedtmann,4.6,200000,$94.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,Modern JavaScript From The Beginning Bootcamp,Brad Traversy,4.6,250000,$99.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,Modern JavaScript From The Beginning 2024,Brad Traversy,4.6,250000,$99.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,Complete Modern JavaScript From The Beginning,Brad Traversy,4.6,200000,$94.99,All Levels,https://www.udemy.com/course/modern-javascript-from-the-beginning/
+JavaScript,JavaScript: Understanding the Weird Parts,Anthony Alicea,4.6,150000,$84.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,JavaScript: Understanding the Weird Parts - Complete Course,Jonas Schmedtmann,4.6,200000,$99.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,JavaScript: Understanding the Weird Parts Bootcamp,Jonas Schmedtmann,4.6,150000,$94.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,JavaScript: Understanding the Weird Parts 2024,Anthony Alicea,4.6,200000,$89.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,Complete JavaScript: Understanding the Weird Parts,Anthony Alicea,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/understand-javascript/
+JavaScript,React - The Complete Guide,Stephen Grider,4.6,500000,$89.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,React - The Complete Guide - Complete Course,Stephen Grider,4.6,600000,$89.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,React - The Complete Guide Bootcamp,Maximilian Schwarzmüller,4.6,500000,$94.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,React - The Complete Guide 2024,Stephen Grider,4.6,500000,$99.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,Complete React - The Complete Guide,Maximilian Schwarzmüller,4.6,500000,$84.99,All Levels,https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+JavaScript,"Node.js, Express, MongoDB & More",Brad Traversy,4.7,300000,$89.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,"Node.js, Express, MongoDB & More - Complete Course",Jonas Schmedtmann,4.7,250000,$84.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,"Node.js, Express, MongoDB & More Bootcamp",Jonas Schmedtmann,4.7,250000,$89.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,"Node.js, Express, MongoDB & More 2024",Jonas Schmedtmann,4.7,250000,$94.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,"Complete Node.js, Express, MongoDB & More",Brad Traversy,4.7,300000,$94.99,Intermediate,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,The Complete Node.js Developer Course,Rob Percival,4.6,200000,$94.99,All Levels,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,The Complete Node.js Developer Course - Complete Course,Rob Percival,4.6,200000,$89.99,All Levels,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,The Complete Node.js Developer Course Bootcamp,Andrew Mead,4.6,200000,$99.99,All Levels,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,The Complete Node.js Developer Course 2024,Rob Percival,4.6,200000,$84.99,All Levels,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,Complete The Complete Node.js Developer Course,Andrew Mead,4.6,200000,$84.99,All Levels,https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/
+JavaScript,Vue - The Complete Guide,Stephen Grider,4.6,150000,$79.99,All Levels,https://www.udemy.com/course/vuejs-2-the-complete-guide/
+JavaScript,Vue - The Complete Guide - Complete Course,Stephen Grider,4.6,150000,$94.99,All Levels,https://www.udemy.com/course/vuejs-2-the-complete-guide/
+JavaScript,Vue - The Complete Guide Bootcamp,Maximilian Schwarzmüller,4.6,180000,$99.99,All Levels,https://www.udemy.com/course/vuejs-2-the-complete-guide/
+JavaScript,Vue - The Complete Guide 2024,Stephen Grider,4.6,180000,$94.99,All Levels,https://www.udemy.com/course/vuejs-2-the-complete-guide/
+JavaScript,Complete Vue - The Complete Guide,Maximilian Schwarzmüller,4.6,150000,$89.99,All Levels,https://www.udemy.com/course/vuejs-2-the-complete-guide/
+JavaScript,Angular - The Complete Guide,Stephen Grider,4.6,400000,$89.99,All Levels,https://www.udemy.com/course/the-complete-guide-to-angular-2/
+JavaScript,Angular - The Complete Guide - Complete Course,Maximilian Schwarzmüller,4.6,400000,$84.99,All Levels,https://www.udemy.com/course/the-complete-guide-to-angular-2/
+JavaScript,Angular - The Complete Guide Bootcamp,Stephen Grider,4.6,350000,$89.99,All Levels,https://www.udemy.com/course/the-complete-guide-to-angular-2/
+JavaScript,Angular - The Complete Guide 2024,Stephen Grider,4.6,350000,$79.99,All Levels,https://www.udemy.com/course/the-complete-guide-to-angular-2/
+JavaScript,Complete Angular - The Complete Guide,Stephen Grider,4.6,350000,$79.99,All Levels,https://www.udemy.com/course/the-complete-guide-to-angular-2/
+JavaScript,JavaScript Algorithms and Data Structures,Stephen Grider,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/javascript-algorithms-and-data-structures/
+JavaScript,JavaScript Algorithms and Data Structures - Complete Course,Stephen Grider,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/javascript-algorithms-and-data-structures---complete-course/
+JavaScript,JavaScript Algorithms and Data Structures Bootcamp,Colt Steele,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/javascript-algorithms-and-data-structures-bootcamp/
+JavaScript,JavaScript Algorithms and Data Structures 2024,Stephen Grider,4.6,150000,$84.99,Intermediate,https://www.udemy.com/course/javascript-algorithms-and-data-structures-2024/
+JavaScript,Complete JavaScript Algorithms and Data Structures,Stephen Grider,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/complete-javascript-algorithms-and-data-structures/
+JavaScript,Advanced JavaScript Concepts,Andrei Neagoie,4.7,100000,$84.99,Advanced,https://www.udemy.com/course/advanced-javascript-concepts/
+JavaScript,Advanced JavaScript Concepts - Complete Course,Andrei Neagoie,4.7,100000,$99.99,Advanced,https://www.udemy.com/course/advanced-javascript-concepts---complete-course/
+JavaScript,Advanced JavaScript Concepts Bootcamp,Anthony Alicea,4.7,100000,$79.99,Advanced,https://www.udemy.com/course/advanced-javascript-concepts-bootcamp/
+JavaScript,Advanced JavaScript Concepts 2024,Anthony Alicea,4.7,100000,$79.99,Advanced,https://www.udemy.com/course/advanced-javascript-concepts-2024/
+JavaScript,Complete Advanced JavaScript Concepts,Anthony Alicea,4.7,100000,$94.99,Advanced,https://www.udemy.com/course/complete-advanced-javascript-concepts/
+Artificial Intelligence,Artificial Intelligence A-Z: Build an AI,Hadelin de Ponteves,4.4,200000,$99.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,Artificial Intelligence A-Z: Build an AI - Complete Course,Hadelin de Ponteves,4.4,150000,$99.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,Artificial Intelligence A-Z: Build an AI Bootcamp,Kirill Eremenko,4.4,200000,$89.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,Artificial Intelligence A-Z: Build an AI 2024,Hadelin de Ponteves,4.4,200000,$89.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,Complete Artificial Intelligence A-Z: Build an AI,Kirill Eremenko,4.4,200000,$89.99,All Levels,https://www.udemy.com/course/artificial-intelligence-az/
+Artificial Intelligence,AI & Machine Learning Masterclass,Hadelin de Ponteves,4.5,80000,$94.99,Intermediate,https://www.udemy.com/course/ai-&-machine-learning-masterclass/
+Artificial Intelligence,AI & Machine Learning Masterclass - Complete Course,Dr. Ryan Ahmed,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/ai-&-machine-learning-masterclass---complete-course/
+Artificial Intelligence,AI & Machine Learning Masterclass Bootcamp,Dr. Ryan Ahmed,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/ai-&-machine-learning-masterclass-bootcamp/
+Artificial Intelligence,AI & Machine Learning Masterclass 2024,Hadelin de Ponteves,4.5,80000,$94.99,Intermediate,https://www.udemy.com/course/ai-&-machine-learning-masterclass-2024/
+Artificial Intelligence,Complete AI & Machine Learning Masterclass,Hadelin de Ponteves,4.5,80000,$89.99,Intermediate,https://www.udemy.com/course/complete-ai-&-machine-learning-masterclass/
+Artificial Intelligence,ChatGPT Complete Guide,Julian Melanson,4.5,120000,$79.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,ChatGPT Complete Guide - Complete Course,Hadelin de Ponteves,4.5,120000,$99.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,ChatGPT Complete Guide Bootcamp,Hadelin de Ponteves,4.5,120000,$99.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,ChatGPT Complete Guide 2024,Julian Melanson,4.5,150000,$84.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,Complete ChatGPT Complete Guide,Julian Melanson,4.5,120000,$89.99,All Levels,https://www.udemy.com/course/chatgpt-complete-guide/
+Artificial Intelligence,Complete AI & ML Bootcamp,Daniel Bourke,4.6,80000,$84.99,All Levels,https://www.udemy.com/course/complete-ai-&-ml-bootcamp/
+Artificial Intelligence,Complete AI & ML Bootcamp - Complete Course,Daniel Bourke,4.6,80000,$94.99,All Levels,https://www.udemy.com/course/complete-ai-&-ml-bootcamp---complete-course/
+Artificial Intelligence,Complete AI & ML Bootcamp Bootcamp,Andrei Neagoie,4.6,80000,$79.99,All Levels,https://www.udemy.com/course/complete-ai-&-ml-bootcamp-bootcamp/
+Artificial Intelligence,Complete AI & ML Bootcamp 2024,Daniel Bourke,4.6,80000,$89.99,All Levels,https://www.udemy.com/course/complete-ai-&-ml-bootcamp-2024/
+Artificial Intelligence,Complete Complete AI & ML Bootcamp,Andrei Neagoie,4.6,80000,$94.99,All Levels,https://www.udemy.com/course/complete-complete-ai-&-ml-bootcamp/
+Artificial Intelligence,AI for Everyone: Master the Basics,Kirill Eremenko,4.4,90000,$79.99,Beginner,https://www.udemy.com/course/ai-for-everyone-master-the-basics/
+Artificial Intelligence,AI for Everyone: Master the Basics - Complete Course,Hadelin de Ponteves,4.4,120000,$89.99,Beginner,https://www.udemy.com/course/ai-for-everyone-master-the-basics---complete-course/
+Artificial Intelligence,AI for Everyone: Master the Basics Bootcamp,Hadelin de Ponteves,4.4,120000,$79.99,Beginner,https://www.udemy.com/course/ai-for-everyone-master-the-basics-bootcamp/
+Artificial Intelligence,AI for Everyone: Master the Basics 2024,Hadelin de Ponteves,4.4,120000,$84.99,Beginner,https://www.udemy.com/course/ai-for-everyone-master-the-basics-2024/
+Artificial Intelligence,Complete AI for Everyone: Master the Basics,Hadelin de Ponteves,4.4,120000,$84.99,Beginner,https://www.udemy.com/course/complete-ai-for-everyone-master-the-basics/
+Artificial Intelligence,Artificial Intelligence: Reinforcement Learning,Hadelin de Ponteves,4.6,70000,$99.99,Advanced,https://www.udemy.com/course/artificial-intelligence-reinforcement-learning/
+Artificial Intelligence,Artificial Intelligence: Reinforcement Learning - Complete Course,Hadelin de Ponteves,4.6,50000,$89.99,Advanced,https://www.udemy.com/course/artificial-intelligence-reinforcement-learning---complete-course/
+Artificial Intelligence,Artificial Intelligence: Reinforcement Learning Bootcamp,Lazy Programmer Inc.,4.6,70000,$99.99,Advanced,https://www.udemy.com/course/artificial-intelligence-reinforcement-learning-bootcamp/
+Artificial Intelligence,Artificial Intelligence: Reinforcement Learning 2024,Lazy Programmer Inc.,4.6,50000,$89.99,Advanced,https://www.udemy.com/course/artificial-intelligence-reinforcement-learning-2024/
+Artificial Intelligence,Complete Artificial Intelligence: Reinforcement Learning,Hadelin de Ponteves,4.6,70000,$79.99,Advanced,https://www.udemy.com/course/complete-artificial-intelligence-reinforcement-learning/
+Artificial Intelligence,AI with Python,Hadelin de Ponteves,4.5,90000,$79.99,Intermediate,https://www.udemy.com/course/ai-with-python/
+Artificial Intelligence,AI with Python - Complete Course,Hadelin de Ponteves,4.5,70000,$79.99,Intermediate,https://www.udemy.com/course/ai-with-python---complete-course/
+Artificial Intelligence,AI with Python Bootcamp,Hadelin de Ponteves,4.5,90000,$89.99,Intermediate,https://www.udemy.com/course/ai-with-python-bootcamp/
+Artificial Intelligence,AI with Python 2024,Hadelin de Ponteves,4.5,70000,$99.99,Intermediate,https://www.udemy.com/course/ai-with-python-2024/
+Artificial Intelligence,Complete AI with Python,Jose Portilla,4.5,90000,$99.99,Intermediate,https://www.udemy.com/course/complete-ai-with-python/
+Artificial Intelligence,Computer Vision and Image Processing,Lazy Programmer Inc.,4.5,60000,$94.99,Advanced,https://www.udemy.com/course/computer-vision-and-image-processing/
+Artificial Intelligence,Computer Vision and Image Processing - Complete Course,Hadelin de Ponteves,4.5,80000,$99.99,Advanced,https://www.udemy.com/course/computer-vision-and-image-processing---complete-course/
+Artificial Intelligence,Computer Vision and Image Processing Bootcamp,Hadelin de Ponteves,4.5,60000,$94.99,Advanced,https://www.udemy.com/course/computer-vision-and-image-processing-bootcamp/
+Artificial Intelligence,Computer Vision and Image Processing 2024,Lazy Programmer Inc.,4.5,80000,$84.99,Advanced,https://www.udemy.com/course/computer-vision-and-image-processing-2024/
+Artificial Intelligence,Complete Computer Vision and Image Processing,Hadelin de Ponteves,4.5,80000,$79.99,Advanced,https://www.udemy.com/course/complete-computer-vision-and-image-processing/
+Artificial Intelligence,Natural Language Processing with AI,Jose Portilla,4.6,80000,$89.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-ai/
+Artificial Intelligence,Natural Language Processing with AI - Complete Course,Jose Portilla,4.6,80000,$94.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-ai---complete-course/
+Artificial Intelligence,Natural Language Processing with AI Bootcamp,Jose Portilla,4.6,80000,$89.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-ai-bootcamp/
+Artificial Intelligence,Natural Language Processing with AI 2024,Jose Portilla,4.6,80000,$89.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-ai-2024/
+Artificial Intelligence,Complete Natural Language Processing with AI,Jose Portilla,4.6,100000,$89.99,Advanced,https://www.udemy.com/course/complete-natural-language-processing-with-ai/
+Artificial Intelligence,AI Ethics and Governance,Hadelin de Ponteves,4.4,50000,$79.99,All Levels,https://www.udemy.com/course/ai-ethics-and-governance/
+Artificial Intelligence,AI Ethics and Governance - Complete Course,Kirill Eremenko,4.4,40000,$94.99,All Levels,https://www.udemy.com/course/ai-ethics-and-governance---complete-course/
+Artificial Intelligence,AI Ethics and Governance Bootcamp,Hadelin de Ponteves,4.4,50000,$84.99,All Levels,https://www.udemy.com/course/ai-ethics-and-governance-bootcamp/
+Artificial Intelligence,AI Ethics and Governance 2024,Hadelin de Ponteves,4.4,40000,$94.99,All Levels,https://www.udemy.com/course/ai-ethics-and-governance-2024/
+Artificial Intelligence,Complete AI Ethics and Governance,Hadelin de Ponteves,4.4,50000,$94.99,All Levels,https://www.udemy.com/course/complete-ai-ethics-and-governance/
+Deep Learning,Deep Learning A-Z: Artificial Neural Networks,Kirill Eremenko,4.5,250000,$99.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Deep Learning A-Z: Artificial Neural Networks - Complete Course,Hadelin de Ponteves,4.5,300000,$79.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Deep Learning A-Z: Artificial Neural Networks Bootcamp,Hadelin de Ponteves,4.5,300000,$79.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Deep Learning A-Z: Artificial Neural Networks 2024,Hadelin de Ponteves,4.5,250000,$84.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Complete Deep Learning A-Z: Artificial Neural Networks,Hadelin de Ponteves,4.5,250000,$89.99,Intermediate,https://www.udemy.com/course/deeplearning/
+Deep Learning,Complete TensorFlow 2 and Keras Bootcamp,Hadelin de Ponteves,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,Complete TensorFlow 2 and Keras Bootcamp - Complete Course,Jose Portilla,4.6,120000,$99.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,Complete TensorFlow 2 and Keras Bootcamp Bootcamp,Jose Portilla,4.6,120000,$84.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,Complete TensorFlow 2 and Keras Bootcamp 2024,Hadelin de Ponteves,4.6,120000,$84.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,Complete Complete TensorFlow 2 and Keras Bootcamp,Jose Portilla,4.6,150000,$79.99,Intermediate,https://www.udemy.com/course/complete-tensorflow-2-and-keras-deep-learning-bootcamp/
+Deep Learning,PyTorch for Deep Learning and Computer Vision,Jad Slim,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Deep Learning,PyTorch for Deep Learning and Computer Vision - Complete Course,Rayan Slim,4.5,60000,$99.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Deep Learning,PyTorch for Deep Learning and Computer Vision Bootcamp,Rayan Slim,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Deep Learning,PyTorch for Deep Learning and Computer Vision 2024,Rayan Slim,4.5,60000,$79.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Deep Learning,Complete PyTorch for Deep Learning and Computer Vision,Jad Slim,4.5,80000,$84.99,Intermediate,https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/
+Deep Learning,Deep Learning: Advanced Computer Vision,Lazy Programmer Inc.,4.6,50000,$84.99,Advanced,https://www.udemy.com/course/deep-learning-advanced-computer-vision/
+Deep Learning,Deep Learning: Advanced Computer Vision - Complete Course,Hadelin de Ponteves,4.6,50000,$94.99,Advanced,https://www.udemy.com/course/deep-learning-advanced-computer-vision---complete-course/
+Deep Learning,Deep Learning: Advanced Computer Vision Bootcamp,Lazy Programmer Inc.,4.6,50000,$79.99,Advanced,https://www.udemy.com/course/deep-learning-advanced-computer-vision-bootcamp/
+Deep Learning,Deep Learning: Advanced Computer Vision 2024,Hadelin de Ponteves,4.6,50000,$79.99,Advanced,https://www.udemy.com/course/deep-learning-advanced-computer-vision-2024/
+Deep Learning,Complete Deep Learning: Advanced Computer Vision,Lazy Programmer Inc.,4.6,50000,$79.99,Advanced,https://www.udemy.com/course/complete-deep-learning-advanced-computer-vision/
+Deep Learning,Natural Language Processing with Deep Learning,Jose Portilla,4.6,55000,$79.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-deep-learning/
+Deep Learning,Natural Language Processing with Deep Learning - Complete Course,Lazy Programmer Inc.,4.6,70000,$79.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-deep-learning---complete-course/
+Deep Learning,Natural Language Processing with Deep Learning Bootcamp,Lazy Programmer Inc.,4.6,70000,$94.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-deep-learning-bootcamp/
+Deep Learning,Natural Language Processing with Deep Learning 2024,Lazy Programmer Inc.,4.6,55000,$79.99,Advanced,https://www.udemy.com/course/natural-language-processing-with-deep-learning-2024/
+Deep Learning,Complete Natural Language Processing with Deep Learning,Lazy Programmer Inc.,4.6,55000,$99.99,Advanced,https://www.udemy.com/course/complete-natural-language-processing-with-deep-learning/
+Deep Learning,Deep Learning with PyTorch,Jose Portilla,4.6,70000,$79.99,Intermediate,https://www.udemy.com/course/deep-learning-with-pytorch/
+Deep Learning,Deep Learning with PyTorch - Complete Course,Jose Portilla,4.6,90000,$89.99,Intermediate,https://www.udemy.com/course/deep-learning-with-pytorch---complete-course/
+Deep Learning,Deep Learning with PyTorch Bootcamp,Jose Portilla,4.6,70000,$79.99,Intermediate,https://www.udemy.com/course/deep-learning-with-pytorch-bootcamp/
+Deep Learning,Deep Learning with PyTorch 2024,Daniel Bourke,4.6,90000,$84.99,Intermediate,https://www.udemy.com/course/deep-learning-with-pytorch-2024/
+Deep Learning,Complete Deep Learning with PyTorch,Jose Portilla,4.6,70000,$79.99,Intermediate,https://www.udemy.com/course/complete-deep-learning-with-pytorch/
+Deep Learning,Convolutional Neural Networks,Lazy Programmer Inc.,4.6,65000,$84.99,Advanced,https://www.udemy.com/course/convolutional-neural-networks/
+Deep Learning,Convolutional Neural Networks - Complete Course,Hadelin de Ponteves,4.6,80000,$99.99,Advanced,https://www.udemy.com/course/convolutional-neural-networks---complete-course/
+Deep Learning,Convolutional Neural Networks Bootcamp,Lazy Programmer Inc.,4.6,65000,$84.99,Advanced,https://www.udemy.com/course/convolutional-neural-networks-bootcamp/
+Deep Learning,Convolutional Neural Networks 2024,Lazy Programmer Inc.,4.6,80000,$84.99,Advanced,https://www.udemy.com/course/convolutional-neural-networks-2024/
+Deep Learning,Complete Convolutional Neural Networks,Hadelin de Ponteves,4.6,65000,$84.99,Advanced,https://www.udemy.com/course/complete-convolutional-neural-networks/
+Deep Learning,Recurrent Neural Networks,Kirill Eremenko,4.5,55000,$89.99,Advanced,https://www.udemy.com/course/recurrent-neural-networks/
+Deep Learning,Recurrent Neural Networks - Complete Course,Lazy Programmer Inc.,4.5,70000,$89.99,Advanced,https://www.udemy.com/course/recurrent-neural-networks---complete-course/
+Deep Learning,Recurrent Neural Networks Bootcamp,Lazy Programmer Inc.,4.5,55000,$89.99,Advanced,https://www.udemy.com/course/recurrent-neural-networks-bootcamp/
+Deep Learning,Recurrent Neural Networks 2024,Lazy Programmer Inc.,4.5,70000,$84.99,Advanced,https://www.udemy.com/course/recurrent-neural-networks-2024/
+Deep Learning,Complete Recurrent Neural Networks,Kirill Eremenko,4.5,55000,$84.99,Advanced,https://www.udemy.com/course/complete-recurrent-neural-networks/
+Deep Learning,GANs and Generative Models,Hadelin de Ponteves,4.6,60000,$79.99,Advanced,https://www.udemy.com/course/gans-and-generative-models/
+Deep Learning,GANs and Generative Models - Complete Course,Hadelin de Ponteves,4.6,48000,$79.99,Advanced,https://www.udemy.com/course/gans-and-generative-models---complete-course/
+Deep Learning,GANs and Generative Models Bootcamp,Lazy Programmer Inc.,4.6,60000,$79.99,Advanced,https://www.udemy.com/course/gans-and-generative-models-bootcamp/
+Deep Learning,GANs and Generative Models 2024,Lazy Programmer Inc.,4.6,60000,$84.99,Advanced,https://www.udemy.com/course/gans-and-generative-models-2024/
+Deep Learning,Complete GANs and Generative Models,Hadelin de Ponteves,4.6,60000,$79.99,Advanced,https://www.udemy.com/course/complete-gans-and-generative-models/
+Deep Learning,Deep Reinforcement Learning,Hadelin de Ponteves,4.6,45000,$94.99,Advanced,https://www.udemy.com/course/deep-reinforcement-learning/
+Deep Learning,Deep Reinforcement Learning - Complete Course,Lazy Programmer Inc.,4.6,45000,$84.99,Advanced,https://www.udemy.com/course/deep-reinforcement-learning---complete-course/
+Deep Learning,Deep Reinforcement Learning Bootcamp,Lazy Programmer Inc.,4.6,55000,$79.99,Advanced,https://www.udemy.com/course/deep-reinforcement-learning-bootcamp/
+Deep Learning,Deep Reinforcement Learning 2024,Hadelin de Ponteves,4.6,55000,$94.99,Advanced,https://www.udemy.com/course/deep-reinforcement-learning-2024/
+Deep Learning,Complete Deep Reinforcement Learning,Lazy Programmer Inc.,4.6,45000,$99.99,Advanced,https://www.udemy.com/course/complete-deep-reinforcement-learning/
+Cloud Computing,AWS Certified Solutions Architect - Associate,Stephane Maarek,4.7,800000,$84.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,AWS Certified Solutions Architect - Associate - Complete Course,Stephane Maarek,4.7,600000,$84.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,AWS Certified Solutions Architect - Associate Bootcamp,Stephane Maarek,4.7,600000,$79.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,AWS Certified Solutions Architect - Associate 2024,Stephane Maarek,4.7,600000,$84.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,Complete AWS Certified Solutions Architect - Associate,Ryan Kroonenburg,4.7,800000,$89.99,All Levels,https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+Cloud Computing,Ultimate AWS Certified Cloud Practitioner,Stephane Maarek,4.7,400000,$79.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Ultimate AWS Certified Cloud Practitioner - Complete Course,Ryan Kroonenburg,4.7,500000,$84.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Ultimate AWS Certified Cloud Practitioner Bootcamp,Stephane Maarek,4.7,500000,$84.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Ultimate AWS Certified Cloud Practitioner 2024,Stephane Maarek,4.7,400000,$84.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Complete Ultimate AWS Certified Cloud Practitioner,Stephane Maarek,4.7,400000,$84.99,Beginner,https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+Cloud Computing,Microsoft Azure Fundamentals AZ-900,Alan Rodrigues,4.6,300000,$94.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Microsoft Azure Fundamentals AZ-900 - Complete Course,Scott Duffy,4.6,300000,$84.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Microsoft Azure Fundamentals AZ-900 Bootcamp,Scott Duffy,4.6,300000,$79.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Microsoft Azure Fundamentals AZ-900 2024,Scott Duffy,4.6,250000,$84.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Complete Microsoft Azure Fundamentals AZ-900,Scott Duffy,4.6,250000,$89.99,Beginner,https://www.udemy.com/course/az900-azure/
+Cloud Computing,Google Cloud Platform Fundamentals,Dan Sullivan,4.5,100000,$79.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Google Cloud Platform Fundamentals - Complete Course,Dan Sullivan,4.5,80000,$89.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Google Cloud Platform Fundamentals Bootcamp,Dan Sullivan,4.5,80000,$84.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Google Cloud Platform Fundamentals 2024,Loony Corn,4.5,100000,$89.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Complete Google Cloud Platform Fundamentals,Loony Corn,4.5,100000,$94.99,Beginner,https://www.udemy.com/course/google-cloud-platform-gcp-fundamentals-for-beginners/
+Cloud Computing,Docker and Kubernetes: The Complete Guide,Stephen Grider,4.6,250000,$84.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cloud Computing,Docker and Kubernetes: The Complete Guide - Complete Course,Stephen Grider,4.6,200000,$94.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cloud Computing,Docker and Kubernetes: The Complete Guide Bootcamp,Stephen Grider,4.6,200000,$84.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cloud Computing,Docker and Kubernetes: The Complete Guide 2024,Stephen Grider,4.6,200000,$79.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cloud Computing,Complete Docker and Kubernetes: The Complete Guide,Mumshad Mannambeth,4.6,200000,$79.99,All Levels,https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/
+Cloud Computing,AWS Certified Developer - Associate,Ryan Kroonenburg,4.7,200000,$79.99,Intermediate,https://www.udemy.com/course/aws-certified-developer---associate/
+Cloud Computing,AWS Certified Developer - Associate - Complete Course,Ryan Kroonenburg,4.7,200000,$79.99,Intermediate,https://www.udemy.com/course/aws-certified-developer---associate---complete-course/
+Cloud Computing,AWS Certified Developer - Associate Bootcamp,Stephane Maarek,4.7,160000,$94.99,Intermediate,https://www.udemy.com/course/aws-certified-developer---associate-bootcamp/
+Cloud Computing,AWS Certified Developer - Associate 2024,Stephane Maarek,4.7,160000,$89.99,Intermediate,https://www.udemy.com/course/aws-certified-developer---associate-2024/
+Cloud Computing,Complete AWS Certified Developer - Associate,Stephane Maarek,4.7,200000,$84.99,Intermediate,https://www.udemy.com/course/complete-aws-certified-developer---associate/
+Cloud Computing,Azure Administrator AZ-104,Scott Duffy,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/azure-administrator-az-104/
+Cloud Computing,Azure Administrator AZ-104 - Complete Course,Scott Duffy,4.6,150000,$89.99,Intermediate,https://www.udemy.com/course/azure-administrator-az-104---complete-course/
+Cloud Computing,Azure Administrator AZ-104 Bootcamp,Scott Duffy,4.6,120000,$99.99,Intermediate,https://www.udemy.com/course/azure-administrator-az-104-bootcamp/
+Cloud Computing,Azure Administrator AZ-104 2024,Alan Rodrigues,4.6,150000,$99.99,Intermediate,https://www.udemy.com/course/azure-administrator-az-104-2024/
+Cloud Computing,Complete Azure Administrator AZ-104,Scott Duffy,4.6,150000,$84.99,Intermediate,https://www.udemy.com/course/complete-azure-administrator-az-104/
+Cloud Computing,AWS Certified SysOps Administrator,Stephane Maarek,4.7,100000,$99.99,Intermediate,https://www.udemy.com/course/aws-certified-sysops-administrator/
+Cloud Computing,AWS Certified SysOps Administrator - Complete Course,Stephane Maarek,4.7,120000,$94.99,Intermediate,https://www.udemy.com/course/aws-certified-sysops-administrator---complete-course/
+Cloud Computing,AWS Certified SysOps Administrator Bootcamp,Ryan Kroonenburg,4.7,100000,$79.99,Intermediate,https://www.udemy.com/course/aws-certified-sysops-administrator-bootcamp/
+Cloud Computing,AWS Certified SysOps Administrator 2024,Ryan Kroonenburg,4.7,120000,$99.99,Intermediate,https://www.udemy.com/course/aws-certified-sysops-administrator-2024/
+Cloud Computing,Complete AWS Certified SysOps Administrator,Stephane Maarek,4.7,120000,$94.99,Intermediate,https://www.udemy.com/course/complete-aws-certified-sysops-administrator/
+Cloud Computing,Terraform for AWS,Bryan Krausen,4.6,70000,$99.99,Intermediate,https://www.udemy.com/course/terraform-for-aws/
+Cloud Computing,Terraform for AWS - Complete Course,Zeal Vora,4.6,90000,$89.99,Intermediate,https://www.udemy.com/course/terraform-for-aws---complete-course/
+Cloud Computing,Terraform for AWS Bootcamp,Zeal Vora,4.6,90000,$94.99,Intermediate,https://www.udemy.com/course/terraform-for-aws-bootcamp/
+Cloud Computing,Terraform for AWS 2024,Zeal Vora,4.6,90000,$84.99,Intermediate,https://www.udemy.com/course/terraform-for-aws-2024/
+Cloud Computing,Complete Terraform for AWS,Bryan Krausen,4.6,90000,$84.99,Intermediate,https://www.udemy.com/course/complete-terraform-for-aws/
+Cloud Computing,AWS Lambda and Serverless,Stephane Maarek,4.6,65000,$99.99,Intermediate,https://www.udemy.com/course/aws-lambda-and-serverless/
+Cloud Computing,AWS Lambda and Serverless - Complete Course,Frank Kane,4.6,65000,$89.99,Intermediate,https://www.udemy.com/course/aws-lambda-and-serverless---complete-course/
+Cloud Computing,AWS Lambda and Serverless Bootcamp,Frank Kane,4.6,65000,$94.99,Intermediate,https://www.udemy.com/course/aws-lambda-and-serverless-bootcamp/
+Cloud Computing,AWS Lambda and Serverless 2024,Stephane Maarek,4.6,80000,$84.99,Intermediate,https://www.udemy.com/course/aws-lambda-and-serverless-2024/
+Cloud Computing,Complete AWS Lambda and Serverless,Stephane Maarek,4.6,80000,$89.99,Intermediate,https://www.udemy.com/course/complete-aws-lambda-and-serverless/
+Cybersecurity,The Complete Cyber Security Course,Ermin Kreponic,4.5,250000,$99.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,The Complete Cyber Security Course - Complete Course,Nathan House,4.5,250000,$84.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,The Complete Cyber Security Course Bootcamp,Ermin Kreponic,4.5,300000,$89.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,The Complete Cyber Security Course 2024,Nathan House,4.5,300000,$94.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,Complete The Complete Cyber Security Course,Nathan House,4.5,300000,$89.99,All Levels,https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/
+Cybersecurity,Complete Ethical Hacking Bootcamp,Andrei Neagoie,4.6,120000,$99.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Ethical Hacking Bootcamp - Complete Course,Andrei Neagoie,4.6,150000,$89.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Ethical Hacking Bootcamp Bootcamp,Andrei Neagoie,4.6,120000,$89.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Ethical Hacking Bootcamp 2024,Andrei Neagoie,4.6,120000,$94.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Complete Ethical Hacking Bootcamp,Andrei Neagoie,4.6,120000,$99.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Learn Ethical Hacking From Scratch,Zaid Sabih,4.6,350000,$94.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Learn Ethical Hacking From Scratch - Complete Course,Zaid Sabih,4.6,350000,$99.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Learn Ethical Hacking From Scratch Bootcamp,Zaid Sabih,4.6,400000,$84.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Learn Ethical Hacking From Scratch 2024,Zaid Sabih,4.6,400000,$89.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Learn Ethical Hacking From Scratch,Zaid Sabih,4.6,400000,$79.99,Beginner,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,CompTIA Security+ Complete Course,Mike Meyers,4.7,160000,$89.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,CompTIA Security+ Complete Course - Complete Course,Jason Dion,4.7,200000,$94.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,CompTIA Security+ Complete Course Bootcamp,Mike Meyers,4.7,160000,$79.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,CompTIA Security+ Complete Course 2024,Mike Meyers,4.7,160000,$79.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,Complete CompTIA Security+ Complete Course,Mike Meyers,4.7,200000,$79.99,Intermediate,https://www.udemy.com/course/securityplus/
+Cybersecurity,Practical Ethical Hacking,Heath Adams,4.7,150000,$79.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Practical Ethical Hacking - Complete Course,Heath Adams,4.7,150000,$89.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Practical Ethical Hacking Bootcamp,TCM Security,4.7,180000,$84.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Practical Ethical Hacking 2024,TCM Security,4.7,180000,$94.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Practical Ethical Hacking,Heath Adams,4.7,180000,$94.99,All Levels,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Web Application Penetration Testing,Heath Adams,4.6,120000,$94.99,Intermediate,https://www.udemy.com/course/web-application-penetration-testing/
+Cybersecurity,Web Application Penetration Testing - Complete Course,Heath Adams,4.6,100000,$79.99,Intermediate,https://www.udemy.com/course/web-application-penetration-testing---complete-course/
+Cybersecurity,Web Application Penetration Testing Bootcamp,Zaid Sabih,4.6,100000,$99.99,Intermediate,https://www.udemy.com/course/web-application-penetration-testing-bootcamp/
+Cybersecurity,Web Application Penetration Testing 2024,Heath Adams,4.6,120000,$89.99,Intermediate,https://www.udemy.com/course/web-application-penetration-testing-2024/
+Cybersecurity,Complete Web Application Penetration Testing,Heath Adams,4.6,120000,$84.99,Intermediate,https://www.udemy.com/course/complete-web-application-penetration-testing/
+Cybersecurity,Network Security and Ethical Hacking,Zaid Sabih,4.5,120000,$79.99,Intermediate,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Network Security and Ethical Hacking - Complete Course,Nathan House,4.5,150000,$99.99,Intermediate,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Network Security and Ethical Hacking Bootcamp,Nathan House,4.5,120000,$94.99,Intermediate,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Network Security and Ethical Hacking 2024,Nathan House,4.5,120000,$89.99,Intermediate,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Complete Network Security and Ethical Hacking,Zaid Sabih,4.5,150000,$89.99,Intermediate,https://www.udemy.com/course/learn-ethical-hacking-from-scratch/
+Cybersecurity,Certified Information Systems Security,Jason Dion,4.6,100000,$79.99,Advanced,https://www.udemy.com/course/certified-information-systems-security/
+Cybersecurity,Certified Information Systems Security - Complete Course,Thor Pedersen,4.6,80000,$79.99,Advanced,https://www.udemy.com/course/certified-information-systems-security---complete-course/
+Cybersecurity,Certified Information Systems Security Bootcamp,Thor Pedersen,4.6,100000,$79.99,Advanced,https://www.udemy.com/course/certified-information-systems-security-bootcamp/
+Cybersecurity,Certified Information Systems Security 2024,Thor Pedersen,4.6,80000,$94.99,Advanced,https://www.udemy.com/course/certified-information-systems-security-2024/
+Cybersecurity,Complete Certified Information Systems Security,Thor Pedersen,4.6,100000,$94.99,Advanced,https://www.udemy.com/course/complete-certified-information-systems-security/
+Cybersecurity,Cybersecurity for Beginners,Nathan House,4.5,90000,$99.99,Beginner,https://www.udemy.com/course/cybersecurity-for-beginners/
+Cybersecurity,Cybersecurity for Beginners - Complete Course,Ermin Kreponic,4.5,70000,$94.99,Beginner,https://www.udemy.com/course/cybersecurity-for-beginners---complete-course/
+Cybersecurity,Cybersecurity for Beginners Bootcamp,Ermin Kreponic,4.5,70000,$94.99,Beginner,https://www.udemy.com/course/cybersecurity-for-beginners-bootcamp/
+Cybersecurity,Cybersecurity for Beginners 2024,Ermin Kreponic,4.5,70000,$84.99,Beginner,https://www.udemy.com/course/cybersecurity-for-beginners-2024/
+Cybersecurity,Complete Cybersecurity for Beginners,Nathan House,4.5,90000,$94.99,Beginner,https://www.udemy.com/course/complete-cybersecurity-for-beginners/
+Cybersecurity,Advanced Penetration Testing,Zaid Sabih,4.7,70000,$84.99,Advanced,https://www.udemy.com/course/advanced-penetration-testing/
+Cybersecurity,Advanced Penetration Testing - Complete Course,Zaid Sabih,4.7,70000,$99.99,Advanced,https://www.udemy.com/course/advanced-penetration-testing---complete-course/
+Cybersecurity,Advanced Penetration Testing Bootcamp,Heath Adams,4.7,55000,$84.99,Advanced,https://www.udemy.com/course/advanced-penetration-testing-bootcamp/
+Cybersecurity,Advanced Penetration Testing 2024,Zaid Sabih,4.7,55000,$84.99,Advanced,https://www.udemy.com/course/advanced-penetration-testing-2024/
+Cybersecurity,Complete Advanced Penetration Testing,Zaid Sabih,4.7,70000,$84.99,Advanced,https://www.udemy.com/course/complete-advanced-penetration-testing/
+DevOps,DevOps Beginners to Advanced,Imran Teli,4.5,160000,$99.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,DevOps Beginners to Advanced - Complete Course,Tao W.,4.5,160000,$79.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,DevOps Beginners to Advanced Bootcamp,Tao W.,4.5,160000,$94.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,DevOps Beginners to Advanced 2024,Tao W.,4.5,160000,$94.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,Complete DevOps Beginners to Advanced,Imran Teli,4.5,160000,$79.99,All Levels,https://www.udemy.com/course/decodingdevops/
+DevOps,Docker Mastery with Kubernetes,Mumshad Mannambeth,4.6,250000,$79.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,Docker Mastery with Kubernetes - Complete Course,Mumshad Mannambeth,4.6,250000,$79.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,Docker Mastery with Kubernetes Bootcamp,Mumshad Mannambeth,4.6,250000,$84.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,Docker Mastery with Kubernetes 2024,Mumshad Mannambeth,4.6,250000,$79.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,Complete Docker Mastery with Kubernetes,Bret Fisher,4.6,250000,$79.99,All Levels,https://www.udemy.com/course/docker-mastery/
+DevOps,Jenkins: From Zero To Hero,Tao W.,4.5,120000,$84.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Jenkins: From Zero To Hero - Complete Course,Ricardo Andre Gonzalez,4.5,120000,$79.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Jenkins: From Zero To Hero Bootcamp,Tao W.,4.5,120000,$89.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Jenkins: From Zero To Hero 2024,Tao W.,4.5,120000,$79.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Complete Jenkins: From Zero To Hero,Ricardo Andre Gonzalez,4.5,150000,$84.99,All Levels,https://www.udemy.com/course/jenkins-from-zero-to-hero/
+DevOps,Kubernetes for Absolute Beginners,Mumshad Mannambeth,4.6,250000,$79.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Kubernetes for Absolute Beginners - Complete Course,Mumshad Mannambeth,4.6,250000,$94.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Kubernetes for Absolute Beginners Bootcamp,KodeKloud,4.6,300000,$89.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Kubernetes for Absolute Beginners 2024,Mumshad Mannambeth,4.6,300000,$89.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Complete Kubernetes for Absolute Beginners,Mumshad Mannambeth,4.6,300000,$84.99,Beginner,https://www.udemy.com/course/learn-kubernetes/
+DevOps,Complete DevOps Bootcamp,Andrei Neagoie,4.6,80000,$89.99,All Levels,https://www.udemy.com/course/complete-devops-bootcamp/
+DevOps,Complete DevOps Bootcamp - Complete Course,Andrei Neagoie,4.6,80000,$79.99,All Levels,https://www.udemy.com/course/complete-devops-bootcamp---complete-course/
+DevOps,Complete DevOps Bootcamp Bootcamp,Zero To Mastery,4.6,100000,$99.99,All Levels,https://www.udemy.com/course/complete-devops-bootcamp-bootcamp/
+DevOps,Complete DevOps Bootcamp 2024,Andrei Neagoie,4.6,80000,$89.99,All Levels,https://www.udemy.com/course/complete-devops-bootcamp-2024/
+DevOps,Complete Complete DevOps Bootcamp,Andrei Neagoie,4.6,80000,$79.99,All Levels,https://www.udemy.com/course/complete-complete-devops-bootcamp/
+DevOps,Ansible for Absolute Beginners,Mumshad Mannambeth,4.6,100000,$94.99,Beginner,https://www.udemy.com/course/ansible-for-absolute-beginners/
+DevOps,Ansible for Absolute Beginners - Complete Course,KodeKloud,4.6,100000,$94.99,Beginner,https://www.udemy.com/course/ansible-for-absolute-beginners---complete-course/
+DevOps,Ansible for Absolute Beginners Bootcamp,Mumshad Mannambeth,4.6,120000,$84.99,Beginner,https://www.udemy.com/course/ansible-for-absolute-beginners-bootcamp/
+DevOps,Ansible for Absolute Beginners 2024,KodeKloud,4.6,100000,$89.99,Beginner,https://www.udemy.com/course/ansible-for-absolute-beginners-2024/
+DevOps,Complete Ansible for Absolute Beginners,Mumshad Mannambeth,4.6,100000,$94.99,Beginner,https://www.udemy.com/course/complete-ansible-for-absolute-beginners/
+DevOps,"GitLab CI: Pipelines, CI/CD and DevOps",Tao W.,4.6,90000,$94.99,Intermediate,https://www.udemy.com/course/gitlab-ci-pipelines-ci/cd-and-devops/
+DevOps,"GitLab CI: Pipelines, CI/CD and DevOps - Complete Course",Tao W.,4.6,90000,$79.99,Intermediate,https://www.udemy.com/course/gitlab-ci-pipelines-ci/cd-and-devops---complete-course/
+DevOps,"GitLab CI: Pipelines, CI/CD and DevOps Bootcamp",Tao W.,4.6,90000,$84.99,Intermediate,https://www.udemy.com/course/gitlab-ci-pipelines-ci/cd-and-devops-bootcamp/
+DevOps,"GitLab CI: Pipelines, CI/CD and DevOps 2024",Tao W.,4.6,90000,$79.99,Intermediate,https://www.udemy.com/course/gitlab-ci-pipelines-ci/cd-and-devops-2024/
+DevOps,"Complete GitLab CI: Pipelines, CI/CD and DevOps",Valentin Despa,4.6,90000,$89.99,Intermediate,https://www.udemy.com/course/complete-gitlab-ci-pipelines-ci/cd-and-devops/
+DevOps,Terraform Bootcamp,Zeal Vora,4.6,65000,$94.99,Intermediate,https://www.udemy.com/course/terraform-bootcamp/
+DevOps,Terraform Bootcamp - Complete Course,Bryan Krausen,4.6,65000,$99.99,Intermediate,https://www.udemy.com/course/terraform-bootcamp---complete-course/
+DevOps,Terraform Bootcamp Bootcamp,Zeal Vora,4.6,80000,$94.99,Intermediate,https://www.udemy.com/course/terraform-bootcamp-bootcamp/
+DevOps,Terraform Bootcamp 2024,Zeal Vora,4.6,65000,$89.99,Intermediate,https://www.udemy.com/course/terraform-bootcamp-2024/
+DevOps,Complete Terraform Bootcamp,Zeal Vora,4.6,65000,$79.99,Intermediate,https://www.udemy.com/course/complete-terraform-bootcamp/
+DevOps,Prometheus and Grafana,Edward Viaene,4.5,70000,$84.99,Intermediate,https://www.udemy.com/course/prometheus-and-grafana/
+DevOps,Prometheus and Grafana - Complete Course,Tao W.,4.5,70000,$99.99,Intermediate,https://www.udemy.com/course/prometheus-and-grafana---complete-course/
+DevOps,Prometheus and Grafana Bootcamp,Edward Viaene,4.5,55000,$84.99,Intermediate,https://www.udemy.com/course/prometheus-and-grafana-bootcamp/
+DevOps,Prometheus and Grafana 2024,Edward Viaene,4.5,55000,$79.99,Intermediate,https://www.udemy.com/course/prometheus-and-grafana-2024/
+DevOps,Complete Prometheus and Grafana,Tao W.,4.5,70000,$94.99,Intermediate,https://www.udemy.com/course/complete-prometheus-and-grafana/
+DevOps,CI/CD with GitHub Actions,Tao W.,4.6,60000,$79.99,Intermediate,https://www.udemy.com/course/ci/cd-with-github-actions/
+DevOps,CI/CD with GitHub Actions - Complete Course,Tao W.,4.6,50000,$79.99,Intermediate,https://www.udemy.com/course/ci/cd-with-github-actions---complete-course/
+DevOps,CI/CD with GitHub Actions Bootcamp,Tao W.,4.6,50000,$89.99,Intermediate,https://www.udemy.com/course/ci/cd-with-github-actions-bootcamp/
+DevOps,CI/CD with GitHub Actions 2024,Tao W.,4.6,50000,$89.99,Intermediate,https://www.udemy.com/course/ci/cd-with-github-actions-2024/
+DevOps,Complete CI/CD with GitHub Actions,Valentin Despa,4.6,50000,$99.99,Intermediate,https://www.udemy.com/course/complete-ci/cd-with-github-actions/
