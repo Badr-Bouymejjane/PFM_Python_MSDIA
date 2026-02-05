@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}📚 Tous les cours - Course Recommender{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <h1 class="section-title"><i data-lucide="book-open"></i> Catalogue de cours</h1>
+    <p class="text-muted">Explorez notre catalogue de {{ total }} cours disponibles sur Coursera et Udemy.</p>
+</section>
+
+<!-- Compact Filters Bar -->
+<div class="search-filter-box">
+    <form class="search-compact" method="GET" action="{{ url_for('courses') }}">
+        <i data-lucide="search" size="18"></i>
+        <input type="text" name="search" placeholder="Rechercher par titre ou mot-clé..." value="{{ current_filters.search or '' }}">
+        
+        <!-- Hidden inputs to preserve other filters -->
+        <input type="hidden" name="platform" value="{{ current_filters.platform or '' }}">
+        <input type="hidden" name="category" value="{{ current_filters.category or '' }}">
+        <input type="hidden" name="level" value="{{ current_filters.level or '' }}">
+        <input type="hidden" name="sort" value="{{ current_filters.sort or 'rating' }}">
+        
+        <button type="submit" class="btn-search">Filtrer</button>
+    </form>
+    
+    <div class="filters-compact">
+        <select onchange="window.location.href=this.value" class="filter-pill">
+            <option value="{{ url_for('courses', **dict(current_filters, platform='')) }}">Plateforme</option>
+            {% for p in platforms %}
+            <option value="{{ url_for('courses', **dict(current_filters, platform=p)) }}" {% if current_filters.platform == p %}selected{% endif %}>{{ p }}</option>
+            {% endfor %}
+        </select>
+        <select onchange="window.location.href=this.value" class="filter-pill">
+            <option value="{{ url_for('courses', **dict(current_filters, category='')) }}">Catégorie</option>
+            {% for c in categories %}
+            <option value="{{ url_for('courses', **dict(current_filters, category=c)) }}" {% if current_filters.category == c %}selected{% endif %}>{{ c }}</option>
+            {% endfor %}
+        </select>
+        <select onchange="window.location.href=this.value" class="filter-pill">
+            <option value="{{ url_for('courses', **dict(current_filters, level='')) }}">Niveau</option>
+            {% for l in levels %}
+            <option value="{{ url_for('courses', **dict(current_filters, level=l)) }}" {% if current_filters.level == l %}selected{% endif %}>{{ l }}</option>
+            {% endfor %}
+        </select>
+        <select onchange="window.location.href=this.value" class="filter-pill">
+            <option value="{{ url_for('courses', **dict(current_filters, sort='rating')) }}" {% if current_filters.sort == 'rating' %}selected{% endif %}>Rating</option>
+            <option value="{{ url_for('courses', **dict(current_filters, sort='num_reviews')) }}" {% if current_filters.sort == 'num_reviews' %}selected{% endif %}>Popularité</option>
+            <option value="{{ url_for('courses', **dict(current_filters, sort='title')) }}" {% if current_filters.sort == 'title' %}selected{% endif %}>Titre</option>
+        </select>
+    </div>
+    
+    <a href="{{ url_for('courses') }}" class="btn-search" style="background:#64748b; text-decoration:none;">Reset</a>
+</div>
+
+<!-- Results Grid -->
+<section class="page-section">
+    <div class="results-header">
+        <h2 class="section-title"><i data-lucide="bar-chart-2"></i> Résultats</h2>
+        <span class="results-count">{{ total }} cours | Page {{ current_page }} / {{ pages }}</span>
+    </div>
+    
+    <div class="courses-grid">
+        {% for course in courses %}
+        <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=course.course_id or loop.index0) }}'">
+            <div class="course-platform {{ course.platform | lower }}">
+                {{ course.platform }}
+            </div>
+            <h3 class="course-title">{{ course.title }}</h3>
+            <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ course.instructor or 'Unknown' }}</p>
+            <div class="course-meta">
+                <span class="meta-badge rating"><i data-lucide="star" size="12"></i> {{ "%.1f" | format(course.rating or 0) }}</span>
+                <span class="meta-badge reviews"><i data-lucide="users" size="12"></i> {{ course.num_reviews or 0 }}</span>
+                <span class="meta-badge level"><i data-lucide="trending-up" size="12"></i> {{ course.level or 'Tout niveau' }}</span>
+            </div>
+            <div class="course-footer">
+                <span class="course-price free">Gratuit</span>
+                <span class="course-link">Détails →</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if pages > 1 %}
+    <div class="pagination" style="display:flex; justify-content:center; gap:0.5rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-light);">
+        {% if current_page > 1 %}
+        <a href="{{ url_for('courses', page=current_page-1, **current_filters) }}" class="nav-link">← Précédent</a>
+        {% endif %}
+        
+        {% for p in range(max(1, current_page - 2), min(pages + 1, current_page + 3)) %}
+        <a href="{{ url_for('courses', page=p, **current_filters) }}" class="nav-link {% if p == current_page %}active{% endif %}">{{ p }}</a>
+        {% endfor %}
+        
+        {% if current_page < pages %}
+        <a href="{{ url_for('courses', page=current_page+1, **current_filters) }}" class="nav-link">Suivant →</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

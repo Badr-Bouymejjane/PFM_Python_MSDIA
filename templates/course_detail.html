@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ course.title }} - Course Recommender{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="{{ url_for('home') }}"><i data-lucide="home" size="14"></i> Accueil</a>
+    <span class="separator">/</span>
+    <a href="{{ url_for('courses') }}"><i data-lucide="book-open" size="14"></i> Cours</a>
+    <span class="separator">/</span>
+    <span class="current">{{ course.title[:40] }}...</span>
+</nav>
+
+<!-- Main Course Detail Section -->
+<section class="course-detail">
+    <div class="course-detail-header">
+        <div class="course-platform {{ course.platform | lower }}">{{ course.platform }}</div>
+        <h1 class="course-detail-title">{{ course.title }}</h1>
+        <div class="course-detail-meta">
+            <div class="meta-item">
+                <span class="meta-icon"><i data-lucide="user" size="18"></i></span>
+                <span>{{ course.instructor or 'Instructeur non spécifié' }}</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon"><i data-lucide="star" size="18"></i></span>
+                <span>{{ "%.1f" | format(course.rating or 0) }} / 5.0 ({{ course.num_reviews or 0 }} avis)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon"><i data-lucide="trending-up" size="18"></i></span>
+                <span>{{ course.level or 'Tout niveau' }}</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon"><i data-lucide="tag" size="18"></i></span>
+                <span>{{ course.category or 'Général' }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="course-detail-body">
+        <div class="course-detail-main">
+            <!-- Description -->
+            <div class="detail-section">
+                <h2 class="section-title"><i data-lucide="file-text" size="20"></i> Description du cours</h2>
+                <div class="course-description-full">
+                    {{ course.description or 'Aucune description détaillée n\'est disponible pour ce cours.' }}
+                </div>
+            </div>
+            
+            <!-- Skills & Information -->
+            {% if course.skills %}
+            <div class="detail-section">
+                <h2 class="section-title"><i data-lucide="award" size="20"></i> Compétences acquises</h2>
+                <div class="skills-list">
+                    {% for skill in course.skills.split(',') %}
+                    <span class="skill-tag">{{ skill.strip() }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="detail-section">
+                <h2 class="section-title"><i data-lucide="info" size="20"></i> Spécifications</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Plateforme</span>
+                        <span class="info-value">{{ course.platform }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Langue</span>
+                        <span class="info-value">{{ course.language or 'Français / Anglais' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Prix habituel</span>
+                        <span class="info-value">Gratuit</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Durée estimée</span>
+                        <span class="info-value">{{ course.duration or 'Variable selon votre rythme' }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="course-detail-sidebar">
+            <!-- CTA Card -->
+            <div class="cta-card">
+                <div class="cta-price">Gratuit</div>
+                <a href="{{ course.url }}" target="_blank" class="cta-button">
+                    🚀 Accéder au cours
+                </a>
+                <p class="cta-note">Vous allez être redirigé vers {{ course.platform }}</p>
+            </div>
+            
+            <!-- Overall Rating -->
+            <div class="rating-card">
+                <div class="rating-value">{{ "%.1f" | format(course.rating or 0) }}</div>
+                <div class="rating-stars">
+                    {% set rating = (course.rating or 0)|int %}
+                    {% for i in range(5) %}
+                        <i data-lucide="star" size="18" class="{% if i < rating %}filled{% endif %}" style="fill: {% if i < rating %}var(--accent){% else %}none{% endif %};"></i>
+                    {% endfor %}
+                </div>
+                <div class="rating-count">Basé sur {{ course.num_reviews or 0 }} évaluations</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recommendations Section -->
+<section class="page-section" style="margin-top: 4rem;">
+    <div class="results-header">
+        <h2 class="section-title-large">🎯 Recommandations similaires</h2>
+        <span class="results-count">{{ similar_courses|length }} cours trouvés</span>
+    </div>
+    
+    <div class="courses-grid" style="margin-top: 2rem;">
+        {% for similar in similar_courses %}
+        <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=similar.course_id) }}'">
+            <div class="course-platform {{ similar.platform | lower }}">{{ similar.platform }}</div>
+            <h3 class="course-title">{{ similar.title }}</h3>
+            <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ similar.instructor or 'Unknown' }}</p>
+            
+            <div class="similarity-bar-container">
+                <span class="similarity-label">Score de pertinence: {{ similar.similarity_score }}%</span>
+                <div class="similarity-bar">
+                    <div class="similarity-fill" style="width: {{ similar.similarity_score }}%"></div>
+                </div>
+            </div>
+            
+            <div class="course-meta">
+                <span class="meta-badge rating"><i data-lucide="star" size="12"></i> {{ "%.1f" | format(similar.rating or 0) }}</span>
+                <span class="meta-badge level"><i data-lucide="trending-up" size="12"></i> {{ similar.level or 'Tout niveau' }}</span>
+            </div>
+            <div class="course-footer">
+                <span class="course-price free">Gratuit</span>
+                <span class="course-link">Voir →</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="back-section">
+    <a href="{{ url_for('courses') }}" class="back-btn">
+        <i data-lucide="arrow-left" size="18"></i> Retour au catalogue complet
+    </a>
+</div>
+{% endblock %}

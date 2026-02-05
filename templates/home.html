@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block title %}🎓 Course Recommender - Dashboard{% endblock %}
+
+{% block content %}
+<!-- Stats Section (Top) -->
+<section class="stats-compact-grid">
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="book" size="20"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ stats.total_courses or 0 }}</div>
+            <div class="stat-label">Total Cours</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="folder" size="20"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ categories|length }}</div>
+            <div class="stat-label">Catégories</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="star" size="20"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ "%.1f"|format(stats.avg_rating or 0) }}</div>
+            <div class="stat-label">Note Moyenne</div>
+        </div>
+    </div>
+    <div class="stat-compact-card">
+        <div class="stat-icon-circle"><i data-lucide="zap" size="20"></i></div>
+        <div class="stat-info">
+            <div class="stat-value">{{ user_stats.total_clicks }}</div>
+            <div class="stat-label">Mes Interactions</div>
+        </div>
+    </div>
+</section>
+
+<!-- Compact Search & Filter Bar -->
+<div class="search-filter-box">
+    <form class="search-compact" id="search-form">
+        <i data-lucide="search" size="18"></i>
+        <input type="text" id="search-query" placeholder="Rechercher un cours...">
+        <button type="submit" class="btn-search">Rechercher</button>
+    </form>
+    
+    <div class="filters-compact">
+        <select id="filter-platform" class="filter-pill">
+            <option value="">Plateforme</option>
+            {% for platform in platforms %}
+            <option value="{{ platform }}">{{ platform }}</option>
+            {% endfor %}
+        </select>
+        <select id="filter-category" class="filter-pill">
+            <option value="">Catégorie</option>
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        <select id="filter-level" class="filter-pill">
+            <option value="">Niveau</option>
+            {% for level in levels %}
+            <option value="{{ level }}">{{ level }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<!-- Main Content Section -->
+<section class="page-section">
+    <div class="results-header">
+        <h2 class="section-title" id="results-title">🎯 Recommandations pour vous</h2>
+        <span class="results-count" id="results-count">{{ personalized_courses|length }} cours personnalisés</span>
+    </div>
+    
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Recherche en cours...</p>
+    </div>
+    
+    <div class="courses-grid" id="courses-grid">
+        {% for course in personalized_courses %}
+        <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=course.course_id) }}'">
+            {% if course.reason %}
+            <div class="recommendation-reason">{{ course.reason }}</div>
+            {% endif %}
+            <div class="course-platform {{ course.platform | lower }}">{{ course.platform }}</div>
+            <h3 class="course-title">{{ course.title }}</h3>
+            <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ course.instructor or 'N/A' }}</p>
+            {% if course.similarity_score %}
+            <div class="similarity-bar-container">
+                <span class="similarity-label">Score de pertinence: {{ course.similarity_score }}%</span>
+                <div class="similarity-bar">
+                    <div class="similarity-fill" style="width: {{ course.similarity_score }}%"></div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="course-meta">
+                <span class="meta-badge rating"><i data-lucide="star" size="12"></i> {{ "%.1f"|format(course.rating or 0) }}</span>
+                <span class="meta-badge level"><i data-lucide="trending-up" size="12"></i> {{ course.level or 'Tout niveau' }}</span>
+                <span class="meta-badge category"><i data-lucide="tag" size="12"></i> {{ course.category }}</span>
+            </div>
+            <div class="course-footer">
+                <span class="course-price free">Gratuit</span>
+                <span class="course-link">Détails →</span>
+            </div>
+        </div>
+        {% else %}
+        <div class="no-results">
+            <p>Commencez à explorer pour obtenir des recommandations!</p>
+            <a href="{{ url_for('courses') }}" class="btn-search" style="text-decoration:none; display:inline-block; margin-top:1rem;">Voir tous les cours</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('search-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const query = document.getElementById('search-query').value;
+    if (!query.trim()) return;
+    
+    const loading = document.getElementById('loading');
+    const grid = document.getElementById('courses-grid');
+    const title = document.getElementById('results-title');
+    const count = document.getElementById('results-count');
+    
+    loading.classList.add('active');
+    grid.innerHTML = '';
+    title.textContent = '🔍 Résultats pour: ' + query;
+    
+    try {
+        const response = await fetch('/api/search', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: query, n: 20 })
+        });
+        
+        const data = await response.json();
+        displayCourses(data.recommendations);
+        count.textContent = data.count + ' cours trouvés';
+    } catch (error) {
+        console.error('Error:', error);
+        grid.innerHTML = '<p class="no-results">Erreur lors de la recherche</p>';
+    } finally {
+        loading.classList.remove('active');
+    }
+});
+
+function displayCourses(courses) {
+    const grid = document.getElementById('courses-grid');
+    grid.innerHTML = '';
+    
+    if (!courses || courses.length === 0) {
+        grid.innerHTML = '<p class="no-results">Aucun cours trouvé</p>';
+        return;
+    }
+    
+    courses.forEach(course => {
+        const card = `
+            <div class="course-card" onclick="window.location.href='/course/${course.course_id}'">
+                ${course.reason ? `<div class="recommendation-reason">${course.reason}</div>` : ''}
+                <div class="course-platform ${(course.platform || '').toLowerCase()}">${course.platform || 'Coursera'}</div>
+                <h3 class="course-title">${course.title || ''}</h3>
+                <p class="course-instructor">👨‍🏫 ${course.instructor || 'N/A'}</p>
+                ${course.similarity_score ? `
+                    <div class="similarity-bar-container">
+                        <span class="similarity-label">Score de pertinence: ${course.similarity_score}%</span>
+                        <div class="similarity-bar">
+                            <div class="similarity-fill" style="width: ${course.similarity_score}%"></div>
+                        </div>
+                    </div>
+                ` : ''}
+                <div class="course-meta">
+                    <span class="meta-badge rating">⭐ ${(course.rating || 0).toFixed(1)}</span>
+                    <span class="meta-badge level">📈 ${course.level || 'Tout niveau'}</span>
+                    <span class="meta-badge category">${course.category || ''}</span>
+                </div>
+                <div class="course-footer">
+                    <span class="course-price free">Gratuit</span>
+                    <span class="course-link">Détails →</span>
+                </div>
+            </div>
+        `;
+        grid.innerHTML += card;
+    });
+    lucide.createIcons();
+}
+
+['filter-platform', 'filter-category', 'filter-level'].forEach(id => {
+    document.getElementById(id).addEventListener('change', applyFilters);
+});
+
+async function applyFilters() {
+    const platform = document.getElementById('filter-platform').value;
+    const category = document.getElementById('filter-category').value;
+    const level = document.getElementById('filter-level').value;
+    
+    if (!platform && !category && !level) return;
+    
+    const loading = document.getElementById('loading');
+    const grid = document.getElementById('courses-grid');
+    const title = document.getElementById('results-title');
+    const count = document.getElementById('results-count');
+    
+    loading.classList.add('active');
+    grid.innerHTML = '';
+    title.textContent = '🔍 Résultats filtrés';
+    
+    try {
+        let url = '/api/courses?per_page=20';
+        if (platform) url += `&platform=${platform}`;
+        if (category) url += `&category=${category}`;
+        if (level) url += `&level=${level}`;
+        
+        const response = await fetch(url);
+        const data = await response.json();
+        displayCourses(data.courses);
+        count.textContent = data.total + ' cours trouvés';
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        loading.classList.remove('active');
+    }
+}
+</script>
+{% endblock %}
