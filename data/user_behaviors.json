@@ -342,6 +342,14 @@
         "level": "All Levels",
         "platform": "Udemy",
         "timestamp": "2026-02-05T11:09:30.871420"
+      },
+      {
+        "course_id": 416,
+        "title": "Renewable Energy and Green Building Entrepreneurship",
+        "category": "Entrepreneurship",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:45:09.140022"
       }
     ],
     "views": [
@@ -476,6 +484,10 @@
       {
         "course_id": 1106,
         "timestamp": "2026-02-05T11:09:30.865646"
+      },
+      {
+        "course_id": 416,
+        "timestamp": "2026-02-05T15:45:09.137813"
       }
     ],
     "favorites": [],
@@ -486,7 +498,7 @@
         "Deep Learning": 2,
         "Finance": 7,
         "DevOps": 2,
-        "Entrepreneurship": 6,
+        "Entrepreneurship": 7,
         "Machine Learning": 1,
         "Health": 2,
         "Personal Development": 2,
@@ -495,12 +507,113 @@
       },
       "levels": {
         "Intermediate": 4,
-        "Beginner": 21,
+        "Beginner": 22,
         "All Levels": 8
       },
       "platforms": {
-        "Coursera": 23,
+        "Coursera": 24,
         "Udemy": 10
+      }
+    }
+  },
+  "mohammed": {
+    "searches": [
+      {
+        "query": "statistique",
+        "timestamp": "2026-02-05T15:20:35.681095"
+      }
+    ],
+    "clicks": [
+      {
+        "course_id": 819,
+        "title": "How To Write A Simple And Successful Business Plan",
+        "category": "Business",
+        "level": "All Levels",
+        "platform": "Udemy",
+        "timestamp": "2026-02-05T15:17:35.914127"
+      },
+      {
+        "course_id": 333,
+        "title": "The Power of Statistics",
+        "category": "Data Science",
+        "level": "Advanced",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:31:26.650035"
+      },
+      {
+        "course_id": 315,
+        "title": "Statistics for Data Science with Python",
+        "category": "Data Science",
+        "level": "All Levels",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:31:32.241098"
+      },
+      {
+        "course_id": 26,
+        "title": "Google Cybersecurity",
+        "category": "Cybersecurity",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:47:42.504620"
+      },
+      {
+        "course_id": 31,
+        "title": "Cybersecurity for Everyone",
+        "category": "Cybersecurity",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:47:46.416151"
+      },
+      {
+        "course_id": 257,
+        "title": "Palo Alto Networks Cybersecurity",
+        "category": "Cybersecurity",
+        "level": "Beginner",
+        "platform": "Coursera",
+        "timestamp": "2026-02-05T15:47:53.136070"
+      }
+    ],
+    "views": [
+      {
+        "course_id": 819,
+        "timestamp": "2026-02-05T15:17:35.911260"
+      },
+      {
+        "course_id": 333,
+        "timestamp": "2026-02-05T15:31:26.647141"
+      },
+      {
+        "course_id": 315,
+        "timestamp": "2026-02-05T15:31:32.238381"
+      },
+      {
+        "course_id": 26,
+        "timestamp": "2026-02-05T15:47:42.501468"
+      },
+      {
+        "course_id": 31,
+        "timestamp": "2026-02-05T15:47:46.413581"
+      },
+      {
+        "course_id": 257,
+        "timestamp": "2026-02-05T15:47:53.133009"
+      }
+    ],
+    "favorites": [],
+    "preferences": {
+      "categories": {
+        "Business": 1,
+        "Data Science": 2,
+        "Cybersecurity": 3
+      },
+      "levels": {
+        "All Levels": 2,
+        "Advanced": 1,
+        "Beginner": 3
+      },
+      "platforms": {
+        "Udemy": 1,
+        "Coursera": 5
       }
     }
   }

@@ -42,38 +42,61 @@
             <option value="{{ url_for('courses', **dict(current_filters, level=l)) }}" {% if current_filters.level == l %}selected{% endif %}>{{ l }}</option>
             {% endfor %}
         </select>
-        <select onchange="window.location.href=this.value" class="filter-pill">
-            <option value="{{ url_for('courses', **dict(current_filters, sort='rating')) }}" {% if current_filters.sort == 'rating' %}selected{% endif %}>Rating</option>
-            <option value="{{ url_for('courses', **dict(current_filters, sort='num_reviews')) }}" {% if current_filters.sort == 'num_reviews' %}selected{% endif %}>Popularité</option>
-            <option value="{{ url_for('courses', **dict(current_filters, sort='title')) }}" {% if current_filters.sort == 'title' %}selected{% endif %}>Titre</option>
+        <select onchange="window.location.href=this.value" class="filter-pill" style="min-width: 180px;">
+            <option value="{{ url_for('courses', **dict(current_filters, sort='recommendation')) }}" {% if current_filters.sort == 'recommendation' %}selected{% endif %}>Tri: Recommandé</option>
+            <option value="{{ url_for('courses', **dict(current_filters, sort='rating')) }}" {% if current_filters.sort == 'rating' %}selected{% endif %}>Tri: Note (Haut)</option>
+            <option value="{{ url_for('courses', **dict(current_filters, sort='title')) }}" {% if current_filters.sort == 'title' %}selected{% endif %}>Tri: Alphabétique</option>
         </select>
     </div>
     
     <a href="{{ url_for('courses') }}" class="btn-search" style="background:#64748b; text-decoration:none;">Reset</a>
 </div>
 
-<!-- Results Grid -->
 <section class="page-section">
-    <div class="results-header">
-        <h2 class="section-title"><i data-lucide="bar-chart-2"></i> Résultats</h2>
+    <div class="results-header" style="margin-bottom: 2.5rem;">
+        <h2 class="section-title"><i data-lucide="bar-chart-2"></i> Catalogue Complet</h2>
         <span class="results-count">{{ total }} cours | Page {{ current_page }} / {{ pages }}</span>
     </div>
     
     <div class="courses-grid">
         {% for course in courses %}
-        <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=course.course_id or loop.index0) }}'">
-            <div class="course-platform {{ course.platform | lower }}">
-                {{ course.platform }}
-            </div>
+        <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=course.course_id) }}'">
+            {% if course.platform | lower == 'coursera' %}
+            <img src="{{ url_for('static', filename='imgs/coursera-logo.png') }}" class="course-logo" alt="Coursera">
+            {% elif course.platform | lower == 'udemy' %}
+            <img src="{{ url_for('static', filename='imgs/logo-udemy.svg') }}" class="course-logo" alt="Udemy">
+            {% else %}
+            <div class="course-platform {{ course.platform | lower }}">{{ course.platform }}</div>
+            {% endif %}
+            
             <h3 class="course-title">{{ course.title }}</h3>
-            <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ course.instructor or 'Unknown' }}</p>
+            <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ course.instructor or 'N/A' }}</p>
+            
+            {% if course.similarity_score and current_filters.sort == 'recommendation' %}
+            <div class="similarity-bar-wrapper" style="margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Pertinence</span>
+                    <span style="font-size: 0.85rem; font-weight: 800; color: var(--primary);">{{ course.similarity_score }}%</span>
+                </div>
+                <div class="similarity-bar-container" style="margin-bottom: 0;">
+                    <div class="similarity-bar">
+                        <div class="similarity-fill" style="width: {{ course.similarity_score }}%"></div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            
             <div class="course-meta">
                 <span class="meta-badge rating"><i data-lucide="star" size="12"></i> {{ "%.1f" | format(course.rating or 0) }}</span>
-                <span class="meta-badge reviews"><i data-lucide="users" size="12"></i> {{ course.num_reviews or 0 }}</span>
                 <span class="meta-badge level"><i data-lucide="trending-up" size="12"></i> {{ course.level or 'Tout niveau' }}</span>
+                <span class="meta-badge category"><i data-lucide="tag" size="12"></i> {{ course.category }}</span>
+                {% if course.price %}
+                <span class="meta-badge price" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <i data-lucide="credit-card" size="12"></i> {{ course.price }}
+                </span>
+                {% endif %}
             </div>
             <div class="course-footer">
-                <span class="course-price free">Gratuit</span>
                 <span class="course-link">Détails →</span>
             </div>
         </div>
@@ -82,17 +105,15 @@
 
     <!-- Pagination -->
     {% if pages > 1 %}
-    <div class="pagination" style="display:flex; justify-content:center; gap:0.5rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-light);">
+    <div class="pagination" style="display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-light);">
         {% if current_page > 1 %}
-        <a href="{{ url_for('courses', page=current_page-1, **current_filters) }}" class="nav-link">← Précédent</a>
+        <a href="{{ url_for('courses', page=current_page-1, **current_filters) }}" class="btn-search" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: var(--text-primary);">Précédent</a>
         {% endif %}
         
-        {% for p in range(max(1, current_page - 2), min(pages + 1, current_page + 3)) %}
-        <a href="{{ url_for('courses', page=p, **current_filters) }}" class="nav-link {% if p == current_page %}active{% endif %}">{{ p }}</a>
-        {% endfor %}
+        <span style="font-weight: 600;">Page {{ current_page }} / {{ pages }}</span>
         
         {% if current_page < pages %}
-        <a href="{{ url_for('courses', page=current_page+1, **current_filters) }}" class="nav-link">Suivant →</a>
+        <a href="{{ url_for('courses', page=current_page+1, **current_filters) }}" class="btn-search" style="padding: 0.6rem 1.2rem;">Suivant</a>
         {% endif %}
     </div>
     {% endif %}

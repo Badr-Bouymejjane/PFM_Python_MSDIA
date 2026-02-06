@@ -1,0 +1,80 @@
+================================================================================
+          DOCUMENTATION COMPLÈTE : PLATEFORME DE RECOMMANDATION DE COURS
+================================================================================
+
+PRÉSENTATION :
+Ce document détaille l'architecture globale et le fonctionnement de la plateforme
+complète, de la collecte des données à l'interface de recommandation finale.
+
+--------------------------------------------------------------------------------
+1. ARCHITECTURE SYSTÈME (VUE D'ENSEMBLE)
+--------------------------------------------------------------------------------
+
+Le projet est divisé en trois couches indépendantes mais connectées :
+
+A. COUCHE DE COLLECTE (Scraping) :
+   - Extraction de données depuis Coursera et Udemy.
+   - Nettoyage et normalisation des informations.
+   - Stockage dans 'data/final_courses.csv'.
+
+B. COUCHE D'INTELLIGENCE (Machine Learning) :
+   - Analyse textuelle (TF-IDF).
+   - Calcul de similarité entre les 1137 cours.
+   - Groupement automatique des cours par thématiques (Clustering K-Means).
+
+C. COUCHE D'INTERFACE (Web Flask) :
+   - Gestion des utilisateurs et de leurs préférences.
+   - Affichage dynamique des recommandations personnalisées.
+   - Visualisation interactive de la carte des cours.
+
+--------------------------------------------------------------------------------
+2. ORGANISATION TECHNIQUE (ÉTAPE PAR ÉTAPE)
+--------------------------------------------------------------------------------
+
+ÉTAPE 1 : RÉCUPÉRATION DES DONNÉES
+   - Coursera : Utilisation de Playwright pour simuler un navigateur réel et 
+     contourner les protections contre le scraping.
+   - Udemy : Utilisation de BeautifulSoup pour extraire les titres, notes et prix.
+   - Résultat : Un catalogue riche de plus de 1100 cours.
+
+ÉTAPE 2 : NETTOYAGE ET PRÉPARATION
+   - Standardisation des notes (0 à 5).
+   - Détection automatique des niveaux (Débutant, Intermédiaire, Avancé).
+   - Attribution automatique de catégories basée sur les mots-clés du titre.
+
+ÉTAPE 3 : ANALYSE ET PRÉ-CALCUL
+   - Le système traduit chaque cours en un vecteur de nombres.
+   - Une matrice de similarité est créée pour savoir instantanément quel cours 
+     ressemble à un autre.
+   - Le modèle est sauvegardé (.pkl) pour une réponse instantanée au démarrage.
+
+ÉTAPE 4 : PERSONNALISATION EN TEMPS RÉEL
+   - Dès qu'un utilisateur cherche un mot ou clique sur un cours, le système
+     met à jour son profil de préférence.
+   - L'accueil affiche un mélange de cours liés à ses recherches et de cours 
+     populaires dans ses catégories préférées.
+
+--------------------------------------------------------------------------------
+3. STRUCTURE DES FICHIERS DU PROJET
+--------------------------------------------------------------------------------
+
+- app.py               : Le moteur principal (serveur Flask).
+- models/recommender.py : Le cerveau ML (similarité).
+- models/clustering.py  : La logique de groupement et de carte 2D.
+- user_manager.py      : La gestion des comptes et du comportement utilisateur.
+- data/                : Contient le catalogue de cours (CSV) et les profils.
+- templates/           : L'interface utilisateur (HTML/Jinja2).
+
+--------------------------------------------------------------------------------
+4. TECHNOLOGIES UTILISÉES
+--------------------------------------------------------------------------------
+
+- Langage : Python 3.10
+- Web : Flask
+- ML : Scikit-Learn (TF-IDF, Cosine Similarity, K-Means, PCA)
+- Scraping : Playwright, BeautifulSoup
+- Données : Pandas, NumPy
+
+================================================================================
+                    FIN DE LA DOCUMENTATION GÉNÉRALE
+================================================================================

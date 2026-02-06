@@ -1,0 +1,50 @@
+==========================================================================
+🎓 EXPLICATION DU GÉNÉRATEUR DE PARCOURS D'APPRENTISSAGE (LEARNING PATH)
+==========================================================================
+
+L'objectif du "Learning Path" est de transformer une base de données de milliers
+de cours en un parcours structuré, logique et progressif pour l'apprenant.
+
+Voici comment fonctionne l'algorithme implémenté dans le système :
+
+1. RECHERCHE ET FILTRAGE :
+---------------------------
+Le système scanne l'intégralité du dataset 'final_courses_shuffled.csv'. Il recherche 
+le mot-clé saisi par l'utilisateur (ex: "Python" ou "Machine Learning") 
+à la fois dans le TITRE du cours et dans sa CATÉGORIE pour maximiser la pertinence.
+
+2. CLASSIFICATION PAR DIFFICULTÉ (PROGRESSION) :
+------------------------------------------------
+Pour construire un parcours, l'ordre est primordial. Nous utilisons la variable 
+'level_enc' (encodage du niveau) :
+   - Niveau 0 : Beginner (Débutant)
+   - Niveau 1 : Mixed/All (Tous niveaux)
+   - Niveau 2 : Intermediate (Intermédiaire)
+   - Niveau 3 : Advanced (Avancé)
+
+Le générateur s'assure que l'étape 1 est toujours plus simple que l'étape 2, etc.
+
+3. OPTIMISATION PAR LA QUALITÉ (POPULARITY SCORE) :
+----------------------------------------------------
+Dans chaque niveau de difficulté, il peut y avoir des centaines de cours. 
+L'algorithme trie ces cours selon le 'popularity_score'. 
+Ce score est calculé en combinant :
+   - La note moyenne (Rating)
+   - Le nombre d'avis (Reviews)
+Cela garantit que le cours suggéré est le plus reconnu et apprécié du marché.
+
+4. SÉLECTION FINALE :
+----------------------
+L'algorithme extrait le "Top 1" de chaque niveau disponible pour la thématique.
+Le résultat est un parcours condensé (généralement 3 à 4 étapes) qui mène
+l'étudiant de la découverte à la maîtrise complète.
+
+AVANTAGES :
+-----------
+- Évite la surcharge d'information (Paradoxe du choix).
+- Garantit une base solide avant d'aborder des concepts complexes.
+- Fournit des liens directs et les durées estimées pour une planification facile.
+
+==========================================================================
+📚 Course Explorer - MSDIA Project 2024
+==========================================================================

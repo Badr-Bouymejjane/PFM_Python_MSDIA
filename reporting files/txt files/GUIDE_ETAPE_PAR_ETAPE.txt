@@ -1,0 +1,55 @@
+================================================================================
+           GUIDE D'IMPLÉMENTATION : ÉTAPE PAR ÉTAPE (WORKFLOW)
+================================================================================
+
+Ce guide retrace le parcours de création du projet, de la conception à la
+finalisation technique.
+
+--------------------------------------------------------------------------------
+PHASE 1 : ACQUISITION DE LA MATIÈRE PREMIÈRE (Scraping)
+--------------------------------------------------------------------------------
+1. Choix des sources : Coursera et Udemy pour leur diversité.
+2. Développement des scrapers : Scripting en Python (BeautifulSoup/Playwright).
+3. Lancement : Récupération massive des données brutes au format CSV.
+
+--------------------------------------------------------------------------------
+PHASE 2 : INGÉNIERIE DES DONNÉES (Data Engineering)
+--------------------------------------------------------------------------------
+1. Fusion : Création du fichier central 'data/final_courses.csv'.
+2. Nettoyage : Suppression des doublons et correction des colonnes vides.
+3. Enrichissement : Développement d'un moteur de détection de catégories basé
+   sur les titres (ex: "Java" -> Programmation).
+
+--------------------------------------------------------------------------------
+PHASE 3 : DÉVELOPPEMENT DU MOTEUR ML
+--------------------------------------------------------------------------------
+1. Vectorisation : Transformation du texte en vecteurs TF-IDF.
+2. Calcul des matrices : Génération des scores de similarité pour tout le 
+   catalogue (1137 x 1137).
+3. Sauvegarde : Export du modèle en format binaire (.pkl) pour plus de vitesse.
+
+--------------------------------------------------------------------------------
+PHASE 4 : SYSTÈME UTILISATEUR ET BACKEND
+--------------------------------------------------------------------------------
+1. Authentification : Création d'un gestionnaire d'utilisateurs (UserManager).
+2. Tracking : Mise en place d'un système de log pour les clics et les recherches.
+3. API : Création des routes Flask pour servir les recommandations au frontend.
+
+--------------------------------------------------------------------------------
+PHASE 5 : INTERFACE WEB ET VISUALISATION
+--------------------------------------------------------------------------------
+1. Design : Création d'un thème moderne (Glassmorphism/Interface Épurée).
+2. Visualisation : Intégration de la carte de clustering interactive.
+3. Filtres : Ajout de la navigation par Plateforme, Niveau et Catégorie.
+
+--------------------------------------------------------------------------------
+PHASE 6 : MAINTENANCE ET OPTIMISATION
+--------------------------------------------------------------------------------
+1. Auto-synchronisation : Ajout d'une vérification au démarrage. Si le CSV est
+   modifié, le modèle se ré-entraîne automatiquement.
+2. Filtrage intelligent : Amélioration de la logique de recherche pour ne 
+   sauvegarder que les intérêts réels de l'utilisateur.
+
+================================================================================
+                    FIN DU GUIDE D'IMPLÉMENTATION
+================================================================================
