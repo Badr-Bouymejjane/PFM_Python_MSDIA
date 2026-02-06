@@ -63,6 +63,25 @@
             <div class="stat-trend">+5%</div>
         </div>
     </div>
+
+    <!-- Activity Section -->
+    <div class="profile-card" style="grid-column: 1 / -1; margin-bottom: 2rem;">
+        <div class="card-header">
+            <h2><i data-lucide="activity"></i> Activité d'Apprentissage</h2>
+            <select class="filter-pill" style="border: 1px solid var(--border); padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.8rem;">
+                <option>30 derniers jours</option>
+                <option>Cette année</option>
+            </select>
+        </div>
+        <div style="height: 200px; display: flex; align-items: flex-end; gap: 8px; padding: 0 1rem 1.5rem;">
+            {% for i in range(15) %}
+            <div style="flex: 1; height: 100%; display: flex; align-items: flex-end; border-radius: 6px; position: relative;">
+                <div style="width: 100%; background: linear-gradient(to top, var(--primary), var(--primary-light)); border-radius: 6px 6px 2px 2px; height: {{ [30, 45, 25, 60, 40, 75, 50, 65, 80, 55, 45, 90, 70, 60, 85][i] }}%; opacity: 0.8; transition: height 0.5s ease;"></div>
+                <div style="position: absolute; bottom: -25px; width: 100%; text-align: center; font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">J-{{ 15 - i }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     
     <!-- Contenu principal -->
     <div class="profile-main-grid">
@@ -73,11 +92,9 @@
             </div>
             <div class="prefs-list">
                 {% for cat, count in preferences.categories.items() %}
-                <div class="pref-item">
-                    <div class="pref-bar" style="--pref-width: {{ (count / preferences.categories.values()|max * 100)|int }}%">
-                        <span class="pref-name">{{ cat }}</span>
-                        <span class="pref-count">{{ count }}</span>
-                    </div>
+                <div class="pref-item" style="{% if loop.first %}background: linear-gradient(135deg, hsl(230, 85%, 60%), hsl(250, 85%, 65%)); color:white;{% else %}background: #f1f5f9; color: #1e293b;{% endif %} display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 0.5rem; font-weight: 600;">
+                    <span class="pref-name" style="{% if loop.first %}color:white;{% endif %}">{{ cat }}</span>
+                    <span class="pref-count" style="{% if loop.first %}background: rgba(255,255,255,0.2); color:white;{% else %}background: white; color: #1e293b;{% endif %} padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.85rem;">{{ count }}</span>
                 </div>
                 {% else %}
                 <div class="empty-state">
@@ -140,15 +157,15 @@
     </div>
     
     <!-- Parcours Recommandé -->
-    <div class="profile-card learning-path-card">
+    <div class="profile-card learning-path-card" style="margin-top: 2rem;">
         <div class="card-header">
-            <h2><i data-lucide="route"></i> Mon Parcours Recommandé</h2>
-            <p class="card-subtitle">Basé sur votre catégorie préférée</p>
+            <h2><i data-lucide="map"></i> Mon Parcours Recommandé</h2>
+            <p class="card-subtitle" style="color: var(--text-muted); font-size: 0.9rem;">Basé sur votre catégorie préférée</p>
         </div>
         <div id="personalized-path" class="profile-path-container">
             <div class="loading-state">
                 <div class="spinner"></div>
-                <p>Analyse de vos préférences...</p>
+                <p>Analyse de vos préférences en cours...</p>
             </div>
         </div>
     </div>

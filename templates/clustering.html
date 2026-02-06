@@ -11,28 +11,28 @@
 <!-- Stats Grid -->
 <section class="stats-compact-grid">
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="database"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="database" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ total_courses }}</div>
             <div class="stat-label">Cours Analysés</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="pie-chart"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="pie-chart" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ n_clusters }}</div>
             <div class="stat-label">Groupes (Clusters)</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="tag"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="tag" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ n_categories }}</div>
             <div class="stat-label">Catégories</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="maximize-2"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="maximize-2" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">2D</div>
             <div class="stat-label">Projection PCA</div>
@@ -51,7 +51,7 @@
 <!-- Cluster Details -->
 <section class="page-section">
     <h3 class="section-title"><i data-lucide="list"></i> Composition des Clusters</h3>
-    <div class="courses-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+    <div class="courses-grid" style="grid-template-columns: repeat(5, 1fr); gap: 1rem;">
         {% for cluster in clusters_info %}
         <div class="course-card" style="border-left: 5px solid {{ cluster_colors[cluster.cluster_id] }}">
             <div class="cluster-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">

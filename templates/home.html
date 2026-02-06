@@ -3,31 +3,37 @@
 {% block title %}🎓 Course Recommender - Dashboard{% endblock %}
 
 {% block content %}
+<!-- Welcome Header -->
+<div style="margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">Bonjour {{ username }},</h1>
+    <p class="text-muted" style="font-size: 1.1rem;">Ravi de vous revoir ! Voici votre aperçu d'apprentissage pour aujourd'hui.</p>
+</div>
+
 <!-- Stats Section (Top) -->
 <section class="stats-compact-grid">
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="book" size="20"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="book" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ stats.total_courses or 0 }}</div>
             <div class="stat-label">Total Cours</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="folder" size="20"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="folder" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ categories|length }}</div>
             <div class="stat-label">Catégories</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="star" size="20"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="star" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ "%.1f"|format(stats.avg_rating or 0) }}</div>
             <div class="stat-label">Note Moyenne</div>
         </div>
     </div>
     <div class="stat-compact-card">
-        <div class="stat-icon-circle"><i data-lucide="zap" size="20"></i></div>
+        <div class="stat-icon-circle"><i data-lucide="zap" size="24"></i></div>
         <div class="stat-info">
             <div class="stat-value">{{ user_stats.total_clicks }}</div>
             <div class="stat-label">Mes Interactions</div>
@@ -35,33 +41,38 @@
     </div>
 </section>
 
-<!-- Compact Search & Filter Bar -->
-<div class="search-filter-box">
-    <form class="search-compact" id="search-form">
-        <i data-lucide="search" size="18"></i>
-        <input type="text" id="search-query" placeholder="Rechercher un cours...">
-        <button type="submit" class="btn-search">Rechercher</button>
-    </form>
+<!-- Visualizations Row -->
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 3.5rem;">
+    <div class="page-section" style="margin-bottom: 0; padding: 2rem; background: linear-gradient(135deg, #061E29 0%, #1D546D 100%); color: white; overflow: hidden; position: relative;">
+        <div style="position: relative; z-index: 2;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem;">Activité d'Apprentissage</h3>
+                    <p style="opacity: 0.7; font-size: 0.95rem;">Votre progression sur les 30 derniers jours</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600;">
+                    +24% ce mois
+                </div>
+            </div>
+            
+            <!-- Dynamic Chart -->
+            <div style="height: 220px; width: 100%;">
+                <canvas id="interestsChart"></canvas>
+            </div>
+        </div>
+        <!-- Decorative element -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--primary-light); filter: blur(100px); opacity: 0.2; pointer-events: none;"></div>
+    </div>
     
-    <div class="filters-compact">
-        <select id="filter-platform" class="filter-pill">
-            <option value="">Plateforme</option>
-            {% for platform in platforms %}
-            <option value="{{ platform }}">{{ platform }}</option>
-            {% endfor %}
-        </select>
-        <select id="filter-category" class="filter-pill">
-            <option value="">Catégorie</option>
-            {% for category in categories %}
-            <option value="{{ category }}">{{ category }}</option>
-            {% endfor %}
-        </select>
-        <select id="filter-level" class="filter-pill">
-            <option value="">Niveau</option>
-            {% for level in levels %}
-            <option value="{{ level }}">{{ level }}</option>
-            {% endfor %}
-        </select>
+    <div class="page-section" style="margin-bottom: 0; background: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative;">
+        <div style="position: relative; width: 160px; height: 160px; margin-bottom: 1.5rem;">
+            <canvas id="goalChart"></canvas>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <span style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary);">75%</span>
+            </div>
+        </div>
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Objectif Hebdo</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">3/4 cours terminés</p>
     </div>
 </div>
 
@@ -69,160 +80,144 @@
 <section class="page-section">
     <div class="results-header">
         <h2 class="section-title" id="results-title">🎯 Recommandations pour vous</h2>
-        <span class="results-count" id="results-count">{{ personalized_courses|length }} cours personnalisés</span>
-    </div>
-    
-    <div id="loading">
-        <div class="spinner"></div>
-        <p>Recherche en cours...</p>
     </div>
     
     <div class="courses-grid" id="courses-grid">
-        {% for course in personalized_courses %}
+        {% for course in personalized_courses[:8] %}
         <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=course.course_id) }}'">
             {% if course.reason %}
-            <div class="recommendation-reason">{{ course.reason }}</div>
+            <div class="recommendation-reason" style="background: rgba(29, 84, 109, 0.1); color: var(--primary);">{{ course.reason }}</div>
             {% endif %}
+            {% if course.platform | lower == 'coursera' %}
+            <img src="{{ url_for('static', filename='imgs/coursera-logo.png') }}" class="course-logo" alt="Coursera">
+            {% elif course.platform | lower == 'udemy' %}
+            <img src="{{ url_for('static', filename='imgs/logo-udemy.svg') }}" class="course-logo" alt="Udemy">
+            {% else %}
             <div class="course-platform {{ course.platform | lower }}">{{ course.platform }}</div>
+            {% endif %}
+            
             <h3 class="course-title">{{ course.title }}</h3>
             <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ course.instructor or 'N/A' }}</p>
+            
             {% if course.similarity_score %}
-            <div class="similarity-bar-container">
-                <span class="similarity-label">Score de pertinence: {{ course.similarity_score }}%</span>
-                <div class="similarity-bar">
-                    <div class="similarity-fill" style="width: {{ course.similarity_score }}%"></div>
+            <div class="similarity-bar-wrapper" style="margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Pertinence</span>
+                    <span style="font-size: 0.85rem; font-weight: 800; color: var(--primary);">{{ course.similarity_score }}%</span>
+                </div>
+                <div class="similarity-bar-container" style="margin-bottom: 0;">
+                    <div class="similarity-bar">
+                        <div class="similarity-fill" style="width: {{ course.similarity_score }}%"></div>
+                    </div>
                 </div>
             </div>
             {% endif %}
+            
             <div class="course-meta">
                 <span class="meta-badge rating"><i data-lucide="star" size="12"></i> {{ "%.1f"|format(course.rating or 0) }}</span>
                 <span class="meta-badge level"><i data-lucide="trending-up" size="12"></i> {{ course.level or 'Tout niveau' }}</span>
                 <span class="meta-badge category"><i data-lucide="tag" size="12"></i> {{ course.category }}</span>
+                {% if course.price %}
+                <span class="meta-badge price" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <i data-lucide="credit-card" size="12"></i> {{ course.price }}
+                </span>
+                {% endif %}
             </div>
             <div class="course-footer">
                 <span class="course-price free">Gratuit</span>
                 <span class="course-link">Détails →</span>
             </div>
         </div>
-        {% else %}
-        <div class="no-results">
-            <p>Commencez à explorer pour obtenir des recommandations!</p>
-            <a href="{{ url_for('courses') }}" class="btn-search" style="text-decoration:none; display:inline-block; margin-top:1rem;">Voir tous les cours</a>
-        </div>
         {% endfor %}
+    </div>
+
+    <!-- Explore Button -->
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="{{ url_for('courses') }}" class="btn-search" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.75rem; padding: 1.25rem 2.5rem; font-size: 1.1rem; border-radius: 12px; background: var(--primary-dark);">
+            <i data-lucide="compass"></i> Explorer tous les cours
+        </a>
     </div>
 </section>
 {% endblock %}
 
 {% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-document.getElementById('search-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const query = document.getElementById('search-query').value;
-    if (!query.trim()) return;
-    
-    const loading = document.getElementById('loading');
-    const grid = document.getElementById('courses-grid');
-    const title = document.getElementById('results-title');
-    const count = document.getElementById('results-count');
-    
-    loading.classList.add('active');
-    grid.innerHTML = '';
-    title.textContent = '🔍 Résultats pour: ' + query;
-    
-    try {
-        const response = await fetch('/api/search', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query: query, n: 20 })
-        });
-        
-        const data = await response.json();
-        displayCourses(data.recommendations);
-        count.textContent = data.count + ' cours trouvés';
-    } catch (error) {
-        console.error('Error:', error);
-        grid.innerHTML = '<p class="no-results">Erreur lors de la recherche</p>';
-    } finally {
-        loading.classList.remove('active');
-    }
-});
+// Dashboard is now static recommendations for a cleaner look
+// Search and filters are available in the Courses catalog page
 
-function displayCourses(courses) {
-    const grid = document.getElementById('courses-grid');
-    grid.innerHTML = '';
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Interests Chart (Bar) ---
+    const ctxInterests = document.getElementById('interestsChart').getContext('2d');
     
-    if (!courses || courses.length === 0) {
-        grid.innerHTML = '<p class="no-results">Aucun cours trouvé</p>';
-        return;
-    }
+    // Data from Jinja2
+    const categories = {{ user_prefs.categories | tojson }};
+    const labels = Object.keys(categories).slice(0, 8); // Top 8
+    const data = Object.values(categories).slice(0, 8);
     
-    courses.forEach(course => {
-        const card = `
-            <div class="course-card" onclick="window.location.href='/course/${course.course_id}'">
-                ${course.reason ? `<div class="recommendation-reason">${course.reason}</div>` : ''}
-                <div class="course-platform ${(course.platform || '').toLowerCase()}">${course.platform || 'Coursera'}</div>
-                <h3 class="course-title">${course.title || ''}</h3>
-                <p class="course-instructor">👨‍🏫 ${course.instructor || 'N/A'}</p>
-                ${course.similarity_score ? `
-                    <div class="similarity-bar-container">
-                        <span class="similarity-label">Score de pertinence: ${course.similarity_score}%</span>
-                        <div class="similarity-bar">
-                            <div class="similarity-fill" style="width: ${course.similarity_score}%"></div>
-                        </div>
-                    </div>
-                ` : ''}
-                <div class="course-meta">
-                    <span class="meta-badge rating">⭐ ${(course.rating || 0).toFixed(1)}</span>
-                    <span class="meta-badge level">📈 ${course.level || 'Tout niveau'}</span>
-                    <span class="meta-badge category">${course.category || ''}</span>
-                </div>
-                <div class="course-footer">
-                    <span class="course-price free">Gratuit</span>
-                    <span class="course-link">Détails →</span>
-                </div>
-            </div>
-        `;
-        grid.innerHTML += card;
+    // Fallback data if empty
+    const chartLabels = labels.length ? labels : ['Data Science', 'Web Dev', 'Business', 'Design', 'Marketing'];
+    const chartData = labels.length ? data : [5, 4, 3, 2, 1];
+
+    new Chart(ctxInterests, {
+        type: 'bar',
+        data: {
+            labels: chartLabels,
+            datasets: [{
+                label: 'Visites',
+                data: chartData,
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                borderRadius: 6,
+                barPercentage: 0.8,
+                categoryPercentage: 0.9
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                    ticks: { color: 'rgba(255, 255, 255, 0.6)' }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { 
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        font: { size: 10 }
+                    }
+                }
+            }
+        }
     });
-    lucide.createIcons();
-}
 
-['filter-platform', 'filter-category', 'filter-level'].forEach(id => {
-    document.getElementById(id).addEventListener('change', applyFilters);
+    // --- Goal Chart (Doughnut) ---
+    const ctxGoal = document.getElementById('goalChart').getContext('2d');
+    new Chart(ctxGoal, {
+        type: 'doughnut',
+        data: {
+            labels: ['Completé', 'Restant'],
+            datasets: [{
+                data: [75, 25],
+                backgroundColor: ['#1D546D', '#f1f5f9'],
+                borderWidth: 0,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '85%',
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
+            }
+        }
+    });
 });
-
-async function applyFilters() {
-    const platform = document.getElementById('filter-platform').value;
-    const category = document.getElementById('filter-category').value;
-    const level = document.getElementById('filter-level').value;
-    
-    if (!platform && !category && !level) return;
-    
-    const loading = document.getElementById('loading');
-    const grid = document.getElementById('courses-grid');
-    const title = document.getElementById('results-title');
-    const count = document.getElementById('results-count');
-    
-    loading.classList.add('active');
-    grid.innerHTML = '';
-    title.textContent = '🔍 Résultats filtrés';
-    
-    try {
-        let url = '/api/courses?per_page=20';
-        if (platform) url += `&platform=${platform}`;
-        if (category) url += `&category=${category}`;
-        if (level) url += `&level=${level}`;
-        
-        const response = await fetch(url);
-        const data = await response.json();
-        displayCourses(data.courses);
-        count.textContent = data.total + ' cours trouvés';
-    } catch (error) {
-        console.error('Error:', error);
-    } finally {
-        loading.classList.remove('active');
-    }
-}
 </script>
 {% endblock %}
