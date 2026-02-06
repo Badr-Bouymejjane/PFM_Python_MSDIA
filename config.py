@@ -40,7 +40,7 @@ REQUEST_DELAY = 2
 
 # Chemins des fichiers de données
 RAW_DATA_PATH = 'data/courses_raw.csv'
-CLEAN_DATA_PATH = 'data/courses_clean.csv'
+CLEAN_DATA_PATH = 'data/final_courses_shuffled.csv'
 
 # Colonnes du dataset
 DATASET_COLUMNS = [

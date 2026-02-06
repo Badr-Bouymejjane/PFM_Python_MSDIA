@@ -38,7 +38,7 @@ Recommandations/
 │   ├── udemy_scraper.py
 │   └── run_scrapers.py
 ├── data/                  # Data Storage
-│   ├── final_data.csv     # Main processed dataset
+│   ├── final_courses_shuffled.csv # Main processed dataset
 │   └── recommandations.db # Relational database
 ├── models/                # Machine Learning Core
 │   ├── recommender.py     # Similarity-based engine

@@ -9,7 +9,7 @@ Voici comment fonctionne l'algorithme implémenté dans le système :
 
 1. RECHERCHE ET FILTRAGE :
 ---------------------------
-Le système scanne l'intégralité du dataset 'final_data.csv'. Il recherche 
+Le système scanne l'intégralité du dataset 'final_courses_shuffled.csv'. Il recherche 
 le mot-clé saisi par l'utilisateur (ex: "Python" ou "Machine Learning") 
 à la fois dans le TITRE du cours et dans sa CATÉGORIE pour maximiser la pertinence.
 
