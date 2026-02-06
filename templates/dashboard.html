@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard Visualisation - Course Explorer{% endblock %}
+
+{% block content %}
+<div class="dashboard-wrapper">
+    <!-- Header Section -->
+    <header class="dashboard-header mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="section-title mb-1">Visualisations & Analytics</h1>
+                <p class="text-muted">Aperçu stratégique du catalogue de cours et des performances algorithmiques</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-action" onclick="window.print()">
+                    <i data-lucide="download"></i>
+                    Générer Rapport PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Grid (Using app's stats-compact-grid) -->
+    <div class="stats-compact-grid mb-5">
+        <div class="stat-compact-card">
+            <div class="stat-icon-circle accent-blue">
+                <i data-lucide="book-open"></i>
+            </div>
+            <div class="stat-info">
+                <div class="stat-value">{{ stats.total_courses }}</div>
+                <div class="stat-label">Total Cours</div>
+            </div>
+        </div>
+
+        <div class="stat-compact-card">
+            <div class="stat-icon-circle accent-emerald">
+                <i data-lucide="star"></i>
+            </div>
+            <div class="stat-info">
+                <div class="stat-value">{{ stats.avg_rating }}</div>
+                <div class="stat-label">Note Moyenne</div>
+            </div>
+        </div>
+
+        <div class="stat-compact-card">
+            <div class="stat-icon-circle accent-amber">
+                <i data-lucide="layers"></i>
+            </div>
+            <div class="stat-info">
+                <div class="stat-value">{{ stats.total_categories }}</div>
+                <div class="stat-label">Catégories</div>
+            </div>
+        </div>
+
+        <div class="stat-compact-card">
+            <div class="stat-icon-circle accent-purple">
+                <i data-lucide="users"></i>
+            </div>
+            <div class="stat-info">
+                <div class="stat-value">{{ stats.total_instructors }}</div>
+                <div class="stat-label">Instructeurs</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Analytics Grid -->
+    <div class="analytics-grid">
+        <!-- Chart 1: Category Bar -->
+        <div class="analytics-card wide">
+            <div class="card-header">
+                <h3><i data-lucide="bar-chart-2" class="me-2"></i>Distribution par Catégorie</h3>
+                <span class="badge-accent">Top 10 Thématiques</span>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Chart 2: Platform Pie -->
+        <div class="analytics-card side">
+            <div class="card-header">
+                <h3><i data-lucide="pie-chart" class="me-2"></i>Part des Plateformes</h3>
+            </div>
+            <div class="chart-wrapper pie">
+                <canvas id="platformChart"></canvas>
+            </div>
+            <div class="platform-stats mt-3">
+                <div class="platform-item coursera">
+                    <span class="dot"></span>
+                    <span class="name">Coursera</span>
+                    <span class="percent fw-id-coursera">--%</span>
+                </div>
+                <div class="platform-item udemy">
+                    <span class="dot"></span>
+                    <span class="name">Udemy</span>
+                    <span class="percent fw-id-udemy">--%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart 3: Cluster Line -->
+        <div class="analytics-card half">
+            <div class="card-header">
+                <h3><i data-lucide="trending-up" class="me-2"></i>Densité des Clusters</h3>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="clusterChart"></canvas>
+            </div>
+            <p class="chart-note mt-2">Répartition des cours dans les 14 groupes thématiques K-Means.</p>
+        </div>
+
+        <!-- Chart 4: Rating Polar -->
+        <div class="analytics-card half">
+            <div class="card-header">
+                <h3><i data-lucide="award" class="me-2"></i>Index Satisfaction par Platform</h3>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="ratingChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<script>
+    // Configuration globale Chart.js
+    Chart.defaults.font.family = "'Inter', sans-serif";
+    Chart.defaults.color = '#1D546D';
+    Chart.defaults.plugins.tooltip.backgroundColor = '#1D546D';
+    
+    const catData = {{ cat_data|safe }};
+    const platformData = {{ platform_data|safe }};
+    const clusterData = {{ cluster_data|safe }};
+    const clusterLabels = {{ cluster_labels|safe }};
+    const ratingData = {{ rating_data|safe }};
+
+    // Calcul des pourcentages Plateforme
+    const totalPlat = Object.values(platformData).reduce((a, b) => a + b, 0);
+    document.querySelector('.fw-id-coursera').textContent = ((platformData['Coursera'] / totalPlat) * 100).toFixed(1) + '%';
+    document.querySelector('.fw-id-udemy').textContent = ((platformData['Udemy'] / totalPlat) * 100).toFixed(1) + '%';
+
+    // Helper Gradient
+    function getGradient(ctx, chartArea, color1, color2) {
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, color1);
+        gradient.addColorStop(1, color2);
+        return gradient;
+    }
+
+    // 1. Chart Bar (Catégories)
+    new Chart(document.getElementById('categoryChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(catData),
+            datasets: [{
+                label: 'Nombre de Cours',
+                data: Object.values(catData),
+                backgroundColor: '#1D546D',
+                borderRadius: 6,
+                hoverBackgroundColor: '#10b981',
+                barThickness: 24
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    // 2. Chart Doughnut (Plateformes)
+    new Chart(document.getElementById('platformChart'), {
+        type: 'doughnut',
+        data: {
+            labels: Object.keys(platformData),
+            datasets: [{
+                data: Object.values(platformData),
+                backgroundColor: ['#1D546D', '#10b981'],
+                borderWidth: 0,
+                cutout: '75%',
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    // 3. Chart Line (Clusters)
+    new Chart(document.getElementById('clusterChart'), {
+        type: 'line',
+        data: {
+            labels: clusterLabels,
+            datasets: [{
+                label: 'Population',
+                data: clusterData,
+                borderColor: '#10b981',
+                backgroundColor: (context) => {
+                    const chart = context.chart;
+                    const {ctx, chartArea} = chart;
+                    if (!chartArea) return null;
+                    const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                    gradient.addColorStop(0, 'rgba(16, 185, 129, 0)');
+                    gradient.addColorStop(1, 'rgba(16, 185, 129, 0.1)');
+                    return gradient;
+                },
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4,
+                pointBackgroundColor: '#ffffff',
+                pointBorderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { grid: { borderDash: [5, 5] }, beginAtZero: true },
+                x: { grid: { display: false } }
+            }
+        }
+    });
+
+    // 4. Chart Polar (Ratings)
+    new Chart(document.getElementById('ratingChart'), {
+        type: 'polarArea',
+        data: {
+            labels: Object.keys(ratingData),
+            datasets: [{
+                data: Object.values(ratingData),
+                backgroundColor: ['rgba(29, 84, 109, 0.5)', 'rgba(16, 185, 129, 0.5)'],
+                borderColor: ['#1D546D', '#10b981'],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: { min: 3, max: 5, ticks: { display: false }, grid: { circular: true } }
+            },
+            plugins: { legend: { position: 'bottom' } }
+        }
+    });
+</script>
+
+<style>
+    /* Dashboard Layout */
+    .dashboard-wrapper {
+        color: var(--text-primary);
+    }
+
+    .analytics-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+    }
+
+    .analytics-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease;
+    }
+
+    .analytics-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+    .analytics-card.wide { grid-column: span 8; }
+    .analytics-card.side { grid-column: span 4; }
+    .analytics-card.half { grid-column: span 6; }
+
+    /* Card Elements */
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 1rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+    }
+
+    .badge-accent {
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: var(--bg-secondary);
+        color: var(--primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-full);
+    }
+
+    .chart-wrapper { height: 320px; }
+    .chart-wrapper.pie { height: 240px; }
+
+    /* Platform Legend */
+    .platform-stats { display: flex; flex-direction: column; gap: 0.75rem; }
+    .platform-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.85rem;
+        padding: 0.5rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-md);
+    }
+
+    .platform-item .dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 0.75rem; }
+    .platform-item.coursera .dot { background: #1D546D; }
+    .platform-item.udemy .dot { background: #10b981; }
+    .platform-item .name { flex: 1; font-weight: 500; }
+    .platform-item .percent { font-weight: 800; color: var(--primary); }
+
+    /* Actions Button */
+    .btn-action {
+        background: var(--primary);
+        color: #ffffff;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-action:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    /* Icons Color Fix */
+    .accent-blue { color: #1D546D; background: rgba(29, 84, 109, 0.1); }
+    .accent-emerald { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+    .accent-amber { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+    .accent-purple { color: #8b5cf6; background: rgba(139, 92, 246, 0.1); }
+
+    .chart-note { font-size: 0.75rem; color: var(--text-muted); text-align: center; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .analytics-card.wide, .analytics-card.side, .analytics-card.half { grid-column: span 12; }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}📄 Rapport détaillé de la plateforme{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <h1 class="section-title"><i data-lucide="file-text"></i> Rapport de Fonctionnement</h1>
+    <p class="text-muted">Documentation détaillée sur le fonctionnement interne du système de recommandation.</p>
+</section>
+
+<div class="course-detail-body">
+    <div class="course-detail-main">
+        <div class="detail-section">
+            <h2 class="section-title"><i data-lucide="cpu"></i> Architecture Globale</h2>
+            <div class="course-description-full">
+                <p>La plateforme "Course Recommender" est conçue sur une architecture hybride combinant le filtrage basé sur le contenu (Content-Based Filtering) et des méthodes de clustering non supervisé pour offrir une expérience d'apprentissage personnalisée.</p>
+                <br>
+                <p>Le système repose sur trois piliers principaux :</p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li><strong>Traitement du Langage Naturel (NLP) :</strong> Utilisation de TF-IDF pour transformer les descriptions et titres de cours en vecteurs mathématiques.</li>
+                    <li><strong>Calcul de Similarité :</strong> Utilisation de la similarité cosinus pour mesurer la proximité entre les cours et les préférences utilisateur.</li>
+                    <li><strong>Segmentation des Données :</strong> Algorithme K-Means pour regrouper les cours en clusters thématiques cohérents.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="section-title"><i data-lucide="database"></i> Gestion des Données</h2>
+            <div class="course-description-full">
+                <p>Les données proviennent de deux sources majeures : <strong>Coursera</strong> et <strong>Udemy</strong>. Le dataset comprend plus de 1000 cours nettoyés et normalisés.</p>
+                <br>
+                <p>Lors du chargement, les données subissent plusieurs étapes :</p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li>Nettoyage des valeurs manquantes.</li>
+                    <li>Normalisation des colonnes de prix et de notation.</li>
+                    <li>Extraction de mots-clés (Skills) à partir des titres.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="section-title"><i data-lucide="search"></i> Algorithme de Recommandation</h2>
+            <div class="course-description-full">
+                <p>Le moteur de recommandation utilise une matrice <strong>TF-IDF</strong> (Term Frequency-Inverse Document Frequency) sur les métadonnées des cours. Lorsqu'un utilisateur effectue une recherche ou consulte un cours :</p>
+                <br>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Le système vectorize l'entrée utilisateur.</li>
+                    <li>Il calcule le produit scalaire entre cette entrée et l'ensemble de la base de cours.</li>
+                    <li>Il retourne les cours ayant le score de <em>similarité cosinus</em> le plus élevé.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-detail-sidebar">
+        <div class="cta-card">
+            <h3 style="margin-bottom: 1rem;">Statistiques Système</h3>
+            <div style="text-align: left; font-size: 0.9rem;">
+                <p>✅ <strong>Algorithme :</strong> TF-IDF / Cosine Similarity</p>
+                <p>✅ <strong>Backend :</strong> Flask (Python)</p>
+                <p>✅ <strong>Frontend :</strong> HTML5 / CSS3 / Lucide Icons</p>
+                <p>✅ <strong>Model Path :</strong> <code>models/recommender.pkl</code></p>
+            </div>
+        </div>
+        
+        <div class="detail-section" style="margin-top: 2rem;">
+            <h3 style="margin-bottom: 1rem;">Personalisation</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Le système apprend de vos interactions (recherches, clics, catégories préférées) pour affiner les recommandations de votre tableau de bord en temps réel.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

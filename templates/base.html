@@ -7,7 +7,7 @@
     <title>{% block title %}Course Recommender{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/enhancements.css') }}" />
+
     <script src="https://unpkg.com/lucide@latest"></script>
     {% block extra_css %}{% endblock %}
   </head>
@@ -16,8 +16,8 @@
     <aside class="sidebar">
       <div class="sidebar-header">
         <a href="{{ url_for('home') }}" class="nav-logo">
-          <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
-          <span class="logo-text">Course Recommender</span>
+          <span class="logo-icon">BMY.</span>
+          <span class="logo-text">Learning</span>
         </a>
       </div>
       
@@ -26,19 +26,27 @@
         <nav class="nav-links">
           <a href="{{ url_for('home') }}" class="nav-link {% if request.endpoint == 'home' %}active{% endif %}">
             <span class="nav-link-icon"><i data-lucide="home"></i></span>
-            <span class="nav-link-text">Accueil</span>
+            <span class="nav-link-text">Dashboard</span>
           </a>
           <a href="{{ url_for('courses') }}" class="nav-link {% if request.endpoint == 'courses' %}active{% endif %}">
-            <span class="nav-link-icon"><i data-lucide="book-open"></i></span>
-            <span class="nav-link-text">Tous les cours</span>
+            <span class="nav-link-icon"><i data-lucide="graduation-cap"></i></span>
+            <span class="nav-link-text">Cours</span>
           </a>
           <a href="{{ url_for('clustering') }}" class="nav-link {% if request.endpoint == 'clustering' %}active{% endif %}">
-            <span class="nav-link-icon"><i data-lucide="layers"></i></span>
+            <span class="nav-link-icon"><i data-lucide="layout-grid"></i></span>
             <span class="nav-link-text">Clustering</span>
+          </a>
+          <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="pie-chart"></i></span>
+            <span class="nav-link-text">Visualisations</span>
+          </a>
+          <a href="{{ url_for('report') }}" class="nav-link {% if request.endpoint == 'report' %}active{% endif %}">
+            <span class="nav-link-icon"><i data-lucide="file-bar-chart"></i></span>
+            <span class="nav-link-text">Rapport</span>
           </a>
           <a href="{{ url_for('profile') }}" class="nav-link {% if request.endpoint == 'profile' %}active{% endif %}">
             <span class="nav-link-icon"><i data-lucide="user"></i></span>
-            <span class="nav-link-text">Profil</span>
+            <span class="nav-link-text">Mon Profil</span>
           </a>
         </nav>
         {% endif %}
@@ -47,12 +55,12 @@
       <div class="sidebar-footer">
         {% if username %}
         <div class="nav-user">
-          <span class="nav-link-icon"><i data-lucide="user-circle"></i></span>
+          <i data-lucide="user-circle"></i>
           <span class="user-badge">{{ username }}</span>
         </div>
         <a href="{{ url_for('logout') }}" class="logout-btn">
-          <span class="nav-link-icon"><i data-lucide="log-out"></i></span>
-          <span class="nav-link-text">Déconnexion</span>
+          <i data-lucide="log-out"></i>
+          <span class="nav-link-text">Se déconnecter</span>
         </a>
         {% endif %}
       </div>

@@ -34,10 +34,15 @@ class CourseClustering:
         self.cluster_centers_2d = None
         self.courses_2d = None
         
-    def load_data(self, filepath='data/final_courses.csv'):
+    def load_data(self, filepath='data/final_courses_shuffled.csv'):
         """Load course data"""
         print(f"📂 Loading data: {filepath}")
-        self.df = pd.read_csv(filepath)
+        try:
+            # Essaie d'abord avec le séparateur par défaut
+            self.df = pd.read_csv(filepath)
+        except:
+            # Si ça échoue, essaie avec le point-virgule
+            self.df = pd.read_csv(filepath, sep=';')
         
         # Ensure required columns
         if 'course_id' not in self.df.columns:
@@ -63,38 +68,48 @@ class CourseClustering:
         return 'All Levels'
         
     def prepare_features(self):
-        """Prepare features for clustering"""
-        print("🔧 Preparing features...")
+        """Prepare features for clustering with optimized weighting and NLP"""
+        print("🔧 Preparing features (Optimized for 14 clusters)...")
         
-        # Text features
-        text_cols = ['title', 'category']
-        self.df['text_features'] = self.df.apply(
-            lambda row: ' '.join([str(row[c]) for c in text_cols if c in row.index and pd.notna(row[c])]),
+        # 1. Custom stop words cleaned to keep domain-specific terms like 'machine' or 'data'
+        from sklearn.feature_extraction import text
+        custom_stop_words = [
+            'course', 'introduction', 'complete', 'specialization', 
+            'professional', 'certificate', 'training', 'master', 'guide', 'weeks', 'months'
+        ]
+        stop_words = list(text.ENGLISH_STOP_WORDS.union(custom_stop_words))
+        
+        # 2. Weighted features: Repeat 'category' 3 times to prioritize it
+        self.df['weighted_text'] = self.df.apply(
+            lambda row: (str(row['category']) + ' ') * 3 + str(row['title']),
             axis=1
         )
         
-        # TF-IDF
-        self.tfidf = TfidfVectorizer(max_features=500, stop_words='english')
-        tfidf_matrix = self.tfidf.fit_transform(self.df['text_features'])
+        # 3. TF-IDF with higher max_features and Bigrams
+        self.tfidf = TfidfVectorizer(
+            max_features=2000, 
+            stop_words=stop_words,
+            ngram_range=(1, 2),
+            min_df=2
+        )
+        tfidf_matrix = self.tfidf.fit_transform(self.df['weighted_text'])
         
-        # Numeric features
+        # 4. Numeric features (optional, keeping them for variety)
         numeric_features = []
         if 'rating' in self.df.columns:
-            numeric_features.append(self.df['rating'].fillna(0).values.reshape(-1, 1))
-        if 'duration_hours' in self.df.columns:
-            numeric_features.append(self.df['duration_hours'].fillna(0).values.reshape(-1, 1))
-        if 'popularity_score' in self.df.columns:
-            numeric_features.append(self.df['popularity_score'].fillna(0).values.reshape(-1, 1))
+            # We scale rating to a smaller range so it doesn't overpower the TF-IDF
+            numeric_features.append(self.df['rating'].fillna(self.df['rating'].mean()).values.reshape(-1, 1))
             
         # Combine features
         if numeric_features:
             scaler = StandardScaler()
             numeric_matrix = scaler.fit_transform(np.hstack(numeric_features))
-            self.feature_matrix = np.hstack([tfidf_matrix.toarray(), numeric_matrix])
+            # Decrease weight of numeric features relative to text (0.5 factor)
+            self.feature_matrix = np.hstack([tfidf_matrix.toarray(), numeric_matrix * 0.5])
         else:
             self.feature_matrix = tfidf_matrix.toarray()
             
-        print(f"   ✅ Feature matrix: {self.feature_matrix.shape}")
+        print(f"   ✅ Optimized feature matrix: {self.feature_matrix.shape}")
         return self
         
     def fit_clusters(self):
@@ -128,9 +143,6 @@ class CourseClustering:
             
             # Top categories in cluster
             top_categories = cluster_df['category'].value_counts().head(3).to_dict()
-            
-            # Top keywords
-            cluster_text = ' '.join(cluster_df['text_features'].tolist())
             
             # Average stats
             avg_rating = cluster_df['rating'].mean() if 'rating' in cluster_df.columns else 0
@@ -218,7 +230,7 @@ class CourseClustering:
                 
         return path
         
-    def run(self, filepath='data/final_courses.csv'):
+    def run(self, filepath='data/final_courses_shuffled.csv'):
         """Run complete clustering pipeline"""
         print("\n" + "="*60)
         print("   🔮 COURSE CLUSTERING")
@@ -243,13 +255,13 @@ _clustering_instance = None
 def get_clustering():
     global _clustering_instance
     if _clustering_instance is None:
-        _clustering_instance = CourseClustering(n_clusters=8)
+        _clustering_instance = CourseClustering(n_clusters=14)
         _clustering_instance.run()
     return _clustering_instance
 
 
 if __name__ == "__main__":
-    clustering = CourseClustering(n_clusters=8)
+    clustering = CourseClustering(n_clusters=14)
     clustering.run()
     
     # Test learning path

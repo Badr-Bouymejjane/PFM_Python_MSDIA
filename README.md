@@ -1,147 +1,119 @@
-# 🎓 Course Recommendation System
+# 🎓 Course Explorer: ML-Powered Recommendation System
 
-A complete **Machine Learning-powered Course Recommendation Platform** that scrapes courses from Coursera and Udemy, builds a structured dataset, and provides personalized recommendations.
+A state-of-the-art **Machine Learning** platform designed to help users discover, analyze, and master new skills. This system integrates real-time web scraping from **Coursera** and **Udemy**, advanced data processing, and a multi-model recommendation engine (Clustering + Content-Filtering).
 
-## 🚀 Features
+---
 
-- **Multi-Platform Scraping**: Scrapes courses from Coursera & Udemy
-- **Large Dataset**: 1000+ courses with detailed metadata
-- **ML Recommendation Engine**: TF-IDF + Cosine Similarity
-- **Beautiful Web Interface**: Modern Flask web application
-- **Personalized Recommendations**: Based on course similarity
-- **Advanced Filtering**: By category, platform, level, price
+## 🚀 Key Features
 
-## 📁 Project Structure
+### 🔍 Search & Exploration
+
+- **Hybrid Search**: Advanced search algorithm matching titles, categories, and partners.
+- **Micro-Filters**: Precise filtering by platform, difficulty level (Beginner to Advanced), and duration.
+- **Smart Catalog**: A responsive interface displaying 1000+ courses with detailed metadata.
+
+### 🤖 Intelligent Engines (Machine Learning)
+
+- **Engine 1: Content-Based Filtering**: Uses **TF-IDF Vectorization** and **Cosine Similarity** to suggest courses identical in content to your interests.
+- **Engine 2: Behavioral Clustering**: Employs **K-Means Clustering** to group courses into thematic "clusters", allowing the discovery of related fields.
+- **Engine 3: Learning Path Generator**: Automatically constructs a step-by-step roadmap from beginner to expert for any given skill.
+
+### 📊 Interactive Dashboard
+
+- **Real-Time Analytics**: Visualization of course distributions across categories.
+- **Platform Insights**: Comparison of ratings and pricing between Coursera and Udemy.
+- **Cluster Visualization**: Graphical representation of how courses are grouped by the ML model.
+
+---
+
+## 📁 Project Architecture
 
 ```
 Recommandations/
-├── app.py                 # Main Flask application
-├── config.py              # Configuration settings
-├── requirements.txt       # Python dependencies
-├── scrapers/
-│   ├── __init__.py
-│   ├── coursera_scraper.py    # Coursera scraping
-│   ├── udemy_scraper.py       # Udemy scraping
-│   └── run_scrapers.py        # Run all scrapers
-├── data/
-│   ├── courses_raw.csv        # Raw scraped data
-│   └── courses_clean.csv      # Cleaned dataset
-├── models/
-│   ├── __init__.py
-│   └── recommender.py         # ML Recommendation Engine
-├── utils/
-│   ├── __init__.py
-│   ├── data_cleaner.py        # Data cleaning utilities
-│   └── feature_engineering.py # Feature engineering
-├── templates/
-│   ├── base.html              # Base template
-│   ├── home.html              # Home page
-│   ├── courses.html           # All courses page
-│   └── course_detail.html     # Course details + recommendations
-└── static/
-    ├── css/
-    │   └── style.css          # Main stylesheet
-    └── js/
-        └── main.js            # Frontend JavaScript
+├── app.py                 # Core Flask application & API routes
+├── database.py            # SQLite management (Users, Searches, Tracking)
+├── user_manager.py        # Authentication & Session logic
+├── scrapers/              # Data Acquisition (Playwright & BeautifulSoup)
+│   ├── coursera_scraper.py
+│   ├── udemy_scraper.py
+│   └── run_scrapers.py
+├── data/                  # Data Storage
+│   ├── final_courses_shuffled.csv # Main processed dataset
+│   └── recommandations.db # Relational database
+├── models/                # Machine Learning Core
+│   ├── recommender.py     # Similarity-based engine
+│   └── clustering.py      # K-Means grouping engine
+├── templates/             # Modern UI (Jinja2)
+│   ├── dashboard.html     # Visual analytics
+│   ├── home.html          # User personalized portal
+│   └── ...
+└── static/                # Assets (Design System, JS, Icons)
 ```
 
-## 🛠️ Installation
+---
 
-### 1. Clone the repository
+## 🛠️ Installation & Setup
+
+### 1. Environment Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/Badr-Bouymejjane/PFM_Python_MSDIA.git
 cd Recommandations
-```
 
-### 2. Install dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
-
-### 3. Install Playwright browsers (for Coursera)
-
-```bash
 playwright install chromium
 ```
 
-## 🔄 Usage
+### 2. Data Preparation (Optional)
 
-### Step 1: Scrape Courses
+If you wish to refresh the database with live data:
 
 ```bash
+# Run scrapers
 python scrapers/run_scrapers.py
 ```
 
-### Step 2: Clean Data
-
-```bash
-python utils/data_cleaner.py
-```
-
-### Step 3: Run Web Application
+### 3. Launch the Platform
 
 ```bash
 python app.py
 ```
 
-Then open: **http://localhost:5000**
+Visit: **[http://localhost:5000](http://localhost:5000)**
 
-## 🌐 Web Routes
+---
 
-| Route             | Description                      |
-| ----------------- | -------------------------------- |
-| `/`               | Home page with search & filters  |
-| `/courses`        | All courses with pagination      |
-| `/course/<id>`    | Course details + recommendations |
-| `/recommend/<id>` | API: Get recommended courses     |
-| `/api/search`     | API: Search courses              |
-| `/api/filter`     | API: Filter courses              |
+## 🧬 Machine Learning Deep Dive
 
-## 🤖 ML Recommendation System
+### **Clustering Engine (K-Means)**
 
-### Content-Based Filtering
+The system analyzes text features to create 14 distinct thematic clusters. This allows the system to understand that a user interested in "Python" might also benefit from "Data Engineering" or "Backend Development" even if the titles are different.
 
-1. **TF-IDF Vectorization** on `title + description + skills`
-2. **Cosine Similarity** computation
-3. **Top-N Recommendations** based on similarity score
+### **Recommendation Logic (TF-IDF)**
 
-### Example
+1. **Vectorization**: Transforms course descriptions into mathematical vectors.
+2. **Similarity**: Calculates the angle between vectors (Cosine Similarity).
+3. **Weighting**: Gives higher priority to courses with high ratings and popularity scores.
 
-> User clicks **"Machine Learning with Python"**
-> → System recommends similar ML/AI courses
+---
 
-## 📊 Dataset Fields
+## � Technologies Used
 
-| Field         | Description                        |
-| ------------- | ---------------------------------- |
-| `platform`    | Coursera / Udemy                   |
-| `title`       | Course title                       |
-| `description` | Course description                 |
-| `category`    | AI, Web, Business, etc.            |
-| `skills`      | Tags and skills                    |
-| `instructor`  | Course instructor                  |
-| `rating`      | Average rating (0-5)               |
-| `num_reviews` | Number of reviews                  |
-| `price`       | Course price                       |
-| `level`       | Beginner / Intermediate / Advanced |
-| `language`    | Course language                    |
-| `url`         | Course URL                         |
+- **Backend**: Flask (Python), SQLite
+- **Machine Learning**: Scikit-Learn, NumPy, Pandas
+- **Web Scraping**: Playwright, BeautifulSoup4
+- **Frontend**: HTML5 (Semantic), Vanilla CSS (Modern Design System), Chart.js (Analytics)
+- **Icons**: Lucide Icons
 
-## 🛠️ Technologies
-
-- **Python 3.10+**
-- **Flask** - Web framework
-- **Pandas** - Data processing
-- **Scikit-learn** - ML algorithms (TF-IDF, Cosine Similarity)
-- **Playwright** - Web scraping (Coursera)
-- **BeautifulSoup** - HTML parsing
-- **HTML/CSS/JavaScript** - Frontend
+---
 
 ## 👨‍💻 Author
 
-- SDIA Student - S7 Python Project
+**SDIA Student - S7 Project**
+_SDIA - S7 / Python / Project / Recommendations_
 
-## 📝 License
+---
 
-MIT License
+© 2024 Course Explorer Project. All rights reserved.

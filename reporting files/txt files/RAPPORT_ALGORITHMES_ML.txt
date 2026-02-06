@@ -1,0 +1,66 @@
+================================================================================
+           RAPPORT DÉTAILLÉ : MOTEUR D'INTELLIGENCE ARTIFICIELLE
+================================================================================
+
+INTRODUCTION :
+Ce rapport explique les mathématiques et la logique de programmation derrière
+la génération des recommandations et le clustering des cours.
+
+--------------------------------------------------------------------------------
+1. LE SYSTÈME DE RECOMMANDATION (TF-IDF + COSINUS)
+--------------------------------------------------------------------------------
+
+A. TRADUCTION DU TEXTE EN NOMBRES (Vectorisation TF-IDF) :
+   Pour que l'ordinateur comprenne un cours, il analyse le Titre, la Catégorie
+   et le Niveau.
+   - TF (Term Frequency) : Mesure combien de fois un mot apparaît dans un cours.
+   - IDF (Inverse Document Frequency) : Mesure la rareté du mot.
+   Résultat : Les termes importants comme "Python" ou "Deep Learning" pèsent
+   plus lourd que les mots communs comme "Le" ou "Cours".
+
+B. CALCUL DE LA SIMILARITÉ (Similarité Cosinus) :
+   Une fois les cours transformés en vecteurs (flèches dans l'espace), on mesure
+   l'angle entre ces flèches.
+   - Score de 1.0 (Angle 0°) : Les cours sont identiques.
+   - Score de 0.0 (Angle 90°) : Les cours n'ont rien en commun.
+   Le système recommande en priorité les cours ayant le score le plus élevé.
+
+--------------------------------------------------------------------------------
+2. LE GROUPEMENT AUTOMATIQUE (CLUSTERING K-MEANS)
+--------------------------------------------------------------------------------
+
+Le système organise le catalogue de 1137 cours sans aide humaine :
+1. Algorithme : K-Means.
+2. Configuration : 10 clusters (groupes).
+3. Processus : Le système identifie 10 centres idéaux et regroupe chaque cours 
+   autour du centre qui lui ressemble le plus.
+   Exemple de clusters identifiés : Data Science, Développement Web, Business,
+   Santé & Fitness, etc.
+
+--------------------------------------------------------------------------------
+3. LA VISUALISATION 2D (PCA)
+--------------------------------------------------------------------------------
+
+Le catalogue contient des centaines de caractéristiques. Pour l'afficher sur 
+une carte plate (2D), nous utilisons la PCA (Analyse en Composantes Principales).
+- C'est une technique de compression de données.
+- Elle "écrase" les centaines de dimensions en seulement deux coordonnées (X, Y).
+- Cela crée les "galaxies de cours" visibles dans la section Clustering.
+
+--------------------------------------------------------------------------------
+4. LOGIQUE DE PERSONNALISATION UTILISATEUR
+--------------------------------------------------------------------------------
+
+Les recommandations sur votre page d'accueil sont un mélange intelligent :
+- Recherches (40%) : Basé sur vos 3 derniers mots-clés recherchés.
+- Intérêts (40%) : Basé sur les catégories des cours où vous avez cliqué.
+- Popularité (20%) : Basé sur les meilleures notes pour garantir la qualité.
+
+SÉCURITÉ ET FILTRAGE :
+Le système ignore désormais les recherches "bruitées" (ex: mots aléatoires).
+Si une recherche donne un score de similarité inférieur à 15%, elle n'est pas
+enregistrée dans le profil utilisateur pour ne pas fausser les recommandations.
+
+================================================================================
+                      FIN DU RAPPORT ALGORITHMIQUE
+================================================================================

@@ -118,12 +118,21 @@ function displayCourses(courses, gridId = 'courses-grid') {
  * Create course card HTML
  */
 function createCourseCard(course) {
-    const platformClass = (course.platform || 'unknown').toLowerCase();
-    const priceClass = course.price === 'Free' ? 'free' : '';
-    const rank = course.rank ? `<div class="course-rank">${course.rank}</div>` : '';
+    const platform = (course.platform || 'unknown').toLowerCase();
+    
+    // Determine logo path
+    let logoHtml = '';
+    if (platform === 'coursera') {
+        logoHtml = `<img src="/static/imgs/coursera-logo.png" alt="Coursera" class="course-logo">`;
+    } else if (platform === 'udemy') {
+        logoHtml = `<img src="/static/imgs/logo-udemy.svg" alt="Udemy" class="course-logo">`;
+    } else {
+        // Fallback for other platforms
+        logoHtml = `<div class="course-platform ${platform}">${course.platform || 'Unknown'}</div>`;
+    }
+
     const similarity = course.similarity_score ? `
         <div class="similarity-bar-container">
-            <span class="similarity-label">Similarité: ${course.similarity_score}%</span>
             <div class="similarity-bar">
                 <div class="similarity-fill" style="width: ${course.similarity_score}%"></div>
             </div>
@@ -132,23 +141,17 @@ function createCourseCard(course) {
     
     return `
         <div class="course-card" onclick="window.location.href='/course/${course.course_id || 0}'">
-            ${rank}
-            <div class="course-platform ${platformClass}">
-                ${course.platform || 'Unknown'}
-            </div>
+            ${logoHtml}
             <h3 class="course-title">${truncate(course.title, 60)}</h3>
-            <p class="course-instructor">🧑‍🏫 ${course.instructor || 'Unknown'}</p>
+            <p class="course-instructor"><i data-lucide="user"></i> ${course.instructor || 'N/A'}</p>
             ${similarity}
             <div class="course-meta">
-                <span class="meta-badge rating">⭐ ${(course.rating || 0).toFixed(1)}</span>
-                <span class="meta-badge level">📈 ${course.level || 'All Levels'}</span>
-                <span class="meta-badge category">📁 ${course.category || 'General'}</span>
+                <span class="meta-badge rating"><i data-lucide="star"></i> ${(course.rating || 0).toFixed(1)}</span>
+                <span class="meta-badge level"><i data-lucide="trending-up"></i> ${course.level || 'Tout niveau'}</span>
+                <span class="meta-badge category"><i data-lucide="tag"></i> ${course.category || ''}</span>
             </div>
             <div class="course-footer">
-                <span class="course-price ${priceClass}">
-                    💰 ${course.price || 'Subscription'}
-                </span>
-                ${course.url ? `<a href="${course.url}" target="_blank" class="course-link" onclick="event.stopPropagation()">Voir →</a>` : ''}
+                <span class="course-link">Détails →</span>
             </div>
         </div>
     `;

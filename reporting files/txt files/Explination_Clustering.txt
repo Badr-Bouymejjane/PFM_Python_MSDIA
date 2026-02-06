@@ -1,0 +1,69 @@
+============================================================
+🔮 EXPLICATION DU CLUSTERING DES COURS (K-MEANS)
+============================================================
+
+Ce document explique le fonctionnement de l'algorithme de clustering utilisé pour 
+organiser et regrouper les cours de la plateforme de recommandation.
+
+1. OBJECTIF DU CLUSTERING
+-------------------------
+Le clustering (ou regroupement) vise à diviser les milliers de cours disponibles 
+en "groupes thématiques" cohérents. Cela permet de :
+- Organiser les cours par domaines (ex: Data Science, Web Dev, Finance).
+- Explorer la plateforme par "cloud" de thématiques.
+- Améliorer les recommandations en identifiant les cours qui appartiennent au même univers.
+
+2. LE MODÈLE : K-MEANS ++
+-------------------------
+Nous utilisons l'algorithme K-Means, l'un des modèles d'apprentissage non supervisé 
+les plus populaires. 
+- Paramètre K : Nous avons optimisé le nombre de clusters à K=14.
+- Initialisation : 'k-means++' est utilisé pour choisir intelligemment les centres 
+  initiaux, ce qui accélère la convergence.
+- Stabilité : L'algorithme tourne 10 fois (n_init=10) pour choisir la meilleure 
+  partition possible.
+
+3. INGÉNIERIE DES DONNÉES (FEATURE ENGINEERING)
+-----------------------------------------------
+Pour que l'algorithme comprenne le sujet des cours, nous appliquons plusieurs 
+techniques de Traitement du Langage Naturel (NLP) :
+
+A. Pondération Thématique :
+   Nous avons constaté que le titre seul est parfois trop vague. Nous donnons 
+   donc 3 fois plus d'importance à la "Catégorie" du cours pour forcer le 
+   regroupement par domaine métier.
+
+B. Vectorisation TF-IDF :
+   Nous transformons le texte en nombres via TF-IDF (Term Frequency-Inverse 
+   Document Frequency). Nous utilisons jusqu'à 2000 termes et des "Bigrams" 
+   (groupes de 2 mots) pour capturer des concepts comme "Machine Learning" 
+   ou "Data Science" en un seul bloc.
+
+C. Nettoyage (Stop Words) :
+   Nous filtrons les mots inutiles (the, and, of) ainsi que des termes génériques 
+   vides de sens thématique (course, introduction, weeks, guide).
+
+4. VISUALISATION (PCA)
+----------------------
+Puisque les données mathématiques ont 2000 dimensions, nous utilisons la PCA 
+(Principal Component Analysis) pour réduire cela à 2 dimensions (X, Y).
+Cela nous permet de projeter les cours sur une carte 2D où l'on peut voir 
+clairement les "îlots" de connaissances.
+
+5. RÉSULTATS OPTIMISÉS
+----------------------
+Grâce à K=14 et la pondération par catégorie, nous obtenons des clusters 
+très nets :
+- Cluster 0 : Science des Données
+- Cluster 1 : Santé et Médecine
+- Cluster 2 : Apprentissage Automatique (ML)
+- Cluster 4 : Développement Web
+- Cluster 13: Design Graphique et Jeux Vidéo
+...
+
+Cette organisation permet une navigation beaucoup plus fluide et intelligente 
+pour l'utilisateur final.
+
+============================================================
+Développé par l'équipe Antigravity AI
+============================================================

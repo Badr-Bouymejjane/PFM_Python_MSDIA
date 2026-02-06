@@ -24,7 +24,7 @@
             </div>
             <div class="meta-item">
                 <span class="meta-icon"><i data-lucide="star" size="18"></i></span>
-                <span>{{ "%.1f" | format(course.rating or 0) }} / 5.0 ({{ course.num_reviews or 0 }} avis)</span>
+                <span>{{ "%.1f" | format(course.rating or 0) }} / 5.0</span>
             </div>
             <div class="meta-item">
                 <span class="meta-icon"><i data-lucide="trending-up" size="18"></i></span>
@@ -34,16 +34,22 @@
                 <span class="meta-icon"><i data-lucide="tag" size="18"></i></span>
                 <span>{{ course.category or 'Général' }}</span>
             </div>
+            {% if course.price %}
+            <div class="meta-item price-badge" style="background: rgba(16, 185, 129, 0.1); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                <span class="meta-icon"><i data-lucide="shopping-tag" size="18" style="color: #10b981;"></i></span>
+                <span style="color: #10b981; font-weight: 700;">{{ course.price }}</span>
+            </div>
+            {% endif %}
         </div>
     </div>
     
     <div class="course-detail-body">
         <div class="course-detail-main">
-            <!-- Description -->
+            <!-- À propos -->
             <div class="detail-section">
-                <h2 class="section-title"><i data-lucide="file-text" size="20"></i> Description du cours</h2>
+                <h2 class="section-title"><i data-lucide="info" size="20"></i> À propos de ce cours</h2>
                 <div class="course-description-full">
-                    {{ course.description or 'Aucune description détaillée n\'est disponible pour ce cours.' }}
+                    Ce cours de niveau <strong>{{ course.level or 'Débutant' }}</strong> est proposé par <strong>{{ course.instructor or 'un expert' }}</strong> sur la plateforme <strong>{{ course.platform }}</strong>. 
                 </div>
             </div>
             
@@ -92,7 +98,6 @@
                 <p class="cta-note">Vous allez être redirigé vers {{ course.platform }}</p>
             </div>
             
-            <!-- Overall Rating -->
             <div class="rating-card">
                 <div class="rating-value">{{ "%.1f" | format(course.rating or 0) }}</div>
                 <div class="rating-stars">
@@ -101,7 +106,7 @@
                         <i data-lucide="star" size="18" class="{% if i < rating %}filled{% endif %}" style="fill: {% if i < rating %}var(--accent){% else %}none{% endif %};"></i>
                     {% endfor %}
                 </div>
-                <div class="rating-count">Basé sur {{ course.num_reviews or 0 }} évaluations</div>
+                <div class="rating-count">Évaluation moyenne des apprenants</div>
             </div>
         </div>
     </div>
@@ -117,7 +122,14 @@
     <div class="courses-grid" style="margin-top: 2rem;">
         {% for similar in similar_courses %}
         <div class="course-card" onclick="window.location.href='{{ url_for('course_detail', course_id=similar.course_id) }}'">
+            {% if similar.platform | lower == 'coursera' %}
+            <img src="{{ url_for('static', filename='imgs/coursera-logo.png') }}" class="course-logo" alt="Coursera">
+            {% elif similar.platform | lower == 'udemy' %}
+            <img src="{{ url_for('static', filename='imgs/logo-udemy.svg') }}" class="course-logo" alt="Udemy">
+            {% else %}
             <div class="course-platform {{ similar.platform | lower }}">{{ similar.platform }}</div>
+            {% endif %}
+            
             <h3 class="course-title">{{ similar.title }}</h3>
             <p class="course-instructor"><i data-lucide="user" size="14"></i> {{ similar.instructor or 'Unknown' }}</p>
             
