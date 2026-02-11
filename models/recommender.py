@@ -21,7 +21,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Data path - use final_data.csv
-DATA_PATH = 'data/final_courses_shuffled.csv'
+DATA_PATH = 'processed_data/final_courses_shuffled.csv'
 TFIDF_MAX_FEATURES = 5000
 TFIDF_NGRAM_RANGE = (1, 2)
 TFIDF_MIN_DF = 2

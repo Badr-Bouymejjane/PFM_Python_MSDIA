@@ -34,7 +34,7 @@ class CourseClustering:
         self.cluster_centers_2d = None
         self.courses_2d = None
         
-    def load_data(self, filepath='data/final_courses_shuffled.csv'):
+    def load_data(self, filepath='processed_data/final_courses_shuffled.csv'):
         """Load course data"""
         print(f"📂 Loading data: {filepath}")
         try:
@@ -230,7 +230,7 @@ class CourseClustering:
                 
         return path
         
-    def run(self, filepath='data/final_courses_shuffled.csv'):
+    def run(self, filepath='processed_data/final_courses_shuffled.csv'):
         """Run complete clustering pipeline"""
         print("\n" + "="*60)
         print("   🔮 COURSE CLUSTERING")
