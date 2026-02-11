@@ -1,95 +1,95 @@
-# 🎓 Course Recommendation Platform: Full Documentation
+# 🎓 Plateforme de Recommandation de Cours : Documentation Complète
 
-This document provides a comprehensive overview of how the entire registration, scraping, analysis, and recommendation platform works.
+Ce document fournit une vue d'ensemble complète du fonctionnement de la plateforme d'inscription, d'extraction, d'analyse et de recommandation.
 
 ---
 
-## 🏗️ 1. High-Level Architecture
+## 🏗️ 1. Architecture de Haut Niveau
 
-The platform is built using a **Modular Data-Driven Architecture**. It separates the data collection from the intelligence engine and the web delivery.
+La plateforme est construite sur une **Architecture Modulaire Orientée Données**. Elle sépare la collecte de données du moteur d'intelligence et de la livraison web.
 
-### System Diagram
+### Diagramme du Système
 
 ```mermaid
 graph TD
-    subgraph "Phase 1: Data Acquisition"
-        Scrapers[Web Scrapers: Coursera/Udemy] -->|Raw Data| CSV_Raw[(courses_raw.csv)]
-        Cleaner[Data Cleaner] -->|Preprocessed Data| CSV_Clean[(final_courses.csv)]
+    subgraph "Phase 1 : Acquisition de Données"
+        Scrapers[Scrapers Web : Coursera/Udemy] -->|Données Brutes| CSV_Raw[(courses_raw.csv)]
+        Cleaner[Nettoyeur de Données] -->|Données Prétraitées| CSV_Clean[(final_courses.csv)]
     end
 
-    subgraph "Phase 2: Machine Learning"
-        CSV_Clean -->|TF-IDF| Recommender[Recommendation Model]
-        CSV_Clean -->|K-Means| Clustering[Clustering Engine]
-        Clustering -->|PCA| VizData[2D Mapping Data]
+    subgraph "Phase 2 : Machine Learning"
+        CSV_Clean -->|TF-IDF| Recommender[Modèle de Recommandation]
+        CSV_Clean -->|K-Means| Clustering[Moteur de Clustering]
+        Clustering -->|PCA| VizData[Données de Cartographie 2D]
     end
 
-    subgraph "Phase 3: Web Application (Flask)"
-        Recommender --> Interface[Web Dashboard]
+    subgraph "Phase 3 : Application Web (Flask)"
+        Recommender --> Interface[Tableau de Bord Web]
         VizData --> Interface
-        Profiles[User Profiles] <--> Interface
-        Tracker[Behavior Tracker] --> Profiles
+        Profiles[Profils Utilisateurs] <--> Interface
+        Tracker[Suivi Comportemental] --> Profiles
     end
 ```
 
 ---
 
-## 🛠️ 2. Step-by-Step Technical Workflow
+## 🛠️ 2. Flux de Travail Technique Étape par Étape
 
-### Step 1: Automated Data Collection (Scraping)
+### Étape 1 : Collecte Automatisée de Données (Scraping)
 
-- **Coursera**: Uses `Playwright` to simulate a real browser, handling dynamic JavaScript content that basic scrapers can't see.
-- **Udemy**: Uses `BeautifulSoup` and requests to parse HTML structure.
-- **Result**: A consolidated dataset with titles, descriptions, categories, levels, ratings, and URLs.
+- **Coursera** : Utilise `Playwright` pour simuler un navigateur réel, gérant le contenu JavaScript dynamique que les scrapers basiques ne peuvent pas voir.
+- **Udemy** : Utilise `BeautifulSoup` et des requêtes pour analyser la structure HTML.
+- **Résultat** : Un jeu de données consolidé avec titres, descriptions, catégories, niveaux, notes et URL.
 
-### Step 2: Data Preprocessing & Cleaning
+### Étape 2 : Prétraitement et Nettoyage des Données
 
-- **Normalization**: Converting various price formats and rating scales into a standard format.
-- **Keyword Extraction**: Extracting essential metadata (level, category) from descriptions if missing.
-- **Deduplication**: Removing duplicate courses and ensuring `course_id` consistency.
+- **Normalisation** : Conversion de divers formats de prix et échelles de notation en un format standard.
+- **Extraction de Mots-Clés** : Extraction de métadonnées essentielles (niveau, catégorie) à partir des descriptions si manquantes.
+- **Déduplication** : Suppression des cours en double et garantie de la cohérence des `course_id`.
 
-### Step 3: Building the Intelligence (ML Training)
+### Étape 3 : Construction de l'Intelligence (Entraînement ML)
 
-The system doesn't just search for keywords; it understands relationships:
+Le système ne cherche pas juste des mots-clés ; il comprend les relations :
 
-1.  **Vectorization**: It converts text (Title + Category + Level) into mathematical vectors using **TF-IDF**.
-2.  **Similarity Matrix**: It calculates the **Cosine Similarity** between every single pair of courses.
-3.  **Clustering**: It groups the 1100+ courses into **10 distinct clusters** (e.g., "Web Dev", "Data Science") using the **K-Means** algorithm.
+1.  **Vectorisation** : Convertit le texte (Titre + Catégorie + Niveau) en vecteurs mathématiques utilisant **TF-IDF**.
+2.  **Matrice de Similarité** : Calcule la **Similarité Cosinus** entre chaque paire de cours.
+3.  **Clustering** : Regroupe les 1100+ cours en **10 clusters distincts** (ex. "Dév Web", "Data Science") utilisant l'algorithme **K-Means**.
 
-### Step 4: Personalization Engine
+### Étape 4 : Moteur de Personnalisation
 
-When you log in, the system builds your profile:
+Lorsque vous vous connectez, le système construit votre profil :
 
-- **Direct Search**: Instantly vectorizes your query and finds the closest matches in the vector space.
-- **Behavior Tracking**: Every click and search is saved. The system calculates your "Top Categories".
-- **Hybrid Recommendation**: The home page combines:
-  - Recent search results.
-  - Top-rated courses from your favorite categories.
-  - Popular global courses to ensure discovery.
+- **Recherche Directe** : Vectorise instantanément votre requête et trouve les correspondances les plus proches dans l'espace vectoriel.
+- **Suivi Comportemental** : Chaque clic et recherche est enregistré. Le système calcule vos "Top Catégories".
+- **Recommandation Hybride** : La page d'accueil combine :
+  - Résultats de recherche récents.
+  - Cours les mieux notés de vos catégories favorites.
+  - Cours populaires mondiaux pour assurer la découverte.
 
-### Step 5: Interactive Visualization
+### Étape 5 : Visualisation Interactive
 
-The "Clustering" page uses **PCA (Principal Component Analysis)** to flatten the complex 900+ dimension data into a simple 2D map. This allows users to browse courses visually, seeing "galaxies" of related topics.
-
----
-
-## 📂 3. Project Directory Map
-
-- `/scrapers`: The "Eyes" - Collecting raw data.
-- `/models`: The "Brain" - Recommendation and Clustering logic.
-- `/data`: The "Memory" - CSV files and User behavior.
-- `/templates`: The "Face" - Modern UI designed with HTML/CSS.
-- `app.py`: The "Heart" - Orchestrating everything via Flask.
+La page "Clustering" utilise **PCA (Analyse en Composantes Principales)** pour aplatir les données complexes de plus de 900 dimensions en une carte 2D simple. Cela permet aux utilisateurs de parcourir les cours visuellement, voyant des "galaxies" de sujets connexes.
 
 ---
 
-## 🚀 4. Technical Stack
+## 📂 3. Carte des Répertoires du Projet
 
-- **Backend**: Python, Flask
-- **Database**: JSON-based User Management
-- **Machine Learning**: Scikit-Learn (TF-IDF, Cosine Similarity, K-Means, PCA)
-- **Scraping**: Playwright, BeautifulSoup
-- **Frontend**: Vanilla CSS, Jinja2, JavaScript (Chart.js for visualization)
+- `/scrapers` : Les "Yeux" - Collecte des données brutes.
+- `/models` : Le "Cerveau" - Logique de Recommandation et de Clustering.
+- `/data` : La "Mémoire" - Fichiers CSV et Comportement utilisateur.
+- `/templates` : Le "Visage" - UI Moderne conçue avec HTML/CSS.
+- `app.py` : Le "Cœur" - Orchestration de tout via Flask.
 
 ---
 
-_Created for SDIA Python Project - S7_
+## 🚀 4. Stack Technique
+
+- **Backend** : Python, Flask
+- **Base de Données** : Gestion Utilisateur basée sur JSON/SQLite
+- **Machine Learning** : Scikit-Learn (TF-IDF, Similarité Cosinus, K-Means, PCA)
+- **Scraping** : Playwright, BeautifulSoup
+- **Frontend** : Vanilla CSS, Jinja2, JavaScript (Chart.js pour la visualisation)
+
+---
+
+_Créé pour le Projet Python SDIA - S7_

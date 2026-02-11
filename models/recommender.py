@@ -1,6 +1,6 @@
 """
-Course Recommender - ML Recommendation Engine
-Adapted for final_courses.csv dataset
+Moteur de Recommandation de Cours - Moteur de Recommandation ML
+Adapté pour le jeu de données final_courses_shuffled.csv
 """
 
 import sys
@@ -20,7 +20,7 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Data path - use final_data.csv
+# Chemin des données - utiliser final_courses_shuffled.csv
 DATA_PATH = 'processed_data/final_courses_shuffled.csv'
 TFIDF_MAX_FEATURES = 5000
 TFIDF_NGRAM_RANGE = (1, 2)
@@ -29,7 +29,7 @@ TFIDF_MAX_DF = 0.95
 
 
 class CourseRecommender:
-    """Course recommendation system using TF-IDF and cosine similarity"""
+    """Système de recommandation de cours utilisant TF-IDF et la similarité cosinus"""
     
     def __init__(self):
         self.df = None
@@ -39,11 +39,11 @@ class CourseRecommender:
         self.is_trained = False
         
     def load_data(self, filepath=None):
-        """Load course data"""
+        """Charger les données des cours"""
         if filepath is None:
             filepath = DATA_PATH
             
-        print(f"📂 Loading data: {filepath}")
+        print(f"📂 Chargement des données : {filepath}")
         
         try:
             # Essaie d'abord avec le séparateur par défaut
@@ -53,7 +53,7 @@ class CourseRecommender:
                 # Si ça échoue, essaie avec le point-virgule
                 self.df = pd.read_csv(filepath, sep=';')
             
-            # Standardize column names for the app
+            # Standardiser les noms de colonnes pour l'application
             column_mapping = {
                 'id': 'course_id',
                 'partner': 'instructor',
@@ -66,38 +66,38 @@ class CourseRecommender:
                 if old_col in self.df.columns and new_col not in self.df.columns:
                     self.df[new_col] = self.df[old_col]
             
-            # Ensure course_id exists
+            # S'assurer que course_id existe
             if 'course_id' not in self.df.columns:
                 self.df['course_id'] = range(len(self.df))
             
-            # Create category from title if not exists
+            # Créer la catégorie à partir du titre si elle n'existe pas
             if 'category' not in self.df.columns:
                 self.df['category'] = self.df['title'].apply(self._extract_category_from_title)
             
-            # Extract level from metadata
+            # Extraire le niveau à partir des métadonnées
             if 'level' not in self.df.columns and 'metadata' in self.df.columns:
                 self.df['level'] = self.df['metadata'].apply(self._extract_level)
             
-            # Set default level if not exists
+            # Définir le niveau par défaut s'il n'existe pas
             if 'level' not in self.df.columns:
                 self.df['level'] = 'All Levels'
             
-            # Set price based on platform (Coursera = Free with subscription)
+            # Définir le prix en fonction de la plateforme (Coursera = Gratuit avec abonnement)
             if 'price' not in self.df.columns:
                 self.df['price'] = 'Free'
             
-            # Capitalize platform name
+            # Mettre le nom de la plateforme en majuscule
             if 'platform' in self.df.columns:
                 self.df['platform'] = self.df['platform'].str.capitalize()
                 
-            print(f"   ✅ {len(self.df)} courses loaded")
+            print(f"   ✅ {len(self.df)} cours chargés")
             return True
         except FileNotFoundError:
-            print(f"   ❌ File not found: {filepath}")
+            print(f"   ❌ Fichier non trouvé : {filepath}")
             return False
     
     def _extract_category_from_title(self, title):
-        """Extract category from course title"""
+        """Extraire la catégorie du titre du cours"""
         if pd.isna(title):
             return 'General'
         
@@ -124,7 +124,7 @@ class CourseRecommender:
         return 'General'
     
     def _extract_level(self, metadata):
-        """Extract level from metadata string"""
+        """Extraire le niveau de la chaîne de métadonnées"""
         if pd.isna(metadata):
             return 'All Levels'
         metadata = str(metadata).lower()
@@ -137,10 +137,10 @@ class CourseRecommender:
         return 'All Levels'
             
     def prepare_data(self):
-        """Prepare data for the model"""
-        print("🔄 Preparing data...")
+        """Préparer les données pour le modèle"""
+        print("🔄 Préparation des données...")
         
-        # Create combined text for TF-IDF
+        # Créer le texte combiné pour TF-IDF
         if 'combined_text' not in self.df.columns or self.df['combined_text'].isna().any():
             text_columns = ['title', 'category', 'level']
             self.df['combined_text'] = self.df.apply(
@@ -150,12 +150,12 @@ class CourseRecommender:
         
         self.df['combined_text'] = self.df['combined_text'].fillna('').str.lower()
         
-        print(f"   ✅ Data prepared")
+        print(f"   ✅ Données préparées")
         return self
         
     def build_tfidf_matrix(self):
-        """Build TF-IDF matrix"""
-        print("🔤 Building TF-IDF matrix...")
+        """Construire la matrice TF-IDF"""
+        print("🔤 Construction de la matrice TF-IDF...")
         
         self.tfidf_vectorizer = TfidfVectorizer(
             max_features=TFIDF_MAX_FEATURES,
@@ -167,25 +167,25 @@ class CourseRecommender:
         
         self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.df['combined_text'])
         
-        print(f"   📊 Vocabulary: {len(self.tfidf_vectorizer.vocabulary_)} terms")
-        print(f"   📊 TF-IDF Matrix: {self.tfidf_matrix.shape}")
+        print(f"   📊 Vocabulaire : {len(self.tfidf_vectorizer.vocabulary_)} termes")
+        print(f"   📊 Matrice TF-IDF : {self.tfidf_matrix.shape}")
         
         return self
         
     def compute_similarity_matrix(self):
-        """Compute cosine similarity matrix"""
-        print("🔗 Computing similarity matrix...")
+        """Calculer la matrice de similarité cosinus"""
+        print("🔗 Calcul de la matrice de similarité...")
         
         self.similarity_matrix = cosine_similarity(self.tfidf_matrix, self.tfidf_matrix)
         
-        print(f"   📊 Similarity Matrix: {self.similarity_matrix.shape}")
+        print(f"   📊 Matrice de similarité : {self.similarity_matrix.shape}")
         
         return self
         
     def train(self, filepath=None):
-        """Train the recommendation model"""
+        """Entraîner le modèle de recommandation"""
         print("\n" + "="*60)
-        print("   🧠 TRAINING RECOMMENDATION MODEL")
+        print("   🧠 ENTRAÎNEMENT DU MODÈLE DE RECOMMANDATION")
         print("="*60 + "\n")
         
         if not self.load_data(filepath):
@@ -197,12 +197,12 @@ class CourseRecommender:
         
         self.is_trained = True
         
-        print("\n✅ Model trained successfully!")
+        print("\n✅ Modèle entraîné avec succès !")
         
         return True
         
     def get_course_by_id(self, course_id):
-        """Get course by ID"""
+        """Obtenir un cours par son ID"""
         if self.df is None:
             return None
             
@@ -217,7 +217,7 @@ class CourseRecommender:
         return None
         
     def get_course_index(self, course_id):
-        """Get course index by ID"""
+        """Obtenir l'index du cours par son ID"""
         if 'course_id' in self.df.columns:
             matches = self.df[self.df['course_id'] == course_id]
             if len(matches) > 0:
@@ -229,7 +229,7 @@ class CourseRecommender:
         return None
         
     def recommend_similar(self, course_id, n=10):
-        """Recommend similar courses"""
+        """Recommander des cours similaires"""
         if not self.is_trained:
             return []
             
@@ -251,24 +251,24 @@ class CourseRecommender:
         return recommendations
         
     def recommend_by_query(self, query, n=10, filters=None):
-        """Recommend courses based on text query"""
+        """Recommander des cours basés sur une requête textuelle"""
         if not self.is_trained:
             return []
             
         query_vector = self.tfidf_vectorizer.transform([query.lower()])
         sim_scores = cosine_similarity(query_vector, self.tfidf_matrix).flatten()
         
-        # Ensure sim_scores matches dataframe length (handles out-of-sync models)
+        # S'assurer que les scores de similarité correspondent à la longueur du dataframe (gère les modèles désynchronisés)
         if len(sim_scores) != len(self.df):
-            print(f"⚠️ Model out of sync with data ({len(sim_scores)} vs {len(self.df)}). Using fallback scores.")
-            # Create a simple score based on keyword matching as fallback or use partial scores
+            print(f"⚠️ Le modèle n'est pas synchronisé avec les données ({len(sim_scores)} vs {len(self.df)}). Utilisation de scores de repli.")
+            # Créer un score simple basé sur la correspondance des mots-clés comme repli ou utiliser des scores partiels
             if len(sim_scores) < len(self.df):
-                # Pad with zeros if model is behind
+                # Remplir avec des zéros si le modèle est en retard
                 padded_scores = np.zeros(len(self.df))
                 padded_scores[:len(sim_scores)] = sim_scores
                 sim_scores = padded_scores
             else:
-                # Truncate if model is ahead (unlikely but possible)
+                # Tronquer si le modèle est en avance (improbable mais possible)
                 sim_scores = sim_scores[:len(self.df)]
 
         results_df = self.df.copy()
@@ -294,7 +294,7 @@ class CourseRecommender:
         return recommendations
         
     def get_popular_courses(self, n=10, category=None):
-        """Get popular courses"""
+        """Obtenir les cours populaires"""
         if self.df is None:
             return []
             
@@ -311,7 +311,7 @@ class CourseRecommender:
         return results_df.head(n).to_dict('records')
         
     def get_all_courses(self, page=1, per_page=12, sort_by='rating', filters=None):
-        """Get all courses with pagination"""
+        """Obtenir tous les cours avec pagination"""
         if self.df is None:
             return {'courses': [], 'total': 0, 'pages': 0}
             
@@ -346,25 +346,25 @@ class CourseRecommender:
         }
         
     def get_categories(self):
-        """Get list of categories"""
+        """Obtenir la liste des catégories"""
         if self.df is None:
             return []
         return sorted(self.df['category'].dropna().unique().tolist())
         
     def get_platforms(self):
-        """Get list of platforms"""
+        """Obtenir la liste des plateformes"""
         if self.df is None:
             return []
         return self.df['platform'].dropna().unique().tolist()
         
     def get_levels(self):
-        """Get list of levels"""
+        """Obtenir la liste des niveaux"""
         if self.df is None:
             return []
         return self.df['level'].dropna().unique().tolist()
         
     def get_stats(self):
-        """Get dataset statistics"""
+        """Obtenir les statistiques du jeu de données"""
         if self.df is None:
             return {}
             
@@ -378,7 +378,7 @@ class CourseRecommender:
         }
         
     def save_model(self, filepath='models/recommender.pkl'):
-        """Save model"""
+        """Sauvegarder le modèle"""
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         
         model_data = {
@@ -390,10 +390,10 @@ class CourseRecommender:
         with open(filepath, 'wb') as f:
             pickle.dump(model_data, f)
             
-        print(f"💾 Model saved: {filepath}")
+        print(f"💾 Modèle sauvegardé : {filepath}")
         
     def load_model(self, filepath='models/recommender.pkl'):
-        """Load model and check consistency if data is already loaded"""
+        """Charger le modèle et vérifier la cohérence si les données sont déjà chargées"""
         try:
             if not os.path.exists(filepath):
                 return False
@@ -405,17 +405,17 @@ class CourseRecommender:
             self.tfidf_matrix = model_data['tfidf_matrix']
             self.similarity_matrix = model_data['similarity_matrix']
             
-            # Check consistency with self.df if it exists
+            # Vérifier la cohérence avec self.df s'il existe
             if self.df is not None:
                 if self.tfidf_matrix.shape[0] != len(self.df):
-                    print(f"⚠️ Model at {filepath} is out of sync with data: matrix {self.tfidf_matrix.shape[0]} rows, CSV {len(self.df)} rows.")
+                    print(f"⚠️ Le modèle à {filepath} n'est pas synchronisé avec les données : matrice {self.tfidf_matrix.shape[0]} lignes, CSV {len(self.df)} lignes.")
                     return False
                     
             self.is_trained = True
-            print(f"📂 Model loaded: {filepath}")
+            print(f"📂 Modèle chargé : {filepath}")
             return True
         except Exception as e:
-            print(f"❌ Error loading model: {e}")
+            print(f"❌ Erreur lors du chargement du modèle : {e}")
             return False
 
 

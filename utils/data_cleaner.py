@@ -1,5 +1,5 @@
 """
-Data Cleaner - Clean and preprocess the scraped course data
+Nettoyeur de Données - Nettoie et prépare les données de cours extraites
 """
 
 import sys
@@ -51,13 +51,13 @@ class DataCleaner:
         'deep-learning': 'Deep Learning',
         'neural networks': 'Deep Learning',
         
-        # Programming
+        # Programmation
         'python': 'Python Programming',
         'python programming': 'Python Programming',
         'javascript': 'JavaScript',
         'java': 'Java Programming',
         
-        # Web Development
+        # Développement Web
         'web development': 'Web Development',
         'web-development': 'Web Development',
         'frontend': 'Web Development',
@@ -71,12 +71,12 @@ class DataCleaner:
         'azure': 'Cloud Computing',
         'gcp': 'Cloud Computing',
         
-        # Security
+        # Sécurité
         'cybersecurity': 'Cybersecurity',
         'cyber security': 'Cybersecurity',
         'security': 'Cybersecurity',
         
-        # Business
+        # Affaires (Business)
         'business': 'Business',
         'management': 'Business',
         'entrepreneurship': 'Business',

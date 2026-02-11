@@ -133,11 +133,11 @@
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// Dashboard is now static recommendations for a cleaner look
-// Search and filters are available in the Courses catalog page
+// Le tableau de bord affiche maintenant des recommandations statiques pour une apparence plus propre
+// La recherche et les filtres sont disponibles dans la page catalogue des Cours
 
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Interests Chart (Bar) ---
+    // --- Graphique des Intérêts (Barres) ---
     const ctxInterests = document.getElementById('interestsChart').getContext('2d');
     
     // Data from Jinja2
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const labels = Object.keys(categories).slice(0, 8); // Top 8
     const data = Object.values(categories).slice(0, 8);
     
-    // Fallback data if empty
+    // Données de repli si vide
     const chartLabels = labels.length ? labels : ['Data Science', 'Web Dev', 'Business', 'Design', 'Marketing'];
     const chartData = labels.length ? data : [5, 4, 3, 2, 1];
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Goal Chart (Doughnut) ---
+    // --- Graphique des Objectifs (Gâteau) ---
     const ctxGoal = document.getElementById('goalChart').getContext('2d');
     new Chart(ctxGoal, {
         type: 'doughnut',

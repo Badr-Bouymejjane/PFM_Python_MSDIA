@@ -1,15 +1,15 @@
 """
-UDEMY SCRAPER - PRODUCTION VERSION
+SCRAPER UDEMY - VERSION DE PRODUCTION
 
-This scraper:
-1. Uses CARD-BASED extraction to capture all course data
-2. Finds cards using: section[class*="course-product-card"]
-3. Extracts data using direct selectors (h2 elements, data-purpose attributes)
-4. Implements PAGINATION with Next link clicking (uses <a> tags, not buttons!)
-5. Handles duplicate prevention with seen_urls tracking
-6. Continues across multiple pages until target limit reached
+Ce scraper (robot d'extraction) :
+1. Utilise l'extraction basée sur les CARTES pour capturer toutes les données des cours
+2. Trouve les cartes en utilisant : section[class*="course-product-card"]
+3. Extrait les données avec des sélecteurs directs (éléments h2, attributs data-purpose)
+4. Implémente la PAGINATION en cliquant sur le lien Suivant (utilise les balises <a> !)
+5. Gère la prévention des doublons avec le suivi des URL vues
+6. Continue sur plusieurs pages jusqu'à atteindre la limite cible
 
-Version: Production (Card-Based + Pagination)
+Version : Production (Basée sur les cartes + Pagination)
 """
 
 import asyncio
@@ -26,7 +26,7 @@ RAW_DATA_DIR.mkdir(exist_ok=True)
 
 
 class UdemyScraper:
-    """Production Udemy scraper with card-based extraction and pagination."""
+    """Scraper Udemy de production avec extraction par cartes et pagination."""
     
     def __init__(self, headless: bool = False):
         self.headless = headless
@@ -36,7 +36,7 @@ class UdemyScraper:
         self.playwright = None
     
     async def start(self):
-        """Start browser with stealth configuration."""
+        """Démarrer le navigateur avec une configuration furtive."""
         self.playwright = await async_playwright().start()
         
         self.browser = await self.playwright.chromium.launch(
@@ -56,7 +56,7 @@ class UdemyScraper:
         )
     
     async def stop(self):
-        """Close browser."""
+        """Fermer le navigateur."""
         if self.context:
             await self.context.close()
         if self.browser:
@@ -66,43 +66,43 @@ class UdemyScraper:
     
     async def search_and_scrape(self, search_query: str, limit: int = 70) -> List[Dict[str, Any]]:
         """
-        Search for courses and scrape with pagination using card-based extraction.
+        Rechercher des cours et extraire les données avec pagination.
         
         Args:
-            search_query: Topic to search for
-            limit: Number of courses to scrape (default 70)
+            search_query: Sujet à rechercher
+            limit: Nombre de cours à extraire (par défaut 70)
             
         Returns:
-            List of course dictionaries
+            Liste de dictionnaires contenant les cours
         """
         search_url = f"https://www.udemy.com/courses/search/?q={search_query.replace(' ', '+')}"
         
-        print(f"\n[STEP 1] Navigating to: {search_url}")
+        print(f"\n[ÉTAPE 1] Navigation vers : {search_url}")
         await self.page.goto(search_url, timeout=60000, wait_until="domcontentloaded")
         
-        # Wait for JavaScript to render
-        print(f"[STEP 2] Waiting for page to render...")
+        # Attendre le rendu JavaScript
+        print(f"[ÉTAPE 2] Attente du rendu de la page...")
         await asyncio.sleep(8)
         
-        # Scroll to load content
-        print(f"[STEP 3] Scrolling to load content...")
+        # Faire défiler pour charger le contenu
+        print(f"[ÉTAPE 3] Défilement pour charger le contenu...")
         for i in range(3):
             await self.page.evaluate("window.scrollBy(0, 800)")
             await asyncio.sleep(1.5)
         await self.page.evaluate("window.scrollTo(0, 0)")
         await asyncio.sleep(2)
         
-        # Extract courses with pagination
-        print(f"[STEP 4] Extracting courses with pagination to reach {limit} courses...")
+        # Extraire les cours avec pagination
+        print(f"[ÉTAPE 4] Extraction des cours avec pagination pour atteindre {limit} cours...")
         courses = await self.extract_courses_with_pagination(limit)
         
-        print(f"\n[OK] Scraped {len(courses)} courses")
+        print(f"\n[OK] {len(courses)} cours extraits avec succès")
         return courses
     
     async def extract_courses_with_pagination(self, limit: int) -> List[Dict[str, Any]]:
         """
-        Extract courses using CORRECTED selectors with PAGINATION support.
-        Clicks Next link to navigate through multiple pages until limit reached.
+        Extraire les cours en utilisant les sélecteurs avec support de la PAGINATION.
+        Clique sur le lien 'Suivant' pour naviguer à travers les pages jusqu'à atteindre la limite.
         """
         courses = []
         seen_urls = set()
@@ -110,9 +110,9 @@ class UdemyScraper:
         no_new_content_count = 0
         
         while len(courses) < limit:
-            print(f"\n[PAGE {page_number}] Current: {len(courses)}/{limit} courses")
+            print(f"\n[PAGE {page_number}] Actuel : {len(courses)}/{limit} cours")
             
-            # Try to find course card containers
+            # Essayer de trouver les conteneurs de cartes de cours
             card_selectors = [
                 'section[class*="course-product-card"]',
                 'div.content-grid-item-module--item',
@@ -121,15 +121,15 @@ class UdemyScraper:
             cards = []
             for selector in card_selectors:
                 cards = await self.page.query_selector_all(selector)
-                if cards:
-                    print(f"[OK] Found {len(cards)} cards with: {selector}")
+            if cards:
+                    print(f"[OK] {len(cards)} cartes trouvées avec : {selector}")
                     break
             
             if not cards:
-                print(f"[ERROR] No course cards found on page {page_number}!")
+                print(f"[ERREUR] Aucune carte de cours trouvée sur la page {page_number} !")
                 break
             
-            # Process each card on current page
+            # Traiter chaque carte sur la page actuelle
             new_courses_this_page = 0
             for i, card in enumerate(cards):
                 if len(courses) >= limit:
@@ -149,47 +149,49 @@ class UdemyScraper:
                     courses.append(course_data)
                     new_courses_this_page += 1
                     
-                    # Brief display
+                    # Affichage bref
+
                     title = course_data.get('title', 'N/A')[:50]
                     rating = course_data.get('rating', 'N/A')
                     print(f"  [{len(courses)}] {title} (Rating: {rating})")
                 
                 except Exception as e:
-                    print(f"  [ERROR] Card {i+1} failed: {e}")
+                    print(f"  [ERREUR] La carte {i+1} a échoué : {e}")
                     continue
             
-            # Check if we got new courses
+            # Vérifier si nous avons de nouveaux cours
             if new_courses_this_page == 0:
                 no_new_content_count += 1
-                print(f"[WARN] No new courses on page {page_number} (attempt {no_new_content_count}/3)")
+                print(f"[ATTENTION] Pas de nouveaux cours sur la page {page_number} (essai {no_new_content_count}/3)")
                 
                 if no_new_content_count >= 3:
-                    print(f"[STOP] No new content after 3 pages. Stopping.")
+                    print(f"[ARRÊT] Pas de nouveau contenu après 3 pages. Arrêt.")
                     break
             else:
                 no_new_content_count = 0
-                print(f"[OK] Added {new_courses_this_page} new courses from page {page_number}")
+                print(f"[OK] Ajout de {new_courses_this_page} nouveaux cours depuis la page {page_number}")
             
-            # Stop if we have enough
+            # Arrêter si nous en avons assez
             if len(courses) >= limit:
-                print(f"[SUCCESS] Reached target of {limit} courses!")
+                print(f"[SUCCÈS] Objectif de {limit} cours atteint !")
                 break
             
-            # Try to find and click Next link
-            print(f"\n[ACTION] Looking for Next link...")
+            # Essayer de trouver et cliquer sur le lien Suivant
+            print(f"\n[ACTION] Recherche du lien Suivant...")
             
-            # Scroll to bottom to ensure pagination is visible
+            # Défiler vers le bas pour s'assurer que la pagination est visible
             await self.page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             await asyncio.sleep(1)
             
-            # IMPORTANT: Udemy uses <a> tags (links), NOT buttons!
-            # Try multiple selectors for Next link
+            # IMPORTANT : Udemy utilise des balises <a> (liens), PAS des boutons !
+            # Essayer plusieurs sélecteurs pour le lien Suivant
             next_element_selectors = [
-                # Look for <a> elements in pagination
+                # Chercher des éléments <a> dans la pagination
                 'nav[aria-label*="Pagination"] a:not([aria-disabled="true"]):last-of-type',
                 'nav[aria-label="Pagination"] a[class*="next"]',
                 'nav[aria-label="Pagination"] a:last-child:not([aria-disabled])',
-                # Fallback to buttons if needed
+                # Solution de repli vers les boutons si nécessaire
+
                 'button[aria-label*="Next"]',
                 'button[aria-label="Next page"]',
             ]
@@ -199,10 +201,10 @@ class UdemyScraper:
                 try:
                     next_element = await self.page.query_selector(selector)
                     if next_element:
-                        # Check if element is disabled
+                        # Vérifier si l'élément est désactivé
                         is_disabled = await next_element.get_attribute("aria-disabled")
-                        if is_disabled != "true":  # Not disabled (check string "true")
-                            print(f"[OK] Found Next link with: {selector}")
+                        if is_disabled != "true":  # Pas désactivé (vérifier la chaîne "true")
+                            print(f"[OK] Lien Suivant trouvé avec : {selector}")
                             break
                         else:
                             next_element = None
@@ -210,40 +212,40 @@ class UdemyScraper:
                     continue
             
             if not next_element:
-                print(f"[STOP] No active Next link found. End of results.")
+                print(f"[ARRÊT] Aucun lien Suivant actif trouvé. Fin des résultats.")
                 break
             
-            # Click Next element (works for both <a> and <button>)
-            print(f"[CLICK] Clicking Next link...")
+            # Cliquer sur l'élément Suivant (fonctionne pour <a> et <button>)
+            print(f"[CLIC] Clic sur le lien Suivant...")
             try:
                 await next_element.click()
                 page_number += 1
                 
-                # Wait for new page to load
-                print(f"[WAIT] Waiting for page {page_number} to load...")
-                await asyncio.sleep(5)  # Wait for new content to load
+                # Attendre le chargement de la nouvelle page
+                print(f"[ATTENTE] Attente du chargement de la page {page_number}...")
+                await asyncio.sleep(5)  # Attendre le chargement du nouveau contenu
                 
-                # Scroll to top of new page
+                # Remonter en haut de la nouvelle page
                 await self.page.evaluate("window.scrollTo(0, 0)")
                 await asyncio.sleep(2)
                 
             except Exception as e:
-                print(f"[ERROR] Failed to click Next link: {e}")
+                print(f"[ERREUR] Échec du clic sur le lien Suivant : {e}")
                 break
         
         return courses[:limit]
     
     async def extract_from_card(self, card) -> Optional[Dict[str, Any]]:
         """
-        Extract data from a single card using DIRECT SELECTORS.
+        Extraire les données d'une seule carte en utilisant DES SÉLECTEURS DIRECTS.
         
-        Based on actual HTML structure:
-        - Title: h2 (NOT h3!)
-        - URL: a[href*="/course/"]
-        - Instructor: span[data-purpose*="visible-instructors"]
-        - Rating: span[data-purpose="rating-number"]
-        - Other data: ul.tag-list-module--list > li
-        - Price: div[data-purpose="course-price-text"]
+        Basé sur la structure HTML réelle :
+        - Titre : h2 (PAS h3 !)
+        - URL : a[href*="/course/"]
+        - Instructeur : span[data-purpose*="visible-instructors"]
+        - Note : span[data-purpose="rating-number"]
+        - Autres données : ul.tag-list-module--list > li
+        - Prix : div[data-purpose="course-price-text"]
         """
         try:
             data = {
@@ -251,10 +253,10 @@ class UdemyScraper:
                 "scraped_at": datetime.now().isoformat()
             }
             
-            # 1. TITLE - h2 (corrected from h3!)
+            # 1. TITRE - h2 (corrigé depuis h3 !)
             title_elem = await card.query_selector("h2 a div")
             if not title_elem:
-                # Fallback: try just h2
+                # Solution de repli : essayer juste h2
                 title_elem = await card.query_selector("h2")
             
             if title_elem:
@@ -293,8 +295,8 @@ class UdemyScraper:
             else:
                 data["rating"] = None
             
-            # 5. EXTRACT FROM TAG LIST - ul.tag-list-module--list
-            # This includes: reviews, duration, lectures, level
+            # 5. EXTRAIRE DE LA LISTE DE TAGS - ul.tag-list-module--list
+            # Cela inclut : avis, durée, cours, niveau
             tag_list = await card.query_selector('ul[class*="tag-list"]')
             if tag_list:
                 tags_text = await tag_list.inner_text()
@@ -302,28 +304,28 @@ class UdemyScraper:
                 # Parse tags
                 import re
                 
-                # Reviews: "22,772 ratings"
+                # Avis : "22,772 ratings"
                 reviews_match = re.search(r'([\d,]+)\s*ratings?', tags_text)
                 if reviews_match:
                     data["reviews"] = int(reviews_match.group(1).replace(',', ''))
                 else:
                     data["reviews"] = None
                 
-                # Duration: "99 total hours"
+                # Durée : "99 total hours"
                 duration_match = re.search(r'([\d.]+)\s*total hours?', tags_text)
                 if duration_match:
                     data["duration_hours"] = float(duration_match.group(1))
                 else:
                     data["duration_hours"] = None
                 
-                # Lectures: "429 lectures"
+                # Conférences : "429 lectures"
                 lectures_match = re.search(r'(\d+)\s*lectures?', tags_text)
                 if lectures_match:
                     data["lectures"] = int(lectures_match.group(1))
                 else:
                     data["lectures"] = None
                 
-                # Level: "All Levels", "Beginner", etc.
+                # Niveau : "All Levels", "Beginner", etc.
                 level_keywords = ['All Levels', 'Beginner', 'Intermediate', 'Advanced', 'Expert']
                 data["level"] = "N/A"
                 for keyword in level_keywords:
@@ -336,7 +338,7 @@ class UdemyScraper:
                 data["lectures"] = None
                 data["level"] = "N/A"
             
-            # 6. PRICE - div[data-purpose="course-price-text"]
+            # 6. PRIX - div[data-purpose="course-price-text"]
             price_elem = await card.query_selector('div[data-purpose="course-price-text"]')
             if price_elem:
                 price_text = await price_elem.inner_text()
@@ -344,7 +346,7 @@ class UdemyScraper:
             else:
                 data["current_price"] = "N/A"
             
-            # 7. ORIGINAL PRICE - div[data-purpose="course-old-price-text"]
+            # 7. PRIX ORIGINAL - div[data-purpose="course-old-price-text"]
             original_price_elem = await card.query_selector('div[data-purpose="course-old-price-text"]')
             if original_price_elem:
                 original_price_text = await original_price_elem.inner_text()
@@ -352,73 +354,73 @@ class UdemyScraper:
             else:
                 data["original_price"] = "N/A"
             
-            # Note: Students enrolled is NOT available on search cards
+            # Note : Le nombre d'étudiants inscrits n'est PAS disponible sur les cartes de recherche
             data["students"] = None
             
-            # Last updated
+            # Dernière mise à jour
             data["last_updated"] = None
             
             return data
         
         except Exception as e:
-            print(f"    [ERROR] Card extraction failed: {e}")
+            print(f"    [ERREUR] Échec de l'extraction de la carte : {e}")
             return None
 
 
 async def main():
-    """Test the production scraper."""
+    """Tester le scraper de production."""
     print("="*60)
-    print("UDEMY SCRAPER V5 - PRODUCTION")
+    print("SCRAPER UDEMY V5 - PRODUCTION")
     print("="*60)
-    print("\nFeatures:")
-    print("  - Card-based extraction (h2 selectors, data-purpose attributes)")
-    print("  - Multi-page pagination with Next link clicking")
-    print("  - Duplicate prevention")
+    print("\nFonctionnalités :")
+    print("  - Extraction par cartes (sélecteurs h2, attributs data-purpose)")
+    print("  - Pagination multi-page avec clic sur lien Suivant")
+    print("  - Prévention des doublons")
     print("="*60)
     
     scraper = UdemyScraper(headless=False)
     
     try:
         await scraper.start()
-        print("\nBrowser started.")
+        print("\nNavigateur démarré.")
         
         courses = await scraper.search_and_scrape("python", limit=5)
         
         if not courses:
-            print("\n[FAILED] No courses scraped")
-            print("[TIP] Check that you can see courses in the browser window")
+            print("\n[ÉCHEC] Aucun cours extrait")
+            print("[CONSEIL] Vérifiez que vous voyez les cours dans la fenêtre du navigateur")
             return
         
-        # Save
+        # Enregistrer
         output_file = RAW_DATA_DIR / "udemy_v5_test.json"
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(courses, f, indent=2, ensure_ascii=False)
         
-        print(f"\n[SAVED] {len(courses)} courses")
-        print(f"[FILE] {output_file.absolute()}")
+        print(f"\n[ENREGISTRÉ] {len(courses)} cours")
+        print(f"[FICHIER] {output_file.absolute()}")
         
-        # Display
+        # Affichage
         for i, course in enumerate(courses, 1):
-            print(f"\n[Course {i}]")
-            print(f"  Title:        {course['title'][:60]}")
-            print(f"  Instructor:   {course['instructor']}")
-            print(f"  Rating:       {course['rating']}")
-            print(f"  Reviews:      {course['reviews']}")
-            print(f"  Students:     {course['students']}")
-            print(f"  Price:        {course['current_price']}")
-            print(f"  Duration:     {course['duration_hours']} hours" if course['duration_hours'] else "  Duration:     N/A")
-            print(f"  Lectures:     {course['lectures']}")
-            print(f"  Level:        {course['level']}")
-            print(f"  Last Updated: {course['last_updated']}")
-            print(f"  URL:          {course['url'][:60]}")
+            print(f"\n[Cours {i}]")
+            print(f"  Titre :       {course['title'][:60]}")
+            print(f"  Instructeur : {course['instructor']}")
+            print(f"  Note :        {course['rating']}")
+            print(f"  Avis :        {course['reviews']}")
+            print(f"  Étudiants :   {course['students']}")
+            print(f"  Prix :        {course['current_price']}")
+            print(f"  Durée :       {course['duration_hours']} heures" if course['duration_hours'] else "  Durée :       N/A")
+            print(f"  Conférences : {course['lectures']}")
+            print(f"  Niveau :      {course['level']}")
+            print(f"  Mise à jour : {course['last_updated']}")
+            print(f"  URL :         {course['url'][:60]}")
         
     except Exception as e:
-        print(f"\nError: {e}")
+        print(f"\nErreur : {e}")
         import traceback
         traceback.print_exc()
     finally:
         await scraper.stop()
-        print("\nBrowser closed.")
+        print("\nNavigateur fermé.")
 
 
 if __name__ == "__main__":

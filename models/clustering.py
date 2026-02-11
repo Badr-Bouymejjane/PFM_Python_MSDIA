@@ -1,6 +1,6 @@
 """
-Course Clustering Module
-K-Means clustering for grouping similar courses
+Module de Clustering des Cours
+Clustering K-Means pour regrouper des cours similaires
 """
 
 import sys
@@ -22,7 +22,7 @@ import json
 
 
 class CourseClustering:
-    """K-Means clustering for courses"""
+    """Clustering K-Means pour les cours"""
     
     def __init__(self, n_clusters=10):
         self.n_clusters = n_clusters
@@ -35,8 +35,8 @@ class CourseClustering:
         self.courses_2d = None
         
     def load_data(self, filepath='processed_data/final_courses_shuffled.csv'):
-        """Load course data"""
-        print(f"📂 Loading data: {filepath}")
+        """Charger les données des cours"""
+        print(f"📂 Chargement des données : {filepath}")
         try:
             # Essaie d'abord avec le séparateur par défaut
             self.df = pd.read_csv(filepath)
@@ -44,7 +44,7 @@ class CourseClustering:
             # Si ça échoue, essaie avec le point-virgule
             self.df = pd.read_csv(filepath, sep=';')
         
-        # Ensure required columns
+        # S'assurer que les colonnes requises sont présentes
         if 'course_id' not in self.df.columns:
             self.df['course_id'] = range(len(self.df))
         if 'instructor' not in self.df.columns and 'partner' in self.df.columns:
@@ -52,7 +52,7 @@ class CourseClustering:
         if 'level' not in self.df.columns and 'metadata' in self.df.columns:
             self.df['level'] = self.df['metadata'].apply(self._extract_level)
             
-        print(f"   ✅ {len(self.df)} courses loaded")
+        print(f"   ✅ {len(self.df)} cours chargés")
         return self
         
     def _extract_level(self, metadata):
@@ -68,10 +68,10 @@ class CourseClustering:
         return 'All Levels'
         
     def prepare_features(self):
-        """Prepare features for clustering with optimized weighting and NLP"""
-        print("🔧 Preparing features (Optimized for 14 clusters)...")
+        """Préparer les caractéristiques (features) pour le clustering avec une pondération optimisée et NLP"""
+        print("🔧 Préparation des caractéristiques (Optimisé pour 14 clusters)...")
         
-        # 1. Custom stop words cleaned to keep domain-specific terms like 'machine' or 'data'
+        # 1. Mots vides personnalisés (stop words) nettoyés pour garder les termes spécifiques au domaine comme 'machine' ou 'data'
         from sklearn.feature_extraction import text
         custom_stop_words = [
             'course', 'introduction', 'complete', 'specialization', 
@@ -79,13 +79,13 @@ class CourseClustering:
         ]
         stop_words = list(text.ENGLISH_STOP_WORDS.union(custom_stop_words))
         
-        # 2. Weighted features: Repeat 'category' 3 times to prioritize it
+        # 2. Caractéristiques pondérées : Répéter 'category' 3 fois pour lui donner la priorité
         self.df['weighted_text'] = self.df.apply(
             lambda row: (str(row['category']) + ' ') * 3 + str(row['title']),
             axis=1
         )
         
-        # 3. TF-IDF with higher max_features and Bigrams
+        # 3. TF-IDF avec plus de max_features (mots clés) et Bigrammes
         self.tfidf = TfidfVectorizer(
             max_features=2000, 
             stop_words=stop_words,
@@ -94,61 +94,61 @@ class CourseClustering:
         )
         tfidf_matrix = self.tfidf.fit_transform(self.df['weighted_text'])
         
-        # 4. Numeric features (optional, keeping them for variety)
+        # 4. Caractéristiques numériques (optionnel, gardé pour la variété)
         numeric_features = []
         if 'rating' in self.df.columns:
-            # We scale rating to a smaller range so it doesn't overpower the TF-IDF
+            # On met à l'échelle la note pour qu'elle ne domine pas le TF-IDF
             numeric_features.append(self.df['rating'].fillna(self.df['rating'].mean()).values.reshape(-1, 1))
             
-        # Combine features
+        # Combiner les caractéristiques
         if numeric_features:
             scaler = StandardScaler()
             numeric_matrix = scaler.fit_transform(np.hstack(numeric_features))
-            # Decrease weight of numeric features relative to text (0.5 factor)
+            # Diminuer le poids des caractéristiques numériques par rapport au texte (facteur 0.5)
             self.feature_matrix = np.hstack([tfidf_matrix.toarray(), numeric_matrix * 0.5])
         else:
             self.feature_matrix = tfidf_matrix.toarray()
             
-        print(f"   ✅ Optimized feature matrix: {self.feature_matrix.shape}")
+        print(f"   ✅ Matrice de caractéristiques optimisée : {self.feature_matrix.shape}")
         return self
         
     def fit_clusters(self):
-        """Fit K-Means clustering"""
-        print(f"🔮 Fitting K-Means with {self.n_clusters} clusters...")
+        """Entraîner le clustering K-Means"""
+        print(f"🔮 Entraînement K-Means avec {self.n_clusters} clusters...")
         
         self.kmeans = KMeans(n_clusters=self.n_clusters, random_state=42, n_init=10)
         self.cluster_labels = self.kmeans.fit_predict(self.feature_matrix)
         self.df['cluster'] = self.cluster_labels
         
-        # PCA for 2D visualization
-        print("📊 Reducing to 2D with PCA...")
+        # PCA pour la visualisation 2D
+        print("📊 Réduction en 2D avec PCA...")
         self.pca = PCA(n_components=2, random_state=42)
         self.courses_2d = self.pca.fit_transform(self.feature_matrix)
         self.df['x'] = self.courses_2d[:, 0]
         self.df['y'] = self.courses_2d[:, 1]
         
-        # Cluster centers in 2D
+        # Centres des clusters en 2D
         centers_full = self.kmeans.cluster_centers_
         self.cluster_centers_2d = self.pca.transform(centers_full)
         
-        print(f"   ✅ Clustering complete")
+        print(f"   ✅ Clustering terminé")
         return self
         
     def get_cluster_info(self):
-        """Get information about each cluster"""
+        """Obtenir des informations sur chaque cluster"""
         clusters_info = []
         
         for i in range(self.n_clusters):
             cluster_df = self.df[self.df['cluster'] == i]
             
-            # Top categories in cluster
+            # Catégories principales dans le cluster
             top_categories = cluster_df['category'].value_counts().head(3).to_dict()
             
-            # Average stats
+            # Statistiques moyennes
             avg_rating = cluster_df['rating'].mean() if 'rating' in cluster_df.columns else 0
             avg_duration = cluster_df['duration_hours'].mean() if 'duration_hours' in cluster_df.columns else 0
             
-            # Dominant level
+            # Niveau dominant
             dominant_level = cluster_df['level'].mode().iloc[0] if 'level' in cluster_df.columns and len(cluster_df) > 0 else 'All'
             
             clusters_info.append({
@@ -166,7 +166,7 @@ class CourseClustering:
         return clusters_info
         
     def get_visualization_data(self):
-        """Get data for visualization"""
+        """Obtenir les données pour la visualisation"""
         courses_data = []
         for _, row in self.df.iterrows():
             courses_data.append({
@@ -195,7 +195,7 @@ class CourseClustering:
         }
         
     def get_learning_path(self, category, start_level='Beginner'):
-        """Generate learning path for a category"""
+        """Générer un parcours d'apprentissage pour une catégorie"""
         category_courses = self.df[self.df['category'].str.contains(category, case=False, na=False)]
         
         if len(category_courses) == 0:
@@ -205,7 +205,7 @@ class CourseClustering:
         category_courses = category_courses.copy()
         category_courses['level_order'] = category_courses['level'].map(level_order).fillna(2)
         
-        # Sort by level, then by rating
+        # Trier par niveau, puis par note
         category_courses = category_courses.sort_values(
             ['level_order', 'rating'], 
             ascending=[True, False]
@@ -231,20 +231,20 @@ class CourseClustering:
         return path
         
     def run(self, filepath='processed_data/final_courses_shuffled.csv'):
-        """Run complete clustering pipeline"""
+        """Exécuter le pipeline complet de clustering"""
         print("\n" + "="*60)
-        print("   🔮 COURSE CLUSTERING")
+        print("   🔮 CLUSTERING DES COURS")
         print("="*60 + "\n")
         
         self.load_data(filepath)
         self.prepare_features()
         self.fit_clusters()
         
-        # Print cluster summary
-        print("\n📊 Cluster Summary:")
+        # Afficher le résumé des clusters
+        print("\n📊 Résumé des Clusters :")
         for info in self.get_cluster_info():
             cats = ', '.join(list(info['top_categories'].keys())[:2])
-            print(f"   Cluster {info['cluster_id']}: {info['count']} courses ({cats})")
+            print(f"   Cluster {info['cluster_id']} : {info['count']} cours ({cats})")
             
         return self
 
@@ -264,8 +264,8 @@ if __name__ == "__main__":
     clustering = CourseClustering(n_clusters=14)
     clustering.run()
     
-    # Test learning path
-    print("\n📚 Learning Path: Data Science")
+    # Tester le parcours d'apprentissage
+    print("\n📚 Parcours d'apprentissage : Data Science")
     path = clustering.get_learning_path("Data Science")
     for step in path:
         print(f"   {step['step']}. [{step['level']}] {step['title'][:40]}...")

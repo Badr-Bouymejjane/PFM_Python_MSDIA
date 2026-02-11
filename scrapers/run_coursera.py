@@ -1,6 +1,6 @@
 """
-Run All Scrapers - Execute Coursera and Udemy scrapers
-Combines results into a single dataset
+Exécuter tous les Scrapers - Exécuter les scrapers Coursera et Udemy
+Combine les résultats en un seul jeu de données
 """
 
 import sys
@@ -90,7 +90,7 @@ def save_combined_dataset(courses, filepath):
 async def main():
     """Fonction principale"""
     print("\n" + "="*70)
-    print("   🚀 COURSE RECOMMENDATION SYSTEM - DATA SCRAPING (COURSERA ONLY)")
+    print("   🚀 SYSTÈME DE RECOMMANDATION DE COURS - EXTRACTION DE DONNÉES (COURSERA SEULEMENT)")
     print("="*70)
     print(f"\n📅 Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"📂 Catégories: {len(CATEGORIES)}")

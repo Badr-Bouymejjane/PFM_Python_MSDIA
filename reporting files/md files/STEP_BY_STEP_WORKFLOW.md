@@ -1,40 +1,40 @@
-# 🏁 Step-by-Step Implementation Guide
+# 🏁 Guide d'Implémentation Étape par Étape
 
-How the project was built from scratch to a working platform.
+Comment le projet a été construit de zéro jusqu'à une plateforme fonctionnelle.
 
 ---
 
-### Phase 1: Data Gathering (Scraping)
+### Phase 1 : Collecte de Données (Scraping)
 
-1. **Target Identification**: Selecting Coursera and Udemy as sources.
-2. **Scraper Scripting**: Writing the Python scripts in `/scrapers` using BeautifulSoup and Playwright.
-3. **Execution**: Running `run_scrapers.py` to fetch ~1100 courses.
+1. **Identification des Cibles** : Sélection de Coursera et Udemy comme sources.
+2. **Scripting des Scrapers** : Écriture des scripts Python dans `/scrapers` utilisant BeautifulSoup et Playwright.
+3. **Exécution** : Lancement des scripts d'exécution pour récupérer ~1100 cours.
 
-### Phase 2: Data Engineering
+### Phase 2 : Ingénierie des Données
 
-1. **CSV Consolidation**: Merging raw files into `data/final_courses.csv`.
-2. **Cleaning**: Standardizing column names (`partner` -> `instructor`, etc.).
-3. **Enrichment**: Auto-generating categories for courses that lacked them using keyword matching in titles.
+1. **Consolidation CSV** : Fusion des fichiers bruts dans `data/final_courses.csv`.
+2. **Nettoyage** : Standardisation des noms de colonnes (`partner` -> `instructor`, etc.).
+3. **Enrichissement** : Génération automatique de catégories pour les cours qui en manquaient via correspondance de mots-clés dans les titres.
 
-### Phase 3: ML Model Training
+### Phase 3 : Entraînement des Modèles ML
 
-1. **Vectorization**: Running the TF-IDF transformer on the cleaned data.
-2. **Similarity Precalculation**: Building the $1137 \times 1137$ similarity matrix.
-3. **Persistence**: Saving the trained model to `models/recommender.pkl` for fast loading.
+1. **Vectorisation** : Exécution du transformateur TF-IDF sur les données nettoyées.
+2. **Précalcul de Similarité** : Construction de la matrice de similarité $1137 \times 1137$.
+3. **Persistance** : Sauvegarde du modèle entraîné dans `models/recommender.pkl` pour un chargement rapide.
 
-### Phase 4: User System & Backend
+### Phase 4 : Système Utilisateur & Backend
 
-1. **UserManager**: Creating `user_manager.py` to handle JSON-based auth and behavior logging.
-2. **Flask Routing**: Setting up routes for `/login`, `/courses`, and `/course/<id>`.
-3. **Logic Integration**: Connecting the `recommender` to the web routes to display similar courses in the detail view.
+1. **Gestionnaire Utilisateur** : Création de `user_manager.py` pour gérer l'authentification basée sur JSON et la journalisation du comportement.
+2. **Routage Flask** : Configuration des routes pour `/login`, `/courses` et `/course/<id>`.
+3. **Intégration Logique** : Connexion du `recommender` aux routes web pour afficher des cours similaires dans la vue détaillée.
 
-### Phase 5: UI/UX & Visualization
+### Phase 5 : UI/UX & Visualisation
 
-1. **Template Design**: Building responsive Jinja2 templates.
-2. **Clustering Implementation**: Integrating K-Means into the dashboard.
-3. **Dynamic Filtering**: Adding real-time filters for Levels, Platforms, and Categories.
+1. **Design des Templates** : Construction de templates Jinja2 réactifs.
+2. **Implémentation Clustering** : Intégration de K-Means dans le tableau de bord.
+3. **Filtrage Dynamique** : Ajout de filtres en temps réel pour les Niveaux, Plateformes et Catégories.
 
-### Phase 6: Sync & Maintenance
+### Phase 6 : Synchro & Maintenance
 
-1. **Integrity Checks**: Added code to detect if the CSV data has changed and auto-retrain the model.
-2. **Filtering Noise**: Implemented logic to ignore invalid searches (similarity < 15%).
+1. **Vérifications d'Intégrité** : Ajout de code pour détecter si les données CSV ont changé et réentraîner automatiquement le modèle.
+2. **Filtrage du Bruit** : Implémentation d'une logique pour ignorer les recherches invalides (similarité < 15%).
