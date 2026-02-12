@@ -2,7 +2,7 @@
 Scrapers package for Course Recommendation System
 """
 
-from .coursera_scraper import CourseraScraper
-from .udemy_scraper import UdemyScraper
+from .coursera import CourseraScraper
+from .udemy import UdemyScraper
 
 __all__ = ['CourseraScraper', 'UdemyScraper']

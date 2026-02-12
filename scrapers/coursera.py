@@ -5,6 +5,7 @@ Uses Playwright for dynamic content loading
 
 import sys
 import os
+# Ajout du dossier parent au path pour importer les modules partagés
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
@@ -15,8 +16,10 @@ import re
 import time
 
 try:
+    # Tentative d'import de la configuration depuis le fichier config.py
     from config import CATEGORIES, MAX_COURSES_PER_CATEGORY, HEADLESS_MODE, REQUEST_DELAY
 except ImportError:
+    # Valeurs par défaut si le fichier config n'est pas trouvé
     CATEGORIES = ['data-science', 'machine-learning', 'python']
     MAX_COURSES_PER_CATEGORY = 30
     HEADLESS_MODE = True
@@ -27,42 +30,51 @@ class CourseraScraper:
     """Scraper pour Coursera utilisant Playwright"""
     
     BASE_URL = "https://www.coursera.org"
+    # URL de recherche dynamique où {query} sera remplacé par la catégorie
     SEARCH_URL = "https://www.coursera.org/search?query={query}"
     
     def __init__(self, headless=True):
+        # Initialisation du scraper avec option pour le mode sans tête (headless)
         self.headless = headless
         self.courses = []
         
     async def init_browser(self):
         """Initialise le navigateur Playwright"""
+        # Démarrage de l'instance Playwright
         self.playwright = await async_playwright().start()
+        # Lancement du navigateur Chromium (base de Chrome)
         self.browser = await self.playwright.chromium.launch(headless=self.headless)
+        # Création d'un contexte de navigateur (session isolée) avec une résolution standard
         self.context = await self.browser.new_context(
             viewport={'width': 1920, 'height': 1080},
             user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         )
+        # Ouverture d'une nouvelle page blanche
         self.page = await self.context.new_page()
         
     async def close_browser(self):
         """Ferme le navigateur"""
+        # Fermeture propre des ressources pour libérer la mémoire
         await self.browser.close()
         await self.playwright.stop()
         
     async def handle_cookie_consent(self):
         """Gère le popup de consentement cookies"""
         try:
+            # Liste des sélecteurs CSS possibles pour le bouton d'acceptation des cookies
             consent_selectors = [
                 'button:has-text("Accept")',
                 'button:has-text("Accepter")',
                 'button[data-testid="accept-cookies"]',
                 '#onetrust-accept-btn-handler'
             ]
+            # On tente de cliquer sur le premier bouton trouvé
             for selector in consent_selectors:
                 try:
                     btn = self.page.locator(selector)
                     if await btn.count() > 0:
                         await btn.first.click()
-                        await asyncio.sleep(1)
+                        await asyncio.sleep(1) # Petite pause pour laisser le popup disparaître
                         break
                 except:
                     pass
@@ -71,9 +83,11 @@ class CourseraScraper:
             
     async def scroll_page(self, scroll_count=5):
         """Fait défiler la page pour charger plus de contenu"""
+        # Coursera utilise le chargement infini (lazy loading), il faut scroller pour voir plus de cours
         for _ in range(scroll_count):
+            # Exécution de JavaScript pour scroller vers le bas
             await self.page.evaluate('window.scrollBy(0, window.innerHeight)')
-            await asyncio.sleep(1)
+            await asyncio.sleep(1) # Pause pour laisser le contenu se charger
             
     def extract_text(self, element, default=''):
         """Extrait le texte d'un élément de manière sécurisée"""
@@ -86,15 +100,21 @@ class CourseraScraper:
         """Scrape les cours d'une catégorie"""
         print(f"\n🔍 Scraping Coursera: {category}")
         
+        # Construction de l'URL de recherche pour la catégorie donnée
         url = self.SEARCH_URL.format(query=category.replace('-', ' '))
         
         try:
+            # Navigation vers la page avec un timeout généreux
+            # 'networkidle' signifie qu'on attend que les connexions réseau soient terminées
             await self.page.goto(url, wait_until='networkidle', timeout=30000)
+            
+            # Gestion des popups et chargement du contenu
             await self.handle_cookie_consent()
             await asyncio.sleep(3)
             await self.scroll_page(5)
             
-            # Sélecteurs pour les cartes de cours
+            # Liste de sélecteurs potentiels pour identifier une carte de cours
+            # On en prévoit plusieurs au cas où Coursera change son code HTML (A/B testing)
             card_selectors = [
                 'li.cds-9.css-0.cds-11.cds-grid-item',
                 'li.cds-9',
@@ -103,6 +123,7 @@ class CourseraScraper:
             ]
             
             cards = []
+            # On essaie chaque sélecteur jusqu'à trouver des cartes
             for selector in card_selectors:
                 cards = await self.page.locator(selector).all()
                 if len(cards) > 0:
@@ -114,9 +135,11 @@ class CourseraScraper:
                 return []
                 
             courses = []
+            # Extraction des données pour chaque carte trouvée, jusqu'à la limite max
             for i, card in enumerate(cards[:max_courses]):
                 try:
                     course_data = await self.extract_course_data(card, category)
+                    # On garde le cours seulement si on a réussi à extraire un titre
                     if course_data and course_data.get('title'):
                         courses.append(course_data)
                 except Exception as e:
@@ -131,13 +154,15 @@ class CourseraScraper:
             
     async def extract_course_data(self, card, category):
         """Extrait les données d'une carte de cours"""
+        # Initialisation du dictionnaire de données pour un cours
         course = {
             'platform': 'Coursera',
             'category': category.replace('-', ' ').title(),
             'scraped_at': datetime.now().isoformat()
         }
         
-        # Titre
+        # 1. Extraction du Titre
+        # Plusieurs sélecteurs possibles pour le titre
         title_selectors = ['h3', 'h2', '[data-testid="product-card-title"]', '.product-name']
         for sel in title_selectors:
             try:
@@ -148,7 +173,7 @@ class CourseraScraper:
             except:
                 pass
                 
-        # Organisation/Instructeur
+        # 2. Extraction du Partenaire/Instructeur (ex: IBM, Google, Yale)
         org_selectors = ['p.cds-ProductCard-partnerNames', 'span[data-testid="partner-names"]', '.partner-name']
         for sel in org_selectors:
             try:
@@ -159,13 +184,14 @@ class CourseraScraper:
             except:
                 pass
                 
-        # Rating
+        # 3. Extraction de la Note (Rating)
         rating_selectors = ['[aria-label*="rating"]', 'span:has-text("stars")', '.ratings-text']
         for sel in rating_selectors:
             try:
                 elem = card.locator(sel)
                 if await elem.count() > 0:
                     text = await elem.first.inner_text()
+                    # Utilisation d'une regex pour trouver un nombre décimal (ex: 4.8)
                     match = re.search(r'(\d+[.,]?\d*)', text)
                     if match:
                         course['rating'] = float(match.group(1).replace(',', '.'))
@@ -173,13 +199,15 @@ class CourseraScraper:
             except:
                 pass
                 
-        # Nombre de reviews
+        # 4. Extraction du Nombre d'avis (Reviews)
         try:
             text = await card.inner_text()
+            # Regex complexe pour capturer "1.2k reviews" ou "1m students"
             review_match = re.search(r'\(?([\d.,]+)\s*[KkMm]?\)?\s*(?:reviews?|avis|étudiants?|students?)', text, re.I)
             if review_match:
                 num_str = review_match.group(1).replace(',', '.')
                 num = float(num_str)
+                # Gestion des milliers (k) et millions (m)
                 if 'k' in text.lower():
                     num *= 1000
                 elif 'm' in text.lower():
@@ -188,7 +216,7 @@ class CourseraScraper:
         except:
             pass
             
-        # Niveau
+        # 5. Détection du Niveau (Beginner, Intermediate...)
         level_keywords = {
             'Beginner': ['débutant', 'beginner', 'introduct', 'basic'],
             'Intermediate': ['intermédiaire', 'intermediate', 'medium'],
@@ -198,6 +226,7 @@ class CourseraScraper:
         try:
             text = await card.inner_text()
             text_lower = text.lower()
+            # On cherche des mots-clés dans tout le texte de la carte
             for level, keywords in level_keywords.items():
                 if any(kw in text_lower for kw in keywords):
                     course['level'] = level
@@ -205,21 +234,23 @@ class CourseraScraper:
         except:
             pass
             
-        # Prix
+        # 6. Extraction du Prix
         try:
             text = await card.inner_text()
             if 'free' in text.lower() or 'gratuit' in text.lower():
                 course['price'] = 'Free'
             else:
+                # Recherche d'un motif monétaire ($50, €20...)
                 price_match = re.search(r'[\$€£]\s*(\d+(?:[.,]\d{2})?)', text)
                 if price_match:
                     course['price'] = price_match.group(0)
                 else:
+                    # Sur Coursera, souvent c'est "Subscription" (abonnement)
                     course['price'] = 'Subscription'
         except:
             pass
             
-        # URL
+        # 7. Extraction de l'URL
         try:
             link = card.locator('a').first
             if await link.count() > 0:
@@ -232,7 +263,7 @@ class CourseraScraper:
         except:
             pass
             
-        # Description (texte disponible)
+        # 8. Description (souvent absente de la carte, on prend ce qu'on peut)
         try:
             desc_selectors = ['p:not(.cds-ProductCard-partnerNames)', '.description']
             for sel in desc_selectors:
@@ -243,7 +274,7 @@ class CourseraScraper:
         except:
             course['description'] = course.get('title', '')
             
-        # Skills (extrait du texte)
+        # Métadonnées par défaut pour enrichir
         course['skills'] = category.replace('-', ', ')
         course['language'] = 'English'
         
@@ -258,15 +289,20 @@ class CourseraScraper:
         print("   COURSERA SCRAPER")
         print("="*60)
         
+        # Initialisation unique du navigateur
         await self.init_browser()
         
         all_courses = []
+        # Boucle sur chaque catégorie demandée
         for i, category in enumerate(categories):
             print(f"\n[{i+1}/{len(categories)}] Catégorie: {category}")
+            # Appel de la fonction de scraping par catégorie
             courses = await self.scrape_category(category, max_per_category)
             all_courses.extend(courses)
+            # Petite pause pour être poli envers le serveur
             await asyncio.sleep(REQUEST_DELAY)
             
+        # Fermeture du navigateur à la fin
         await self.close_browser()
         
         self.courses = all_courses

@@ -1,119 +1,124 @@
-# 🎓 Course Explorer: ML-Powered Recommendation System
+# 🎓 Explorateur de Cours : Système de Recommandation par IA
 
-A state-of-the-art **Machine Learning** platform designed to help users discover, analyze, and master new skills. This system integrates real-time web scraping from **Coursera** and **Udemy**, advanced data processing, and a multi-model recommendation engine (Clustering + Content-Filtering).
-
----
-
-## 🚀 Key Features
-
-### 🔍 Search & Exploration
-
-- **Hybrid Search**: Advanced search algorithm matching titles, categories, and partners.
-- **Micro-Filters**: Precise filtering by platform, difficulty level (Beginner to Advanced), and duration.
-- **Smart Catalog**: A responsive interface displaying 1000+ courses with detailed metadata.
-
-### 🤖 Intelligent Engines (Machine Learning)
-
-- **Engine 1: Content-Based Filtering**: Uses **TF-IDF Vectorization** and **Cosine Similarity** to suggest courses identical in content to your interests.
-- **Engine 2: Behavioral Clustering**: Employs **K-Means Clustering** to group courses into thematic "clusters", allowing the discovery of related fields.
-- **Engine 3: Learning Path Generator**: Automatically constructs a step-by-step roadmap from beginner to expert for any given skill.
-
-### 📊 Interactive Dashboard
-
-- **Real-Time Analytics**: Visualization of course distributions across categories.
-- **Platform Insights**: Comparison of ratings and pricing between Coursera and Udemy.
-- **Cluster Visualization**: Graphical representation of how courses are grouped by the ML model.
+Une plateforme de **Machine Learning** de pointe conçue pour aider les utilisateurs à découvrir, analyser et maîtriser de nouvelles compétences. Ce système intègre le scraping web en temps réel de **Coursera** et **Udemy**, un traitement avancé des données et un moteur de recommandation multi-modèles (Clustering + Filtrage Basé sur le Contenu).
 
 ---
 
-## 📁 Project Architecture
+## 🚀 Fonctionnalités Clés
+
+### 🔍 Recherche & Exploration
+
+- **Recherche Hybride** : Algorithme de recherche avancé correspondant aux titres, catégories et partenaires.
+- **Micro-Filtres** : Filtrage précis par plateforme, niveau de difficulté (Débutant à Avancé) et durée.
+- **Catalogue Intelligent** : Une interface responsive affichant plus de 1000 cours avec des métadonnées détaillées.
+
+### 🤖 Moteurs Intelligents (Machine Learning)
+
+- **Moteur 1 : Filtrage Basé sur le Contenu** : Utilise la **Vectorisation TF-IDF** et la **Similarité Cosinus** pour suggérer des cours au contenu identique à vos intérêts.
+- **Moteur 2 : Clustering Comportemental** : Utilise le **Clustering K-Means** pour regrouper les cours en "clusters" thématiques, permettant la découverte de domaines connexes.
+- **Moteur 3 : Générateur de Parcours d'Apprentissage** : Construit automatiquement une feuille de route étape par étape, de débutant à expert, pour n'importe quelle compétence donnée.
+
+### 📊 Tableau de Bord Interactif
+
+- **Analytique Temps Réel** : Visualisation de la distribution des cours par catégories.
+- **Insights Plateforme** : Comparaison des notes et des prix entre Coursera et Udemy.
+- **Visualisation des Clusters** : Représentation graphique de la manière dont les cours sont regroupés par le modèle ML.
+
+---
+
+## 📁 Architecture du Projet
 
 ```
 Recommandations/
-├── app.py                 # Core Flask application & API routes
-├── database.py            # SQLite management (Users, Searches, Tracking)
-├── user_manager.py        # Authentication & Session logic
-├── scrapers/              # Data Acquisition (Playwright & BeautifulSoup)
-│   ├── coursera_scraper.py
-│   ├── udemy_scraper.py
-│   └── run_scrapers.py
-├── data/                  # Data Storage
-│   ├── final_courses_shuffled.csv # Main processed dataset
-│   └── recommandations.db # Relational database
-├── models/                # Machine Learning Core
-│   ├── recommender.py     # Similarity-based engine
-│   └── clustering.py      # K-Means grouping engine
-├── templates/             # Modern UI (Jinja2)
-│   ├── dashboard.html     # Visual analytics
-│   ├── home.html          # User personalized portal
+├── app.py                 # Application Flask principale & routes API
+├── database.py            # Gestion SQLite (Utilisateurs, Recherches, Suivi)
+├── user_manager.py        # Logique d'Authentification & Session
+├── scrapers/              # Acquisition de Données (Playwright & BeautifulSoup)
+│   ├── coursera.py        # Logique de scraping Coursera
+│   ├── udemy.py           # Logique de scraping Udemy
+│   └── runners/           # Scripts d'exécution
+│       ├── run_coursera.py
+│       └── run_udemy.py
+├── data/                  # Stockage des Données
+│   ├── final_courses_shuffled.csv # Dataset principal traité
+│   └── recommandations.db # Base de données relationnelle
+├── models/                # Cœur du Machine Learning
+│   ├── recommender.py     # Moteur basé sur la similarité
+│   └── clustering.py      # Moteur de regroupement K-Means
+├── templates/             # UI Moderne (Jinja2)
+│   ├── dashboard.html     # Analytique visuelle
+│   ├── home.html          # Portail personnalisé utilisateur
 │   └── ...
-└── static/                # Assets (Design System, JS, Icons)
+└── static/                # Assets (Design System, JS, Icônes)
 ```
 
 ---
 
-## 🛠️ Installation & Setup
+## 🛠️ Installation et Configuration
 
-### 1. Environment Setup
+### 1. Configuration de l'Environnement
 
 ```bash
-# Clone the repository
+# Cloner le dépôt
 git clone https://github.com/Badr-Bouymejjane/PFM_Python_MSDIA.git
-cd Recommandations
+cd PFM_Python_MSDIA
 
-# Install dependencies
+# Installer les dépendances
 pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 2. Data Preparation (Optional)
+### 2. Préparation des Données (Optionnel)
 
-If you wish to refresh the database with live data:
+Si vous souhaitez rafraîchir la base de données avec des données en direct, exécutez les runners de scraping :
 
 ```bash
-# Run scrapers
-python scrapers/run_scrapers.py
+# Lancer le scraper Coursera
+python scrapers/runners/run_coursera.py
+
+# Lancer le scraper Udemy
+python scrapers/runners/run_udemy.py
 ```
 
-### 3. Launch the Platform
+### 3. Lancer la Plateforme
 
 ```bash
 python app.py
 ```
 
-Visit: **[http://localhost:5000](http://localhost:5000)**
+Visitez : **[http://localhost:2400](http://localhost:2400)**
 
 ---
 
-## 🧬 Machine Learning Deep Dive
+## 🧬 Plongée dans le Machine Learning
 
-### **Clustering Engine (K-Means)**
+### **Moteur de Clustering (K-Means)**
 
-The system analyzes text features to create 14 distinct thematic clusters. This allows the system to understand that a user interested in "Python" might also benefit from "Data Engineering" or "Backend Development" even if the titles are different.
+Le système analyse les caractéristiques textuelles pour créer 14 clusters thématiques distincts. Cela permet au système de comprendre qu'un utilisateur intéressé par "Python" pourrait également bénéficier de "Data Engineering" ou "Backend Development" même si les titres sont différents.
 
-### **Recommendation Logic (TF-IDF)**
+### **Logique de Recommandation (TF-IDF)**
 
-1. **Vectorization**: Transforms course descriptions into mathematical vectors.
-2. **Similarity**: Calculates the angle between vectors (Cosine Similarity).
-3. **Weighting**: Gives higher priority to courses with high ratings and popularity scores.
-
----
-
-## � Technologies Used
-
-- **Backend**: Flask (Python), SQLite
-- **Machine Learning**: Scikit-Learn, NumPy, Pandas
-- **Web Scraping**: Playwright, BeautifulSoup4
-- **Frontend**: HTML5 (Semantic), Vanilla CSS (Modern Design System), Chart.js (Analytics)
-- **Icons**: Lucide Icons
+1. **Vectorisation** : Transforme les descriptions de cours en vecteurs mathématiques.
+2. **Similarité** : Calcule l'angle entre les vecteurs (Similarité Cosinus).
+3. **Pondération** : Donne une priorité plus élevée aux cours avec de bonnes notes et des scores de popularité élevés.
 
 ---
 
-## 👨‍💻 Author
+## 💻 Technologies Utilisées
 
-**SDIA Student - S7 Project**
-_SDIA - S7 / Python / Project / Recommendations_
+- **Backend** : Flask (Python), SQLite
+- **Machine Learning** : Scikit-Learn, NumPy, Pandas
+- **Web Scraping** : Playwright, BeautifulSoup4
+- **Frontend** : HTML5 (Sémantique), Vanilla CSS (Système de Design Moderne), Chart.js (Analytique)
+- **Icônes** : Lucide Icons
 
 ---
 
-© 2024 Course Explorer Project. All rights reserved.
+## 👨‍💻 Auteur
+
+**Étudiant SDIA - Projet S7**
+_SDIA - S7 / Python / Projet / Recommandations_
+
+---
+
+© 2024 Projet Explorateur de Cours. Tous droits réservés.

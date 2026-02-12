@@ -8,7 +8,7 @@ from database import Database
 class UserManager:
     """Manages users and their behavior tracking using a SQLite database"""
     
-    def __init__(self, db_path='data/recommandations.db'):
+    def __init__(self, db_path=None):
         self.db = Database(db_path)
         
     def register(self, username, email, password):

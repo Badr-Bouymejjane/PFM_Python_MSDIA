@@ -11,8 +11,13 @@ import os
 class Database:
     """Classe pour gérer la base de données SQLite"""
     
-    def __init__(self, db_path='data/recommandations.db'):
+    def __init__(self, db_path=None):
         """Initialise la connexion à la base de données"""
+        if db_path is None:
+            # Use absolute path relative to this file
+            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            db_path = os.path.join(BASE_DIR, 'data', 'recommandations.db')
+            
         self.db_path = db_path
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         self.init_database()

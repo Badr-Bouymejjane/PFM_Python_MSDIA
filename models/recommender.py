@@ -41,7 +41,9 @@ class CourseRecommender:
     def load_data(self, filepath=None):
         """Load course data"""
         if filepath is None:
-            filepath = DATA_PATH
+            # Use absolute path relative to project root
+            PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            filepath = os.path.join(PROJECT_ROOT, DATA_PATH)
             
         print(f"📂 Loading data: {filepath}")
         

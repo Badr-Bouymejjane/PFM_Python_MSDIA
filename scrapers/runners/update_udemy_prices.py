@@ -11,9 +11,15 @@ def clean_price(price_str):
         return match.group(0)
     return price_str
 
+import os
+import sys
+
+# Ensure root directory is in path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 def update_prices():
     csv_path = 'data/final_courses_shuffled.csv'
-    json_path = 'data/raw_udemy.json'
+    json_path = 'data/raw/raw_udemy.json' # Assuming raw data will be moved to data/raw/
     
     print(f"Reading {csv_path}...")
     df = pd.read_csv(csv_path)
