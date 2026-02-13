@@ -20,11 +20,6 @@ from config import (
 from models.recommender import CourseRecommender
 from user_manager import UserManager
 
-# =====================================
-# =====================================
-# INITIALISATION DE L'APPLICATION FLASK
-# =====================================
-
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=SESSION_LIFETIME_DAYS)
@@ -34,16 +29,9 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 # Fonctions globales pour les modèles Jinja
 app.jinja_env.globals.update(max=max, min=min)
 
-# =====================================
-# VARIABLES GLOBALES
-# =====================================
-
 recommender = CourseRecommender()
 user_manager = UserManager()
 
-# =====================================
-# DÉCORATEURS
-# =====================================
 
 def login_required(f):
     @wraps(f)
@@ -55,10 +43,6 @@ def login_required(f):
 
 def get_current_user():
     return session.get('username')
-
-# =====================================
-# INIT
-# =====================================
 
 def init_recommender():
     global recommender
@@ -88,10 +72,7 @@ def init_recommender():
         return True
     return False
 
-# =====================================
 # ROUTES D'AUTHENTIFICATION
-# =====================================
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -140,10 +121,7 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
-# =====================================
 # ROUTES WEB
-# =====================================
-
 @app.route('/')
 @login_required
 def home():
@@ -186,11 +164,14 @@ def home():
             proportion = count / total_top_clicks
             n_to_fetch = max(2, round(proportion * target_total_cat_recs))
             
+            # Obtenir les cours populaires dans cette catégorie
             cat_courses = recommender.get_popular_courses(n=n_to_fetch, category=cat)
             for course in cat_courses:
                 if course['course_id'] not in [c['course_id'] for c in personalized_courses]:
                     personalized_courses.append(course)
+                    # Ajouter la raison de la recommandation
                     recommendation_reasons[course['course_id']] = f"Car vous aimez: {cat}"
+                    # Limiter le nombre de recommandations
                     if len(personalized_courses) >= 30: break
             if len(personalized_courses) >= 30: break
     else:
@@ -221,28 +202,53 @@ def home():
     for course in personalized_courses:
         course['reason'] = recommendation_reasons.get(course['course_id'], '')
         
-        # Calculer un score réaliste basé sur la source de recommandation
-        if 'similarity_score' not in course or course['similarity_score'] is None:
+        # Si le score existe déjà (venant du moteur de recherche), on l'ajuste
+        # Sinon on le calcule basé sur les métadonnées
+        
+        current_score = course.get('similarity_score')
+        
+        if current_score:
+            # C'est un résultat de recherche directe ou recommandation ML
+            # On normalise si c'est > 1 (le moteur retourne 0-100)
+            if current_score <= 1: current_score *= 100
+                
+            # DIVERSIFICATION : Réduire légèrement le score si on a déjà fait d'autres actions
+            # Si l'utilisateur a beaucoup d'autres intérêts, la recherche unique a moins de poids absolu
+            if total_clicks > 5:
+                penalty = min(total_clicks * 0.5, 15.0) # Jusqu'à 15% de pénalité si très actif ailleurs
+                current_score -= penalty
+        else:
+            # Calcul heuristique pour les recommandations par catégorie/popularité
             if 'recherche' in course['reason'].lower():
-                base = 88.0
+                base = 85.0
             elif 'aimez' in course['reason'].lower():
                 # Poids dynamique basé sur l'intérêt pour cette catégorie spécifique
                 cat_name = course.get('category')
-                cat_interest = cat_counts.get(cat_name, 1)
-                # Augmenter le score de base (80-94%) basé sur l'intérêt proportionnel
-                base = 80.0 + (min(cat_interest / total_clicks, 1.0) * 14.0)
+                cat_interest = cat_counts.get(cat_name, 0)
+                
+                # Ratio d'intérêt : part de cette catégorie dans l'historique total (0.0 à 1.0)
+                interest_ratio = cat_interest / total_clicks
+                
+                # Le score reflète la part d'intérêt : 
+                # Si 100% des clics sont ici -> ~95%
+                # Si 10% des clics sont ici -> ~75%
+                base = 70.0 + (interest_ratio * 25.0) 
             elif 'populaire' in course['reason'].lower():
-                base = 72.0
+                base = 60.0
             else:
-                base = 65.0
+                base = 50.0
             
-            # Ajouter un bonus de note (jusqu'à 5%)
+            # Ajouter un bonus de qualité du cours (Note)
             rating = course.get('rating', 0)
-            bonus = (rating - 3.5) * 4 if rating > 3.5 else 0
+            quality_bonus = max(0, (rating - 4.0) * 10) # +0 à +10 points pour 4.0 à 5.0
             
-            # Ajouter une variation microscopique aléatoire pour un aspect "vrai ML" (ex. 89.2%)
-            final_score = base + bonus + random.uniform(-1.5, 1.5)
-            course['similarity_score'] = round(min(98.8, final_score), 1)
+            current_score = base + quality_bonus
+            
+        # Ajout de bruit aléatoire pour éviter les scores trop ronds
+        final_score = current_score + random.uniform(-2.0, 2.0)
+        
+        # Bornage du score (40% - 99%)
+        course['similarity_score'] = round(max(40.0, min(99.0, final_score)), 1)
     
     # Trier les recommandations par le score calculé pour que les sujets favoris apparaissent en premier
     personalized_courses.sort(key=lambda x: x.get('similarity_score', 0), reverse=True)
@@ -257,7 +263,6 @@ def home():
                          stats=stats,
                          personalized_courses=personalized_courses[:20],
                          recent_searches=recent_searches)
-
 
 @app.route('/courses')
 @login_required
@@ -290,34 +295,51 @@ def courses():
         
         query_text = ""
         if recent_searches:
+            # On donne un poids normal aux recherches
             query_text += " ".join(recent_searches)
         if top_cats:
-            query_text += " " + " ".join(top_cats)
+            # On BOOSTE les catégories (x3) pour compenser leur IDF souvent plus faible
+            # Cela permet aux interactions récentes (clics) d'avoir plus d'impact face aux recherches
+            cat_text = " ".join(top_cats)
+            query_text += " " + (cat_text + " ") * 3
             
         if query_text.strip():
             # Recommandation personnalisée
             recs = recommender.recommend_by_query(query_text, n=len(all_filtered), filters=filters)
             rec_map = {r['course_id']: r['similarity_score'] for r in recs}
             
+            # Importer les modules nécessaires
+            import math
+            import random
+            
             # Trouver le score max pour la normalisation
+            # On s'assure que le max n'est pas trop bas pour éviter de booster du bruit
             max_sim = max(rec_map.values()) if rec_map else 1.0
+            max_sim = max(max_sim, 0.1) # Seuil minimal
             
             for c in all_filtered:
                 raw_sim = rec_map.get(c['course_id'], 0)
                 
-                # Boost et Mise à l'échelle : Transformer la similarité 0-1 en une plage "optimiste" 40-98
-                # Nous utilisons une mise à l'échelle non linéaire : les meilleurs résultats restent en haut, les résultats inférieurs sont remontés
+                # Validation : Si le score brut est trop faible (< 0.05), on le considère comme nul
+                # sauf si c'est une correspondance exacte (rare)
+                if raw_sim < 0.01:
+                    raw_sim = 0
+                
+                # Boost et Mise à l'échelle
                 if raw_sim > 0:
                     normalized = raw_sim / max_sim
-                    # Formule : Base 50 + (Normalisé * 40) + (Bonus Note)
-                    rating_bonus = (c.get('rating', 0) - 3.0) * 2 if c.get('rating', 0) > 3.0 else 0
-                    scaled_score = 55 + (normalized * 35) + rating_bonus
                     
-                    # Ajouter un petit facteur aléatoire pour un aspect "réel"
-                    import random
-                    scaled_score += random.uniform(-1, 1)
+                    # Formule adoucie :
+                    # On veut que même les items avec une similarité moyenne (0.3-0.5) aient un score décent (60-70%)
+                    # Score = Base 50 + (sqrt(Normalisé) * 45) + (Bonus Note)
+                    # La racine carrée remonte les scores moyens vers le haut
+                    rating_bonus = (c.get('rating', 0) - 3.0) * 3 if c.get('rating', 0) > 3.0 else 0
+                    scaled_score = 50 + (math.sqrt(normalized) * 40) + rating_bonus
                     
-                    c['similarity_score'] = round(min(98.2, scaled_score), 1)
+                    # Ajouter un petit facteur aléatoire
+                    scaled_score += random.uniform(-1.5, 1.5)
+                    
+                    c['similarity_score'] = round(max(40.0, min(99.5, scaled_score)), 1)
                 else:
                     c['similarity_score'] = 0
                     
@@ -335,6 +357,10 @@ def courses():
         result = {'courses': courses_list, 'total': total, 'pages': pages, 'current_page': page}
     else:
         result = recommender.get_all_courses(page=page, per_page=COURSES_PER_PAGE, sort_by=sort_by, filters=filters)
+    
+    # Suivre la recherche si elle renvoie des résultats
+    if search and result['total'] > 0:
+        user_manager.track_search(username, search)
     
     return render_template('courses.html',
                          username=username,
@@ -366,7 +392,6 @@ def course_detail(course_id):
                          course=course,
                          similar_courses=similar_courses)
 
-
 @app.route('/profile')
 @login_required
 def profile():
@@ -380,22 +405,21 @@ def profile():
         
     stats = user_manager.get_user_stats(username)
     prefs = user_manager.get_preferences(username)
+    saved_paths = user_manager.get_saved_paths(username)
     
     return render_template('profile.html',
                          username=username,
                          user=user,
                          stats=stats,
-                         preferences=prefs)
+                         preferences=prefs,
+                         saved_paths=saved_paths)
 
 @app.route('/report')
 @login_required
 def report():
     return render_template('report.html', username=get_current_user())
 
-# =====================================
 # ROUTES API
-# =====================================
-
 @app.route('/api/search', methods=['POST'])
 @login_required
 def api_search():
@@ -444,7 +468,6 @@ def api_courses():
     result = recommender.get_all_courses(page, per_page, sort_by, filters)
     return jsonify(result)
 
-
 @app.route('/api/track/click', methods=['POST'])
 @login_required
 def api_track_click():
@@ -477,17 +500,14 @@ def api_popular():
     popular = recommender.get_popular_courses(n, category)
     return jsonify({'courses': popular, 'count': len(popular)})
 
-# =====================================
 # ROUTES DE CLUSTERING
-# =====================================
-
 clustering_instance = None
 
 def get_clustering():
     global clustering_instance
     if clustering_instance is None:
         from models.clustering import CourseClustering
-        clustering_instance = CourseClustering(n_clusters=14)
+        clustering_instance = CourseClustering(n_clusters=24)
         clustering_instance.run()
     return clustering_instance
 
@@ -516,7 +536,6 @@ def clustering():
                          total_courses=len(clustering_model.df),
                          n_clusters=len(clusters_info),
                          n_categories=len(categories))
-
 
 @app.route('/dashboard')
 @login_required
@@ -549,7 +568,6 @@ def dashboard():
                          rating_data=json.dumps(avg_ratings),
                          stats=stats)
 
-
 @app.route('/api/learning-path')
 @login_required
 def api_learning_path():
@@ -566,14 +584,25 @@ def api_clusters():
     clustering_model = get_clustering()
     return jsonify(clustering_model.get_visualization_data())
 
-# =====================================
-# MAIN
-# =====================================
+@app.route('/api/save-path', methods=['POST'])
+@login_required
+def api_save_path():
+    username = get_current_user()
+    data = request.get_json()
+    category = data.get('category')
+    path_data = data.get('path')
+    
+    if not category or not path_data:
+        return jsonify({'error': 'Missing data'}), 400
+        
+    user_manager.save_path(username, category, path_data)
+    return jsonify({'status': 'ok'})
 
+# MAIN
 if __name__ == '__main__':
     if init_recommender():
         print(f"\nDémarrage du serveur Flask...")
         print(f"Accédez à : http://localhost:2400\n")
-        app.run(debug=FLASK_DEBUG, host=FLASK_HOST, port=2400)
+        app.run(debug=FLASK_DEBUG, host=FLASK_HOST, port=FLASK_PORT)
     else:
         print("\nImpossible de démarrer l'application")

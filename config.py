@@ -81,7 +81,7 @@ DEFAULT_RECOMMENDATIONS = 10
 
 # Paramètres Flask (Serveur Web)
 FLASK_HOST = '0.0.0.0'
-FLASK_PORT = 5000
+FLASK_PORT = 2400
 FLASK_DEBUG = True
 
 # Pagination (nombre de cours par page)

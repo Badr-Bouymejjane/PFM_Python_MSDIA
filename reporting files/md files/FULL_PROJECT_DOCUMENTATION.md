@@ -38,7 +38,7 @@ graph TD
 ### Étape 1 : Collecte Automatisée de Données (Scraping)
 
 - **Coursera** : Utilise `Playwright` pour simuler un navigateur réel, gérant le contenu JavaScript dynamique que les scrapers basiques ne peuvent pas voir.
-- **Udemy** : Utilise `BeautifulSoup` et des requêtes pour analyser la structure HTML.
+- **Udemy** : Utilise `Playwright` et des requêtes pour analyser la structure HTML.
 - **Résultat** : Un jeu de données consolidé avec titres, descriptions, catégories, niveaux, notes et URL.
 
 ### Étape 2 : Prétraitement et Nettoyage des Données
@@ -85,11 +85,9 @@ La page "Clustering" utilise **PCA (Analyse en Composantes Principales)** pour a
 ## 🚀 4. Stack Technique
 
 - **Backend** : Python, Flask
-- **Base de Données** : Gestion Utilisateur basée sur JSON/SQLite
+- **Base de Données** : Gestion Utilisateur basée sur JSON/SQLite/CSV
 - **Machine Learning** : Scikit-Learn (TF-IDF, Similarité Cosinus, K-Means, PCA)
 - **Scraping** : Playwright, BeautifulSoup
-- **Frontend** : Vanilla CSS, Jinja2, JavaScript (Chart.js pour la visualisation)
+- **Frontend** : Tailwind CSS, JavaScript (Chart.js pour la visualisation)
 
 ---
-
-_Créé pour le Projet Python SDIA - S7_

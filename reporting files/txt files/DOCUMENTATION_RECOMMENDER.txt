@@ -1,0 +1,149 @@
+================================================================================
+    DOCUMENTATION DU SYSTÈME DE RECOMMANDATION - recommender.py
+================================================================================
+
+Date: 12 Février 2026
+Projet: Système de Recommandation de Cours
+
+================================================================================
+PRINCIPE DE FONCTIONNEMENT
+================================================================================
+
+Le système utilise TF-IDF + Similarité Cosinus pour recommander des cours:
+1. Convertir les descriptions de cours en nombres (TF-IDF)
+2. Calculer la similarité entre tous les cours (Cosinus)
+3. Recommander les cours les plus similaires
+
+================================================================================
+FONCTIONS PRINCIPALES
+================================================================================
+
+1. __init__()
+   → Initialiser le système de recommandation
+
+2. load_data(filepath)
+   → Charger les cours depuis un fichier CSV
+   → Standardise les colonnes et crée les données manquantes
+
+3. prepare_data()
+   → Combiner titre + catégorie + niveau en un seul texte
+   → Préparer pour TF-IDF
+
+4. build_tfidf_matrix()
+   → Convertir les textes en vecteurs numériques (TF-IDF)
+   → Vocabulaire de 5000 mots max
+
+5. compute_similarity_matrix()
+   → Calculer la similarité entre tous les cours
+   → Matrice NxN (N = nombre de cours)
+
+6. train(filepath)
+   → Entraîner le modèle complet (pipeline)
+   → Exécute: load_data → prepare_data → build_tfidf → compute_similarity
+
+7. recommend_similar(course_id, n=10)
+   → Recommander n cours similaires à un cours donné
+   → Retourne: liste de cours avec score de similarité (%)
+
+8. recommend_by_query(query, n=10, filters=None)
+   → Recommander des cours basés sur une recherche textuelle
+   → Filtres possibles: platform, category, level
+   → Exemple: "python machine learning"
+
+9. get_popular_courses(n=10, category=None)
+   → Obtenir les cours populaires (triés par note)
+   → Optionnel: filtrer par catégorie
+
+10. get_all_courses(page=1, per_page=12, sort_by='rating', filters=None)
+    → Obtenir tous les cours avec pagination
+    → Filtres: platform, category, level, search
+
+11. get_categories() / get_platforms() / get_levels()
+    → Obtenir les listes de catégories/plateformes/niveaux disponibles
+
+12. get_stats()
+    → Statistiques du dataset (total cours, répartition, note moyenne)
+
+13. save_model(filepath) / load_model(filepath)
+    → Sauvegarder/charger le modèle entraîné (format pickle)
+
+================================================================================
+FONCTIONS UTILITAIRES (INTERNES)
+================================================================================
+
+- _extract_category_from_title(title)
+  → Extraire la catégorie du titre (ex: "Python" → "Programming")
+
+- _extract_level(metadata)
+  → Extraire le niveau (Beginner, Intermediate, Advanced, All Levels)
+
+- get_course_by_id(course_id)
+  → Récupérer un cours par son ID
+
+- get_course_index(course_id)
+  → Obtenir l'index du cours dans le DataFrame
+
+================================================================================
+EXEMPLES D'UTILISATION
+================================================================================
+
+# ENTRAÎNEMENT
+recommender = CourseRecommender()
+recommender.train('processed_data/final_courses_shuffled.csv')
+recommender.save_model('models/recommender.pkl')
+
+# RECOMMANDATIONS SIMILAIRES
+similar = recommender.recommend_similar(course_id=42, n=10)
+
+# RECHERCHE TEXTUELLE
+results = recommender.recommend_by_query("python data science", n=5)
+
+# RECHERCHE AVEC FILTRES
+results = recommender.recommend_by_query(
+    query="machine learning",
+    n=10,
+    filters={'level': 'Beginner', 'platform': 'Coursera'}
+)
+
+# COURS POPULAIRES
+popular = recommender.get_popular_courses(n=10, category="Data Science")
+
+# PAGINATION
+page_data = recommender.get_all_courses(page=1, per_page=12, sort_by='rating')
+
+================================================================================
+CONCEPTS CLÉS
+================================================================================
+
+TF-IDF (Term Frequency-Inverse Document Frequency)
+→ Mesure l'importance d'un mot dans un cours
+→ Mots importants = fréquents dans un cours, rares globalement
+→ Convertit texte en vecteur numérique
+
+Similarité Cosinus
+→ Mesure la similarité entre deux cours (0 à 1)
+→ 0 = totalement différent, 1 = identique
+→ Basée sur l'angle entre les vecteurs TF-IDF
+
+N-grammes (1, 2)
+→ Unigrammes: "machine", "learning"
+→ Bigrammes: "machine learning"
+→ Capture les expressions importantes
+
+Stop Words
+→ Mots ignorés (the, is, a, etc.)
+→ Réduit le bruit et améliore la performance
+
+================================================================================
+PARAMÈTRES DE CONFIGURATION
+================================================================================
+
+DATA_PATH = 'processed_data/final_courses_shuffled.csv'
+TFIDF_MAX_FEATURES = 5000        # Vocabulaire max
+TFIDF_NGRAM_RANGE = (1, 2)       # Unigrammes + Bigrammes
+TFIDF_MIN_DF = 2                 # Mot dans au moins 2 cours
+TFIDF_MAX_DF = 0.95              # Ignorer mots trop fréquents (>95%)
+
+================================================================================
+FIN DE LA DOCUMENTATION
+================================================================================

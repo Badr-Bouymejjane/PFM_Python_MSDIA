@@ -19,7 +19,7 @@ Comment le projet a été construit de zéro jusqu'à une plateforme fonctionnel
 ### Phase 3 : Entraînement des Modèles ML
 
 1. **Vectorisation** : Exécution du transformateur TF-IDF sur les données nettoyées.
-2. **Précalcul de Similarité** : Construction de la matrice de similarité $1137 \times 1137$.
+2. **Précalcul de Similarité** : Construction de la matrice de similarité $1855 \times 1855$.
 3. **Persistance** : Sauvegarde du modèle entraîné dans `models/recommender.pkl` pour un chargement rapide.
 
 ### Phase 4 : Système Utilisateur & Backend

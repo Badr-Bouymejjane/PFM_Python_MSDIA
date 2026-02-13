@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <!-- Activity Section -->
+    <!-- Activity Section
     <div class="profile-card" style="grid-column: 1 / -1; margin-bottom: 2rem;">
         <div class="card-header">
             <h2><i data-lucide="activity"></i> Activité d'Apprentissage</h2>
@@ -81,7 +81,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </div> -->
     
     <!-- Contenu principal -->
     <div class="profile-main-grid">
@@ -156,91 +156,59 @@
         </div>
     </div>
     
-    <!-- Parcours Recommandé -->
-    <div class="profile-card learning-path-card" style="margin-top: 2rem;">
+
+
+    <!-- Parcours Enregistrés -->
+    <div class="profile-card saved-paths-card" style="margin-top: 2rem;">
         <div class="card-header">
-            <h2><i data-lucide="map"></i> Mon Parcours Recommandé</h2>
-            <p class="card-subtitle" style="color: var(--text-muted); font-size: 0.9rem;">Basé sur votre catégorie préférée</p>
+            <h2><i data-lucide="bookmark"></i> Mes Parcours Enregistrés</h2>
         </div>
-        <div id="personalized-path" class="profile-path-container">
-            <div class="loading-state">
-                <div class="spinner"></div>
-                <p>Analyse de vos préférences en cours...</p>
+        <div class="saved-paths-list" style="display: grid; gap: 1.5rem;">
+            {% for path in saved_paths %}
+            <div class="saved-path-item" style="border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; background: var(--bg-secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin: 0 0 0.25rem 0;">{{ path.category }}</h3>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Enregistré le {{ path.timestamp[:10] }}</span>
+                    </div>
+                    <button class="btn-search" onclick="togglePath('path-{{ path.id }}')" style="font-size: 0.8rem; padding: 0.25rem 0.75rem;">Voir le détail</button>
+                </div>
+                
+                <div id="path-{{ path.id }}" style="display: none; margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+                    {% for step in path.path_data %}
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                        <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">{{ step.step }}</span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.9rem;">{{ step.title }}</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">{{ step.level }} • ⭐ {{ step.rating }}</div>
+                        </div>
+                        <a href="/course/{{ step.course_id }}" style="margin-left: auto; color: var(--primary);"><i data-lucide="external-link" size="16"></i></a>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
+            {% else %}
+            <div class="empty-state">
+                <i data-lucide="bookmark"></i>
+                <p>Vous n'avez pas encore enregistré de parcours.</p>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', async () => {
-    const prefs = {{ preferences.categories | tojson }};
-    const topCategory = Object.keys(prefs).reduce((a, b) => prefs[a] > prefs[b] ? a : b, null);
-    
-    const container = document.getElementById('personalized-path');
-    
-    if (topCategory) {
-        try {
-            const response = await fetch(`/api/learning-path?category=${encodeURIComponent(topCategory)}`);
-            const data = await response.json();
-            
-            if (data.path && data.path.length > 0) {
-                let html = `
-                    <p class="path-intro">Puisque vous vous intéressez à <strong>${topCategory}</strong>, voici le parcours idéal pour vous :</p>
-                    <div class="profile-path-steps">
-                `;
-                
-                data.path.forEach((step, i) => {
-                    html += `
-                        <div class="profile-path-step">
-                            <div class="step-number">${i + 1}</div>
-                            <div class="step-badge">${step.level}</div>
-                            <div class="step-info">
-                                <h4>${step.title}</h4>
-                                <div class="step-meta">
-                                    <span><i data-lucide="star" size="14"></i> ${step.rating.toFixed(1)}</span>
-                                    <span><i data-lucide="clock" size="14"></i> ${step.duration}h</span>
-                                </div>
-                                <a href="/course/${step.course_id}" class="step-btn">
-                                    Démarrer
-                                    <i data-lucide="arrow-right" size="14"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                });
-                
-                html += '</div>';
-                container.innerHTML = html;
-                lucide.createIcons();
-            } else {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <i data-lucide="book-open"></i>
-                        <p>Explorez plus de cours de cette catégorie pour générer un parcours.</p>
-                    </div>
-                `;
-                lucide.createIcons();
-            }
-        } catch (e) {
-            container.innerHTML = `
-                <div class="empty-state error">
-                    <i data-lucide="alert-circle"></i>
-                    <p>Erreur lors de la génération du parcours.</p>
-                </div>
-            `;
-            lucide.createIcons();
-        }
+function togglePath(id) {
+    const el = document.getElementById(id);
+    if (el.style.display === 'none') {
+        el.style.display = 'block';
     } else {
-        container.innerHTML = `
-            <div class="empty-state">
-                <i data-lucide="compass"></i>
-                <p>Commencez à explorer des cours pour recevoir un parcours personnalisé!</p>
-            </div>
-        `;
-        lucide.createIcons();
+        el.style.display = 'none';
     }
-});
+}
 </script>
+
+
 
 <style>
 /* Hero Section */

@@ -67,3 +67,11 @@ class UserManager:
     def get_all_users_count(self):
         """Obtenir le nombre total d'utilisateurs"""
         return self.db.get_total_users()
+
+    def save_path(self, username, category, path_data):
+        """Sauvegarder un parcours"""
+        return self.db.add_saved_path(username, category, path_data)
+        
+    def get_saved_paths(self, username):
+        """Obtenir les parcours sauvegardés"""
+        return self.db.get_saved_paths(username)
