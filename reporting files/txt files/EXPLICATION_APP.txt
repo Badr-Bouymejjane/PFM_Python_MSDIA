@@ -1,0 +1,184 @@
+================================================================================
+   EXPLICATION DÉTAILLÉE DU CODE : app.py
+================================================================================
+
+Ce document explique étape par étape le fonctionnement de l'application web Flask
+qui sert d'interface utilisateur pour le système de recommandation de cours.
+
+================================================================================
+📋 ÉTAPE 1 : IMPORTATION ET CONFIGURATION (lignes 6-33)
+================================================================================
+
+Le code commence par configurer l'environnement web :
+
+• FRAMEWORK FLASK :
+  - Flask : le cœur de l'application web
+  - render_template : pour afficher les pages HTML (dans /templates)
+  - request : pour récupérer les données envoyées par l'utilisateur (formulaires)
+  - session : pour garder l'utilisateur connecté (cookies)
+  - jsonify : pour renvoyer des données JSON (pour les API)
+
+• CONFIGURATION :
+  Importe les paramètres depuis config.py (clé secrète, durée de session, etc.)
+  et configure l'application Flask pour gérer les sessions de manière sécurisée.
+
+• INITIALISATION DES MODÈLES :
+  - recommender = CourseRecommender() : Charge le moteur de recommandation
+  - user_manager = UserManager() : Charge le gestionnaire d'utilisateurs
+
+================================================================================
+🔹 ÉTAPE 2 : FONCTIONS UTILITAIRES ET DÉCORATEURS (lignes 36-73)
+================================================================================
+
+Des outils pour sécuriser et gérer l'application :
+
+• @login_required (lignes 36-42) :
+  Un "décorateur" qui protège les pages. Si on l'ajoute au-dessus d'une route,
+  l'utilisateur DOIT être connecté pour la voir. Sinon, il est redirigé vers
+  la page de connexion.
+
+• init_recommender() (lignes 47-73) :
+  Fonction appelée au démarrage. Elle vérifie si le modèle d'IA existe :
+  - OUI → Le charge en mémoire
+  - NON → Lance l'entraînement (train) et le sauvegarde
+  Cela garantit que l'app est toujours prête à faire des recommandations.
+
+================================================================================
+🔹 ÉTAPE 3 : SYSTÈME D'AUTHENTIFICATION (lignes 76-123)
+================================================================================
+
+Gère l'accès des utilisateurs :
+
+• /login (Connexion) :
+  - GET : Affiche le formulaire
+  - POST : Vérifie pseudo/mot de passe avec user_manager. Si OK, crée une
+    session ('session['username'] = ...').
+
+• /register (Inscription) :
+  - Vérifie que le pseudo est unique et les mots de passe correspondent.
+  - Crée le compte et connecte directement l'utilisateur.
+
+• /logout (Déconnexion) :
+  - Supprime l'utilisateur de la session et redirige vers login.
+
+================================================================================
+🔹 ÉTAPE 4 : PAGE D'ACCUEIL INTELLIGENTE (lignes 125-266)
+================================================================================
+
+La route '/' (home) est le cerveau de l'interface. Elle construit un flux
+personnalisé pour chaque utilisateur :
+
+1. RÉCUPÈRE LE PROFIL : Charge les préférences et l'historique de l'utilisateur.
+
+2. GÉNÈRE 3 TYPES DE RECOMMANDATIONS :
+   a. Basées sur les recherches récentes (ex: "python")
+   b. Basées sur les catégories préférées (selon les clics précédents)
+   c. Basées sur la popularité (pour compléter ou pour les nouveaux)
+
+3. CALCUL DU SCORE HYBRIDE (lignes 198-252) :
+   L'algorithme fusionne plusieurs signaux pour trier les cours :
+   - Score de similarité (IA)
+   - Bonus si c'est une catégorie favorite
+   - Bonus si le cours est bien noté (4.5+)
+   - Pénalité de "diversification" pour ne pas montrer toujours la même chose
+
+   Résultat : Une liste de cours triée par pertinence unique pour cet utilisateur.
+
+================================================================================
+🔹 ÉTAPE 5 : CATALOGUE DE COURS  (lignes 267-375)
+================================================================================
+
+La route '/courses' permet d'explorer tout le catalogue :
+
+• FILTRES ET RECHERCHE :
+  L'utilisateur peut filtrer par plateforme (Coursera/Udemy), niveau ou catégorie.
+  Si une recherche est faite, elle est sauvegardée dans l'historique pour
+  améliorer les futures recommandations.
+
+• LOGIQUE DE RECHERCHE PERSONNALISÉE (lignes 290-346) :
+  Si l'utilisateur trie par "Recommandé", l'app ne fait pas juste un tri simple.
+  Elle "booste" les cours qui correspondent aux intérêts passés de l'utilisateur,
+  même dans une recherche globale.
+
+================================================================================
+🔹 ÉTAPE 6 : DÉTAIL D'UN COURS & TRACKING (lignes 376-394)
+================================================================================
+
+La route '/course/<id>' affiche un cours spécifique :
+
+• TRACKING :
+  Dès que la page s'ouvre, user_manager.track_view() est appelé.
+  Cela enregistre que l'utilisateur est intéressé par ce sujet, ce qui
+  influencera sa page d'accueil future.
+
+• RECOMMANDATIONS SIMILAIRES :
+  Affiche "Vous aimerez aussi..." en bas de page, en utilisant
+  recommender.recommend_similar().
+
+================================================================================
+🔹 ÉTAPE 7 : ROUTES API (lignes 423-502)
+================================================================================
+
+Ces routes ne retournent pas de HTML mais du JSON. Elles sont utilisées par le
+JavaScript pour rendre la page dynamique sans recharger :
+
+• /api/search : Recherche instantanée (barre de recherche)
+• /api/track/click : Enregistre un clic quand on va sur le site externe
+• /api/user/stats : Pour les graphiques du profil
+
+================================================================================
+🔹 ÉTAPE 8 : CLUSTERING & DASHBOARD (lignes 504-569)
+================================================================================
+
+• /clustering :
+  Visualise les groupes de cours (clusters). Utilise un modèle de clustering
+  (K-Means) pour regrouper les cours par thématique et afficher une carte
+  interactive.
+
+• /dashboard :
+  Affiche des statistiques globales sur le catalogue (répartition par plateforme,
+  notes moyennes, etc.) sous forme de graphiques.
+
+• /api/learning-path (lignes 571-580) :
+  Génère un "parcours d'apprentissage" suggéré pour une catégorie donnée,
+  en étape par étape (Débutant -> Avancé).
+
+================================================================================
+🔹 ÉTAPE 9 : LANCEMENT DU SERVEUR (lignes 602-609)
+================================================================================
+
+Le bloc final :
+1. Initialise le système de recommandation (chargement/entraînement).
+2. Si tout est OK, lance le serveur web sur le port défini (2400).
+
+================================================================================
+🎯 RÉSUMÉ DU FLUX UTILISATEUR
+================================================================================
+
+1. CONNEXION : L'utilisateur s'identifie (/login).
+2. ACCUEIL : Le système analyse son historique et construit une liste sur mesure
+   (Mélange Recherche + Intérêts + Popularité).
+3. NAVIGATION :
+   - Clic sur un cours → Enregistré comme intérêt fort.
+   - Recherche "Java" → Enregistré comme intention.
+4. RAFFINEMENT : Au prochain rechargement de l'accueil, les cours de Java et
+   similaires au cours cliqué seront mis en avant.
+
+================================================================================
+💡 POINTS CLÉS À RETENIR
+================================================================================
+
+✓ STATEFULNESS (État) : Contrairement à un site statique, cette app "apprend".
+  Chaque action (clic, recherche, vue) modifie les suggestions futures grâce
+  au User Manager qui stocke tout.
+
+✓ HYBRIDATION : L'algorithme ne se base pas sur un seul critère. Il mélange
+  le contenu (IA), la popularité (Note) et le contexte (Recherche récente)
+  pour un résultat équilibré.
+
+✓ PERFORMANCE : Le chargement des données et l'entraînement se font au
+  démarrage (init_recommender) pour que le site soit rapide ensuite.
+
+================================================================================
+FIN DE L'EXPLICATION
+================================================================================
