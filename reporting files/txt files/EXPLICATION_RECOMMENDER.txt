@@ -1,0 +1,230 @@
+================================================================================
+   EXPLICATION DÉTAILLÉE DU CODE : models/recommender.py
+================================================================================
+
+Ce document explique étape par étape le fonctionnement du moteur de recommandation
+basé sur le contenu (Content-Based Filtering) utilisé dans l'application.
+
+================================================================================
+📋 ÉTAPE 1 : IMPORTATION DES MODULES & CONFIGURATION (lignes 6-36)
+================================================================================
+
+Le code commence par importer les outils nécessaires pour le traitement de données
+et le Machine Learning :
+
+• BIBLIOTHÈQUES DE DONNÉES :
+  - pandas : pour charger et manipuler le fichier CSV des cours
+  - numpy : pour les calculs mathématiques rapides
+  - pickle : pour sauvegarder et charger le modèle entraîné (éviter de
+    ré-entraîner à chaque démarrage)
+
+• BIBLIOTHÈQUES DE MACHINE LEARNING (scikit-learn) :
+  - TfidfVectorizer : convertit le texte (titres, descriptions) en nombres
+    (vecteurs) compréhensibles par l'ordinateur
+  - cosine_similarity : calcule la ressemblance entre deux cours (angle entre
+    leurs vecteurs)
+
+• CONFIGURATION :
+  - DATA_PATH : chemin vers le fichier CSV nettoyé ('final_courses_shuffled.csv')
+  - Paramètres TF-IDF : limite à 5000 mots, inclut les expressions de 1 ou 2
+    mots (n-grams), ignore les mots trop rares ou trop fréquents
+
+================================================================================
+🔹 ÉTAPE 2 : LA CLASSE CourseRecommender (lignes 39-49)
+================================================================================
+
+Une classe unique encapsule toute la logique de recommandation :
+
+• ATTRIBUTS PRINCIPAUX :
+  - self.df : le tableau contenant tous les cours et leurs détails
+  - self.tfidf_matrix : la représentation mathématique de tous les cours
+  - self.similarity_matrix : la grille géante qui stocke la similarité de
+    chaque cours avec tous les autres cours
+  - self.is_trained : un drapeau pour savoir si le système est prêt à l'emploi
+
+================================================================================
+🔹 ÉTAPE 3 : CHARGEMENT ET NETTOYAGE DES DONNÉES (lignes 50-110)
+================================================================================
+
+La méthode load_data() prépare le terrain :
+
+1. LECTURE DU CSV : Essaie de lire le fichier avec une virgule ou un point-virgule
+   comme séparateur (gestion des formats différents).
+
+2. STANDARDISATION : Renomme les colonnes pour avoir des noms cohérents dans
+   toute l'application (ex: 'title_clean' devient 'combined_text', 'partner'
+   devient 'instructor').
+
+3. ENRICHISSEMENT :
+   - Si la catégorie manque, elle l'extrait du titre avec des mots-clés
+   - Si le niveau manque, elle cherche "beginner", "advanced" dans les métadonnées
+   - Si le prix manque, elle met "Free" par défaut
+
+Cette étape est cruciale pour avoir des données propres avant l'analyse.
+
+================================================================================
+🔹 ÉTAPE 4 : PRÉPARATION DU TEXTE (lignes 152-170)
+================================================================================
+
+La méthode prepare_data() crée la "matière première" pour l'IA :
+
+• CRÉATION DE 'combined_text' :
+  L'algorithme ne "lit" pas une seule colonne. Il a besoin de tout le contexte.
+  Le code combine donc :
+  [TITRE] + [CATÉGORIE] + [NIVEAU] + [INSTRUCTEUR]
+
+  Exemple : "Introduction to Python" + "Programming" + "Beginner" + "IBM"
+  = "introduction to python programming beginner ibm"
+
+• NETTOYAGE : Tout est converti en minuscules pour que "Python" soit identique à
+  "python".
+
+================================================================================
+🔹 ÉTAPE 5 : VECTORISATION TF-IDF (lignes 172-192)
+================================================================================
+
+La méthode build_tfidf_matrix() est le cœur "intelligent" du système :
+
+• TF-IDF (Term Frequency - Inverse Document Frequency) :
+  C'est une technique qui transforme le texte en chiffres en donnant un poids
+  à chaque mot.
+
+  - TF (Fréquence) : Plus un mot apparaît dans un cours, plus il est important.
+  - IDF (Fréquence Inverse) : Plus un mot est rare dans l'ensemble des cours,
+    plus il a de poids. (Le mot "le" est fréquent mais peu important, le mot
+    "neural-network" est rare donc très important).
+
+• RÉSULTAT :
+  Une matrice (tableau géant) où chaque ligne est un cours et chaque colonne
+  est un mot du vocabulaire.
+
+================================================================================
+🔹 ÉTAPE 6 : CALCUL DE SIMILARITÉ (lignes 194-205)
+================================================================================
+
+La méthode compute_similarity_matrix() compare tous les cours entre eux :
+
+• SIMILARITÉ COSINUS :
+  Calcule l'angle entre les vecteurs de deux cours.
+  - 1.0 = Cours identiques (angle 0°)
+  - 0.0 = Cours totalement différents (angle 90°)
+
+• MATRICE DE SIMILARITÉ :
+  Le résultat est un tableau carré (N x N cours). La case [i, j] contient
+  le score de ressemblance entre le cours i et le cours j.
+
+================================================================================
+🔹 ÉTAPE 7 : ENTRAÎNEMENT GLOBAL (lignes 207-224)
+================================================================================
+
+La méthode train() orchestre tout le processus :
+1. Charge les données
+2. Prépare le texte
+3. Construit la matrice TF-IDF
+4. Calcule la matrice de similarité
+
+C'est cette méthode qui est appelée au démarrage de l'application si aucun
+modèle n'est sauvegardé.
+
+================================================================================
+🔹 ÉTAPE 8 : RECOMMANDATION PAR SIMILARITÉ (lignes 253-283)
+================================================================================
+
+La méthode recommend_similar(course_id) trouve des cours "frères" :
+
+1. Trouve l'index du cours source dans la matrice.
+2. Récupère la ligne correspondante dans la matrice de similarité (qui contient
+   les scores avec tous les autres cours).
+3. Trie les scores du plus grand au plus petit.
+4. Exclut le cours lui-même (score de 1.0).
+5. Retourne les 'n' meilleurs cours avec leur score de similarité converti en %.
+
+Exemple : Si vous regardez "Python for Data Science", il recommandera
+"Data Analysis with Python".
+
+================================================================================
+🔹 ÉTAPE 9 : RECOMMANDATION PAR RECHERCHE (lignes 285-337)
+================================================================================
+
+La méthode recommend_by_query(query) permet de chercher des cours :
+
+1. Transforme la phrase de l'utilisateur (ex: "learn deep learning") en vecteur
+   avec le même vectoriseur TF-IDF.
+2. Compare ce vecteur "requête" avec tous les vecteurs "cours".
+3. Filtre les résultats (optionnel) par plateforme, catégorie ou niveau.
+4. Retourne les cours les plus proches sémantiquement de la requête.
+
+C'est ce qui permet au moteur de recherche de comprendre le sens, pas juste
+les mots exacts.
+
+================================================================================
+🔹 ÉTAPE 10 : FONCTIONS UTILITAIRES (lignes 339-421)
+================================================================================
+
+Des fonctions pour faciliter l'affichage dans l'interface web :
+- get_course_by_id() : Récupère les détails d'un cours
+- get_popular_courses() : Retourne les cours les mieux notés ou avec le meilleur
+  score de popularité
+- get_all_courses() : Gère la pagination et le filtrage pour la page "Courses"
+- get_stats() : Fournit des statistiques globales (nombre de cours, catégories...)
+
+================================================================================
+🔹 ÉTAPE 11 : SAUVEGARDE ET CHARGEMENT (lignes 423-462)
+================================================================================
+
+Pour éviter de tout recalculer à chaque redémarrage (ce qui prendrait du temps) :
+- save_model() : Enregistre les matrices calculées dans un fichier 'recommender.pkl'
+- load_model() : Recharge ces matrices instantanément au démarrage.
+
+Le code vérifie aussi la "synchronisation" : si vous ajoutez des cours dans le CSV
+mais chargez un vieux modèle .pkl, il détectera l'incohérence et ré-entraînera
+le modèle.
+
+================================================================================
+🎯 RÉSUMÉ DU FLUX DE DONNÉES
+================================================================================
+
+┌──────────────────┐
+│  FICHIER CSV     │ (Données brutes)
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│  NETTOYAGE       │ (Extraction catégories, minuscules, fusion texte)
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│  TF-IDF          │ (Conversion Texte -> Nombres)
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐      ┌──────────────────┐
+│ MATRICE TF-IDF   │ ───► │ MATRICE SIMILARITÉ│ (Relations entre cours)
+└────────┬─────────┘      └────────┬─────────┘
+         │                         │
+         ▼                         ▼
+┌──────────────────┐      ┌──────────────────┐
+│ RECHERCHE        │      │ RECOMMANDATIONS  │
+│ (Query -> Vector)│      │ (Item -> Item)   │
+└──────────────────┘      └──────────────────┘
+
+================================================================================
+💡 POINTS CLÉS À RETENIR
+================================================================================
+
+✓ APPROCHE "CONTENT-BASED" : Le système ne nécessite pas d'historique utilisateur.
+  Il recommande basé sur ce que SONT les cours (leur contenu), pas sur ce que
+  les autres ont aimé. C'est idéal pour un démarrage à froid (Cold Start).
+
+✓ ANALYSE SÉMANTIQUE : Grâce à TF-IDF, le système comprend que "Machine Learning"
+  est important et rare, donc il pèsera plus lourd dans la similarité que des
+  mots communs comme "Introduction".
+
+✓ HYBRIDE : L'application web finale mélange ces scores de similarité avec
+  la note (stars) et la popularité pour classer les résultats, donnant un
+  équilibre entre pertinence et qualité.
+
+================================================================================
+FIN DE L'EXPLICATION
+================================================================================
