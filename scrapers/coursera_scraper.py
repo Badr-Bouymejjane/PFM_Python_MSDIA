@@ -1,6 +1,6 @@
 """
-Coursera Scraper - Scrape courses from Coursera
-Uses Playwright for dynamic content loading
+Scraper Coursera - Extraire les cours de Coursera
+Utilise Playwright pour le chargement de contenu dynamique
 """
 
 import sys
@@ -159,7 +159,7 @@ class CourseraScraper:
             except:
                 pass
                 
-        # Rating
+        # Note (Rating)
         rating_selectors = ['[aria-label*="rating"]', 'span:has-text("stars")', '.ratings-text']
         for sel in rating_selectors:
             try:
@@ -243,7 +243,7 @@ class CourseraScraper:
         except:
             course['description'] = course.get('title', '')
             
-        # Skills (extrait du texte)
+        # Compétences (Skills - extrait du texte)
         course['skills'] = category.replace('-', ', ')
         course['language'] = 'English'
         
@@ -255,7 +255,7 @@ class CourseraScraper:
             categories = CATEGORIES
             
         print("\n" + "="*60)
-        print("   COURSERA SCRAPER")
+        print("   SCRAPER COURSERA")
         print("="*60)
         
         await self.init_browser()

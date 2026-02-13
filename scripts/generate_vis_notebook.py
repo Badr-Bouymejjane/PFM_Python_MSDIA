@@ -1,0 +1,326 @@
+
+import json
+import os
+
+notebook_content = {
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 📊 Analyse et Visualisation des Données des Cours\n",
+    "\n",
+    "Ce notebook présente une analyse complète et interactive du dataset des cours (`final_data.csv`).\n",
+    "Nous utiliserons **Plotly** pour des visualisations dynamiques et esthétiques afin de mieux comprendre la distribution des données pour notre système de recommandation.\n",
+    "\n",
+    "### Objectifs de l'analyse :\n",
+    "1. Distribution des cours par catégorie\n",
+    "2. Analyse des notes (Ratings)\n",
+    "3. Relation entre popularité et notes\n",
+    "4. Top 10 des partenaires (institutions)\n",
+    "5. Distribution des niveaux de difficulté\n",
+    "6. Durée des cours par catégorie\n",
+    "7. Répartition par domaine source"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import plotly.express as px\n",
+    "import plotly.graph_objects as go\n",
+    "from plotly.subplots import make_subplots\n",
+    "import warnings\n",
+    "\n",
+    "warnings.filterwarnings('ignore')\n",
+    "\n",
+    "# Configuration du thème Plotly\n",
+    "px.defaults.template = \"plotly_dark\"\n",
+    "px.defaults.color_continuous_scale = px.colors.sequential.Viridis"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Chargement et Aperçu des Données"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Chargement du fichier CSV\n",
+    "try:\n",
+    "    # Chemin relatif depuis le dossier notebooks/\n",
+    "    df = pd.read_csv('../final_data/final_data.csv')\n",
+    "    print(\"✅ Données chargées avec succès !\")\n",
+    "except FileNotFoundError:\n",
+    "    try:\n",
+    "        # Fallback 1: Si exécuté depuis la racine\n",
+    "        df = pd.read_csv('final_data/final_data.csv')\n",
+    "        print(\"✅ Données chargées avec succès (chemin racine) !\")\n",
+    "    except FileNotFoundError:\n",
+    "        # Fallback 2: Chemin absolu ou autre structure\n",
+    "        print(\"❌ Fichier non trouvé. Vérifiez le chemin.\")\n",
+    "        # df = pd.read_csv('chemin/vers/final_data.csv')\n",
+    "\n",
+    "# Conversion des colonnes si nécessaire\n",
+    "if 'scraped_at' in df.columns:\n",
+    "    df['scraped_at'] = pd.to_datetime(df['scraped_at'])\n",
+    "\n",
+    "# Affichage des premières lignes\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Informations générales\n",
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Distribution des Catégories\n",
+    "Quelles sont les thématiques les plus représentées dans notre catalogue ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "category_counts = df['category'].value_counts().reset_index()\n",
+    "category_counts.columns = ['Category', 'Count']\n",
+    "\n",
+    "fig = px.bar(category_counts, \n",
+    "             x='Count', \n",
+    "             y='Category', \n",
+    "             orientation='h',\n",
+    "             title='<b>Distribution des Cours par Catégorie</b>',\n",
+    "             text='Count',\n",
+    "             color='Count', \n",
+    "             color_continuous_scale='Viridis')\n",
+    "\n",
+    "fig.update_layout(yaxis={'categoryorder':'total ascending'}, showlegend=False)\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. Analyse des Notes (Ratings)\n",
+    "Analyse de la distribution des notes attribuées aux cours."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fig = px.histogram(df, \n",
+    "                   x='rating', \n",
+    "                   nbins=20, \n",
+    "                   title='<b>Distribution des Notes des Cours</b>',\n",
+    "                   color_discrete_sequence=['#00CC96'],\n",
+    "                   marginals='box', \n",
+    "                   hover_data=df.columns)\n",
+    "\n",
+    "fig.update_layout(bargap=0.1)\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Relation Popularité vs Notes\n",
+    "Y a-t-il une corrélation entre la note d'un cours et son score de popularité ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fig = px.scatter(df, \n",
+    "                 x='rating', \n",
+    "                 y='popularity_score', \n",
+    "                 color='category',\n",
+    "                 size='num_ratings', \n",
+    "                 hover_name='title',\n",
+    "                 title='<b>Popularité vs Notes</b>',\n",
+    "                 log_y=True, \n",
+    "                 template='plotly_dark')\n",
+    "\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Top 10 des Partenaires\n",
+    "Quelles institutions proposent le plus de cours ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "partner_counts = df['partner'].value_counts().nlargest(10).reset_index()\n",
+    "partner_counts.columns = ['Partner', 'Count']\n",
+    "\n",
+    "fig = px.bar(partner_counts, \n",
+    "             x='Partner', \n",
+    "             y='Count', \n",
+    "             title='<b>Top 10 des Institutions Partenaires</b>',\n",
+    "             color='Count',\n",
+    "             text='Count')\n",
+    "\n",
+    "fig.update_layout(xaxis_tickangle=-45)\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. Distribution des Niveaux\n",
+    "Répartition des niveaux de difficulté des cours."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "level_counts = df['level_enc'].value_counts().reset_index()\n",
+    "level_counts.columns = ['Level Code', 'Count']\n",
+    "\n",
+    "fig = px.pie(level_counts, \n",
+    "             values='Count', \n",
+    "             names='Level Code',\n",
+    "             title='<b>Distribution des Niveaux de Cours</b>',\n",
+    "             hole=0.4)\n",
+    "\n",
+    "fig.update_traces(textposition='inside', textinfo='percent+label')\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 7. Durée des Cours par Catégorie\n",
+    "Quelle est la durée typique des cours selon leur thématique ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fig = px.box(df, \n",
+    "             x='category', \n",
+    "             y='duration_hours', \n",
+    "             color='category',\n",
+    "             title='<b>Distribution de la Durée des Cours par Catégorie</b>',\n",
+    "             points='outliers')\n",
+    "\n",
+    "fig.update_layout(xaxis_tickangle=-45, showlegend=False)\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 8. Répartition par Domaine Source\n",
+    "D'où proviennent les données ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "source_counts = df['source_domain'].value_counts().reset_index()\n",
+    "source_counts.columns = ['Source', 'Count']\n",
+    "\n",
+    "fig = px.pie(source_counts, \n",
+    "             values='Count', \n",
+    "             names='Source',\n",
+    "             title='<b>Répartition des Cours par Source</b>',\n",
+    "             color_discrete_sequence=px.colors.qualitative.Pastel)\n",
+    "\n",
+    "fig.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Conclusion et Insights\n",
+    "\n",
+    "Cette analyse nous permet de dégager plusieurs points clés pour notre système de recommandation :\n",
+    "1. **Dominance des catégories** : Certaines catégories sont très représentées, ce qui nécessitera peut-être un équilibrage lors des recommandations.\n",
+    "2. **Qualité des données** : La distribution des notes montre la tendance générale de satisfaction.\n",
+    "3. **Engagement** : La relation popularité/notes aide à identifier les \"pépites\" (cours très notés et populaires) à mettre en avant.\n",
+    "\n",
+    "Ces visualisations serviront de base pour affiner nos algorithmes de filtrage et de ranking."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+
+# Chemin du fichier notebook
+notebook_path = r'c:/Users/LEGION 5/Desktop/SDIA - S7/Python/projet/Recommandations/notebooks/Data_Visualisation.ipynb'
+
+# Écriture du fichier
+with open(notebook_path, 'w', encoding='utf-8') as f:
+    json.dump(notebook_content, f, indent=4, ensure_ascii=False)
+
+print(f"Notebook généré avec succès : {notebook_path}")

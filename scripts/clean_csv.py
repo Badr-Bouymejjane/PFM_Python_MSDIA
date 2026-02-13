@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 def clean_shuffled_csv():
-    path = 'data/final_courses_shuffled.csv'
+    path = 'processed_data/final_courses_shuffled.csv'
     if not os.path.exists(path):
         print(f"File not found: {path}")
         return

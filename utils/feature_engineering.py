@@ -1,5 +1,5 @@
 """
-Feature Engineering - Create features for ML recommendation
+Ingénierie des Caractéristiques (Feature Engineering) - Créer des features pour la recommandation ML
 """
 
 import sys
@@ -30,7 +30,7 @@ class FeatureEngineer:
     
     # Stopwords français et anglais
     STOPWORDS = set([
-        # English
+        # Anglais
         'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
         'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
         'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
@@ -46,7 +46,7 @@ class FeatureEngineer:
         'same', 'so', 'than', 'too', 'very', 'course', 'learn', 'learning',
         'complete', 'introduction', 'guide', 'tutorial', 'masterclass',
         
-        # French
+        # Français
         'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'et', 'ou', 'mais',
         'dans', 'sur', 'à', 'pour', 'avec', 'par', 'ce', 'cette', 'ces',
         'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'être', 'avoir',

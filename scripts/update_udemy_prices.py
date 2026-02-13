@@ -12,7 +12,7 @@ def clean_price(price_str):
     return price_str
 
 def update_prices():
-    csv_path = 'data/final_courses_shuffled.csv'
+    csv_path = 'processed_data/final_courses_shuffled.csv'
     json_path = 'data/raw_udemy.json'
     
     print(f"Reading {csv_path}...")

@@ -1,8 +1,8 @@
 """
-Run Udemy Scraper - Multiple Topics
+Exécuter le Scraper Udemy - Sujets Multiples
 
-Scrapes courses from multiple topics and saves all to raw_udemy.json
-Edit SEARCH_QUERIES list to customize topics.
+Scrape des cours de plusieurs sujets et enregistre tout dans raw_udemy.json
+Modifiez la liste SEARCH_QUERIES pour personnaliser les sujets.
 """
 
 import asyncio
@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scrapers.udemy_scraper import UdemyScraper
 
-# Configuration - Multiple Topics
+# Configuration - Sujets Multiples
 SEARCH_QUERIES = [
     "machine learning",
     "data science", 
@@ -29,19 +29,20 @@ SEARCH_QUERIES = [
     "healthcare",
 ]
 
-COURSES_PER_TOPIC = 70  # Number of courses to scrape per topic
-HEADLESS = False  # Set to True to hide browser window
+COURSES_PER_TOPIC = 70  # Nombre de cours à extraire par sujet
+HEADLESS = False  # Mettre à True pour masquer la fenêtre du navigateur
 
 async def main():
     print("="*70)
-    print(" UDEMY SCRAPER - MULTIPLE TOPICS ".center(70))
     print("="*70)
-    print(f"\nTopics: {len(SEARCH_QUERIES)}")
+    print(" SCRAPER UDEMY - SUJETS MULTIPLES ".center(70))
+    print("="*70)
+    print(f"\nSujets : {len(SEARCH_QUERIES)}")
     for i, query in enumerate(SEARCH_QUERIES, 1):
         print(f"  {i}. {query}")
-    print(f"\nCourses per topic: {COURSES_PER_TOPIC}")
-    print(f"Headless Mode: {HEADLESS}")
-    print(f"Total target: {len(SEARCH_QUERIES) * COURSES_PER_TOPIC} courses\n")
+    print(f"\nCours par sujet : {COURSES_PER_TOPIC}")
+    print(f"Mode sans tête (Headless) : {HEADLESS}")
+    print(f"Objectif total : {len(SEARCH_QUERIES) * COURSES_PER_TOPIC} cours\n")
     
     scraper = UdemyScraper(headless=HEADLESS)
     all_courses = []
@@ -49,31 +50,31 @@ async def main():
     try:
         await scraper.start()
         
-        # Scrape each topic
+        # Scraper chaque sujet
         for i, query in enumerate(SEARCH_QUERIES, 1):
             print("\n" + "="*70)
-            print(f" TOPIC {i}/{len(SEARCH_QUERIES)}: {query.upper()} ".center(70))
+            print(f" SUJET {i}/{len(SEARCH_QUERIES)}: {query.upper()} ".center(70))
             print("="*70)
             
             courses = await scraper.search_and_scrape(query, limit=COURSES_PER_TOPIC)
             
             if courses:
                 all_courses.extend(courses)
-                print(f"\n[OK] Scraped {len(courses)} courses from '{query}'")
+                print(f"\n[OK] {len(courses)} cours extraits pour '{query}'")
             else:
-                print(f"\n[WARNING] No courses scraped from '{query}'")
+                print(f"\n[ATTENTION] Aucun cours extrait pour '{query}'")
             
-            # Small delay between topics
+            # Petit délai entre les sujets
             if i < len(SEARCH_QUERIES):
-                print("\nWaiting 5 seconds before next topic...")
+                print("\nAttente de 5 secondes avant le prochain sujet...")
                 await asyncio.sleep(5)
         
         if not all_courses:
-            print("\n[ERROR] No courses were scraped from any topic.")
+            print("\n[ERREUR] Aucun cours n'a été extrait pour aucun sujet.")
             return
         
-        # Save all courses to raw_udemy.json
-        raw_data_dir = Path("data")  # Adjusted to save in data/ folder directly
+        # Enregistrer tous les cours dans raw_udemy.json
+        raw_data_dir = Path("data")  # Ajusté pour sauvegarder directement dans le dossier data/
         raw_data_dir.mkdir(exist_ok=True)
         
         output_file = raw_data_dir / "raw_udemy.json"
@@ -82,31 +83,31 @@ async def main():
             json.dump(all_courses, f, indent=2, ensure_ascii=False)
         
         print("\n" + "="*70)
-        print(" SCRAPING COMPLETE ".center(70))
+        print(" EXTRACTION TERMINÉE ".center(70))
         print("="*70)
-        print(f"\n[SUCCESS] Total courses scraped: {len(all_courses)}")
-        print(f"[SAVED] {output_file.absolute()}")
+        print(f"\n[SUCCÈS] Total cours extraits : {len(all_courses)}")
+        print(f"[ENREGISTRÉ] {output_file.absolute()}")
         
-        # Display preview
+        # Afficher l'aperçu
         print("\n" + "="*70)
-        print(" PREVIEW (First 3 courses) ".center(70))
+        print(" APERÇU (3 premiers cours) ".center(70))
         print("="*70)
         for i, course in enumerate(all_courses[:3], 1):
-            print(f"\n[Course {i}]")
-            print(f"  Title:      {course['title'][:60]}")
-            print(f"  Instructor: {course['instructor']}")
-            print(f"  Rating:     {course['rating']} ({course.get('reviews', 'N/A')} reviews)")
-            print(f"  Price:      {course['current_price']}")
-            print(f"  Duration:   {course.get('duration_hours', 'N/A')} hours")
-            print(f"  Level:      {course['level']}")
+            print(f"\n[Cours {i}]")
+            print(f"  Titre :       {course['title'][:60]}")
+            print(f"  Instructeur : {course['instructor']}")
+            print(f"  Note :        {course['rating']} ({course.get('reviews', 'N/A')} avis)")
+            print(f"  Prix :        {course['current_price']}")
+            print(f"  Durée :       {course.get('duration_hours', 'N/A')} heures")
+            print(f"  Niveau :      {course['level']}")
         
         if len(all_courses) > 3:
-            print(f"\n... and {len(all_courses) - 3} more courses")
+            print(f"\n... et {len(all_courses) - 3} autres cours")
     
     finally:
         await scraper.stop()
     
-    print("\n[DONE] All topics scraped!")
+    print("\n[TERMINÉ] Tous les sujets ont été traités !")
 
 
 if __name__ == "__main__":

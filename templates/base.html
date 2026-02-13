@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Course Recommendation System - Find your perfect course" />
-    <title>{% block title %}Course Recommender{% endblock %}</title>
+    <meta name="description" content="Système de Recommandation de Cours - Trouvez votre cours parfait" />
+    <title>{% block title %}Recommandateur de Cours{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 
@@ -26,7 +26,7 @@
         <nav class="nav-links">
           <a href="{{ url_for('home') }}" class="nav-link {% if request.endpoint == 'home' %}active{% endif %}">
             <span class="nav-link-icon"><i data-lucide="home"></i></span>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
           <a href="{{ url_for('courses') }}" class="nav-link {% if request.endpoint == 'courses' %}active{% endif %}">
             <span class="nav-link-icon"><i data-lucide="graduation-cap"></i></span>
@@ -73,8 +73,8 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-content">
-          <p>Course Recommendation System - Powered by ML</p>
-          <p class="footer-sub">SDIA S7 - Python Project</p>
+          <p>Système de Recommandation de Cours - Propulsé par ML</p>
+          <p class="footer-sub">SDIA S7 - Projet Python</p>
         </div>
       </footer>
     </main>

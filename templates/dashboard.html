@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <!-- Stats Grid (Using app's stats-compact-grid) -->
+    <!-- Grille de Stats (Utilisant stats-compact-grid de l'app) -->
     <div class="stats-compact-grid mb-5">
         <div class="stat-compact-card">
             <div class="stat-icon-circle accent-blue">
@@ -63,9 +63,9 @@
         </div>
     </div>
 
-    <!-- Main Analytics Grid -->
+    <!-- Grille Analytique Principale -->
     <div class="analytics-grid">
-        <!-- Chart 1: Category Bar -->
+        <!-- Graphique 1 : Barres Catégories -->
         <div class="analytics-card wide">
             <div class="card-header">
                 <h3><i data-lucide="bar-chart-2" class="me-2"></i>Distribution par Catégorie</h3>
@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <!-- Chart 2: Platform Pie -->
+        <!-- Graphique 2 : Camembert Plateformes -->
         <div class="analytics-card side">
             <div class="card-header">
                 <h3><i data-lucide="pie-chart" class="me-2"></i>Part des Plateformes</h3>
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <!-- Chart 3: Cluster Line -->
+        <!-- Graphique 3 : Ligne Clusters -->
         <div class="analytics-card half">
             <div class="card-header">
                 <h3><i data-lucide="trending-up" class="me-2"></i>Densité des Clusters</h3>
@@ -106,10 +106,10 @@
             <div class="chart-wrapper">
                 <canvas id="clusterChart"></canvas>
             </div>
-            <p class="chart-note mt-2">Répartition des cours dans les 14 groupes thématiques K-Means.</p>
+            <p class="chart-note mt-2">Répartition des cours dans les 24 groupes thématiques K-Means.</p>
         </div>
 
-        <!-- Chart 4: Rating Polar -->
+        <!-- Graphique 4 : Polaire Notes -->
         <div class="analytics-card half">
             <div class="card-header">
                 <h3><i data-lucide="award" class="me-2"></i>Index Satisfaction par Platform</h3>
@@ -140,7 +140,7 @@
     document.querySelector('.fw-id-coursera').textContent = ((platformData['Coursera'] / totalPlat) * 100).toFixed(1) + '%';
     document.querySelector('.fw-id-udemy').textContent = ((platformData['Udemy'] / totalPlat) * 100).toFixed(1) + '%';
 
-    // Helper Gradient
+    // Assistant Dégradé
     function getGradient(ctx, chartArea, color1, color2) {
         const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
         gradient.addColorStop(0, color1);

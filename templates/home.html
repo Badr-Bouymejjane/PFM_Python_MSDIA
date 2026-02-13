@@ -45,15 +45,6 @@
 <div class="home-analytics-grid">
     <div class="page-section" style="margin-bottom: 0; padding: 2rem; background: linear-gradient(135deg, #061E29 0%, #1D546D 100%); color: white; overflow: hidden; position: relative;">
         <div style="position: relative; z-index: 2;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
-                <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem;">Activité d'Apprentissage</h3>
-                    <p style="opacity: 0.7; font-size: 0.95rem;">Votre progression sur les 30 derniers jours</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600;">
-                    +24% ce mois
-                </div>
-            </div>
             
             <!-- Dynamic Chart -->
             <div style="height: 220px; width: 100%;">
@@ -133,11 +124,11 @@
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// Dashboard is now static recommendations for a cleaner look
-// Search and filters are available in the Courses catalog page
+// Le tableau de bord affiche maintenant des recommandations statiques pour une apparence plus propre
+// La recherche et les filtres sont disponibles dans la page catalogue des Cours
 
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Interests Chart (Bar) ---
+    // --- Graphique des Intérêts (Barres) ---
     const ctxInterests = document.getElementById('interestsChart').getContext('2d');
     
     // Data from Jinja2
@@ -145,9 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const labels = Object.keys(categories).slice(0, 8); // Top 8
     const data = Object.values(categories).slice(0, 8);
     
-    // Fallback data if empty
-    const chartLabels = labels.length ? labels : ['Data Science', 'Web Dev', 'Business', 'Design', 'Marketing'];
-    const chartData = labels.length ? data : [5, 4, 3, 2, 1];
+    // Données de repli si vide
+    const chartLabels = labels.length ? labels : [];
+    const chartData = labels.length ? data : [];
 
     new Chart(ctxInterests, {
         type: 'bar',
@@ -185,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Goal Chart (Doughnut) ---
+    // --- Graphique des Objectifs (Gâteau) ---
     const ctxGoal = document.getElementById('goalChart').getContext('2d');
     new Chart(ctxGoal, {
         type: 'doughnut',

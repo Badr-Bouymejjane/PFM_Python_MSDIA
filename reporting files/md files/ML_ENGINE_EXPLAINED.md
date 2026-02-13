@@ -1,52 +1,52 @@
-# 🧠 The ML Heart: How Recommendations Work
+# 🧠 Le Cœur ML : Comment Fonctionnent les Recommandations
 
-This report dives into the mathematical logic behind the course recommendations and clustering.
+Ce rapport plonge dans la logique mathématique derrière les recommandations de cours et le clustering.
 
 ---
 
-## 1. Feature Engineering (The Input)
+## 1. Feature Engineering (L'Entrée)
 
-To recommend courses, we translate human language into numbers.
-We create a **Combined Text** field: `Title + Category + Level`.
-Example: `[ "Machine Learning", "Data Science", "Beginner" ]` becomes `"machine learning data science beginner"`.
+Pour recommander des cours, nous traduisons le langage humain en chiffres.
+Nous créons un champ **Texte Combiné** : `Titre + Catégorie + Niveau`.
+Exemple : `[ "Machine Learning", "Data Science", "Beginner" ]` devient `"machine learning data science beginner"`.
 
-## 2. Text Representation: TF-IDF
+## 2. Représentation Textuelle : TF-IDF
 
-We use **TF-IDF (Term Frequency-Inverse Document Frequency)**.
+Nous utilisons **TF-IDF (Term Frequency-Inverse Document Frequency)**.
 
-- **TF**: How often a word appears in a course.
-- **IDF**: How unique that word is across the whole catalog.
-  Words like "Python" or "React" get higher weights than common filler words like "the" or "how".
+- **TF (Fréquence du Terme)** : Combien de fois un mot apparaît dans un cours.
+- **IDF (Fréquence Inverse de Document)** : À quel point ce mot est unique dans tout le catalogue.
+  Des mots comme "Python" ou "React" obtiennent des poids plus élevés que des mots de remplissage courants comme "le" ou "comment".
 
-## 3. Measuring Distance: Cosine Similarity
+## 3. Mesure de Distance : Similarité Cosinus
 
-Imagine every course is an arrow in a 900-dimensional space.
+Imaginez chaque cours comme une flèche dans un espace à 900 dimensions.
 
-- To find "Similar Courses", we compute the **Cosine** of the angle between these arrows.
-- An angle of **0° (Similarity = 1.0)** means the courses are virtually identical.
-- An angle of **90° (Similarity = 0.0)** means they have nothing in common.
+- Pour trouver des "Cours Similaires", nous calculons le **Cosinus** de l'angle entre ces flèches.
+- Un angle de **0° (Similarité = 1.0)** signifie que les cours sont virtuellement identiques.
+- Un angle de **90° (Similarité = 0.0)** signifie qu'ils n'ont rien en commun.
 
-The formula used: `Similarity(A, B) = (A · B) / (||A|| × ||B||)`
+La formule utilisée : `Similarité(A, B) = (A · B) / (||A|| × ||B||)`
 
-## 4. Unsupervised Discovery: K-Means Clustering
+## 4. Découverte Non Supervisée : Clustering K-Means
 
-The **K-Means** algorithm automatically finds patterns in our 1137 courses.
+L'algorithme **K-Means** trouve automatiquement des motifs dans nos 1137 cours.
 
-1. It chooses 10 central points (centroids).
-2. It assigns every course to the nearest cluster.
-3. It creates meaningful groups like "Business & Finance" or "Health & Fitness" without being told which is which.
+1. Il choisit 10 points centraux (centroïdes).
+2. Il assigne chaque cours au cluster le plus proche.
+3. Il crée des groupes significatifs comme "Business & Finance" ou "Santé & Fitness" sans qu'on lui dise lequel est lequel.
 
-## 5. Visualizing the Catalog: PCA
+## 5. Visualisation du Catalogue : PCA
 
-Our data has hundreds of features. Human eyes can only see 2 or 3.
-**PCA (Principal Component Analysis)** is a mathematical projection that squashes hundreds of dimensions into just **X and Y coordinates**, preserving the most important variations.
-This is what powers the interactive "Discovery Map" in the UI.
+Nos données ont des centaines de caractéristiques. Les yeux humains ne peuvent en voir que 2 ou 3.
+**PCA (Analyse en Composantes Principales)** est une projection mathématique qui écrase des centaines de dimensions en justes **coordonnées X et Y**, préservant les variations les plus importantes.
+C'est ce qui alimente la "Carte de Découverte" interactive dans l'interface utilisateur.
 
-## 6. Real-time User Logic
+## 6. Logique Utilisateur Temps Réel
 
-The recommendations on the Home page are a **Weighted Hybrid**:
+Les recommandations sur la page d'Accueil sont un **Hybride Pondéré** :
 
-- **Search Intent (40%)**: Based on your last 3 keyword searches.
-- **Preference Bias (40%)**: Based on the categories of course you clicked.
-- **Popularity (20%)**: Based on course ratings to ensure quality.
-- **Safety**: Queries that result in no similarity (less than 15%) are rejected to prevent model pollution.
+- **Intention de Recherche (40%)** : Basé sur vos 3 dernières recherches par mots-clés.
+- **Biais de Préférence (40%)** : Basé sur les catégories de cours sur lesquels vous avez cliqué.
+- **Popularité (20%)** : Basé sur les notes des cours pour assurer la qualité.
+- **Sécurité** : Les requêtes qui ne donnent aucune similarité (moins de 15%) sont rejetées pour éviter la pollution du modèle.

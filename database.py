@@ -77,6 +77,18 @@ class Database:
                 UNIQUE(user_id, course_id)
             )
         ''')
+
+        # Table des parcours enregistrés
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS saved_paths (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                category TEXT NOT NULL,
+                path_data TEXT NOT NULL, -- JSON string
+                timestamp TEXT NOT NULL,
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        ''')
         
         conn.commit()
         conn.close()
@@ -342,7 +354,57 @@ class Database:
         cursor.execute('SELECT course_id FROM favorites WHERE user_id = ?', (user_id,))
         favs = [row['course_id'] for row in cursor.fetchall()]
         conn.close()
+        conn.close()
         return favs
+
+    def add_saved_path(self, username, category, path_data):
+        """Enregistre un parcours pour l'utilisateur"""
+        user_id = self.get_user_id(username)
+        if not user_id:
+            return False
+            
+        conn = self.get_connection()
+        cursor = conn.cursor()
+        
+        # Vérifier si on a déjà un parcours pour cette catégorie récemment (optionnel, ici on autorise tout)
+        import json
+        
+        cursor.execute('''
+            INSERT INTO saved_paths (user_id, category, path_data, timestamp)
+            VALUES (?, ?, ?, ?)
+        ''', (user_id, category, json.dumps(path_data), datetime.now().isoformat()))
+        
+        conn.commit()
+        conn.close()
+        return True
+
+    def get_saved_paths(self, username):
+        """Récupère les parcours enregistrés de l'utilisateur"""
+        user_id = self.get_user_id(username)
+        if not user_id:
+            return []
+            
+        conn = self.get_connection()
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM saved_paths 
+            WHERE user_id = ? 
+            ORDER BY timestamp DESC
+        ''', (user_id,))
+        
+        paths = []
+        import json
+        for row in cursor.fetchall():
+            path = dict(row)
+            try:
+                path['path_data'] = json.loads(path['path_data'])
+            except:
+                path['path_data'] = []
+            paths.append(path)
+            
+        conn.close()
+        return paths
 
     def get_total_users(self):
         """Récupère le nombre total d'utilisateurs"""

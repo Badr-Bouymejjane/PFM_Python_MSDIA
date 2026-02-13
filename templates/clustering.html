@@ -118,7 +118,7 @@ const colors = {{ cluster_colors | tojson }};
 
 const ctx = document.getElementById('clusterChart').getContext('2d');
 const datasets = [];
-
+// Création des datasets pour le graphique
 for (let i = 0; i < {{ n_clusters }}; i++) {
     const clusterCourses = vizData.courses.filter(c => c.cluster === i);
     datasets.push({
@@ -164,6 +164,11 @@ async function generatePath() {
     }
     
     let html = '<div style="display:flex; flex-direction:column; gap:1.5rem;">';
+    
+    // Stocker le chemin actuel pour la sauvegarde
+    window.currentPath = data.path;
+    window.currentCategory = category;
+    
     data.path.forEach((step, i) => {
         html += `
             <div style="display:flex; gap:1.5rem; align-items:center;">
@@ -187,8 +192,63 @@ async function generatePath() {
             ${i < data.path.length - 1 ? '<div style="margin-left:25px; height:20px; width:2px; background:var(--border); border-radius:1px;"></div>' : ''}
         `;
     });
+    
+    // Bouton de sauvegarde
+    // Bouton de sauvegarde
+    html += `
+        <div style="text-align:center; margin-top:2.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--border);">
+            <button id="save-btn" onclick="savePath()" class="btn-primary" style="padding: 0.75rem 1.5rem; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; background: #10b981; border: none; border-radius: 8px; color: white; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);">
+                <i data-lucide="bookmark-plus"></i> Enregistrer ce parcours
+            </button>
+            <p id="save-msg" style="margin-top:1rem; padding: 0.75rem; background: #ecfdf5; color: #047857; border-radius: 8px; border: 1px solid #a7f3d0; display:none; max-width: 400px; margin-left: auto; margin-right: auto;">
+                <i data-lucide="check-circle" style="vertical-align: middle; margin-right: 5px;"></i>
+                Parcours enregistré avec succès ! Retrouvez-le dans votre profil.
+            </p>
+        </div>
+    `;
+    
     html += '</div>';
     container.innerHTML = html;
+    lucide.createIcons();
+}
+
+async function savePath() {
+    const category = window.currentCategory;
+    const path = window.currentPath;
+    
+    if (!category || !path) return;
+
+    const btn = document.getElementById('save-btn');
+    const msg = document.getElementById('save-msg');
+    
+    btn.disabled = true;
+    btn.innerHTML = '<i data-lucide="loader"></i> Enregistrement...';
+    lucide.createIcons();
+    
+    try {
+        const response = await fetch('/api/save-path', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ category, path })
+        });
+        
+        if (response.ok) {
+            btn.style.display = 'none';
+            msg.style.display = 'block';
+        } else {
+            alert("Erreur lors de l'enregistrement");
+            btn.disabled = false;
+            btn.innerHTML = '<i data-lucide="save"></i> Réessayer';
+        }
+    } catch (e) {
+        console.error(e);
+        alert("Erreur de connexion");
+        btn.disabled = false;
+        btn.innerHTML = '<i data-lucide="save"></i> Réessayer';
+    }
+    lucide.createIcons();
 }
 </script>
 {% endblock %}
